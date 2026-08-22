@@ -1,0 +1,17 @@
+{
+  "example": "flask-redis",
+  "stage": "original",
+  "image_tag": "dip-flask-redis:original",
+  "generated_at": "2026-08-22T16:38:42.016733+00:00",
+  "size_bytes": 25046114,
+  "size_human": "25.0MB",
+  "sbom_component_count": 82,
+  "vulnerability_total": 32,
+  "vulnerability_by_severity": {
+    "High": 9,
+    "Medium": 19,
+    "Low": 3,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/flask-redis/test.sh)"
+}

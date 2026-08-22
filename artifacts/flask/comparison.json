@@ -1,0 +1,34 @@
+{
+  "example": "flask",
+  "original": {
+    "image_tag": "dip-flask:original",
+    "size_bytes": 23798493,
+    "size_human": "23.8MB",
+    "sbom_component_count": 80,
+    "vulnerability_total": 32,
+    "vulnerability_by_severity": {
+      "High": 9,
+      "Medium": 19,
+      "Low": 3,
+      "Negligible": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-flask:slim",
+    "size_bytes": 9786814,
+    "size_human": "9.79MB",
+    "sbom_component_count": 2,
+    "vulnerability_total": 19,
+    "vulnerability_by_severity": {
+      "High": 5,
+      "Medium": 10,
+      "Low": 3,
+      "Negligible": 1
+    }
+  },
+  "size_reduction_pct": 58.9,
+  "component_reduction": 78,
+  "vulnerability_reduction": 13,
+  "functional_tests_original": "PASS (tests/specific/flask/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/flask/test.sh)"
+}

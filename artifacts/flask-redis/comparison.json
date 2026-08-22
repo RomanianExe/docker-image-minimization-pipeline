@@ -1,0 +1,34 @@
+{
+  "example": "flask-redis",
+  "original": {
+    "image_tag": "dip-flask-redis:original",
+    "size_bytes": 25046114,
+    "size_human": "25.0MB",
+    "sbom_component_count": 82,
+    "vulnerability_total": 32,
+    "vulnerability_by_severity": {
+      "High": 9,
+      "Medium": 19,
+      "Low": 3,
+      "Negligible": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-flask-redis:slim",
+    "size_bytes": 11576905,
+    "size_human": "11.58MB",
+    "sbom_component_count": 3,
+    "vulnerability_total": 19,
+    "vulnerability_by_severity": {
+      "High": 5,
+      "Medium": 10,
+      "Low": 3,
+      "Negligible": 1
+    }
+  },
+  "size_reduction_pct": 53.8,
+  "component_reduction": 79,
+  "vulnerability_reduction": 13,
+  "functional_tests_original": "PASS (tests/specific/flask-redis/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/flask-redis/test.sh)"
+}
