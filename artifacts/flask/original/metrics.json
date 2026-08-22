@@ -1,0 +1,17 @@
+{
+  "example": "flask",
+  "stage": "original",
+  "image_tag": "dip-flask:original",
+  "generated_at": "2026-08-22T14:56:01.693978Z",
+  "size_bytes": 23798493,
+  "size_human": "23.8MB",
+  "sbom_component_count": 80,
+  "vulnerability_total": 32,
+  "vulnerability_by_severity": {
+    "High": 9,
+    "Medium": 19,
+    "Low": 3,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/flask/test.sh)"
+}
