@@ -1,0 +1,35 @@
+{
+  "example": "aspnet-mssql",
+  "original": {
+    "image_tag": "dip-aspnet-mssql:original",
+    "size_bytes": 85388703,
+    "size_human": "85.39MB",
+    "sbom_component_count": 100,
+    "vulnerability_total": 271,
+    "vulnerability_by_severity": {
+      "Critical": 10,
+      "High": 80,
+      "Medium": 87,
+      "Low": 24,
+      "Negligible": 66,
+      "Unknown": 4
+    }
+  },
+  "slim": {
+    "image_tag": "dip-aspnet-mssql:slim",
+    "size_bytes": 66138661,
+    "size_human": "66.14MB",
+    "sbom_component_count": 8,
+    "vulnerability_total": 13,
+    "vulnerability_by_severity": {
+      "Critical": 1,
+      "High": 10,
+      "Medium": 2
+    }
+  },
+  "size_reduction_pct": 22.5,
+  "component_reduction": 92,
+  "vulnerability_reduction": 258,
+  "functional_tests_original": "PASS (tests/specific/aspnet-mssql/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/aspnet-mssql/test.sh)"
+}

@@ -27,13 +27,31 @@ if [[ -n "${DEPENDENCY_IMAGE:-}" ]]; then
   LINK_ARGS=(--link "${DEPENDENCY_CONTAINER}:${DEPENDENCY_ALIAS}")
 fi
 
+# EXTRA_PROBE_PATHS (space-separated, optional in pipeline.env) lets an example
+# exercise more than one route during Slim's dynamic analysis — important for
+# apps with multiple pages/static assets that a single GET on HEALTH_PATH would
+# never touch, and which Slim could otherwise strip as "unused".
+PROBE_ARGS=(--http-probe-cmd "GET:${HEALTH_PATH}")
+for path in ${EXTRA_PROBE_PATHS:-}; do
+  PROBE_ARGS+=(--http-probe-cmd "GET:${path}")
+done
+
+# APP_ENV (space-separated KEY=VALUE, optional in pipeline.env) sets env vars on
+# the container Slim analyzes, for apps that need runtime config (e.g. a DB
+# connection string) to behave correctly during the probe.
+ENV_ARGS=()
+for kv in ${APP_ENV:-}; do
+  ENV_ARGS+=(--env "$kv")
+done
+
 docker-slim build \
   --target "$ORIGINAL_TAG" \
   --tag "$SLIM_TAG" \
   --http-probe \
-  --http-probe-cmd "GET:${HEALTH_PATH}" \
+  "${PROBE_ARGS[@]}" \
   --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
   "${LINK_ARGS[@]}" \
+  "${ENV_ARGS[@]}" \
   --show-clogs \
   --show-blogs \
   --copy-meta-artifacts "$ARTIFACT_DIR"

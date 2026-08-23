@@ -1,0 +1,4660 @@
+{
+  "document": "doc.report.container",
+  "version": "ov/container/1.1",
+  "target_type": "container",
+  "target_id": "0616a263f1a1c68658a8ef2957f6f20599e368865defc7515407b971910e214c",
+  "image_id": "sha256:1e528adda91847f7f7cd75f947c74669e999abbe2c4991a99f70613d6a016912",
+  "start_command": {
+    "app_name": "nginx",
+    "app_args": [
+      "-g",
+      "daemon off;"
+    ]
+  },
+  "sensor": {
+    "version": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+    "args": [
+      "/opt/_mint/bin/mint-sensor",
+      "-log-level",
+      "warn",
+      "-log-format",
+      "text"
+    ]
+  },
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.24.1",
+      "display_name": "Alpine Linux v3.24"
+    }
+  },
+  "monitors": {
+    "fan": {
+      "monitor_pid": 1,
+      "monitor_ppid": 0,
+      "event_count": 88,
+      "main_process": {
+        "pid": 16,
+        "name": "nginx",
+        "path": "/usr/sbin/nginx",
+        "cmd": "",
+        "cwd": "/usr/share/nginx/html",
+        "root": "/",
+        "ppid": 1
+      },
+      "processes": {
+        "16": {
+          "pid": 16,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 1
+        },
+        "17": {
+          "pid": 17,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "18": {
+          "pid": 18,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "19": {
+          "pid": 19,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "20": {
+          "pid": 20,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "21": {
+          "pid": 21,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "22": {
+          "pid": 22,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "23": {
+          "pid": 23,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "24": {
+          "pid": 24,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "25": {
+          "pid": 25,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "26": {
+          "pid": 26,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "27": {
+          "pid": 27,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "28": {
+          "pid": 28,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "29": {
+          "pid": 29,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "30": {
+          "pid": 30,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "31": {
+          "pid": 31,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "32": {
+          "pid": 32,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "33": {
+          "pid": 33,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "34": {
+          "pid": 34,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "35": {
+          "pid": 35,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "36": {
+          "pid": 36,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "37": {
+          "pid": 37,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "38": {
+          "pid": 38,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "39": {
+          "pid": 39,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        },
+        "40": {
+          "pid": 40,
+          "name": "nginx",
+          "path": "/usr/sbin/nginx",
+          "cmd": "nginx: master process nginx -g daemon off;",
+          "cwd": "/usr/share/nginx/html",
+          "root": "/",
+          "ppid": 16
+        }
+      },
+      "process_files": {
+        "16": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 30,
+            "reads": 1
+          },
+          "/etc/nginx/conf.d/default.conf": {
+            "event_count": 2,
+            "first_eid": 35,
+            "reads": 1
+          },
+          "/etc/nginx/mime.types": {
+            "event_count": 3,
+            "first_eid": 32,
+            "reads": 2
+          },
+          "/etc/nginx/nginx.conf": {
+            "event_count": 2,
+            "first_eid": 26,
+            "reads": 1
+          },
+          "/etc/passwd": {
+            "event_count": 2,
+            "first_eid": 28,
+            "reads": 1
+          },
+          "/etc/ssl/openssl.cnf": {
+            "event_count": 14,
+            "first_eid": 12,
+            "reads": 13
+          },
+          "/lib/ld-musl-x86_64.so.1": {
+            "event_count": 1,
+            "first_eid": 3,
+            "reads": 1
+          },
+          "/run/nginx.pid": {
+            "event_count": 2,
+            "first_eid": 37,
+            "writes": 1
+          },
+          "/usr/lib/libcrypto.so.3": {
+            "event_count": 2,
+            "first_eid": 8,
+            "reads": 1
+          },
+          "/usr/lib/libpcre2-8.so.0.15.0": {
+            "event_count": 2,
+            "first_eid": 4,
+            "reads": 1
+          },
+          "/usr/lib/libssl.so.3": {
+            "event_count": 2,
+            "first_eid": 6,
+            "reads": 1
+          },
+          "/usr/lib/libz.so.1.3.2": {
+            "event_count": 2,
+            "first_eid": 10,
+            "reads": 1
+          },
+          "/usr/sbin/nginx": {
+            "event_count": 2,
+            "first_eid": 1,
+            "reads": 1,
+            "execs": 2
+          }
+        },
+        "17": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 39,
+            "reads": 1
+          }
+        },
+        "18": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 41,
+            "reads": 1
+          }
+        },
+        "19": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 43,
+            "reads": 1
+          }
+        },
+        "20": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 45,
+            "reads": 1
+          }
+        },
+        "21": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 47,
+            "reads": 1
+          }
+        },
+        "22": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 49,
+            "reads": 1
+          }
+        },
+        "23": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 51,
+            "reads": 1
+          }
+        },
+        "24": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 53,
+            "reads": 1
+          }
+        },
+        "25": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 55,
+            "reads": 1
+          }
+        },
+        "26": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 57,
+            "reads": 1
+          }
+        },
+        "27": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 59,
+            "reads": 1
+          }
+        },
+        "28": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 61,
+            "reads": 1
+          }
+        },
+        "29": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 63,
+            "reads": 1
+          }
+        },
+        "30": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 65,
+            "reads": 1
+          }
+        },
+        "31": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 67,
+            "reads": 1
+          }
+        },
+        "32": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 69,
+            "reads": 1
+          }
+        },
+        "33": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 71,
+            "reads": 1
+          }
+        },
+        "34": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 73,
+            "reads": 1
+          }
+        },
+        "35": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 75,
+            "reads": 1
+          }
+        },
+        "36": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 77,
+            "reads": 1
+          }
+        },
+        "37": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 79,
+            "reads": 1
+          },
+          "/usr/share/nginx/html/index.html": {
+            "event_count": 2,
+            "first_eid": 87,
+            "reads": 1
+          }
+        },
+        "38": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 81,
+            "reads": 1
+          }
+        },
+        "39": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 83,
+            "reads": 1
+          }
+        },
+        "40": {
+          "/etc/group": {
+            "event_count": 2,
+            "first_eid": 85,
+            "reads": 1
+          }
+        }
+      }
+    },
+    "pt": {
+      "enabled": true,
+      "arch_name": "amd64",
+      "syscall_count": 2653,
+      "syscall_num": 58,
+      "syscall_stats": {
+        "0": {
+          "num": 0,
+          "name": "read",
+          "count": 68
+        },
+        "1": {
+          "num": 1,
+          "name": "write",
+          "count": 32
+        },
+        "10": {
+          "num": 10,
+          "name": "mprotect",
+          "count": 6
+        },
+        "102": {
+          "num": 102,
+          "name": "getuid",
+          "count": 1
+        },
+        "104": {
+          "num": 104,
+          "name": "getgid",
+          "count": 1
+        },
+        "105": {
+          "num": 105,
+          "name": "setuid",
+          "count": 24
+        },
+        "106": {
+          "num": 106,
+          "name": "setgid",
+          "count": 24
+        },
+        "107": {
+          "num": 107,
+          "name": "geteuid",
+          "count": 26
+        },
+        "108": {
+          "num": 108,
+          "name": "getegid",
+          "count": 1
+        },
+        "11": {
+          "num": 11,
+          "name": "munmap",
+          "count": 15
+        },
+        "110": {
+          "num": 110,
+          "name": "getppid",
+          "count": 1
+        },
+        "116": {
+          "num": 116,
+          "name": "setgroups",
+          "count": 24
+        },
+        "12": {
+          "num": 12,
+          "name": "brk",
+          "count": 6
+        },
+        "13": {
+          "num": 13,
+          "name": "rt_sigaction",
+          "count": 12
+        },
+        "130": {
+          "num": 130,
+          "name": "rt_sigsuspend",
+          "count": 1
+        },
+        "14": {
+          "num": 14,
+          "name": "rt_sigprocmask",
+          "count": 386
+        },
+        "15": {
+          "num": 15,
+          "name": "rt_sigreturn",
+          "count": 1
+        },
+        "157": {
+          "num": 157,
+          "name": "prctl",
+          "count": 24
+        },
+        "158": {
+          "num": 158,
+          "name": "arch_prctl",
+          "count": 1
+        },
+        "16": {
+          "num": 16,
+          "name": "ioctl",
+          "count": 97
+        },
+        "17": {
+          "num": 17,
+          "name": "pread64",
+          "count": 4
+        },
+        "186": {
+          "num": 186,
+          "name": "gettid",
+          "count": 31
+        },
+        "2": {
+          "num": 2,
+          "name": "open",
+          "count": 50
+        },
+        "20": {
+          "num": 20,
+          "name": "writev",
+          "count": 1
+        },
+        "204": {
+          "num": 204,
+          "name": "sched_getaffinity",
+          "count": 1
+        },
+        "206": {
+          "num": 206,
+          "name": "io_setup",
+          "count": 24
+        },
+        "217": {
+          "num": 217,
+          "name": "getdents64",
+          "count": 2
+        },
+        "218": {
+          "num": 218,
+          "name": "set_tid_address",
+          "count": 25
+        },
+        "233": {
+          "num": 233,
+          "name": "epoll_ctl",
+          "count": 123
+        },
+        "281": {
+          "num": 281,
+          "name": "epoll_pwait",
+          "count": 49
+        },
+        "288": {
+          "num": 288,
+          "name": "accept4",
+          "count": 1
+        },
+        "290": {
+          "num": 290,
+          "name": "eventfd2",
+          "count": 48
+        },
+        "291": {
+          "num": 291,
+          "name": "epoll_create1",
+          "count": 25
+        },
+        "3": {
+          "num": 3,
+          "name": "close",
+          "count": 411
+        },
+        "302": {
+          "num": 302,
+          "name": "prlimit64",
+          "count": 2
+        },
+        "318": {
+          "num": 318,
+          "name": "getrandom",
+          "count": 1
+        },
+        "328": {
+          "num": 328,
+          "name": "pwritev2",
+          "count": 1
+        },
+        "33": {
+          "num": 33,
+          "name": "dup2",
+          "count": 1
+        },
+        "39": {
+          "num": 39,
+          "name": "getpid",
+          "count": 30
+        },
+        "4": {
+          "num": 4,
+          "name": "stat",
+          "count": 7
+        },
+        "40": {
+          "num": 40,
+          "name": "sendfile",
+          "count": 1
+        },
+        "41": {
+          "num": 41,
+          "name": "socket",
+          "count": 25
+        },
+        "42": {
+          "num": 42,
+          "name": "connect",
+          "count": 24
+        },
+        "45": {
+          "num": 45,
+          "name": "recvfrom",
+          "count": 1
+        },
+        "46": {
+          "num": 46,
+          "name": "sendmsg",
+          "count": 276
+        },
+        "47": {
+          "num": 47,
+          "name": "recvmsg",
+          "count": 299
+        },
+        "49": {
+          "num": 49,
+          "name": "bind",
+          "count": 1
+        },
+        "5": {
+          "num": 5,
+          "name": "fstat",
+          "count": 8
+        },
+        "50": {
+          "num": 50,
+          "name": "listen",
+          "count": 2
+        },
+        "53": {
+          "num": 53,
+          "name": "socketpair",
+          "count": 48
+        },
+        "54": {
+          "num": 54,
+          "name": "setsockopt",
+          "count": 2
+        },
+        "57": {
+          "num": 57,
+          "name": "fork",
+          "count": 24
+        },
+        "61": {
+          "num": 61,
+          "name": "wait4",
+          "count": 1
+        },
+        "63": {
+          "num": 63,
+          "name": "uname",
+          "count": 2
+        },
+        "72": {
+          "num": 72,
+          "name": "fcntl",
+          "count": 131
+        },
+        "83": {
+          "num": 83,
+          "name": "mkdir",
+          "count": 5
+        },
+        "9": {
+          "num": 9,
+          "name": "mmap",
+          "count": 210
+        },
+        "92": {
+          "num": 92,
+          "name": "chown",
+          "count": 5
+        }
+      },
+      "fs_activity": {
+        "/etc/group": {
+          "ops_all": 25,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {},
+            "17": {},
+            "18": {},
+            "19": {},
+            "20": {},
+            "21": {},
+            "22": {},
+            "23": {},
+            "24": {},
+            "25": {},
+            "26": {},
+            "27": {},
+            "28": {},
+            "29": {},
+            "30": {},
+            "31": {},
+            "32": {},
+            "33": {},
+            "34": {},
+            "35": {},
+            "36": {},
+            "37": {},
+            "38": {},
+            "39": {},
+            "40": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/nginx/conf.d/default.conf": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/nginx/mime.types": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/nginx/nginx.conf": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/passwd": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/ssl/openssl.cnf": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/run/nginx.pid": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/lib/libcrypto.so.3": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/lib/libpcre2-8.so.0": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/lib/libssl.so.3": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/lib/libz.so.1": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/share/nginx/html/index.html": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {},
+            "4": {}
+          },
+          "pids": {
+            "37": {}
+          },
+          "is_subdir": false
+        },
+        "/var/cache/nginx/client_temp": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "4": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/var/cache/nginx/fastcgi_temp": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "4": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/var/cache/nginx/proxy_temp": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "4": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/var/cache/nginx/scgi_temp": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "4": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/var/cache/nginx/uwsgi_temp": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "4": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/var/log/nginx/access.log": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/var/log/nginx/error.log": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        }
+      }
+    }
+  },
+  "image": {
+    "files": [
+      {
+        "file_type": "symlink",
+        "file_path": "/dev/stderr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/proc/self/fd/2",
+        "file_size": 15,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/dev/stdout",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/proc/self/fd/1",
+        "file_size": 15,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/group",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 528,
+        "sha1_hash": "06f24a2a2e5b935a3dfb4004e1a3c5a36debec7a",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nginx/conf.d/default.conf",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 258,
+        "sha1_hash": "2bffe29d06a9d8c9fe1853bb443938f84ee94e66",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nginx/mime.types",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 5349,
+        "sha1_hash": "9b85e5091018455091d7f135c4a160ad9487516a",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nginx/nginx.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 644,
+        "sha1_hash": "bdb7265056ac726013b4fd32f50a2f30f6e8647a",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nsswitch.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 205,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/passwd",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 755,
+        "sha1_hash": "825eb4b469e5e1b465ed307e52e682e69365c782",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/resolv.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 224,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/cert.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/002c0b4f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0179095f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/062cdee6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/064e0aa9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/06dc52d5.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/09789157.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0a775a30.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 23,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0b1b94ef.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0b9bc432.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0bf05006.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0f5dc4f3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0f6fa695.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 34,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1001acf7.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 23,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/14bc7599.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1cef98f5.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1d3472b9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1e08bfd1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1e09d511.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/2923b3f9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/2ae6433e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/2ccbdda3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/30e1580d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/32888f65.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/3bde41ac.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/3e359ba6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/3fb36b73.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/40193066.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/4042bcee.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/406c9bb1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/48bec511.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/4b718d9b.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/4bfab552.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5443e9e3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/54657681.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5860aaa6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5931b5bc.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5f15c80c.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5f618aec.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/607986c7.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6805c744.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/68dd7389.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6a9bdba3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6d41d539.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6fa5da56.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/749e9e03.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/75d1b2ed.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7719f463.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 71,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/773e07ad.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7a3adc42.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7a780d93.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 29,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7f3d5d1d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7fa05551.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8160b96c.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8508e720.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 29,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/865fbdf9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/878d9bca.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8cb5ee0f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8d89cda1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8f103249.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9046744a.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/90c5a3c8.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 30,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/930ac5d2.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9482e63a.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9846683b.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/988a38cb.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9b46e03d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9bf03295.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9d04f354.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9e654b62.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9ef4a08a.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9f727ac7.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a09a51ae.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a3418fda.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 23,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a89d74c2.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a94d09e5.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 21,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b0d5255e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b0e59380.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b433981b.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b7a5b843.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b81b93f0.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b8d25de6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 30,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/bf53fb88.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/c01eb047.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 30,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/c28a8a30.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ACCVRAIZ1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-AC_RAIZ_FNMT-RCM.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 74,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ANF_Secure_Server_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Actalis_Authentication_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Atos_TrustedRoot_2011.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 96,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-BJCA_Global_Root_CA1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-BJCA_Global_Root_CA2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Buypass_Class_2_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Buypass_Class_3_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-CA_Disig_Root_R2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-CFCA_EV_ROOT.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-COMODO_ECC_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-COMODO_RSA_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certainly_Root_E1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certainly_Root_R1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certigna_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_EC-384_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_Trusted_Network_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_Trusted_Network_CA_2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_Trusted_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_BR_Root_CA_1_2020.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_BR_Root_CA_2_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_EV_Root_CA_1_2020.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_EV_Root_CA_2_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_Root_Class_3_CA_2_2009.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_Root_Class_3_CA_2_EV_2009.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Assured_ID_Root_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Assured_ID_Root_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Global_Root_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Global_Root_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_TLS_ECC_P384_Root_G5.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 68,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_TLS_RSA4096_Root_G5.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Trusted_Root_G4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 63,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GDCA_TrustAUTH_R5_ROOT.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GTS_Root_R1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GTS_Root_R3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GTS_Root_R4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_ECC_Root_CA_-_R4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_ECC_Root_CA_-_R5.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_CA_-_R3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_CA_-_R6.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_E46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_R46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Go_Daddy_Root_Certificate_Authority_-_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 79,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-HARICA_TLS_ECC_Root_CA_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-HARICA_TLS_RSA_Root_CA_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 98,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 94,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-HiPKI_Root_CA_-_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Hongkong_Post_Root_CA_3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ISRG_Root_X1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ISRG_Root_X2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-IdenTrust_Commercial_Root_CA_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-IdenTrust_Public_Sector_Root_CA_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Izenpe.com.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Microsec_e-Szigno_Root_CA_2009.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Microsoft_ECC_Root_Certificate_Authority_2017.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Microsoft_RSA_Root_Certificate_Authority_2017.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-NAVER_Global_Root_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 80,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 83,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_Server_Root_ECC_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 63,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_Server_Root_RSA_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 63,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_WISeKey_Global_Root_GB_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 70,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_WISeKey_Global_Root_GC_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 70,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-QuoVadis_Root_CA_1_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-QuoVadis_Root_CA_2_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-QuoVadis_Root_CA_3_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_EV_Root_Certification_Authority_ECC.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 82,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_EV_Root_Certification_Authority_RSA_R2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 85,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_Root_Certification_Authority_ECC.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 79,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_Root_Certification_Authority_RSA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 79,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_TLS_ECC_Root_CA_2022.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_TLS_RSA_Root_CA_2022.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SZAFIR_ROOT_CA2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Sectigo_Public_Server_Authentication_Root_E46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Sectigo_Public_Server_Authentication_Root_R46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SecureSign_Root_CA14.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SecureSign_Root_CA15.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Security_Communication_ECC_RootCA1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Security_Communication_RootCA2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Starfield_Root_Certificate_Authority_-_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 80,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Starfield_Services_Root_Certificate_Authority_-_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 89,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SwissSign_RSA_TLS_Root_CA_2022_-_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-T-TeleSec_GlobalRoot_Class_2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-T-TeleSec_GlobalRoot_Class_3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TWCA_CYBER_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TWCA_Global_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TWCA_Root_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Telekom_Security_TLS_ECC_Root_2020.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Telekom_Security_TLS_RSA_Root_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Telia_Root_CA_v2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_Global_Root_CA_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_Global_Root_CA_G4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_TLS_ECC_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_TLS_RSA_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TunTrust_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-UCA_Extended_Validation_Root.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-UCA_Global_G2_Root.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-USERTrust_ECC_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-USERTrust_RSA_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-certSIGN_Root_CA_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-e-Szigno_Root_CA_2017.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-e-Szigno_TLS_Root_CA_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ePKI_Root_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_ECC_Root_CA_-_C3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_ECC_Root_CA_-_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_Root_CA_-_C1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_Root_CA_-_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-vTrus_ECC_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-vTrus_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/ssl/certs/ca-certificates.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 179359,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca6e4ad9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cbf06781.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cc450945.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 22,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cd58d51e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cd8c0d63.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ce5e74ef.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/d4dae3dd.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/d52c538d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/d6325660.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/da0cfd1d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/dc4d6a89.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/dd8e9d41.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ddcda989.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/de6d66f3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e18bfb83.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e35234b1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 34,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e36a6752.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e73d606e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e868b802.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e8de2f56.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ecccd8db.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ed858448.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 29,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/eed8c118.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ef954a4e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f0c70a8d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f30dd6ad.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f44703f1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f51bb24c.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fb717492.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fc5a8f99.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fd64f3fc.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fe8a2cd8.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 27,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/feffd413.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ff34af3f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ffdd40f9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/ssl/openssl.cnf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 12411,
+        "sha1_hash": "5ff8070dceaa742043d8171f98abe95e5abd02e5",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/lib/ld-musl-x86_64.so.1",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 670312,
+        "sha1_hash": "1c36e90298092e128f24de888da03bc09dce6b8a",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib/libc.musl-x86_64.so.1",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "ld-musl-x86_64.so.1",
+        "file_size": 19,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/proc/self/fd/1",
+        "modex": 134217920,
+        "mode": "L-wx------",
+        "link_ref": "pipe:[12240]",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/run",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/run/nginx.pid",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "W": true
+        },
+        "file_size": 3,
+        "sha1_hash": "3596ea087bfdaf52380eae441077572ed289d657",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/tmp",
+        "modex": 2148532735,
+        "mode": "dtrwxrwxrwx",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/libcrypto.so.3",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 4985616,
+        "sha1_hash": "55159e9123d19dbb2746d932416799cb374ba65e",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/lib/libpcre2-8.so.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "libpcre2-8.so.0.15.0",
+        "file_size": 20,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/libpcre2-8.so.0.15.0",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 780256,
+        "sha1_hash": "4b18a9058509e0e3111de5027db6b9d959691dd1",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/libssl.so.3",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 839544,
+        "sha1_hash": "327700f83f48ae5aa02da6564e6dc40913c7df6c",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/lib/libz.so.1",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "libz.so.1.3.2",
+        "file_size": 13,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/libz.so.1.3.2",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 108376,
+        "sha1_hash": "e5914ee94559b22d918e4675fc02a651b7bb44c0",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/usr/local/share/ca-certificates",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/sbin/nginx",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true,
+          "X": true
+        },
+        "file_size": 1353816,
+        "sha1_hash": "e72b561ca4370b86a97169d07889aee179631349",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ACCVRAIZ1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2772,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1972,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 904,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ANF_Secure_Server_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2118,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Actalis_Authentication_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2049,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1188,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1883,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 656,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 737,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_2011.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1261,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_ECC_TLS_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 782,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_RSA_TLS_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1931,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2167,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/BJCA_Global_Root_CA1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1952,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/BJCA_Global_Root_CA2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 806,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Buypass_Class_2_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Buypass_Class_3_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/CA_Disig_Root_R2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1935,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/CFCA_EV_ROOT.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1984,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/COMODO_ECC_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 940,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/COMODO_RSA_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2086,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certainly_Root_E1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 741,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certainly_Root_R1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certigna_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2264,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_EC-384_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1354,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA_2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2078,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_Trusted_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2053,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_1_2020.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1050,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_2_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2025,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_1_2020.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1050,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_2_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2025,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1517,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1537,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1306,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 851,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1294,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 839,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_TLS_ECC_P384_Root_G5.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 790,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_TLS_RSA4096_Root_G5.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1931,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Trusted_Root_G4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1988,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GDCA_TrustAUTH_R5_ROOT.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1980,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GTS_Root_R1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1911,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GTS_Root_R3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 765,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GTS_Root_R4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 765,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 704,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R5.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 794,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1229,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R6.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1972,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_E46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 769,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_R46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1367,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/HARICA_TLS_ECC_Root_CA_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 867,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/HARICA_TLS_RSA_Root_CA_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2017,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1017,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2155,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/HiPKI_Root_CA_-_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1939,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Hongkong_Post_Root_CA_3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2074,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ISRG_Root_X1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1939,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ISRG_Root_X2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 790,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/IdenTrust_Commercial_Root_CA_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/IdenTrust_Public_Sector_Root_CA_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1931,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Izenpe.com.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2122,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Microsec_e-Szigno_Root_CA_2009.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1460,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 875,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2021,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/NAVER_Global_Root_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2013,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1476,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_Server_Root_ECC_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 826,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_Server_Root_RSA_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1972,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1346,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 895,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_1_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_2_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_3_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 956,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2114,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_ECC.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 944,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_RSA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2094,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_TLS_ECC_Root_CA_2022.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 834,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_TLS_RSA_Root_CA_2022.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1980,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SZAFIR_ROOT_CA2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1257,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_E46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 834,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_R46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1980,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SecureSign_Root_CA14.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1948,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SecureSign_Root_CA15.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 802,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Security_Communication_ECC_RootCA1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 830,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Security_Communication_RootCA2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1261,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Starfield_Root_Certificate_Authority_-_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1399,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1424,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SwissSign_RSA_TLS_Root_CA_2022_-_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1992,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1367,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1367,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1582,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TWCA_CYBER_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1984,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1883,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1269,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Telekom_Security_TLS_ECC_Root_2020.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 843,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Telekom_Security_TLS_RSA_Root_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2037,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Telia_Root_CA_v2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1952,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2017,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 871,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_TLS_ECC_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 822,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_TLS_RSA_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1968,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TunTrust_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2037,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/UCA_Extended_Validation_Root.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/UCA_Global_G2_Root.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/USERTrust_ECC_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 948,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/USERTrust_RSA_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2094,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/certSIGN_Root_CA_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/e-Szigno_Root_CA_2017.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 843,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/e-Szigno_TLS_Root_CA_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1034,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ePKI_Root_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2033,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_C3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 814,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 859,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_Root_CA_-_C1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1257,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_Root_CA_-_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1302,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/vTrus_ECC_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 774,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/vTrus_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1911,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/usr/share/nginx/html",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/nginx/html/index.html",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 644,
+        "sha1_hash": "7c9962592991d67b24428fc9b3d714a0c5010637",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/var/cache/nginx/client_temp",
+        "modex": 2147484096,
+        "mode": "drwx------",
+        "file_size": 4096,
+        "uid": 101,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/var/cache/nginx/fastcgi_temp",
+        "modex": 2147484096,
+        "mode": "drwx------",
+        "file_size": 4096,
+        "uid": 101,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/var/cache/nginx/proxy_temp",
+        "modex": 2147484096,
+        "mode": "drwx------",
+        "file_size": 4096,
+        "uid": 101,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/var/cache/nginx/scgi_temp",
+        "modex": 2147484096,
+        "mode": "drwx------",
+        "file_size": 4096,
+        "uid": 101,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/var/cache/nginx/uwsgi_temp",
+        "modex": 2147484096,
+        "mode": "drwx------",
+        "file_size": 4096,
+        "uid": 101,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/var/log/nginx/access.log",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/dev/stdout",
+        "file_size": 11,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/var/log/nginx/error.log",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/dev/stderr",
+        "file_size": 11,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/var/run",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "../run",
+        "file_size": 6,
+        "uid": 0,
+        "gid": 0
+      }
+    ]
+  }
+}

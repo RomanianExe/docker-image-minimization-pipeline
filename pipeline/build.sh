@@ -18,9 +18,23 @@ source "$ENV_FILE"
 
 IMAGE_TAG="${IMAGE_NAME}:${TAG_SUFFIX}"
 
+DOCKERFILE_ARGS=()
+if [[ -n "${DOCKERFILE_PATH:-}" ]]; then
+  DOCKERFILE_ARGS=(-f "$ROOT_DIR/$DOCKERFILE_PATH")
+fi
+
+# DOCKERFILE_TARGET may be left empty in pipeline.env for Dockerfiles whose final
+# (unnamed) stage is the one actually built by compose (no `target:` set there
+# either) — omit --target in that case so docker build uses the last stage.
+TARGET_ARGS=()
+if [[ -n "${DOCKERFILE_TARGET:-}" ]]; then
+  TARGET_ARGS=(--target "$DOCKERFILE_TARGET")
+fi
+
 docker build \
-  --target "$DOCKERFILE_TARGET" \
+  "${TARGET_ARGS[@]}" \
   -t "$IMAGE_TAG" \
+  "${DOCKERFILE_ARGS[@]}" \
   "$ROOT_DIR/$BUILD_CONTEXT"
 
 echo "$IMAGE_TAG"

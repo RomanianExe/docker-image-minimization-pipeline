@@ -15,10 +15,18 @@ if [[ -z "${DEPENDENCY_IMAGE:-}" ]]; then
   exit 0
 fi
 
+# DEPENDENCY_ENV (space-separated KEY=VALUE, optional in pipeline.env) sets env
+# vars on the dependency container itself (e.g. postgres needs POSTGRES_PASSWORD
+# to match what the app is configured to connect with).
+DEP_ENV_ARGS=()
+for kv in ${DEPENDENCY_ENV:-}; do
+  DEP_ENV_ARGS+=(-e "$kv")
+done
+
 case "$ACTION" in
   up)
     docker rm -f "$DEPENDENCY_CONTAINER" >/dev/null 2>&1 || true
-    docker run -d --name "$DEPENDENCY_CONTAINER" "$DEPENDENCY_IMAGE" >/dev/null
+    docker run -d --name "$DEPENDENCY_CONTAINER" "${DEP_ENV_ARGS[@]}" "$DEPENDENCY_IMAGE" >/dev/null
     echo "Started dependency container '$DEPENDENCY_CONTAINER' ($DEPENDENCY_IMAGE)"
     ;;
   down)

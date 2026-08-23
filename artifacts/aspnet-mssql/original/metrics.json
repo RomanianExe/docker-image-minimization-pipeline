@@ -1,0 +1,19 @@
+{
+  "example": "aspnet-mssql",
+  "stage": "original",
+  "image_tag": "dip-aspnet-mssql:original",
+  "generated_at": "2026-08-23T13:30:00Z",
+  "size_bytes": 85388703,
+  "size_human": "85.39MB",
+  "sbom_component_count": 100,
+  "vulnerability_total": 271,
+  "vulnerability_by_severity": {
+    "Critical": 10,
+    "High": 80,
+    "Medium": 87,
+    "Low": 24,
+    "Negligible": 66,
+    "Unknown": 4
+  },
+  "functional_tests": "PASS (tests/specific/aspnet-mssql/test.sh)"
+}

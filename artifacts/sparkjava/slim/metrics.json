@@ -1,0 +1,16 @@
+{
+  "example": "sparkjava",
+  "stage": "slim",
+  "image_tag": "dip-sparkjava:slim",
+  "generated_at": "2026-08-23T12:20:00Z",
+  "size_bytes": 53958724,
+  "size_human": "53.96MB",
+  "sbom_component_count": 20,
+  "vulnerability_total": 44,
+  "vulnerability_by_severity": {
+    "High": 15,
+    "Medium": 19,
+    "Low": 10
+  },
+  "functional_tests": "PASS (tests/specific/sparkjava/test.sh)"
+}
