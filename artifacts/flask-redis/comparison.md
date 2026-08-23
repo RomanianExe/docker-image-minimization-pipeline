@@ -33,7 +33,10 @@ confirms the pattern is not specific to the `flask` example but likely applies t
 whole Python/Alpine cluster (`django`, `fastapi`, `nginx-flask-*`, `nginx-wsgi-flask`).
 
 ## Functional validation
-- `tests/generic/container_up.sh` + `tests/generic/http_health.sh` (via
-  `tests/specific/flask-redis/test.sh`) both pass against `dip-flask-redis:slim`,
-  linked to a running `redis` container, with the same counter-increment behavior
-  verified as on the original image.
+- `tests/generic/container_up.sh`, `tests/generic/http_health.sh`, and
+  `tests/specific/flask-redis/counter_increment.sh` (via
+  `tests/specific/flask-redis/test.sh`) all pass against `dip-flask-redis:slim`,
+  linked to a running `redis` container.
+- `counter_increment.sh` issues two requests and asserts the view counter strictly
+  increases (e.g. 5 -> 6), confirming Redis read/write still happens on every request
+  after minimization, not just that a cached/static string is returned once.

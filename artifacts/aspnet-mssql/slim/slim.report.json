@@ -1,0 +1,308 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "26.04",
+    "display_name": "Ubuntu 26.04 LTS"
+  },
+  "type": "slim",
+  "state": "done",
+  "target_reference": "dip-aspnet-mssql:original",
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "10",
+      "display_name": "Debian GNU/Linux 10 (buster)"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:438282a748c0da9f1bfdb4d0bb8aff03e4f23fa4ebd44657e8d88014d0dadf11",
+      "tags": [
+        "original"
+      ],
+      "names": [
+        "dip-aspnet-mssql:original"
+      ],
+      "digests": [
+        "sha256:438282a748c0da9f1bfdb4d0bb8aff03e4f23fa4ebd44657e8d88014d0dadf11"
+      ],
+      "full_digests": [
+        "dip-aspnet-mssql@sha256:438282a748c0da9f1bfdb4d0bb8aff03e4f23fa4ebd44657e8d88014d0dadf11"
+      ]
+    },
+    "size": 85388703,
+    "size_human": "85 MB",
+    "create_time": "2026-08-23T13:16:16Z",
+    "runtime_name": "docker",
+    "architecture": "amd64",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "ASPNETCORE_URLS=http://+:80",
+      "DOTNET_RUNNING_IN_CONTAINER=true",
+      "DOTNET_VERSION=5.0.17",
+      "ASPNET_VERSION=5.0.17"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 66138661,
+  "minified_image_size_human": "66 MB",
+  "minified_image": "dip-aspnet-mssql:slim",
+  "minified_image_id": "sha256:1379b3af0c6cf300a6d923072a8d77f7ecfb265e5103ad7332ebebfba3f4be99",
+  "minified_image_digest": "sha256:159354ca1a0c81bb3077aba99637552925840912c69e15c413c2ced5bd068527",
+  "minified_image_has_data": true,
+  "minified_by": 1.2910558168088706,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/438282a748c0da9f1bfdb4d0bb8aff03e4f23fa4ebd44657e8d88014d0dadf11/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "dip-aspnet-mssql-seccomp.json",
+  "apparmor_profile_name": "dip-aspnet-mssql-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:438282a748c0da9f1bfdb4d0bb8aff03e4f23fa4ebd44657e8d88014d0dadf11",
+      "full_name": "dip-aspnet-mssql:original",
+      "repo_name": "dip-aspnet-mssql",
+      "version_tag": "original",
+      "raw_tags": [
+        "dip-aspnet-mssql:original"
+      ],
+      "create_time": "2026-08-23T13:16:16Z",
+      "new_size": 219926528,
+      "new_size_human": "220 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2022-05-28T01:20:43Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 78901248,
+          "size_human": "79 MB",
+          "params": "file:0513eda9512e010cb9459591b62e0c9d9319750923df091b64250ad6e98c2878 in /",
+          "command_snippet": "ADD file:0513eda9512e010cb9459591b62e0c9d931...",
+          "command_all": "ADD file:0513eda9512e010cb9459591b62e0c9d9319750923df091b64250ad6e98c2878 /",
+          "target": "/",
+          "source_type": "file",
+          "inst_set_time_bucket": "2022-05-28T04:15:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "CMD",
+          "time": "2022-05-28T01:20:43Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"bash\"]\n",
+          "command_snippet": "CMD [\"bash\"]\n",
+          "command_all": "CMD [\"bash\"]\n",
+          "inst_set_time_bucket": "2022-05-28T04:15:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2022-05-28T08:31:17Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 42676224,
+          "size_human": "43 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends         ca-certificates                 libc6         libgcc1         libgssapi-krb5-2         libicu63         libssl1.1         libstdc++6         zlib1g && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends         ca-certificates                 libc6         libgcc1         libgssapi-krb5-2         libicu63         libssl1.1         libstdc++6         zlib1g",
+            "rm -rf /var/lib/apt/lists/*"
+          ],
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-05-28T08:31:17Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "ASPNETCORE_URLS=http://+:80 DOTNET_RUNNING_IN_CONTAINER=true",
+          "command_snippet": "ENV ASPNETCORE_URLS=http://+:80 DOTNET_RUNNI...",
+          "command_all": "ENV ASPNETCORE_URLS=http://+:80 DOTNET_RUNNING_IN_CONTAINER=true",
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-05-28T08:31:38Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "DOTNET_VERSION=5.0.17",
+          "command_snippet": "ENV DOTNET_VERSION=5.0.17",
+          "command_all": "ENV DOTNET_VERSION=5.0.17",
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "COPY",
+          "time": "2022-05-28T08:31:42Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 76169216,
+          "size_human": "76 MB",
+          "params": "dir:656209ff9d5f572b9ac85d166cf04f3014464e60680ab4d6b588dd2409fa4a03 in /usr/share/dotnet",
+          "command_snippet": "COPY dir:656209ff9d5f572b9ac85d166cf04f30144...",
+          "command_all": "COPY dir:656209ff9d5f572b9ac85d166cf04f3014464e60680ab4d6b588dd2409fa4a03 /usr/share/dotnet",
+          "target": "/usr/share/dotnet",
+          "source_type": "dir",
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2022-05-28T08:31:43Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 12288,
+          "size_human": "12 kB",
+          "command_snippet": "RUN ln -s /usr/share/dotnet/dotnet /usr/bin/...",
+          "command_all": "RUN ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet",
+          "system_commands": [
+            "ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet"
+          ],
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-05-28T08:31:55Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "ASPNET_VERSION=5.0.17",
+          "command_snippet": "ENV ASPNET_VERSION=5.0.17",
+          "command_all": "ENV ASPNET_VERSION=5.0.17",
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "COPY",
+          "time": "2022-05-28T08:31:57Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 19247104,
+          "size_human": "19 MB",
+          "params": "dir:5d31539b5d7b6494646864f0840b13e8973d592db7c2173f042896981e73eee9 in /usr/share/dotnet/shared/Microsoft.AspNetCore.App",
+          "command_snippet": "COPY dir:5d31539b5d7b6494646864f0840b13e8973...",
+          "command_all": "COPY dir:5d31539b5d7b6494646864f0840b13e8973d592db7c2173f042896981e73eee9 /usr/share/dotnet/shared/Microsoft.AspNetCore.App",
+          "target": "/usr/share/dotnet/shared/Microsoft.AspNetCore.App",
+          "source_type": "dir",
+          "inst_set_time_bucket": "2022-05-28T11:30:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2026-08-23T13:16:09Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 8192,
+          "size_human": "8.2 kB",
+          "params": "/app",
+          "command_snippet": "WORKDIR /app",
+          "command_all": "WORKDIR /app",
+          "system_commands": [
+            "mkdir -p /app"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-23T16:15:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2026-08-23T13:16:09Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4096,
+          "size_human": "4.1 kB",
+          "params": "/app",
+          "command_snippet": "WORKDIR /app",
+          "command_all": "WORKDIR /app",
+          "system_commands": [
+            "mkdir -p /app"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-23T16:15:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "COPY",
+          "time": "2026-08-23T13:16:16Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 2908160,
+          "size_human": "2.9 MB",
+          "params": "/app/publish .",
+          "command_snippet": "COPY /app/publish .",
+          "command_all": "COPY /app/publish .",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-23T16:15:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2026-08-23T13:16:16Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"dotnet\",\"aspnetapp.dll\"]\n",
+          "command_snippet": "ENTRYPOINT [\"dotnet\",\"aspnetapp.dll\"]\n",
+          "command_all": "ENTRYPOINT [\"dotnet\",\"aspnetapp.dll\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "dip-aspnet-mssql:original"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-23T16:15:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}

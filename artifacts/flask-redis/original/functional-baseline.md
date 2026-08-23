@@ -32,7 +32,10 @@
 ## Test coverage
 - `tests/generic/container_up.sh` — container `running` state check.
 - `tests/generic/http_health.sh` — `GET /` returns 2xx and body contains expected substring.
-- `tests/specific/flask-redis/test.sh` — orchestrates both against the `web` container.
+- `tests/specific/flask-redis/counter_increment.sh` — issues two requests and asserts the view
+  counter strictly increases, proving Redis read/write happens on *every* request (a static or
+  cached response would pass the substring check above but fail this one).
+- `tests/specific/flask-redis/test.sh` — orchestrates all three against the `web` container.
 - Result against `dip-flask-redis:original`: **PASS**.
 
 ## Baseline artifacts (this directory)

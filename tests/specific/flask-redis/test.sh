@@ -12,5 +12,6 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 # Each hit increments a counter stored in redis, so a 200 response containing this
 # text proves the full web -> redis call chain works, not just that nginx/flask is up.
 "$ROOT_DIR/tests/generic/http_health.sh" "$BASE_URL/" "This webpage has been viewed"
+"$ROOT_DIR/tests/specific/flask-redis/counter_increment.sh" "$BASE_URL"
 
 echo "All flask-redis functional tests passed."

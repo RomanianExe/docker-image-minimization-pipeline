@@ -107,3 +107,53 @@ production target ambiguity, minimal surface) to validate the full pipeline end-
 (build → baseline test → SBOM → Grype → Slim → post-test → compare), then immediately follow
 with **`flask-redis`** to validate the pipeline against an interconnected multi-service example
 before generalizing to other clusters.
+
+## 5. Production Recommendation: SBOM/Vulnerability Scanning Order
+
+Slim's dynamic analysis strips package metadata (e.g. Python `*.dist-info`, Alpine's `apk`
+database) alongside genuinely unused files, since it has no way to distinguish "unused" from
+"used but undocumented" — it only sees what was touched during the probe. This means Syft/Grype
+become partially blind on the *slimmed* image: a package can still be present and functional
+while no longer being detected (confirmed on `flask` and `flask-redis`, see their
+`comparison.md`). The size reduction is real; the vulnerability/component reduction is partly a
+detection artifact, not a security improvement.
+
+**Recommendation:** generate the SBOM and run vulnerability scanning against the **original**
+image, before minimization — that is the accurate, auditable security record. The **slim**
+image should be the one deployed to production (for its size/attack-surface benefits), but its
+own SBOM/scan results should not be relied upon as a complete picture of what it contains.
+
+```
+build original → SBOM + vulnerability scan (security decisions made here) → slim → deploy slim image
+```
+
+## 6. Excluded Cluster: Rust/WASM (out of scope)
+
+The Rust/WASM cluster (`wasmedge-mysql-nginx`, `wasmedge-kafka-mysql`, and — while
+technically native Rust, not WASM — `react-rust-postgres`'s backend) was attempted and
+excluded after hitting two independent, concrete blockers, tested directly rather than
+assumed:
+
+1. **The WASM examples cannot be run in this environment at all.** `wasmedge-mysql-nginx`'s
+   production image is `FROM scratch` + a `.wasm` binary, requiring the
+   `io.containerd.wasmedge.v1` container runtime (`compose.yaml`: `runtime:
+   io.containerd.wasmedge.v1`). This Docker installation only has `runc` registered
+   (`docker info` confirms no wasmedge runtime), and the host has no standalone `wasmedge`
+   CLI either. `docker-slim` itself would need to start a container from this image to run
+   its dynamic analysis, which is not possible here — not a pipeline limitation, an
+   environment/tooling one.
+2. **Both Rust examples attempted fail to even build**, independent of (1).
+   `wasmedge-mysql-nginx/backend/Cargo.toml` and `react-rust-postgres/backend/Cargo.toml`
+   both ship without a committed `Cargo.lock` (unlike the Node examples, which commit
+   `package-lock.json`). Building today resolves current crates.io dependency versions,
+   several of which now require Rust's "edition 2024" — unsupported by the Rust toolchains
+   pinned in these Dockerfiles (`rust:1.64`, `rust:buster`/Cargo 1.79). This is dependency
+   drift in the upstream vendored examples, not something introduced by this pipeline.
+
+**Conclusion:** the Rust/WASM cluster is excluded from this project's minimization results.
+This is itself a valid finding worth reporting: not every example in a multi-year-old
+reference repository remains buildable/runnable without non-trivial intervention (pinning a
+working dependency set, or provisioning a WasmEdge-enabled container runtime), and
+attempting a fix was judged out of scope for what this pipeline is meant to demonstrate.
+Final example coverage: **7 examples across 6 technology clusters** (Python ×2, PHP, Node,
+Java, Go, .NET) — see `artifacts/*/comparison.md` for each.

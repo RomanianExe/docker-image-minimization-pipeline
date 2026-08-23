@@ -1,0 +1,33 @@
+{
+  "example": "sparkjava",
+  "original": {
+    "image_tag": "dip-sparkjava:original",
+    "size_bytes": 97444975,
+    "size_human": "97.44MB",
+    "sbom_component_count": 170,
+    "vulnerability_total": 462,
+    "vulnerability_by_severity": {
+      "High": 28,
+      "Medium": 281,
+      "Low": 141,
+      "Negligible": 12
+    }
+  },
+  "slim": {
+    "image_tag": "dip-sparkjava:slim",
+    "size_bytes": 53958724,
+    "size_human": "53.96MB",
+    "sbom_component_count": 20,
+    "vulnerability_total": 44,
+    "vulnerability_by_severity": {
+      "High": 15,
+      "Medium": 19,
+      "Low": 10
+    }
+  },
+  "size_reduction_pct": 44.6,
+  "component_reduction": 150,
+  "vulnerability_reduction": 418,
+  "functional_tests_original": "PASS (tests/specific/sparkjava/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/sparkjava/test.sh)"
+}

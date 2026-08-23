@@ -1,0 +1,18 @@
+{
+  "example": "nginx-golang",
+  "stage": "scratch-stage (bonus, no Slim)",
+  "image_tag": "dip-nginx-golang-backend:scratch-stage",
+  "generated_at": "2026-08-23T13:05:00Z",
+  "size_bytes": 4260399,
+  "size_human": "4.26MB",
+  "sbom_component_count": 3,
+  "vulnerability_total": 43,
+  "vulnerability_by_severity": {
+    "Critical": 2,
+    "High": 25,
+    "Medium": 15,
+    "Low": 1
+  },
+  "functional_tests": "PASS (manual curl verification, see comparison.md)",
+  "note": "Built directly from the Dockerfile's existing unused final 'FROM scratch' stage, without running docker-slim. See comparison.md for the 'free minimization' analysis."
+}

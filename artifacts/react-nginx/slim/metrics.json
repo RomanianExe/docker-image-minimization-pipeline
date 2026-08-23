@@ -1,0 +1,12 @@
+{
+  "example": "react-nginx",
+  "stage": "slim",
+  "image_tag": "dip-react-nginx:slim",
+  "generated_at": "2026-08-23T10:35:00Z",
+  "size_bytes": 4481029,
+  "size_human": "4.48MB",
+  "sbom_component_count": 1,
+  "vulnerability_total": 0,
+  "vulnerability_by_severity": {},
+  "functional_tests": "PASS (tests/specific/react-nginx/test.sh)"
+}

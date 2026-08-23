@@ -1,0 +1,36 @@
+{
+  "example": "apache-php",
+  "original": {
+    "image_tag": "dip-apache-php:original",
+    "size_bytes": 167773412,
+    "size_human": "167.77MB",
+    "sbom_component_count": 197,
+    "vulnerability_total": 1929,
+    "vulnerability_by_severity": {
+      "Critical": 183,
+      "High": 488,
+      "Medium": 410,
+      "Low": 48,
+      "Negligible": 784,
+      "Unknown": 16
+    }
+  },
+  "slim": {
+    "image_tag": "dip-apache-php:slim",
+    "size_bytes": 33723017,
+    "size_human": "33.72MB",
+    "sbom_component_count": 4,
+    "vulnerability_total": 59,
+    "vulnerability_by_severity": {
+      "Critical": 12,
+      "High": 26,
+      "Medium": 19,
+      "Low": 2
+    }
+  },
+  "size_reduction_pct": 79.9,
+  "component_reduction": 193,
+  "vulnerability_reduction": 1870,
+  "functional_tests_original": "PASS (tests/specific/apache-php/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/apache-php/test.sh)"
+}

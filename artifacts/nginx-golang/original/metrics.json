@@ -1,0 +1,17 @@
+{
+  "example": "nginx-golang",
+  "stage": "original",
+  "image_tag": "dip-nginx-golang-backend:original",
+  "generated_at": "2026-08-23T13:00:00Z",
+  "size_bytes": 123401388,
+  "size_human": "123.40MB",
+  "sbom_component_count": 59,
+  "vulnerability_total": 574,
+  "vulnerability_by_severity": {
+    "Critical": 38,
+    "High": 271,
+    "Medium": 245,
+    "Low": 20
+  },
+  "functional_tests": "PASS (tests/specific/nginx-golang/test.sh)"
+}
