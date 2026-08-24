@@ -37,8 +37,22 @@ metadata left, this image is the clearest illustration yet that **post-slim
 scans should not be treated as an accurate security picture** — see
 `docs/methodology.md` §5 for the standing recommendation to scan pre-minimization.
 
+## Coverage review finding: JS/CSS bundle and SPA fallback were untested (fixed)
+A later test-coverage review found that the original test suite only checked
+`index.html`'s title — it never verified the actual JS/CSS bundle files (never
+touched by Slim's single `GET /` probe, since there's no browser/JS execution)
+or the custom `nginx.conf`'s SPA fallback (`try_files $uri /index.html =404;`).
+Checked directly against the already-built `dip-react-nginx:slim` image: both
+the JS and CSS bundles still returned `200` (nginx's own directory-level file
+access during startup/serving appears to have kept them, even without an
+explicit Slim probe), and the SPA fallback still worked. The test suite
+(`tests/specific/react-nginx/test.sh`) was extended with both checks — using
+dynamic discovery of the hashed JS/CSS filenames from the served HTML, since
+they change on every rebuild — so a future minimization run that *does* break
+either of these will now be caught instead of passing silently on a
+title-only check.
+
 ## Functional validation
-- `tests/generic/container_up.sh` + `tests/generic/http_health.sh` (via
-  `tests/specific/react-nginx/test.sh`) both pass against `dip-react-nginx:slim`:
-  `GET /` returns `200 OK` with body containing `React App`, confirming nginx
-  still serves the correct built bundle with its custom config after minimization.
+- `tests/generic/container_up.sh`, `tests/generic/http_health.sh` (title, JS
+  bundle, CSS bundle, SPA fallback — 4 checks) via
+  `tests/specific/react-nginx/test.sh`, all pass against `dip-react-nginx:slim`.

@@ -58,8 +58,17 @@ the backend, linked to it by the hostname the proxy config expects). Verified
 both the direct backend response and the response through nginx match, proving
 minimization didn't break the proxy's ability to reach the backend.
 
+## Coverage review addition: negative-path (404) check
+A later test-coverage review found the suite only checked the one registered
+route (`/`). Added a 404 check for an unregistered path, run both directly on
+the backend and through the proxy — re-verified against the already-built
+`dip-nginx-golang-backend:slim` + proxy and confirmed still `404` on both,
+proving chi's default not-found handling survived minimization and that the
+proxy doesn't mask a backend error behind its own page.
+
 ## Functional validation
-- `tests/generic/container_up.sh`, `tests/generic/http_health.sh` (direct), and
-  `tests/generic/proxy_passthrough.sh` (via `tests/specific/nginx-golang/test.sh`)
-  all pass against `dip-nginx-golang-backend:slim`, both hit directly and through
-  a live nginx proxy container linked to it.
+- `tests/generic/container_up.sh`, `tests/generic/http_health.sh` (direct),
+  `tests/generic/proxy_passthrough.sh`, and the negative-path 404 check (via
+  `tests/specific/nginx-golang/test.sh`) all pass against
+  `dip-nginx-golang-backend:slim`, both hit directly and through a live nginx
+  proxy container linked to it.

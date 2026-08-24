@@ -44,6 +44,16 @@ for kv in ${APP_ENV:-}; do
   ENV_ARGS+=(--env "$kv")
 done
 
+# APP_MOUNT (optional, "host_path:container_path[:ro]") bind-mounts a file into
+# the container Slim analyzes — e.g. a Docker-secrets-style password file the
+# app reads directly instead of an env var. --exclude-mounts (docker-slim's
+# default) keeps this out of the final minimized image, matching how the file
+# is provided at runtime in production rather than baked into the image.
+MOUNT_ARGS=()
+if [[ -n "${APP_MOUNT:-}" ]]; then
+  MOUNT_ARGS=(--mount "$ROOT_DIR/$APP_MOUNT")
+fi
+
 docker-slim build \
   --target "$ORIGINAL_TAG" \
   --tag "$SLIM_TAG" \
@@ -52,12 +62,19 @@ docker-slim build \
   --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
   "${LINK_ARGS[@]}" \
   "${ENV_ARGS[@]}" \
+  "${MOUNT_ARGS[@]}" \
   --show-clogs \
   --show-blogs \
   --copy-meta-artifacts "$ARTIFACT_DIR"
 
 if [[ -n "${DEPENDENCY_IMAGE:-}" ]]; then
   "$ROOT_DIR/pipeline/deps.sh" down "$EXAMPLE"
+fi
+
+# docker-slim writes slim.report.json into the current working directory, not
+# --copy-meta-artifacts's dir — move it alongside the other slim artifacts.
+if [[ -f "$ROOT_DIR/slim.report.json" ]]; then
+  mv "$ROOT_DIR/slim.report.json" "$ARTIFACT_DIR/"
 fi
 
 echo "$SLIM_TAG"
