@@ -43,11 +43,15 @@ separately as a "free" minimization opportunity — see `comparison.md`.
   example, first reverse-proxy case): `GET /` through the nginx proxy, requiring
   a mandatory backend-specific marker in the body, so a proxy default/error page
   cannot false-positive as "backend reachable".
-- `tests/specific/nginx-golang/test.sh` — orchestrates all three (needs
+- **404 check** (added retroactively after a coverage review): `main.go`'s
+  `chi` router only registers `"/"` — an unregistered path must still get chi's
+  default 404, checked both directly on the backend and through the proxy
+  (a proxy could mask a backend error behind its own error page, a distinct
+  failure mode from passthrough working at all).
+- `tests/specific/nginx-golang/test.sh` — orchestrates all of the above (needs
   `pipeline/proxy.sh up nginx-golang <backend-container>` run first to start the
   linked nginx sidecar; `pipeline/proxy.sh down nginx-golang` after).
-- Result against `dip-nginx-golang-backend:original` + proxy: **PASS** (both
-  direct and passthrough).
+- Result against `dip-nginx-golang-backend:original` + proxy: **PASS** (5/5 checks).
 
 ## Baseline artifacts (this directory)
 - `sbom.json` — Syft SBOM, 59 components (Go toolchain + Alpine packages in the

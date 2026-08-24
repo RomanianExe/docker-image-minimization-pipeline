@@ -1,0 +1,36 @@
+{
+  "example": "django",
+  "original": {
+    "image_tag": "dip-django:original",
+    "size_bytes": 27718999,
+    "size_human": "27.72MB",
+    "sbom_component_count": 63,
+    "vulnerability_total": 178,
+    "vulnerability_by_severity": {
+      "Critical": 9,
+      "High": 63,
+      "Medium": 88,
+      "Low": 17,
+      "Negligible": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-django:slim",
+    "size_bytes": 11358428,
+    "size_human": "11.36MB",
+    "sbom_component_count": 1,
+    "vulnerability_total": 71,
+    "vulnerability_by_severity": {
+      "Medium": 36,
+      "High": 26,
+      "Critical": 1,
+      "Low": 7,
+      "Negligible": 1
+    }
+  },
+  "size_reduction_pct": 59.0,
+  "component_reduction": 62,
+  "vulnerability_reduction": 107,
+  "functional_tests_original": "PASS (tests/specific/django/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/django/test.sh)"
+}

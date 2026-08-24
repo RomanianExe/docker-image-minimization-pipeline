@@ -23,10 +23,18 @@ for kv in ${DEPENDENCY_ENV:-}; do
   DEP_ENV_ARGS+=(-e "$kv")
 done
 
+# DEPENDENCY_MOUNT (optional, "host_path:container_path[:ro]") bind-mounts a
+# file into the dependency container — e.g. a Docker-secrets-style password
+# file some examples read instead of taking a password via plain env var.
+DEP_MOUNT_ARGS=()
+if [[ -n "${DEPENDENCY_MOUNT:-}" ]]; then
+  DEP_MOUNT_ARGS=(-v "$ROOT_DIR/$DEPENDENCY_MOUNT")
+fi
+
 case "$ACTION" in
   up)
     docker rm -f "$DEPENDENCY_CONTAINER" >/dev/null 2>&1 || true
-    docker run -d --name "$DEPENDENCY_CONTAINER" "${DEP_ENV_ARGS[@]}" "$DEPENDENCY_IMAGE" >/dev/null
+    docker run -d --name "$DEPENDENCY_CONTAINER" "${DEP_ENV_ARGS[@]}" "${DEP_MOUNT_ARGS[@]}" "$DEPENDENCY_IMAGE" >/dev/null
     echo "Started dependency container '$DEPENDENCY_CONTAINER' ($DEPENDENCY_IMAGE)"
     ;;
   down)

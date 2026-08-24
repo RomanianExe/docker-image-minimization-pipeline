@@ -1,0 +1,16 @@
+{
+  "example": "sparkjava-mysql",
+  "stage": "slim",
+  "image_tag": "dip-sparkjava-mysql:slim",
+  "generated_at": "2026-08-24T18:37:51Z",
+  "size_bytes": 57766179,
+  "size_human": "57.77MB",
+  "sbom_component_count": 22,
+  "vulnerability_total": 50,
+  "vulnerability_by_severity": {
+    "High": 20,
+    "Medium": 20,
+    "Low": 10
+  },
+  "functional_tests": "PASS (tests/specific/sparkjava-mysql/test.sh)"
+}

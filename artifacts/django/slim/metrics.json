@@ -1,0 +1,18 @@
+{
+  "example": "django",
+  "stage": "slim",
+  "image_tag": "dip-django:slim",
+  "generated_at": "2026-08-24T14:39:02Z",
+  "size_bytes": 11358428,
+  "size_human": "11.36MB",
+  "sbom_component_count": 1,
+  "vulnerability_total": 71,
+  "vulnerability_by_severity": {
+    "Medium": 36,
+    "High": 26,
+    "Critical": 1,
+    "Low": 7,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/django/test.sh)"
+}

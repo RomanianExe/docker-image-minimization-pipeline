@@ -33,8 +33,19 @@ which would have been an error).
 ## Test coverage
 - `tests/generic/container_up.sh` — container `running` state check.
 - `tests/generic/http_health.sh` — `GET /` returns 2xx and body contains expected substring.
-- `tests/specific/react-nginx/test.sh` — orchestrates both against the `frontend` container.
-- Result against `dip-react-nginx:original`: **PASS**.
+- **JS/CSS bundle check** (added retroactively after a coverage review): the
+  built app's index.html references content-hashed bundle files (e.g.
+  `/static/js/main.d7949b8a.js`) that are never touched by docker-slim's single
+  `GET /` probe (no browser/JS execution) — the test suite discovers these paths
+  from the served HTML and fetches them directly, proving the actual JS/CSS
+  survive minimization, not just `index.html`.
+- **SPA fallback check**: `nginx.conf` sets `try_files $uri /index.html =404;`
+  for client-side routing (React Router). An arbitrary unknown path is checked
+  to still return the app shell (200 + "React App"), not nginx's default 404 —
+  proving the custom `nginx.conf` itself (not just the static files) survived.
+- `tests/specific/react-nginx/test.sh` — orchestrates all of the above against
+  the `frontend` container.
+- Result against `dip-react-nginx:original`: **PASS** (4/4 checks).
 
 ## Baseline artifacts (this directory)
 - `sbom.json` — Syft SBOM, 71 components identified (nginx:alpine base packages;
