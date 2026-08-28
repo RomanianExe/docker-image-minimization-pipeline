@@ -1,0 +1,18 @@
+{
+  "example": "nginx-flask-mysql",
+  "stage": "original",
+  "image_tag": "dip-nginx-flask-mysql:original",
+  "generated_at": "2026-08-27T12:20:51Z",
+  "size_bytes": 24355600,
+  "size_human": "24.36MB",
+  "sbom_component_count": 80,
+  "vulnerability_total": 62,
+  "vulnerability_by_severity": {
+    "High": 24,
+    "Medium": 28,
+    "Unknown": 4,
+    "Low": 5,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/nginx-flask-mysql/test.sh)"
+}

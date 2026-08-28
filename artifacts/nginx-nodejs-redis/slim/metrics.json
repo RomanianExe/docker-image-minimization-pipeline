@@ -1,0 +1,17 @@
+{
+  "example": "nginx-nodejs-redis",
+  "stage": "slim",
+  "image_tag": "dip-nginx-nodejs-redis:slim",
+  "generated_at": "2026-08-27T12:19:27Z",
+  "size_bytes": 35234680,
+  "size_human": "35.23MB",
+  "sbom_component_count": 58,
+  "vulnerability_total": 91,
+  "vulnerability_by_severity": {
+    "High": 41,
+    "Medium": 31,
+    "Critical": 5,
+    "Low": 14
+  },
+  "functional_tests": "PASS (tests/specific/nginx-nodejs-redis/test.sh)"
+}

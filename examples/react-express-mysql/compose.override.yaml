@@ -1,0 +1,28 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified). It supplies only what the pipeline needs on top
+# of what the example already declares:
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim), and
+#                     make `docker compose build` write that tag.
+#   container_name  - stable name the functional tests address.
+#   volumes !reset  - drop the dev-only source bind mounts, so the container
+#                     runs the code baked into the image (what Slim analyses),
+#                     not the host tree mounted over it.
+#   ports !override - remap onto this project's own host-port range, so
+#                     examples that all publish :80/:8000 upstream can be
+#                     processed without colliding.
+#
+# The `db` service is not touched at all: it publishes no host ports upstream,
+# so its vendor definition (image, env, secrets) is used verbatim.
+#
+# command !reset - compose overrides the image's CMD with `npm run start-watch`
+#   (nodemon against the bind-mounted source). With the mounts gone, the image's
+#   own `node src/index.js` is what a real deployment of this image would run.
+services:
+  backend:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    command: !reset null
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"

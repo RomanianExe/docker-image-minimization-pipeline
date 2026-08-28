@@ -2,14 +2,14 @@
   "example": "flask",
   "stage": "slim",
   "image_tag": "dip-flask:slim",
-  "generated_at": "2026-08-22T15:41:55.271418+00:00",
-  "size_bytes": 9786814,
+  "generated_at": "2026-08-28T09:44:16Z",
+  "size_bytes": 9787365,
   "size_human": "9.79MB",
   "sbom_component_count": 2,
-  "vulnerability_total": 19,
+  "vulnerability_total": 20,
   "vulnerability_by_severity": {
     "High": 5,
-    "Medium": 10,
+    "Medium": 11,
     "Low": 3,
     "Negligible": 1
   },

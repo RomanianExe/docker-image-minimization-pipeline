@@ -1,0 +1,120 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "26.04",
+    "display_name": "Ubuntu 26.04 LTS"
+  },
+  "type": "slim",
+  "state": "done",
+  "target_reference": "dip-traefik-golang:original",
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "unknown",
+      "version": "",
+      "display_name": "unknown"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf",
+      "tags": [
+        "original"
+      ],
+      "names": [
+        "dip-traefik-golang:original"
+      ],
+      "digests": [
+        "sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf"
+      ],
+      "full_digests": [
+        "dip-traefik-golang@sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf"
+      ]
+    },
+    "size": 3557103,
+    "size_human": "3.6 MB",
+    "create_time": "2026-08-27T10:14:23Z",
+    "runtime_name": "docker",
+    "architecture": "amd64",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 3774391,
+  "minified_image_size_human": "3.8 MB",
+  "minified_image": "dip-traefik-golang:slim",
+  "minified_image_id": "sha256:20def6b687a9ffe6a76b5a1a4b8c958fb8795e1a2b8d7c7c4101ae0d3a2c6538",
+  "minified_image_digest": "sha256:b595b0ff9ce791fe7eb7b171834327570bb80f2218ce5221f37c701b02259eb9",
+  "minified_image_has_data": true,
+  "minified_by": 0.9424309776067186,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "dip-traefik-golang-seccomp.json",
+  "apparmor_profile_name": "dip-traefik-golang-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf",
+      "full_name": "dip-traefik-golang:original",
+      "repo_name": "dip-traefik-golang",
+      "version_tag": "original",
+      "raw_tags": [
+        "dip-traefik-golang:original"
+      ],
+      "create_time": "2026-08-27T10:14:23Z",
+      "new_size": 6258688,
+      "new_size_human": "6.3 MB",
+      "instructions": [
+        {
+          "type": "COPY",
+          "time": "2026-08-27T10:14:23Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 6258688,
+          "size_human": "6.3 MB",
+          "params": "/compose/hello-docker/backend /usr/local/bin/backend",
+          "command_snippet": "COPY /compose/hello-docker/backend /usr/loca...",
+          "command_all": "COPY /compose/hello-docker/backend /usr/local/bin/backend",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-27T13:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2026-08-27T10:14:23Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/local/bin/backend\"]\n",
+          "command_snippet": "CMD [\"/usr/local/bin/backend\"]\n",
+          "command_all": "CMD [\"/usr/local/bin/backend\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "dip-traefik-golang:original"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-27T13:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}

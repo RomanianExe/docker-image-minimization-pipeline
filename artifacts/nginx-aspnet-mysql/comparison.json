@@ -1,0 +1,33 @@
+{
+  "example": "nginx-aspnet-mysql",
+  "original": {
+    "image_tag": "dip-nginx-aspnet-mysql:original",
+    "size_bytes": 86705181,
+    "size_human": "86.71MB",
+    "sbom_component_count": 103,
+    "vulnerability_total": 325,
+    "vulnerability_by_severity": {
+      "Critical": 10,
+      "Negligible": 85,
+      "High": 91,
+      "Medium": 109,
+      "Low": 10,
+      "Unknown": 20
+    }
+  },
+  "slim": {
+    "image_tag": "dip-nginx-aspnet-mysql:slim",
+    "size_bytes": 48999990,
+    "size_human": "49.00MB",
+    "sbom_component_count": 4,
+    "vulnerability_total": 1,
+    "vulnerability_by_severity": {
+      "High": 1
+    }
+  },
+  "size_reduction_pct": 43.5,
+  "component_reduction": 99,
+  "vulnerability_reduction": 324,
+  "functional_tests_original": "PASS (tests/specific/nginx-aspnet-mysql/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/nginx-aspnet-mysql/test.sh)"
+}

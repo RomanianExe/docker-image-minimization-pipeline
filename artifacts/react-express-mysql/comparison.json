@@ -1,0 +1,36 @@
+{
+  "example": "react-express-mysql",
+  "original": {
+    "image_tag": "dip-react-express-mysql:original",
+    "size_bytes": 417884686,
+    "size_human": "417.88MB",
+    "sbom_component_count": 661,
+    "vulnerability_total": 1791,
+    "vulnerability_by_severity": {
+      "High": 263,
+      "Medium": 408,
+      "Negligible": 916,
+      "Critical": 78,
+      "Low": 80,
+      "Unknown": 46
+    }
+  },
+  "slim": {
+    "image_tag": "dip-react-express-mysql:slim",
+    "size_bytes": 55605029,
+    "size_human": "55.61MB",
+    "sbom_component_count": 76,
+    "vulnerability_total": 24,
+    "vulnerability_by_severity": {
+      "High": 8,
+      "Critical": 2,
+      "Medium": 7,
+      "Low": 7
+    }
+  },
+  "size_reduction_pct": 86.7,
+  "component_reduction": 585,
+  "vulnerability_reduction": 1767,
+  "functional_tests_original": "PASS (tests/specific/react-express-mysql/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/react-express-mysql/test.sh)"
+}

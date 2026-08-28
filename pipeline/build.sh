@@ -1,5 +1,18 @@
 #!/usr/bin/env bash
-# Build the original (pre-minimization) image for a given awesome-compose example.
+# Build the original (pre-minimization) image for a given awesome-compose example,
+# using the example's own compose file (`docker compose build`) rather than a
+# hand-reconstructed `docker build` invocation.
+#
+# The build context, dockerfile and target stage all come from the vendor compose
+# file itself, so what this produces is by construction the image that example
+# actually ships — no risk of the pipeline drifting from `target:`/`context:`
+# upstream. examples/<name>/compose.override.yaml supplies only the output tag,
+# plus (for the four examples with a pipeline-side patched Dockerfile) the
+# substituted dockerfile path.
+#
+# Buildable dependency services listed in COMPOSE_DEPS (e.g. the custom-built
+# nginx proxies) are built here too, so the run stage can use `up --no-build`.
+#
 # Usage: pipeline/build.sh <example-name> [image-tag-suffix]
 set -euo pipefail
 
@@ -18,23 +31,8 @@ source "$ENV_FILE"
 
 IMAGE_TAG="${IMAGE_NAME}:${TAG_SUFFIX}"
 
-DOCKERFILE_ARGS=()
-if [[ -n "${DOCKERFILE_PATH:-}" ]]; then
-  DOCKERFILE_ARGS=(-f "$ROOT_DIR/$DOCKERFILE_PATH")
-fi
-
-# DOCKERFILE_TARGET may be left empty in pipeline.env for Dockerfiles whose final
-# (unnamed) stage is the one actually built by compose (no `target:` set there
-# either) — omit --target in that case so docker build uses the last stage.
-TARGET_ARGS=()
-if [[ -n "${DOCKERFILE_TARGET:-}" ]]; then
-  TARGET_ARGS=(--target "$DOCKERFILE_TARGET")
-fi
-
-docker build \
-  "${TARGET_ARGS[@]}" \
-  -t "$IMAGE_TAG" \
-  "${DOCKERFILE_ARGS[@]}" \
-  "$ROOT_DIR/$BUILD_CONTEXT"
+# shellcheck disable=SC2086
+TARGET_IMAGE="$IMAGE_TAG" "$ROOT_DIR/pipeline/compose.sh" "$EXAMPLE" \
+  build "$COMPOSE_SERVICE" ${COMPOSE_BUILD_DEPS:-}
 
 echo "$IMAGE_TAG"

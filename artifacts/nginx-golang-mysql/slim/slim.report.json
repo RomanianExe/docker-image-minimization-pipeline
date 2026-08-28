@@ -1,0 +1,120 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "26.04",
+    "display_name": "Ubuntu 26.04 LTS"
+  },
+  "type": "slim",
+  "state": "done",
+  "target_reference": "dip-nginx-golang-mysql:original",
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "unknown",
+      "version": "",
+      "display_name": "unknown"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:670589528049c59589b243d328b8906b8e40cfa34ceb1c7b1dc8cc468840bbfc",
+      "tags": [
+        "original"
+      ],
+      "names": [
+        "dip-nginx-golang-mysql:original"
+      ],
+      "digests": [
+        "sha256:670589528049c59589b243d328b8906b8e40cfa34ceb1c7b1dc8cc468840bbfc"
+      ],
+      "full_digests": [
+        "dip-nginx-golang-mysql@sha256:670589528049c59589b243d328b8906b8e40cfa34ceb1c7b1dc8cc468840bbfc"
+      ]
+    },
+    "size": 4156598,
+    "size_human": "4.2 MB",
+    "create_time": "2026-08-27T11:01:32Z",
+    "runtime_name": "docker",
+    "architecture": "amd64",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 4419230,
+  "minified_image_size_human": "4.4 MB",
+  "minified_image": "dip-nginx-golang-mysql:slim",
+  "minified_image_id": "sha256:4cea81d5d9652b84408289cc509f51fa495975cf14e46eca6a9302d210ea650b",
+  "minified_image_digest": "sha256:efe395b70d5459a3f112627d0136f5ad6e0cb8e759102459bc294c6aeef78e75",
+  "minified_image_has_data": true,
+  "minified_by": 0.9405706423969786,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/670589528049c59589b243d328b8906b8e40cfa34ceb1c7b1dc8cc468840bbfc/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "dip-nginx-golang-mysql-seccomp.json",
+  "apparmor_profile_name": "dip-nginx-golang-mysql-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:670589528049c59589b243d328b8906b8e40cfa34ceb1c7b1dc8cc468840bbfc",
+      "full_name": "dip-nginx-golang-mysql:original",
+      "repo_name": "dip-nginx-golang-mysql",
+      "version_tag": "original",
+      "raw_tags": [
+        "dip-nginx-golang-mysql:original"
+      ],
+      "create_time": "2026-08-27T11:01:32Z",
+      "new_size": 7438336,
+      "new_size_human": "7.4 MB",
+      "instructions": [
+        {
+          "type": "COPY",
+          "time": "2026-08-27T11:01:32Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 7438336,
+          "size_human": "7.4 MB",
+          "params": "/code/bin/backend /usr/local/bin/backend",
+          "command_snippet": "COPY /code/bin/backend /usr/local/bin/backen...",
+          "command_all": "COPY /code/bin/backend /usr/local/bin/backend",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-27T14:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2026-08-27T11:01:32Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/local/bin/backend\"]\n",
+          "command_snippet": "CMD [\"/usr/local/bin/backend\"]\n",
+          "command_all": "CMD [\"/usr/local/bin/backend\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "dip-nginx-golang-mysql:original"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-27T14:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}

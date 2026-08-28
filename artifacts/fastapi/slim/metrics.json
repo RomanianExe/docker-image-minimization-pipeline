@@ -1,0 +1,17 @@
+{
+  "example": "fastapi",
+  "stage": "slim",
+  "image_tag": "dip-fastapi:slim",
+  "generated_at": "2026-08-27T10:23:41Z",
+  "size_bytes": 21448485,
+  "size_human": "21.45MB",
+  "sbom_component_count": 6,
+  "vulnerability_total": 42,
+  "vulnerability_by_severity": {
+    "High": 13,
+    "Medium": 23,
+    "Low": 5,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/fastapi/test.sh)"
+}

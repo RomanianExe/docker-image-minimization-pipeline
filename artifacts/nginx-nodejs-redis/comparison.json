@@ -1,0 +1,34 @@
+{
+  "example": "nginx-nodejs-redis",
+  "original": {
+    "image_tag": "dip-nginx-nodejs-redis:original",
+    "size_bytes": 42809197,
+    "size_human": "42.81MB",
+    "sbom_component_count": 512,
+    "vulnerability_total": 246,
+    "vulnerability_by_severity": {
+      "Critical": 17,
+      "High": 129,
+      "Medium": 82,
+      "Low": 18
+    }
+  },
+  "slim": {
+    "image_tag": "dip-nginx-nodejs-redis:slim",
+    "size_bytes": 35234680,
+    "size_human": "35.23MB",
+    "sbom_component_count": 58,
+    "vulnerability_total": 91,
+    "vulnerability_by_severity": {
+      "High": 41,
+      "Medium": 31,
+      "Critical": 5,
+      "Low": 14
+    }
+  },
+  "size_reduction_pct": 17.7,
+  "component_reduction": 454,
+  "vulnerability_reduction": 155,
+  "functional_tests_original": "PASS (tests/specific/nginx-nodejs-redis/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/nginx-nodejs-redis/test.sh)"
+}

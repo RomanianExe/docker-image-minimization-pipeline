@@ -1,0 +1,18 @@
+{
+  "example": "nginx-wsgi-flask",
+  "stage": "slim",
+  "image_tag": "dip-nginx-wsgi-flask:slim",
+  "generated_at": "2026-08-27T12:26:00Z",
+  "size_bytes": 8196145,
+  "size_human": "8.20MB",
+  "sbom_component_count": 1,
+  "vulnerability_total": 89,
+  "vulnerability_by_severity": {
+    "High": 35,
+    "Medium": 42,
+    "Critical": 4,
+    "Low": 7,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/nginx-wsgi-flask/test.sh)"
+}

@@ -22,7 +22,7 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:18110e099e01a1f60a7ba456fe0353b08b704d3de2009fd8197b556428f4e4ab",
+      "id": "sha256:1e32214f40fb8d8453da75d9926119db7ea543fd823a705af0974dad1bee9995",
       "tags": [
         "original"
       ],
@@ -30,18 +30,23 @@
         "dip-flask:original"
       ],
       "digests": [
-        "sha256:18110e099e01a1f60a7ba456fe0353b08b704d3de2009fd8197b556428f4e4ab"
+        "sha256:1e32214f40fb8d8453da75d9926119db7ea543fd823a705af0974dad1bee9995"
       ],
       "full_digests": [
-        "dip-flask@sha256:18110e099e01a1f60a7ba456fe0353b08b704d3de2009fd8197b556428f4e4ab"
+        "dip-flask@sha256:1e32214f40fb8d8453da75d9926119db7ea543fd823a705af0974dad1bee9995"
       ]
     },
-    "size": 23798493,
+    "size": 23798617,
     "size_human": "24 MB",
     "create_time": "2026-08-22T14:33:41Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "os": "linux",
+    "labels": {
+      "com.docker.compose.project": "dip-flask",
+      "com.docker.compose.service": "web",
+      "com.docker.compose.version": "5.5.0"
+    },
     "env_vars": [
       "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
       "LANG=C.UTF-8",
@@ -53,21 +58,21 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 9786814,
+  "minified_image_size": 9787365,
   "minified_image_size_human": "9.8 MB",
   "minified_image": "dip-flask:slim",
-  "minified_image_id": "sha256:cd5a88aa44f4124b43c796b089332e42fffc91130b4df66b1970c7553d92fbd9",
-  "minified_image_digest": "sha256:d19fff98d58488acca2ca9faa6d5e9996e4bd9d9e59136bf717950639f9bbc41",
+  "minified_image_id": "sha256:93e090296d548a49ce9192a51cd7f9916a011a31eda56e43630682b10f0c1e6c",
+  "minified_image_digest": "sha256:da6a5be525bcbe33c85f82388db764ec71c6ae2d48149343d2b73c1a4b60a70c",
   "minified_image_has_data": true,
-  "minified_by": 2.43168951611832,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/18110e099e01a1f60a7ba456fe0353b08b704d3de2009fd8197b556428f4e4ab/artifacts",
+  "minified_by": 2.4315652885122807,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/1e32214f40fb8d8453da75d9926119db7ea543fd823a705af0974dad1bee9995/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-flask-seccomp.json",
   "apparmor_profile_name": "dip-flask-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:18110e099e01a1f60a7ba456fe0353b08b704d3de2009fd8197b556428f4e4ab",
+      "id": "sha256:1e32214f40fb8d8453da75d9926119db7ea543fd823a705af0974dad1bee9995",
       "full_name": "dip-flask:original",
       "repo_name": "dip-flask",
       "version_tag": "original",

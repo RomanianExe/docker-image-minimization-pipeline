@@ -1,0 +1,36 @@
+{
+  "example": "angular",
+  "original": {
+    "image_tag": "dip-angular:original",
+    "size_bytes": 242807563,
+    "size_human": "242.81MB",
+    "sbom_component_count": 1824,
+    "vulnerability_total": 782,
+    "vulnerability_by_severity": {
+      "High": 315,
+      "Medium": 262,
+      "Critical": 50,
+      "Negligible": 84,
+      "Low": 52,
+      "Unknown": 19
+    }
+  },
+  "slim": {
+    "image_tag": "dip-angular:slim",
+    "size_bytes": 66611586,
+    "size_human": "66.61MB",
+    "sbom_component_count": 970,
+    "vulnerability_total": 225,
+    "vulnerability_by_severity": {
+      "High": 112,
+      "Medium": 84,
+      "Critical": 7,
+      "Low": 22
+    }
+  },
+  "size_reduction_pct": 72.6,
+  "component_reduction": 854,
+  "vulnerability_reduction": 557,
+  "functional_tests_original": "PASS (tests/specific/angular/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/angular/test.sh)"
+}

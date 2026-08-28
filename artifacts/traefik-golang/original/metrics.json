@@ -1,0 +1,17 @@
+{
+  "example": "traefik-golang",
+  "stage": "original",
+  "image_tag": "dip-traefik-golang:original",
+  "generated_at": "2026-08-27T10:15:09Z",
+  "size_bytes": 3557103,
+  "size_human": "3.56MB",
+  "sbom_component_count": 2,
+  "vulnerability_total": 40,
+  "vulnerability_by_severity": {
+    "High": 23,
+    "Medium": 14,
+    "Critical": 2,
+    "Low": 1
+  },
+  "functional_tests": "PASS (tests/specific/traefik-golang/test.sh)"
+}

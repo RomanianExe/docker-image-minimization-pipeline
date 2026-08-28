@@ -22,7 +22,7 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:4070bc6943e1b6080d850dda34ce5abde249096b3b7cbb19e23812ec0a96a9b7",
+      "id": "sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406",
       "tags": [
         "original"
       ],
@@ -30,18 +30,23 @@
         "dip-nginx-golang-backend:original"
       ],
       "digests": [
-        "sha256:4070bc6943e1b6080d850dda34ce5abde249096b3b7cbb19e23812ec0a96a9b7"
+        "sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406"
       ],
       "full_digests": [
-        "dip-nginx-golang-backend@sha256:4070bc6943e1b6080d850dda34ce5abde249096b3b7cbb19e23812ec0a96a9b7"
+        "dip-nginx-golang-backend@sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406"
       ]
     },
-    "size": 123401388,
+    "size": 123401523,
     "size_human": "123 MB",
     "create_time": "2026-08-23T12:35:18Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "os": "linux",
+    "labels": {
+      "com.docker.compose.project": "dip-nginx-golang",
+      "com.docker.compose.service": "backend",
+      "com.docker.compose.version": "5.5.0"
+    },
     "env_vars": [
       "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
       "GOLANG_VERSION=1.18.10",
@@ -53,21 +58,21 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 4804110,
+  "minified_image_size": 4804703,
   "minified_image_size_human": "4.8 MB",
   "minified_image": "dip-nginx-golang-backend:slim",
-  "minified_image_id": "sha256:d5ff1672c3f193e19d145f2bfdba1f63091092580565fedc2f5c2fbfba4323f3",
-  "minified_image_digest": "sha256:818dd49a52df1928dccd3058b4ddb36e6dfd24dcf07edc7190bdfa011c3e4eca",
+  "minified_image_id": "sha256:feb031b9e044d8b5a3390d691720815aa99d6594094f82090aaa72202352ce1b",
+  "minified_image_digest": "sha256:036670d16e445abc95b9d3368b206cc4d53220e24d4fc7905077996a548257ed",
   "minified_image_has_data": true,
-  "minified_by": 25.68662832449715,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/4070bc6943e1b6080d850dda34ce5abde249096b3b7cbb19e23812ec0a96a9b7/artifacts",
+  "minified_by": 25.68348615929018,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nginx-golang-backend-seccomp.json",
   "apparmor_profile_name": "dip-nginx-golang-backend-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:4070bc6943e1b6080d850dda34ce5abde249096b3b7cbb19e23812ec0a96a9b7",
+      "id": "sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406",
       "full_name": "dip-nginx-golang-backend:original",
       "repo_name": "dip-nginx-golang-backend",
       "version_tag": "original",

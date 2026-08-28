@@ -1,0 +1,1 @@
+{"commands": [{"method": "GET", "resource": "/api"}, {"method": "POST", "resource": "/api/todos", "headers": ["Content-Type: application/json"], "body": "{\"text\":\"slim-probe\"}"}]}

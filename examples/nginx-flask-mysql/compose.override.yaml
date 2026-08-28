@@ -1,0 +1,34 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified). It supplies only what the pipeline needs on top
+# of what the example already declares:
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim), and
+#                     make `docker compose build` write that tag.
+#   container_name  - stable name the functional tests address.
+#   volumes !reset  - drop the dev-only source bind mounts, so the container
+#                     runs the code baked into the image (what Slim analyses),
+#                     not the host tree mounted over it.
+#   ports !override - remap onto this project's own host-port range, so
+#                     examples that all publish :80/:8000 upstream can be
+#                     processed without colliding.
+#
+# The proxy service keeps the vendor image and the vendor config verbatim; only
+# its published port moves to ${PROXY_HOST_PORT}. It reaches the app by the
+# compose service name, which compose keeps as a network alias even though
+# container_name is overridden above.
+#
+# build.dockerfile - requirements.txt pins Flask==2.0.1 but not Werkzeug, and
+#   current Werkzeug removed a name Flask 2.0.1 imports directly; the patched
+#   copy adds the missing pin. Context stays the vendor directory.
+services:
+  backend:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    build:
+      dockerfile: ${DIP_ROOT}/examples/nginx-flask-mysql/Dockerfile.patched
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  proxy:
+    ports: !override
+      - "${PROXY_HOST_PORT}:80"

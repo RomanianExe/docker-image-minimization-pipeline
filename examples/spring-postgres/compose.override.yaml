@@ -1,0 +1,33 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified). It supplies only what the pipeline needs on top
+# of what the example already declares:
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim), and
+#                     make `docker compose build` write that tag.
+#   container_name  - stable name the functional tests address.
+#   volumes !reset  - drop the dev-only source bind mounts, so the container
+#                     runs the code baked into the image (what Slim analyses),
+#                     not the host tree mounted over it.
+#   ports !override - remap onto this project's own host-port range, so
+#                     examples that all publish :80/:8000 upstream can be
+#                     processed without colliding.#
+# db.image - PINNED pipeline-side. The vendor file says `image: postgres`, with
+#   no tag, which today resolves to 18.x. Postgres 18 moved PGDATA to
+#   /var/lib/postgresql/<major>/docker and its entrypoint now refuses to start
+#   when a volume is mounted at the old /var/lib/postgresql/data — which is
+#   exactly what the vendor file mounts, so the database exits(1) even on a
+#   completely empty volume and the app then fails with UnknownHostException.
+#   Same class of upstream drift as the unpinned Python/Node dependencies in
+#   docs/methodology.md, just in a dependency image rather than a Dockerfile.
+#   Pinned to the last major that matches the layout the example was written
+#   against. The database is a dependency only — never built, minimized, SBOM-d
+#   or scanned — so its version does not affect any measured result.
+services:
+  backend:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  db:
+    image: postgres:17

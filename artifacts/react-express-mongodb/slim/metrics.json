@@ -1,0 +1,17 @@
+{
+  "example": "react-express-mongodb",
+  "stage": "slim",
+  "image_tag": "dip-react-express-mongodb:slim",
+  "generated_at": "2026-08-27T10:28:31Z",
+  "size_bytes": 45668317,
+  "size_human": "45.67MB",
+  "sbom_component_count": 146,
+  "vulnerability_total": 74,
+  "vulnerability_by_severity": {
+    "High": 33,
+    "Critical": 4,
+    "Low": 17,
+    "Medium": 20
+  },
+  "functional_tests": "PASS (tests/specific/react-express-mongodb/test.sh)"
+}

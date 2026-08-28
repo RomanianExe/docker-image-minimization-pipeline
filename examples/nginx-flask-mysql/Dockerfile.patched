@@ -1,0 +1,47 @@
+# syntax=docker/dockerfile:1.4
+#
+# PATCHED copy of vendor/awesome-compose/nginx-flask-mysql/backend/Dockerfile.
+# Build context is still the vendor directory (COPY commands below resolve
+# against it) — only this Dockerfile is substituted, via
+# compose.override.yaml's build.dockerfile.
+#
+# Fix: requirements.txt pins Flask==2.0.1 but not its Werkzeug dependency.
+# Unpinned, pip resolves the current Werkzeug (3.1.8), which removed
+# werkzeug.urls.url_quote — a name Flask 2.0.1 imports directly, crashing on
+# startup with an ImportError (see docs/methodology.md). Pinning Werkzeug to
+# the last release compatible with Flask 2.0.1 (2.0.x) restores the intended
+# behavior without touching the app's own code or the vendor requirements.txt.
+FROM --platform=$BUILDPLATFORM python:3.10-alpine AS builder
+
+WORKDIR /code
+COPY requirements.txt /code
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip3 install -r requirements.txt "Werkzeug<2.1"
+
+COPY . .
+
+ENV FLASK_APP hello.py
+ENV FLASK_ENV development
+ENV FLASK_RUN_PORT 8000
+ENV FLASK_RUN_HOST 0.0.0.0
+
+EXPOSE 8000
+
+CMD ["flask", "run"]
+
+FROM builder AS dev-envs
+
+RUN <<EOF
+apk update
+apk add git
+EOF
+
+RUN <<EOF
+addgroup -S docker
+adduser -S --shell /bin/bash --ingroup docker vscode
+EOF
+
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
+
+CMD ["flask", "run"]

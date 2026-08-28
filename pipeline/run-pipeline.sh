@@ -1,15 +1,24 @@
 #!/usr/bin/env bash
 # Full pipeline orchestrator for one example: build -> functional test -> SBOM ->
 # vuln scan -> Slim minimize -> functional test -> SBOM -> vuln scan -> compare.
-# Automates the sequence of manual steps used to process every example so far
-# (flask, flask-redis, apache-php, react-nginx, sparkjava, nginx-golang,
-# aspnet-mssql), reading the same pipeline.env fields those examples already use:
+#
+# Both the build and the functional-test runs go through the example's own
+# compose file (see pipeline/compose.sh), so the image built is by construction
+# the one the example ships, and the services around it — databases, reverse
+# proxies, their secrets, networks, healthchecks and depends_on ordering — are
+# the ones upstream declares rather than a hand-rebuilt approximation.
+#
+# pipeline.env fields consumed here:
+#   COMPOSE_FILE, COMPOSE_SERVICE                  (required; see compose.sh)
 #   IMAGE_NAME, CONTAINER_PORT, HOST_PORT          (required)
-#   DOCKERFILE_TARGET, DOCKERFILE_PATH, BUILD_CONTEXT (build)
-#   DEPENDENCY_IMAGE/ALIAS/CONTAINER/ENV           (optional, e.g. redis/postgres)
-#   PROXY_IMAGE/CONFIG/CONTAINER/ALIAS/HOST_PORT   (optional, reverse-proxy sidecar)
-#   APP_ENV, EXTRA_PROBE_PATHS                     (optional)
-#   STARTUP_WAIT                                   (optional, seconds; default 3)
+#   COMPOSE_DEPS        extra services to start alongside the target service
+#   COMPOSE_BUILD_DEPS  subset of those compose must build rather than pull
+#   PROXY_HOST_PORT     set when one of COMPOSE_DEPS is a reverse proxy; the
+#                       proxy URL is then passed to the test script as a 3rd arg
+#   STARTUP_WAIT        seconds to settle after `up` (default 3). compose's own
+#                       depends_on/healthcheck ordering covers the dependency
+#                       side; this covers the app's own startup where the
+#                       example declares no healthcheck for it.
 #
 # Usage: pipeline/run-pipeline.sh <example-name>
 set -euo pipefail
@@ -34,41 +43,32 @@ fi
 
 ORIGINAL_TAG="${IMAGE_NAME}:original"
 SLIM_TAG="${IMAGE_NAME}:slim"
+# Matches container_name in examples/<name>/compose.override.yaml.
 APP_CONTAINER="${IMAGE_NAME}-test"
+
+compose() {
+  TARGET_IMAGE="${TARGET_IMAGE:-}" "$ROOT_DIR/pipeline/compose.sh" "$EXAMPLE" "$@"
+}
+
+teardown() {
+  compose down -v --remove-orphans >/dev/null 2>&1 || true
+}
+trap teardown EXIT
 
 run_stage() {
   local TAG="$1" STAGE="$2"
   local ARTIFACT_DIR="$ROOT_DIR/artifacts/$EXAMPLE/$STAGE"
   mkdir -p "$ARTIFACT_DIR"
 
-  local ENV_RUN_ARGS=()
-  for kv in ${APP_ENV:-}; do
-    ENV_RUN_ARGS+=(-e "$kv")
-  done
-
-  local MOUNT_RUN_ARGS=()
-  if [[ -n "${APP_MOUNT:-}" ]]; then
-    MOUNT_RUN_ARGS=(-v "$ROOT_DIR/$APP_MOUNT")
-  fi
-
-  local LINK_RUN_ARGS=()
-  if [[ -n "${DEPENDENCY_IMAGE:-}" ]]; then
-    "$ROOT_DIR/pipeline/deps.sh" up "$EXAMPLE"
-    LINK_RUN_ARGS=(--link "${DEPENDENCY_CONTAINER}:${DEPENDENCY_ALIAS}")
-  fi
-
-  docker rm -f "$APP_CONTAINER" >/dev/null 2>&1 || true
-  docker run -d --name "$APP_CONTAINER" \
-    -p "${HOST_PORT}:${CONTAINER_PORT}" \
-    "${LINK_RUN_ARGS[@]}" "${ENV_RUN_ARGS[@]}" "${MOUNT_RUN_ARGS[@]}" \
-    "$TAG" >/dev/null
+  # --no-build: the images were produced by the build stage (original) or by
+  # Slim (slim). Never let `up` silently rebuild over the tag under test.
+  # shellcheck disable=SC2086
+  TARGET_IMAGE="$TAG" compose up -d --no-build "$COMPOSE_SERVICE" ${COMPOSE_DEPS:-}
   sleep "${STARTUP_WAIT:-3}"
 
   local BASE_URL="http://localhost:${HOST_PORT}"
   local TEST_ARGS=("$APP_CONTAINER" "$BASE_URL")
-  if [[ -n "${PROXY_IMAGE:-}" ]]; then
-    "$ROOT_DIR/pipeline/proxy.sh" up "$EXAMPLE" "$APP_CONTAINER"
-    sleep 2
+  if [[ -n "${PROXY_HOST_PORT:-}" ]]; then
     TEST_ARGS+=("http://localhost:${PROXY_HOST_PORT}")
   fi
 
@@ -86,13 +86,7 @@ run_stage() {
     "$ARTIFACT_DIR/metrics.json" >/dev/null
   echo "Metrics written to $ARTIFACT_DIR/metrics.json"
 
-  if [[ -n "${PROXY_IMAGE:-}" ]]; then
-    "$ROOT_DIR/pipeline/proxy.sh" down "$EXAMPLE"
-  fi
-  docker rm -f "$APP_CONTAINER" >/dev/null 2>&1 || true
-  if [[ -n "${DEPENDENCY_IMAGE:-}" ]]; then
-    "$ROOT_DIR/pipeline/deps.sh" down "$EXAMPLE"
-  fi
+  TARGET_IMAGE="$TAG" compose down -v --remove-orphans
 }
 
 echo "=== [$EXAMPLE] Stage: build original ==="

@@ -1,0 +1,14 @@
+{
+  "example": "nginx-aspnet-mysql",
+  "stage": "slim",
+  "image_tag": "dip-nginx-aspnet-mysql:slim",
+  "generated_at": "2026-08-27T11:26:44Z",
+  "size_bytes": 48999990,
+  "size_human": "49.00MB",
+  "sbom_component_count": 4,
+  "vulnerability_total": 1,
+  "vulnerability_by_severity": {
+    "High": 1
+  },
+  "functional_tests": "PASS (tests/specific/nginx-aspnet-mysql/test.sh)"
+}
