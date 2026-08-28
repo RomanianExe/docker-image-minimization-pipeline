@@ -1,0 +1,19 @@
+{
+  "example": "react-express-mysql",
+  "stage": "original",
+  "image_tag": "dip-react-express-mysql:original",
+  "generated_at": "2026-08-27T11:07:58Z",
+  "size_bytes": 417884686,
+  "size_human": "417.88MB",
+  "sbom_component_count": 661,
+  "vulnerability_total": 1791,
+  "vulnerability_by_severity": {
+    "High": 263,
+    "Medium": 408,
+    "Negligible": 916,
+    "Critical": 78,
+    "Low": 80,
+    "Unknown": 46
+  },
+  "functional_tests": "PASS (tests/specific/react-express-mysql/test.sh)"
+}

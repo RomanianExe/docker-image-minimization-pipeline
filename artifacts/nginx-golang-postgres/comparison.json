@@ -1,0 +1,34 @@
+{
+  "example": "nginx-golang-postgres",
+  "original": {
+    "image_tag": "dip-nginx-golang-postgres:original",
+    "size_bytes": 4251260,
+    "size_human": "4.25MB",
+    "sbom_component_count": 5,
+    "vulnerability_total": 42,
+    "vulnerability_by_severity": {
+      "High": 25,
+      "Medium": 14,
+      "Critical": 2,
+      "Low": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-nginx-golang-postgres:slim",
+    "size_bytes": 4516955,
+    "size_human": "4.52MB",
+    "sbom_component_count": 5,
+    "vulnerability_total": 42,
+    "vulnerability_by_severity": {
+      "High": 25,
+      "Medium": 14,
+      "Critical": 2,
+      "Low": 1
+    }
+  },
+  "size_reduction_pct": -6.2,
+  "component_reduction": 0,
+  "vulnerability_reduction": 0,
+  "functional_tests_original": "PASS (tests/specific/nginx-golang-postgres/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/nginx-golang-postgres/test.sh)"
+}

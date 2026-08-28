@@ -1,0 +1,19 @@
+{
+  "example": "angular",
+  "stage": "original",
+  "image_tag": "dip-angular:original",
+  "generated_at": "2026-08-27T10:54:20Z",
+  "size_bytes": 242807563,
+  "size_human": "242.81MB",
+  "sbom_component_count": 1824,
+  "vulnerability_total": 782,
+  "vulnerability_by_severity": {
+    "High": 315,
+    "Medium": 262,
+    "Critical": 50,
+    "Negligible": 84,
+    "Low": 52,
+    "Unknown": 19
+  },
+  "functional_tests": "PASS (tests/specific/angular/test.sh)"
+}

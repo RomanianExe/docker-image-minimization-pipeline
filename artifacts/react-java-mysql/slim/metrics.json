@@ -1,0 +1,17 @@
+{
+  "example": "react-java-mysql",
+  "stage": "slim",
+  "image_tag": "dip-react-java-mysql:slim",
+  "generated_at": "2026-08-28T09:48:08Z",
+  "size_bytes": 91150344,
+  "size_human": "91.15MB",
+  "sbom_component_count": 98,
+  "vulnerability_total": 152,
+  "vulnerability_by_severity": {
+    "Critical": 8,
+    "High": 65,
+    "Medium": 62,
+    "Low": 17
+  },
+  "functional_tests": "PASS (tests/specific/react-java-mysql/test.sh)"
+}

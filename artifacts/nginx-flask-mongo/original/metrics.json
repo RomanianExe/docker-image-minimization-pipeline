@@ -1,0 +1,18 @@
+{
+  "example": "nginx-flask-mongo",
+  "stage": "original",
+  "image_tag": "dip-nginx-flask-mongo:original",
+  "generated_at": "2026-08-27T10:57:55Z",
+  "size_bytes": 25798261,
+  "size_human": "25.80MB",
+  "sbom_component_count": 82,
+  "vulnerability_total": 51,
+  "vulnerability_by_severity": {
+    "High": 21,
+    "Medium": 22,
+    "Unknown": 4,
+    "Low": 3,
+    "Negligible": 1
+  },
+  "functional_tests": "PASS (tests/specific/nginx-flask-mongo/test.sh)"
+}

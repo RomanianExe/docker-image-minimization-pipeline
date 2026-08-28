@@ -2,14 +2,14 @@
   "example": "flask-redis",
   "stage": "slim",
   "image_tag": "dip-flask-redis:slim",
-  "generated_at": "2026-08-22T16:44:41.736481+00:00",
-  "size_bytes": 11576905,
+  "generated_at": "2026-08-28T09:45:05Z",
+  "size_bytes": 11577522,
   "size_human": "11.58MB",
   "sbom_component_count": 3,
-  "vulnerability_total": 19,
+  "vulnerability_total": 20,
   "vulnerability_by_severity": {
     "High": 5,
-    "Medium": 10,
+    "Medium": 11,
     "Low": 3,
     "Negligible": 1
   },

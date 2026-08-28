@@ -1,0 +1,120 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "26.04",
+    "display_name": "Ubuntu 26.04 LTS"
+  },
+  "type": "slim",
+  "state": "done",
+  "target_reference": "dip-nginx-golang-postgres:original",
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "unknown",
+      "version": "",
+      "display_name": "unknown"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:107abf91eba53928b926498c4928f8575c9fa008133cb7bd18789f42d2ddb027",
+      "tags": [
+        "original"
+      ],
+      "names": [
+        "dip-nginx-golang-postgres:original"
+      ],
+      "digests": [
+        "sha256:107abf91eba53928b926498c4928f8575c9fa008133cb7bd18789f42d2ddb027"
+      ],
+      "full_digests": [
+        "dip-nginx-golang-postgres@sha256:107abf91eba53928b926498c4928f8575c9fa008133cb7bd18789f42d2ddb027"
+      ]
+    },
+    "size": 4251260,
+    "size_human": "4.3 MB",
+    "create_time": "2026-08-27T11:04:21Z",
+    "runtime_name": "docker",
+    "architecture": "amd64",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 4516955,
+  "minified_image_size_human": "4.5 MB",
+  "minified_image": "dip-nginx-golang-postgres:slim",
+  "minified_image_id": "sha256:615eb9de17e9c0e122421bd2ea3a988521d23444ef64a07953f19747ee47f9fd",
+  "minified_image_digest": "sha256:7e97915ce238c451ec5b2250cbce46d205738eb20c15204bc9d85845e5c9b157",
+  "minified_image_has_data": true,
+  "minified_by": 0.9411782937841976,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/107abf91eba53928b926498c4928f8575c9fa008133cb7bd18789f42d2ddb027/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "dip-nginx-golang-postgres-seccomp.json",
+  "apparmor_profile_name": "dip-nginx-golang-postgres-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:107abf91eba53928b926498c4928f8575c9fa008133cb7bd18789f42d2ddb027",
+      "full_name": "dip-nginx-golang-postgres:original",
+      "repo_name": "dip-nginx-golang-postgres",
+      "version_tag": "original",
+      "raw_tags": [
+        "dip-nginx-golang-postgres:original"
+      ],
+      "create_time": "2026-08-27T11:04:21Z",
+      "new_size": 7499776,
+      "new_size_human": "7.5 MB",
+      "instructions": [
+        {
+          "type": "COPY",
+          "time": "2026-08-27T11:04:21Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 7499776,
+          "size_human": "7.5 MB",
+          "params": "/code/bin/backend /usr/local/bin/backend",
+          "command_snippet": "COPY /code/bin/backend /usr/local/bin/backen...",
+          "command_all": "COPY /code/bin/backend /usr/local/bin/backend",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-27T14:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2026-08-27T11:04:21Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/local/bin/backend\"]\n",
+          "command_snippet": "CMD [\"/usr/local/bin/backend\"]\n",
+          "command_all": "CMD [\"/usr/local/bin/backend\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "dip-nginx-golang-postgres:original"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-27T14:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}

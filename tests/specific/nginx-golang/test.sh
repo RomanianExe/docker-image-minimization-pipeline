@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Functional test suite for the "nginx-golang" example.
 # Validates the backend directly AND through the nginx reverse-proxy sidecar
-# (pipeline/proxy.sh must already be "up", linked to the backend container).
+# (the example's own nginx proxy service must already be up alongside the backend).
 # Usage: test.sh <backend-container> <backend-url> <proxy-url>
 set -euo pipefail
 

@@ -1,0 +1,34 @@
+{
+  "example": "vuejs",
+  "original": {
+    "image_tag": "dip-vuejs:original",
+    "size_bytes": 107651316,
+    "size_human": "107.65MB",
+    "sbom_component_count": 2183,
+    "vulnerability_total": 530,
+    "vulnerability_by_severity": {
+      "Critical": 32,
+      "High": 271,
+      "Medium": 188,
+      "Low": 39
+    }
+  },
+  "slim": {
+    "image_tag": "dip-vuejs:slim",
+    "size_bytes": 44783449,
+    "size_human": "44.78MB",
+    "sbom_component_count": 590,
+    "vulnerability_total": 190,
+    "vulnerability_by_severity": {
+      "High": 96,
+      "Medium": 64,
+      "Critical": 10,
+      "Low": 20
+    }
+  },
+  "size_reduction_pct": 58.4,
+  "component_reduction": 1593,
+  "vulnerability_reduction": 340,
+  "functional_tests_original": "PASS (tests/specific/vuejs/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/vuejs/test.sh)"
+}

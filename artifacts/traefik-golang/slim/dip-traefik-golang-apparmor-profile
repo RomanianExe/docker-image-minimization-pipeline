@@ -1,0 +1,11 @@
+
+profile dip-traefik-golang-apparmor-profile flags=(attach_disconnected,mediate_deleted) {
+
+  network,
+
+  /usr/local/bin/backend rix,
+
+
+  /etc/resolv.conf r,
+
+}

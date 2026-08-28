@@ -1,0 +1,34 @@
+{
+  "example": "traefik-golang",
+  "original": {
+    "image_tag": "dip-traefik-golang:original",
+    "size_bytes": 3557103,
+    "size_human": "3.56MB",
+    "sbom_component_count": 2,
+    "vulnerability_total": 40,
+    "vulnerability_by_severity": {
+      "High": 23,
+      "Medium": 14,
+      "Critical": 2,
+      "Low": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-traefik-golang:slim",
+    "size_bytes": 3774391,
+    "size_human": "3.77MB",
+    "sbom_component_count": 2,
+    "vulnerability_total": 40,
+    "vulnerability_by_severity": {
+      "High": 23,
+      "Medium": 14,
+      "Critical": 2,
+      "Low": 1
+    }
+  },
+  "size_reduction_pct": -6.1,
+  "component_reduction": 0,
+  "vulnerability_reduction": 0,
+  "functional_tests_original": "PASS (tests/specific/traefik-golang/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/traefik-golang/test.sh)"
+}

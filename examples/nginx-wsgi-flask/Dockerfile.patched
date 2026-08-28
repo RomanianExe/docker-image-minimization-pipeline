@@ -1,0 +1,53 @@
+# PATCHED copy of vendor/awesome-compose/nginx-wsgi-flask/flask/Dockerfile.
+# Build context is still the vendor directory (COPY commands below resolve
+# against it) — only this Dockerfile is substituted, via
+# compose.override.yaml's build.dockerfile.
+#
+# Fix: the venv created below bootstraps its OWN pip via ensurepip (20.2.3,
+# tied to this Python 3.9.2 image) — separate from the system pip, so
+# upgrading the system pip alone (the vendor Dockerfile's original
+# intent) has no effect on what actually installs requirements.txt inside
+# the venv. That venv pip auto-upgrades itself to the current release
+# (26.0.1) while resolving dependencies, whose own vendored toml parser
+# throws IndexError reading markupsafe's pyproject.toml during an sdist
+# build (see docs/methodology.md). Pinning pip INSIDE the venv, after it's
+# created, restores the intended behavior without touching requirements.txt
+# or any app code.
+FROM python:3.9.2-alpine
+
+# get curl for healthchecks
+RUN apk add curl
+
+# permissions and nonroot user for tightened security
+RUN adduser -D nonroot
+RUN mkdir /home/app/ && chown -R nonroot:nonroot /home/app
+RUN mkdir -p /var/log/flask-app && touch /var/log/flask-app/flask-app.err.log && touch /var/log/flask-app/flask-app.out.log
+RUN chown -R nonroot:nonroot /var/log/flask-app
+WORKDIR /home/app
+USER nonroot
+
+# copy all the files to the container
+COPY --chown=nonroot:nonroot . .
+
+# venv
+ENV VIRTUAL_ENV=/home/app/venv
+
+# python setup
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN export FLASK_APP=app.py
+RUN pip install --upgrade "pip<24"
+# requirements.txt only pins Flask==1.1.1/gunicorn==20.0.4, not their own
+# transitive deps. Current Jinja2 (3.x) removed the `escape` re-export and
+# current itsdangerous (2.x) removed its `json` submodule — both imported
+# directly by Flask 1.1.1's own __init__.py (ImportError at startup, found
+# one at a time as each got pinned). Same class of problem as the pip/toml
+# issue above, several layers further down the chain. Pin every transitive
+# dependency to the last release contemporaneous with Flask 1.1.1 (2019).
+RUN pip install -r requirements.txt \
+    "Werkzeug<2.0" "Jinja2<3.0" "MarkupSafe<2.1" "itsdangerous<2.0" "click<8.0"
+
+# define the port number the container should expose
+EXPOSE 5000
+
+CMD ["python", "app.py"]

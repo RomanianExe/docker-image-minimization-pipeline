@@ -1,0 +1,49 @@
+# syntax=docker/dockerfile:1.4
+#
+# PATCHED copy of vendor/awesome-compose/vuejs/vuejs/Dockerfile. Build
+# context is still the vendor directory — only this Dockerfile is
+# substituted, via compose.override.yaml's build.dockerfile.
+#
+# Fix: `yarn global add @vue/cli` is unpinned (no lockfile controls a global
+# install) and fails against a live registry today (its transitive
+# dependencies require Node >=18, incompatible with node:14.4.0-alpine — see
+# docs/methodology.md). Bumping the base image to Node 18 "fixes" that
+# install but then breaks the LOCAL, yarn.lock-pinned dependency tree
+# instead (@achrinza/node-ipc, a transitive dep of the pinned
+# @vue/cli-service@^5.0.1, requires Node <=17) — a genuine mutual
+# incompatibility between the global tool's current resolution and the
+# locked local one, not just a missing pin.
+#
+# The actual fix: the global @vue/cli install isn't needed at all.
+# package.json's own "serve" script (`vue-cli-service serve`, what the
+# Dockerfile's CMD/compose actually runs) resolves to the LOCAL
+# @vue/cli-service devDependency via node_modules/.bin, installed by `yarn
+# install --immutable` below — the global `vue` CLI binary is only useful
+# for interactive scaffolding (`vue create`, `vue add`), never invoked here.
+# Removing the unused, broken install line requires no other change.
+FROM --platform=$BUILDPLATFORM node:14.4.0-alpine AS development
+
+RUN mkdir /project
+WORKDIR /project
+
+COPY . .
+
+COPY .npmrc .
+COPY .yarnrc.yml .
+RUN yarn install --immutable
+ENV HOST=0.0.0.0
+CMD ["yarn", "run", "serve"]
+
+FROM development as dev-envs
+RUN <<EOF
+apk update
+apk add git
+EOF
+
+RUN <<EOF
+addgroup -S docker
+adduser -S --shell /bin/bash --ingroup docker vscode
+EOF
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
+CMD ["yarn", "run", "serve"]

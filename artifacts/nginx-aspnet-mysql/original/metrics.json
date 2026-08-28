@@ -1,0 +1,19 @@
+{
+  "example": "nginx-aspnet-mysql",
+  "stage": "original",
+  "image_tag": "dip-nginx-aspnet-mysql:original",
+  "generated_at": "2026-08-27T11:25:21Z",
+  "size_bytes": 86705181,
+  "size_human": "86.71MB",
+  "sbom_component_count": 103,
+  "vulnerability_total": 325,
+  "vulnerability_by_severity": {
+    "Critical": 10,
+    "Negligible": 85,
+    "High": 91,
+    "Medium": 109,
+    "Low": 10,
+    "Unknown": 20
+  },
+  "functional_tests": "PASS (tests/specific/nginx-aspnet-mysql/test.sh)"
+}

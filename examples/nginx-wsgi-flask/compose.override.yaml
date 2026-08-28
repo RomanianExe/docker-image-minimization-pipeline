@@ -1,0 +1,27 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified). It supplies only what the pipeline needs on top
+# of what the example already declares:
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim), and
+#                     make `docker compose build` write that tag.
+#   container_name  - stable name the functional tests address.
+#   volumes !reset  - drop the dev-only source bind mounts, so the container
+#                     runs the code baked into the image (what Slim analyses),
+#                     not the host tree mounted over it.
+#   ports !override - remap onto this project's own host-port range, so
+#                     examples that all publish :80/:8000 upstream can be
+#                     processed without colliding.
+#
+# build.dockerfile - the vendored `pip install --upgrade pip` is unpinned and the current pip
+#   crashes building markupsafe; the patched copy pins it inside the venv.
+#   The context stays the vendor directory, so every COPY still resolves
+#   upstream; only the Dockerfile itself is substituted.
+services:
+  flask-app:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    build:
+      dockerfile: ${DIP_ROOT}/examples/nginx-wsgi-flask/Dockerfile.patched
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"

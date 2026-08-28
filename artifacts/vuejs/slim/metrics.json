@@ -1,0 +1,17 @@
+{
+  "example": "vuejs",
+  "stage": "slim",
+  "image_tag": "dip-vuejs:slim",
+  "generated_at": "2026-08-27T12:36:03Z",
+  "size_bytes": 44783449,
+  "size_human": "44.78MB",
+  "sbom_component_count": 590,
+  "vulnerability_total": 190,
+  "vulnerability_by_severity": {
+    "High": 96,
+    "Medium": 64,
+    "Critical": 10,
+    "Low": 20
+  },
+  "functional_tests": "PASS (tests/specific/vuejs/test.sh)"
+}
