@@ -1,0 +1,64 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified). It supplies only what the pipeline needs on top
+# of what the example already declares:
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim), and
+#                     make `docker compose build` write that tag.
+#   container_name  - stable name the functional tests address.
+#   volumes !reset  - drop the dev-only source bind mount and the cargo target
+#                     cache, so the container runs the code baked into the
+#                     image (what Slim analyses), not the host tree mounted
+#                     over it.
+#   ports !override - publish on this project's own host-port range. The
+#                     vendor file publishes nothing for `backend` (only the
+#                     frontend dev server reaches it, over the compose
+#                     network), but the pipeline probes it over HTTP from the
+#                     host, so a mapping is added here.
+#
+# build.dockerfile - `rust:buster` is frozen at Rust 1.79 and can no longer
+#   resolve this project's unpinned dependency tree; the patched copy moves
+#   both the build and runtime bases to bookworm. The context stays the vendor
+#   directory, so every COPY still resolves upstream. See Dockerfile.patched.
+#
+# build.target - the vendor file builds `development`: the full Rust toolchain
+#   image whose CMD is `cargo run --offline`, i.e. it compiles the program at
+#   container start and relies on the `backend-cache` volume (reset above) to
+#   not redo that work every time. That is a development harness, not a
+#   deployment artifact, and minimizing it would mostly measure how much of a
+#   compiler Slim can strip. The Dockerfile's own final stage — a bare
+#   debian-slim carrying just the release binary — is what this example would
+#   actually ship, so that is what gets built and minimized. It is anonymous
+#   upstream; Dockerfile.patched names it `production` so it can be selected.
+#
+# db.ports !reset - upstream publishes 5432 on the host; nothing outside the
+#   compose network needs it, and it collides with a local postgres.
+#
+# db.healthcheck + backend.depends_on - main.rs calls postgres::migrate_up()
+#   during startup, which `.expect()`s its connection: the backend panics and
+#   exits if postgres is not accepting connections yet, and the vendor file
+#   declares neither a healthcheck nor a `restart:` policy, only a plain
+#   `depends_on: [db]` (which waits for the container to be created, not
+#   ready). Same failure mode as react-java-mysql's Spring/HikariCP, but there
+#   the vendor compose file already gated startup on a healthcheck; here the
+#   gate has to be added. pipeline/slim.sh, which starts its container outside
+#   compose and gets no such gating, relies on STARTUP_WAIT instead.
+services:
+  backend:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    build:
+      dockerfile: ${DIP_ROOT}/examples/react-rust-postgres/Dockerfile.patched
+      target: production
+    depends_on: !override
+      db:
+        condition: service_healthy
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  db:
+    ports: !reset null
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 3s
+      retries: 10
+      start_period: 10s

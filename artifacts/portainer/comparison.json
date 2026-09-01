@@ -1,0 +1,33 @@
+{
+  "example": "portainer",
+  "original": {
+    "image_tag": "dip-portainer:original",
+    "size_bytes": 48553782,
+    "size_human": "48.55MB",
+    "sbom_component_count": 328,
+    "vulnerability_total": 34,
+    "vulnerability_by_severity": {
+      "High": 20,
+      "Critical": 2,
+      "Medium": 8,
+      "Unknown": 4
+    }
+  },
+  "slim": {
+    "image_tag": "dip-portainer:slim",
+    "size_bytes": 38744462,
+    "size_human": "38.74MB",
+    "sbom_component_count": 312,
+    "vulnerability_total": 11,
+    "vulnerability_by_severity": {
+      "High": 6,
+      "Critical": 2,
+      "Medium": 3
+    }
+  },
+  "size_reduction_pct": 20.2,
+  "component_reduction": 16,
+  "vulnerability_reduction": 23,
+  "functional_tests_original": "PASS (tests/specific/portainer/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/portainer/test.sh)"
+}

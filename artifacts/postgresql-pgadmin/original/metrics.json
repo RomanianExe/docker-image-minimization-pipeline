@@ -1,0 +1,18 @@
+{
+  "example": "postgresql-pgadmin",
+  "stage": "original",
+  "image_tag": "dip-postgresql-pgadmin:original",
+  "generated_at": "2026-09-01T08:52:48Z",
+  "size_bytes": 181560572,
+  "size_human": "181.56MB",
+  "sbom_component_count": 210,
+  "vulnerability_total": 45,
+  "vulnerability_by_severity": {
+    "High": 21,
+    "Critical": 2,
+    "Medium": 16,
+    "Low": 4,
+    "Unknown": 2
+  },
+  "functional_tests": "PASS (tests/specific/postgresql-pgadmin/test.sh)"
+}

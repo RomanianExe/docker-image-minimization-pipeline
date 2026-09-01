@@ -1,0 +1,306 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "26.04",
+    "display_name": "Ubuntu 26.04 LTS"
+  },
+  "type": "slim",
+  "state": "done",
+  "target_reference": "dip-gitea-postgres:original",
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.24.1",
+      "display_name": "Alpine Linux v3.24"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef",
+      "tags": [
+        "latest",
+        "original"
+      ],
+      "names": [
+        "gitea/gitea:latest",
+        "dip-gitea-postgres:original"
+      ],
+      "digests": [
+        "sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef"
+      ],
+      "full_digests": [
+        "gitea/gitea@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef",
+        "dip-gitea-postgres@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef"
+      ]
+    },
+    "size": 72158565,
+    "size_human": "72 MB",
+    "create_time": "2026-08-29T17:03:09Z",
+    "runtime_name": "docker",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "22/tcp",
+      "3000/tcp"
+    ],
+    "os": "linux",
+    "volumes": [
+      "/data"
+    ],
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "USER=git",
+      "GITEA_CUSTOM=/data/gitea"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 59812867,
+  "minified_image_size_human": "60 MB",
+  "minified_image": "dip-gitea-postgres:slim",
+  "minified_image_id": "sha256:e044d4fe83eecc82f8f891ff1775148d58b7507f391a6484abcafca1a451afde",
+  "minified_image_digest": "sha256:7639dd5632fa8e2519dfa6c384bc67e64145936a5292eacda145c63c5b65c2a4",
+  "minified_image_has_data": true,
+  "minified_by": 1.2064053876568064,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "dip-gitea-postgres-seccomp.json",
+  "apparmor_profile_name": "dip-gitea-postgres-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef",
+      "full_name": "gitea/gitea:latest",
+      "repo_name": "gitea/gitea",
+      "version_tag": "latest",
+      "raw_tags": [
+        "gitea/gitea:latest",
+        "dip-gitea-postgres:original"
+      ],
+      "create_time": "2026-08-29T17:03:09Z",
+      "new_size": 193847296,
+      "new_size_human": "194 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2026-06-16T00:01:29Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 9072640,
+          "size_human": "9.1 MB",
+          "params": "alpine-minirootfs-3.24.1-x86_64.tar.gz /",
+          "command_snippet": "ADD alpine-minirootfs-3.24.1-x86_64.tar.gz /",
+          "command_all": "ADD alpine-minirootfs-3.24.1-x86_64.tar.gz /",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-06-16T03:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "CMD",
+          "time": "2026-06-16T00:01:29Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/sh\"]\n",
+          "command_snippet": "CMD [\"/bin/sh\"]\n",
+          "command_all": "CMD [\"/bin/sh\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-06-16T03:00:00+03:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2026-08-29T16:54:49Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[22/tcp 3000/tcp]",
+          "command_snippet": "EXPOSE [22/tcp 3000/tcp]",
+          "command_all": "EXPOSE [22/tcp 3000/tcp]",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T19:45:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2026-08-29T16:54:49Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 60018688,
+          "size_human": "60 MB",
+          "command_snippet": "RUN apk --no-cache add     bash     ca-certi...",
+          "command_all": "RUN apk --no-cache add     bash     ca-certificates     curl     gettext     git     linux-pam     openssh     s6     sqlite     su-exec     gnupg",
+          "system_commands": [
+            "apk --no-cache add     bash     ca-certificates     curl     gettext     git     linux-pam     openssh     s6     sqlite     su-exec     gnupg"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T19:45:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2026-08-29T16:54:49Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 32768,
+          "size_human": "33 kB",
+          "command_snippet": "RUN addgroup     -S -g 1000     git && \\\n\tad...",
+          "command_all": "RUN addgroup     -S -g 1000     git && \\\n\tadduser     -S -H -D     -h /data/git     -s /bin/bash     -u 1000     -G git     git && \\\n\techo \"git:*\" | chpasswd -e",
+          "system_commands": [
+            "addgroup     -S -g 1000     git",
+            "adduser     -S -H -D     -h /data/git     -s /bin/bash     -u 1000     -G git     git",
+            "echo \"git:*\" | chpasswd -e"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T19:45:00+03:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "COPY",
+          "time": "2026-08-29T17:03:08Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 98304,
+          "size_human": "98 kB",
+          "params": "/tmp/local /",
+          "command_snippet": "COPY /tmp/local /",
+          "command_all": "COPY /tmp/local /",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "COPY",
+          "time": "2026-08-29T17:03:09Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 124624896,
+          "size_human": "125 MB",
+          "params": "/go/src/gitea.dev/gitea /app/gitea/gitea",
+          "command_snippet": "COPY /go/src/gitea.dev/gitea /app/gitea/gite...",
+          "command_all": "COPY /go/src/gitea.dev/gitea /app/gitea/gitea",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "ENV",
+          "time": "2026-08-29T17:03:09Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "USER=git",
+          "command_snippet": "ENV USER=git",
+          "command_all": "ENV USER=git",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "ENV",
+          "time": "2026-08-29T17:03:09Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "GITEA_CUSTOM=/data/gitea",
+          "command_snippet": "ENV GITEA_CUSTOM=/data/gitea",
+          "command_all": "ENV GITEA_CUSTOM=/data/gitea",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "VOLUME",
+          "time": "2026-08-29T17:03:09Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[/data]",
+          "command_snippet": "VOLUME [/data]",
+          "command_all": "VOLUME [/data]",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2026-08-29T17:03:09Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/bin/entrypoint\"]\n",
+          "command_snippet": "ENTRYPOINT [\"/usr/bin/entrypoint\"]\n",
+          "command_all": "ENTRYPOINT [\"/usr/bin/entrypoint\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2026-08-29T17:03:09Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/bin/s6-svscan\",\"/etc/s6\"]\n",
+          "command_snippet": "CMD [\"/usr/bin/s6-svscan\",\"/etc/s6\"]\n",
+          "command_all": "CMD [\"/usr/bin/s6-svscan\",\"/etc/s6\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "gitea/gitea:latest",
+            "dip-gitea-postgres:original"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-08-29T20:00:00+03:00",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}

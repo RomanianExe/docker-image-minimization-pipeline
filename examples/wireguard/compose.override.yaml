@@ -1,0 +1,22 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+# volumes !override - the vendor file bind-mounts /usr/share/appdata/wireguard/
+#   config from the host, a path that does not exist here and would leave
+#   generated keys outside the project and shared between the original and slim
+#   stages. A named volume gives the same writable /config while being wiped by
+#   `compose down -v` between stages. The two read-only mounts the container
+#   genuinely needs from the host — /lib/modules and /usr/src, where it looks
+#   for the kernel module — are kept.
+services:
+  wireguard:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    volumes: !override
+      - wg-config:/config
+      - /usr/src:/usr/src:ro
+      - /lib/modules:/lib/modules:ro
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}/udp"
+volumes:
+  wg-config: {}

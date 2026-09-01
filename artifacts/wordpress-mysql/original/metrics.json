@@ -1,0 +1,19 @@
+{
+  "example": "wordpress-mysql",
+  "stage": "original",
+  "image_tag": "dip-wordpress-mysql:original",
+  "generated_at": "2026-08-31T21:47:03Z",
+  "size_bytes": 274729632,
+  "size_human": "274.73MB",
+  "sbom_component_count": 273,
+  "vulnerability_total": 1045,
+  "vulnerability_by_severity": {
+    "Negligible": 671,
+    "High": 114,
+    "Critical": 45,
+    "Low": 31,
+    "Medium": 160,
+    "Unknown": 24
+  },
+  "functional_tests": "PASS (tests/specific/wordpress-mysql/test.sh)"
+}

@@ -1,0 +1,78 @@
+# syntax=docker/dockerfile:1.4
+#
+# PATCHED copy of vendor/awesome-compose/react-rust-postgres/backend/Dockerfile.
+# Build context is still the vendor directory — only this Dockerfile is
+# substituted, via compose.override.yaml's build.dockerfile.
+#
+# Fix 1 (frozen toolchain): the vendored base is `rust:buster`. Debian buster
+# is EOL, so that tag stopped being rebuilt and is frozen at Rust 1.79. The
+# project ships no Cargo.lock (.dockerignore excludes it), so `cargo fetch`
+# resolves dependencies fresh on every build; today `tokio-postgres = "^0.7"`
+# resolves to 0.7.18, whose manifest requires edition2024 (Rust >= 1.85):
+#
+#   error: failed to parse manifest at .../tokio-postgres-0.7.18/Cargo.toml
+#   Caused by: feature `edition2024` is required ... not stabilized in this
+#   version of Cargo (1.79.0)
+#
+# This is upstream drift, not a defect in the example: an unpinned dependency
+# tree resolved against a pinned-by-abandonment compiler. Bumping the base to
+# a current Rust is enough — the source itself needs no change, and the
+# unchanged Cargo.toml resolves and compiles cleanly on 1.90 (actix-web
+# "4.0.0-beta.8" resolves forward to 4.15, deadpool-postgres stays on 0.9).
+#
+# Fix 2 (runtime base): the final stage was `debian:buster-slim`, also EOL and
+# with a glibc too old for a binary linked on bookworm. It follows the build
+# base to bookworm so the two match.
+#
+# Fix 3 (named final stage): the vendored final stage is anonymous, so compose
+# cannot select it by name. It is named `production` here and targeted from
+# compose.override.yaml — see that file for why the pipeline builds this stage
+# rather than the vendor compose file's `development`.
+FROM rust:1.90-slim-bookworm AS base
+
+ENV USER=root
+ENV ROCKET_ADDRESS=0.0.0.0
+ENV ROCKET_ENV=development
+
+WORKDIR /code
+RUN cargo init
+COPY Cargo.toml /code/Cargo.toml
+RUN cargo fetch
+COPY . /code
+
+FROM base AS development
+
+EXPOSE 8000
+
+CMD [ "cargo", "run", "--offline" ]
+
+FROM base AS dev-envs
+
+EXPOSE 8000
+RUN <<VENDOREOF
+apt-get update
+apt-get install -y --no-install-recommends git
+VENDOREOF
+
+RUN <<VENDOREOF
+useradd -s /bin/bash -m vscode
+groupadd docker
+usermod -aG docker vscode
+VENDOREOF
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
+CMD [ "cargo", "run", "--offline" ]
+
+FROM base AS builder
+
+RUN cargo build --release --offline
+
+FROM debian:bookworm-slim AS production
+
+ENV ROCKET_ENV=production
+
+EXPOSE 8000
+
+COPY --from=builder /code/target/release/react-rust-postgres /react-rust-postgres
+
+CMD [ "/react-rust-postgres" ]

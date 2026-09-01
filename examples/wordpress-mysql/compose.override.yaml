@@ -1,0 +1,35 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference
+#                     rather than naming a build output, which is why
+#                     pipeline/build.sh pulls the upstream image directly
+#                     instead of going through `compose pull`.
+#   container_name  - stable name the functional tests address.
+#   ports !override - remap onto this project's own host-port range (upstream
+#                     publishes :80, which collides with other examples).
+#
+# db.healthcheck + wordpress.depends_on - the vendor file declares no ordering
+#   at all between the two services, relying on `restart: always` to eventually
+#   recover from a failed first connection. That is fine for a human running
+#   `compose up`, but the pipeline asserts the container is running the moment
+#   STARTUP_WAIT elapses, so a restart loop would surface as a spurious test
+#   failure. Gating on a healthcheck makes the run deterministic without
+#   changing what is being measured.
+services:
+  wordpress:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  db:
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+      interval: 3s
+      retries: 10
+      start_period: 30s

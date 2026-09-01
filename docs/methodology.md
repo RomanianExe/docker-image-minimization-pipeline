@@ -61,6 +61,42 @@ instead). Affected: `nginx-golang*`, `react-express-mysql` (frontend), `react-ja
 (frontend), `react-rust-postgres`. This is itself a first, "free" minimization opportunity we
 should note per-image (retarget the compose build to the final stage) before even running Slim.
 
+### 1.1 Scope: the twelve prebuilt entries are excluded by default
+
+Twelve of the 39 vendored entries ship **no Dockerfile at all**. They declare only an
+`image:` and wire together binaries somebody else built:
+
+| Entry | Image the pipeline would target |
+|---|---|
+| elasticsearch-logstash-kibana | `kibana` |
+| gitea-postgres | `gitea/gitea` |
+| minecraft | `itzg/minecraft-server` |
+| nextcloud-postgres | `nextcloud:apache` |
+| nextcloud-redis-mariadb | `nextcloud:apache` |
+| pihole-cloudflared-DoH | `pihole/pihole` |
+| plex | `linuxserver/plex` |
+| portainer | `portainer/portainer-ce` |
+| postgresql-pgadmin | `dpage/pgadmin4` |
+| prometheus-grafana | `grafana/grafana` |
+| wireguard | `linuxserver/wireguard` |
+| wordpress-mysql | `wordpress` |
+
+`docker compose build` on any of them is a no-op, so the plan's central premise — build the
+example's own image, minimize it, compare the two — has nothing to act on. **They are
+therefore excluded from the core scope: the default target set for this methodology is the
+25 buildable entries** (39 minus these 12 minus the 2 WasmEdge entries of §6), and the
+project's headline results are the 25.
+
+The exclusion is a scoping decision, not a claim that the entries are unusable. Being
+prebuilt changes four things at once — the baseline becomes a pull, the *service* to
+minimize has to be chosen by hand, the running container is the only specification a test
+can be written against, and runtime state stops being handled by compose — each of which is
+a departure from the methodology rather than a parameter within it. §12 works through those
+four consequences and carries the entries through anyway as an explicit extension: four
+reach a validated slim image and are reported alongside the 25, and eight are recorded as
+diagnosed failures. **Anything below §12 is that extension.** A reader reproducing the core
+methodology, or extending it to further awesome-compose entries, should skip the twelve.
+
 ## 2. Technology Clustering
 
 | Cluster | Examples | Reusable test basis |
@@ -73,7 +109,7 @@ should note per-image (retarget the compose build to the final stage) before eve
 | PHP | apache-php | Generic HTTP GET |
 | Rust / WASM | react-rust-postgres (backend), wasmedge-kafka-mysql, wasmedge-mysql-nginx | HTTP GET / message-queue produce-consume check |
 | Reverse proxy pattern (nginx/Traefik in front of an app) | nginx-golang*, nginx-flask-*, nginx-aspnet-mysql, nginx-nodejs-redis, nginx-wsgi-flask, traefik-golang, wasmedge-mysql-nginx | Proxy passthrough test (request via proxy port reaches backend) |
-| Prebuilt-image only (no custom Dockerfile — deferred to Phase 6) | elasticsearch-logstash-kibana, gitea-postgres, minecraft, nextcloud-postgres, nextcloud-redis-mariadb, pihole-cloudflared-DoH, plex, portainer, postgresql-pgadmin, prometheus-grafana, wireguard | N/A (no build step to minimize) |
+| Prebuilt-image only (no custom Dockerfile — outside the core scope, see §1.1) | elasticsearch-logstash-kibana, gitea-postgres, minecraft, nextcloud-postgres, nextcloud-redis-mariadb, pihole-cloudflared-DoH, plex, portainer, postgresql-pgadmin, prometheus-grafana, wireguard, wordpress-mysql | N/A (no build step to minimize) |
 
 ## 3. Testing Strategy (generic vs. image-specific)
 
@@ -150,13 +186,44 @@ assumed:
    pinned in these Dockerfiles (`rust:1.64`, `rust:buster`/Cargo 1.79). This is dependency
    drift in the upstream vendored examples, not something introduced by this pipeline.
 
-**Conclusion:** the Rust/WASM cluster is excluded from this project's minimization results —
-the two blockers above are environment/tooling limits (no WasmEdge runtime available) and
-genuine upstream build breakage (unpinned Cargo dependencies against current crates.io), not
-something a pipeline-side patch can reasonably work around without pinning a full working
-dependency set or provisioning a different container runtime. This is itself a valid finding:
-not every example in a multi-year-old reference repository remains runnable without
-non-trivial intervention.
+**Conclusion (superseded in part — see below):** the cluster was excluded on the strength of
+the two blockers above. Blocker (1) still stands. Blocker (2) turned out to be weaker than
+this section claimed.
+
+### Correction: `react-rust-postgres` is recoverable, and is now included
+
+The diagnosis in point 2 was right about the cause and wrong about the remedy. The failure
+is real and reproducible:
+
+```
+error: failed to parse manifest at .../tokio-postgres-0.7.18/Cargo.toml
+Caused by: feature `edition2024` is required ... not stabilized in this version of Cargo (1.79.0)
+```
+
+But it does not require "pinning a full working dependency set". The pin that matters is on
+the *compiler*, not on the crates: `rust:buster` is frozen at Rust 1.79 because Debian buster
+is EOL and the tag stopped being rebuilt, so an unpinned dependency tree is being resolved
+against a compiler that has been standing still for years. Point the same, entirely unchanged
+`Cargo.toml` at a current toolchain and it resolves and compiles without a single source
+change — `actix-web = "4.0.0-beta.8"` resolves forward to 4.15, `deadpool-postgres` stays on
+0.9, and `cargo build --release` succeeds in about 20 seconds.
+
+The example is therefore handled exactly like the four in §10: a pipeline-side
+`Dockerfile.patched` (build base `rust:buster` → `rust:1.90-slim-bookworm`, runtime base
+`debian:buster-slim` → `debian:bookworm-slim`, and a name on the previously anonymous final
+stage so compose can target it), with `vendor/` untouched. It is the only Rust example in the
+result set and produces one of the best reductions in it: **30.72 MB → 4.01 MB (-86.9%)**,
+88 → 0 SBOM components, 177 → 0 vulnerabilities, functional tests passing on both stages.
+
+The two **WasmEdge** examples remain excluded, on blocker (1) alone: no
+`io.containerd.wasmedge.v1` runtime is registered with this Docker installation and no
+standalone `wasmedge` CLI exists on the host, so `docker-slim` cannot start a container from
+those images to analyse. That is an environment limit, not a dependency one.
+
+The general finding survives intact, just sharpened: not every example in a multi-year-old
+reference repository remains runnable without intervention — but "unpinned dependencies"
+and "abandoned base image" are different diseases, and only the second one was ever the
+problem here.
 
 ## 10. Four Recovered Examples: Unpinned Dependencies and a Config Bug, Patched Pipeline-Side
 
@@ -218,8 +285,12 @@ latent bug was found and fixed in `tests/specific/angular/test.sh` too — it on
 there because `main.js` (56KB) happened to fit under the pipe buffer, not because the pattern
 was actually safe.
 
-Final example coverage: **24 examples across 6 technology clusters** (Python ×7, PHP, Node
-×6, Java ×4, Go ×4, .NET ×2) — see `artifacts/*/comparison.md` for each.
+Coverage at the end of §10: **24 examples across 6 technology clusters** (Python ×7, PHP,
+Node ×6, Java ×4, Go ×4, .NET ×2). Two later additions bring the final total to **29**:
+`react-rust-postgres`, recovered from the exclusion list and adding Rust as a seventh cluster
+(§6), and four of the twelve prebuilt entries that ship no Dockerfile at all (§12). See
+`artifacts/*/comparison.json` for each, and `artifacts/*/comparison.md` where a written
+analysis exists.
 
 ## 7. When Slim Adds No Value: Already-`scratch` Images
 
@@ -355,3 +426,241 @@ reproduces identically when building the source image with plain `docker build`,
 a quirk of this `mint` version rather than anything introduced here. It is cosmetic for
 this project's results: the metrics are collected from the tag itself
 (`docker inspect <tag>`), which is the image that is tested.
+
+## 12. Prebuilt Examples: Minimizing Images Nobody Built Here
+
+Every example up to this point ships a Dockerfile. The pipeline builds it, minimizes the
+result, and compares the two. Fifteen of the 39 vendored awesome-compose entries do not
+work that way — twelve of them contain no Dockerfile at all and only wire together images
+pulled from a registry, and three more (`react-rust-postgres` and the two WasmEdge entries)
+are a separate story told in §6. This section covers the twelve, why four of them are in
+the results, and why the other eight are not.
+
+### 12.1 What is structurally different
+
+The plan's Stage 2 opens the whole methodology with a single instruction — *"Build the
+example using `docker compose build`"* — and for these twelve there is nothing to build.
+That one absence propagates through every later stage:
+
+**The baseline is a pull, not a build.** `pipeline.env` gains `PREBUILT_IMAGE`, naming the
+exact registry reference the vendor compose file gives the target service;
+`pipeline/build.sh` pulls it and re-tags it as the example's `:original`, so everything
+downstream addresses it identically to a built image. The pull deliberately does not go
+through compose: `compose.override.yaml` has already replaced the service's `image:` with
+`${TARGET_IMAGE}`, so `compose pull` would try to fetch the pipeline's own tag from a
+registry.
+
+**"The" image has to be chosen.** A buildable example has exactly one thing it builds. A
+prebuilt entry is three or four peer services with no privileged one among them. The
+choice is recorded in each `pipeline.env` and follows one rule: minimize the service where
+minimization has something to work on. For `prometheus-grafana` that is Grafana, not
+Prometheus — a single static Go binary is the shape §7 already showed Slim cannot improve.
+For `elasticsearch-logstash-kibana` it is Kibana, not the two JVM servers whose behaviour
+is driven by classpath scanning and plugin discovery.
+
+**There is no source to reason about.** For a buildable example, a Dockerfile says what the
+image is for. Here the only available evidence is what the running container does, which
+makes the functional tests the sole specification — and makes the difference between a test
+that exercises the product and one that exercises the container's toolbox matter far more
+than it did before (see 12.4).
+
+**State handling becomes a correctness problem, not a detail.** These are finished server
+products, and finished server products write state. Under compose that state goes to a
+declared volume, wiped between stages. docker-slim runs its container with no volumes, so
+everything the analysed run writes lands in the container filesystem and is baked into the
+"minimized" image. On `gitea-postgres` the first run produced a slim image that came up
+*already installed*, carrying a generated `app.ini` — no longer the same image as the
+original, which makes the before/after comparison meaningless. Handling this took three
+attempts and is documented in 12.5.
+
+### 12.2 Results
+
+Four examples completed the full pipeline with functional tests passing on both stages.
+
+| Example | Target service | Size | Reduction | SBOM components | Vulnerabilities |
+|---|---|---|---|---|---|
+| `wordpress-mysql` | `wordpress:latest` | 274.73 → 140.20 MB | **-49.0%** | 273 → 18 | 1045 → 4 |
+| `nextcloud-redis-mariadb` | `nextcloud:apache` | 555.55 → 407.68 MB | **-26.6%** | 459 → 170 | 1261 → 7 |
+| `portainer` | `portainer/portainer-ce:alpine` | 48.55 → 38.74 MB | **-20.2%** | 328 → 312 | 34 → 11 |
+| `prometheus-grafana` | `grafana/grafana:latest` | 474.10 → 413.28 MB | **-12.8%** | 1791 → 1760 | 178 → 157 |
+
+The size reductions are modest next to the buildable examples (median ~54%), and that is
+the expected shape rather than a disappointment: a published product image has already been
+optimized by whoever publishes it, so there is less slack to remove than in an example
+Dockerfile that installs a full toolchain and never cleans up.
+
+The vulnerability numbers move much harder than the sizes. `wordpress-mysql` loses half its
+bytes but 99.6% of its findings (1045 → 4); `nextcloud-redis-mariadb` loses a quarter of its
+bytes and 99.4% of its findings (1261 → 7). The §7 caveat applies in full — much of that
+drop is package *metadata* becoming invisible to Syft rather than code being removed — but
+the asymmetry itself is the point, and it is far more pronounced here than on the buildable
+set.
+
+### 12.3 The eight marked out of scope
+
+The remaining eight are **out of scope for this project's results**. All eight are fully
+configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all eight pass
+the `original` stage, so `artifacts/<example>/original/` holds a real baseline for each.
+None produces a slim image that both builds and passes its tests. They are kept in the
+repository as evidence, not as pending work.
+
+The justification is the plan's own scoping language. Stage 7 asks for *"as many **relevant**
+Awesome Compose examples as possible"*, and Stage 1 filters the inventory to *"the available
+Awesome Compose examples **that can be processed**"*. An entry whose baseline cannot be
+built by `docker compose build` was never inside the methodology; recording why is a Stage 1
+deliverable, not a gap in Stage 7.
+
+Grouped by cause:
+
+**Blocked by docker-slim itself (3).** Nothing in the pipeline configuration can move these.
+
+- `postgresql-pgadmin` — the analysis container dies with `sudo: effective uid is not 0, is
+  /usr/bin/sudo on a file system with the 'nosuid' option set`. pgAdmin's entrypoint elevates
+  through `sudo`, and mint's sensor makes that impossible. mint exits `code=-1`.
+- `plex` — mint's artifact copier cannot handle the s6-overlay layout:
+  `cloneDirPath() - os.MkdirAll(/opt/_mint/artifacts/files/package/admin/s6-overlay-helpers)
+  error - file exists`. Also `code=-1`.
+- `gitea-postgres` — the most instructive of the three, because the minimized image is
+  *not* broken. See 12.6.
+
+**Reached the slim stage but not validated (5).** `nextcloud-postgres`,
+`pihole-cloudflared-DoH`, `minecraft`, `wireguard` and `elasticsearch-logstash-kibana` each hit
+a distinct, diagnosed cause with a fix written into their configuration (`SLIM_INCLUDE_BINS`,
+`SLIM_INCLUDE_PATHS`, `COMPOSE_NETWORK`, a host-side test assertion). Those fixes are **not
+validated** — the runs that would confirm them were not completed. The configurations are left
+in place and honestly labelled as unverified rather than presented as results.
+
+Two of the five failed for the same pipeline-side reason, worth naming because the message is
+misleading: mint answers `info=param.error status='unknown.network'` and exits `code=16777220`
+when `--network` names a compose network that does exist. It is not reporting a missing
+network — it is reporting that `pipeline/slim.sh` built the name from the compose default
+(`dip-<example>_default`) while the example declares its own (`dns-net` for
+`pihole-cloudflared-DoH`, `elastic` for `elasticsearch-logstash-kibana`). `COMPOSE_NETWORK`
+exists for exactly this and was simply not set for those two.
+
+**A note on `elasticsearch-logstash-kibana`, which was previously filed here as blocked by
+the environment.** It is not, and the distinction matters. The vendor pins 7.16.1, whose
+bundled JDK 17.0.1 crashes on cgroup v2 before Elasticsearch starts (`NullPointerException:
+Cannot invoke "jdk.internal.platform.CgroupInfo.getMountPoint()" because "anyController" is
+null`). That is not dependency drift — the tag is pinned; the ground moved under it, a 2021
+image on a 2026 kernel — and it cannot be worked around from outside the image, since
+`ES_JAVA_OPTS` is read by the launcher that is already crashing and `--cgroupns=host` does not
+help. **The deviation to 7.17.28 was therefore taken**, the last release of the same 7.x line,
+which passes `-Des.cgroups.hierarchy.override=/` and starts cleanly. It is the only version
+deviation in this repository that changes the artifact being measured rather than a dependency
+around it, so it is stated in the example's `pipeline.env` banner rather than left implicit:
+**the baseline in `artifacts/elasticsearch-logstash-kibana/original/` is Kibana 7.17.28, not
+7.16.1.** With that in place the `original` stage passes in full, and the only thing standing
+between this entry and a result is the unset `COMPOSE_NETWORK` above.
+
+### 12.4 Tests must measure the product, not the toolbox
+
+Minimization removes the shell. That is largely the point, and it quietly invalidates a whole
+class of assertion.
+
+`docker exec <container> test -S /var/run/docker.sock` passes against `portainer:original`
+and fails against `portainer:slim` with `exec: "test": executable file not found in $PATH` —
+not because Portainer stopped working, but because the minimized image contains the portainer
+binary and essentially nothing else. The same happened to `getent` on nextcloud and to `test`
+on minecraft. Every such assertion was rewritten to observe from the host (`docker inspect`
+for mounts and networks, a helper container sharing the volume) or dropped in favour of an
+HTTP check that exercises the same thing through the application.
+
+A second, subtler case: `wordpress:slim` no longer contains `/usr/local/bin/php`. The image
+serves through mod_php, so nothing the probe does ever execs the CLI and Slim correctly
+classifies it as unused. WordPress works; `wp-cli` and cron workflows would not. That is
+recorded as a capability loss in the example's test script rather than as a test failure,
+because the tests measure what the image is for.
+
+**One test was actively lying.** `tests/generic/http_health.sh` accepts any 2xx/3xx. On
+`prometheus-grafana:slim`, Slim had removed `public/img/grafana_icon.svg`; Grafana answered the
+request with a 302 whose body happened to contain the string being grepped for, and the check
+passed. The measured reduction at that point was 17.3% — partly obtained by deleting a file
+that was supposed to still be there. `tests/generic/http_asset.sh` was added (exactly 200,
+non-empty body), the icon was added to the probe set, and the honest figure is **12.8%**.
+A better number and a broken image are easy to confuse; only a strict assertion tells them
+apart.
+
+### 12.5 Keeping runtime state out of the minimized image
+
+Three mint mechanisms were tried for this. Only a combination works, and the negative results
+were verified on a purpose-built two-image probe rather than inferred from failures.
+
+1. **`--preserve-path` is broken** in 1.41.8. It fails with
+   `fsutil.ArchiveFiles: bad file - /opt/_mint/artifacts/...` and carries the path into the
+   output image anyway.
+2. **`--exclude-mounts` does not exclude.** Probe: an image whose `CMD` writes
+   `/state/written.txt`, run with `--mount vol:/state`. The write lands in the volume, as it
+   should — and `written.txt` is still baked into the minified image, despite the flag being
+   documented as on by default.
+3. **`--exclude-pattern` removes files but never directories.** Globs, then every directory
+   listed explicitly, then `--include-path` on the parent: the empty tree survives all three.
+
+The working arrangement is `SLIM_MOUNTS` (a throwaway named volume at the state path, so the
+analysed run writes where the real deployment writes) *plus* `SLIM_EXCLUDE_PATTERNS` for the
+same path. The mount is not redundant — without it the run exercises a different code path
+from the one the example actually uses.
+
+### 12.6 `gitea-postgres`: minimization that succeeds and still fails
+
+Worth stating separately, because the conclusion is not the obvious one.
+
+The slim gitea image fails at runtime with
+`open /data/git/.ssh/authorized_keys.tmp: permission denied`, and gitea exits. The cause is a
+four-link chain, each link verified independently:
+
+1. mint bakes the mounted volume's contents into the image (12.5, finding 2);
+2. `--exclude-pattern` strips the files but leaves `/data/git` and `/data/gitea` behind
+   (finding 3);
+3. Docker pre-populates a named volume from the image's content on first mount — standard
+   behaviour, and the vendor compose file uses a named volume;
+4. gitea's init only fixes ownership on directories it creates itself, so it skips the
+   pre-existing ones and `/data/git/.ssh` ends up owned by root while gitea runs as `git`.
+
+The decisive test: the same slim image started with `--tmpfs /data` — identical image, only
+without Docker pre-populating from it — installs and runs perfectly. Install completes, `/`
+renders the configured instance name, `/api/v1/version` responds, zero fatal log lines.
+
+**So the minimized image is not broken. The directory skeleton mint leaves behind is.**
+
+Switching the override to a tmpfs would make this example pass and produce reduction figures.
+It was not done. The original image works with the volume the vendor declares and the slim
+image does not; reporting "no regression" under a mount chosen to hide that difference would
+misrepresent exactly what the pipeline exists to measure. `gitea-postgres` is recorded as a
+failure, with the reason and the tmpfs result stated, which is more useful than a number.
+
+### 12.7 Pipeline changes introduced by this category
+
+All are additive; the 25 buildable examples are unaffected.
+
+| Mechanism | Purpose |
+|---|---|
+| `PREBUILT_IMAGE` | Baseline by pull + re-tag instead of `compose build` |
+| `SLIM_MOUNTS` | Throwaway volume at the state path during analysis |
+| `SLIM_EXCLUDE_PATTERNS` | Drop that path from the output image (required alongside the mount) |
+| `SLIM_INCLUDE_BINS` | Keep a binary the analysis may not observe |
+| `SLIM_INCLUDE_PATHS` | Keep a path the analysis may not observe |
+| `SLIM_PROBE=none` + `SLIM_RUN_SECONDS` | For examples that speak no HTTP |
+| `POST_PROBE_CONTENT_TYPE` | Form-urlencoded probe bodies, not just JSON |
+| `APP_MOUNT` absolute paths | The Docker socket, for portainer |
+| Lowercased compose project name | `pihole-cloudflared-DoH` has uppercase letters |
+
+Two of these deserve emphasis as findings rather than plumbing.
+
+**`SLIM_PROBE=none` needs `--http-probe=false` explicitly.** `--continue-after <seconds>` does
+not imply it: mint still tries to probe and aborts with `NO EXPOSED PORTS` before starting the
+container.
+
+**Slim's analysis is not deterministic.** `nextcloud-postgres` and `nextcloud-redis-mariadb`
+are the *same image* (`nextcloud:apache`) with the same pipeline configuration. One run
+produced a slim image containing `/usr/bin/rsync`; the other did not, and crashlooped on
+`/entrypoint.sh: 206: rsync: not found` — the entrypoint uses rsync to unpack
+`/usr/src/nextcloud` into the web root, so the container never starts. Nothing in the
+configuration differed. What differed was whether the analysis observed that one exec during
+startup. A later run reproduced the same class of problem one level down, with the data file
+`/upgrade.exclude` that rsync is handed via `--exclude-from`.
+
+This is the most consequential finding in this section. It means a passing pipeline run is not
+by itself evidence that a configuration is correct — anything a program touches exactly once
+at startup may or may not survive, and the only defence is to pin it explicitly with
+`SLIM_INCLUDE_BINS` / `SLIM_INCLUDE_PATHS` rather than leave it to the analysis.

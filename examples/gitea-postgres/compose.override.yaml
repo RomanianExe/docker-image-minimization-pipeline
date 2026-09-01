@@ -1,0 +1,40 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference, so
+#                     pipeline/build.sh pulls that reference directly rather
+#                     than going through `compose pull`.
+#   container_name  - stable name the functional tests address.
+#   ports !override - remap onto this project's own host-port range.
+#
+# db.healthcheck + gitea.depends_on - the vendor file declares no ordering
+#   between the two services at all, leaning on `restart: always`. The pipeline
+#   asserts the container is running once STARTUP_WAIT elapses, so a restart
+#   loop would read as a spurious failure; the healthcheck gate makes the run
+#   deterministic without changing what is measured.
+#
+# db.image - the vendor file says `postgres:alpine`, unpinned. That tag now
+#   resolves to PostgreSQL 18, which relocated PGDATA to
+#   /var/lib/postgresql/<major>/docker and REFUSES TO START when a volume is
+#   mounted at the old /var/lib/postgresql/data — which is exactly what the
+#   vendor file mounts. Same upstream drift already pinned around in
+#   spring-postgres and nginx-golang-postgres; pinned to the last major that
+#   matches the vendored mount layout so the example still describes itself.
+services:
+  gitea:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  db:
+    image: postgres:17-alpine
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gitea"]
+      interval: 3s
+      retries: 10
+      start_period: 10s

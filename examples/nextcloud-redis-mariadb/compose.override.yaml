@@ -1,0 +1,37 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference, so
+#                     pipeline/build.sh pulls that reference directly rather
+#                     than going through `compose pull`.
+#   container_name  - stable name the functional tests address.
+#   ports !override - remap onto this project's own host-port range (upstream
+#                     publishes :80).
+#
+# nc.volumes is deliberately NOT reset: nc_data is where the entrypoint unpacks
+# the application.
+#
+# Both backing services are pinned upstream already (mariadb:10.5, redis:alpine
+# is unpinned but redis has no equivalent of the postgres PGDATA relocation and
+# starts cleanly), so nothing needs pinning here.
+#
+# db.healthcheck + nc.depends_on - the vendor file declares no ordering between
+#   the services, relying on `restart: always`; the gate makes the pipeline run
+#   deterministic.
+services:
+  nc:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  db:
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+      interval: 3s
+      retries: 10
+      start_period: 30s

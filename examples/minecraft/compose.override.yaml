@@ -1,0 +1,23 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed.
+#   container_name  - stable name the functional tests address.
+#   ports !override - remap onto this project's own host-port range.
+#
+# volumes !override - the vendor file bind-mounts "~/minecraft_data" from the
+#   host, which would write a multi-hundred-megabyte generated world into the
+#   user's home directory and, worse, carry state between the original and slim
+#   stages so the two would not start from the same point. A named volume gives
+#   the container the same writable /data while staying inside the project and
+#   being wiped by `compose down -v` between stages.
+services:
+  minecraft:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    volumes: !override
+      - mc-data:/data
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+volumes:
+  mc-data: {}

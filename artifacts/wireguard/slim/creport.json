@@ -1,0 +1,5460 @@
+{
+  "document": "doc.report.container",
+  "version": "ov/container/1.1",
+  "target_type": "container",
+  "target_id": "7ed499adbe23c2fdf442b103181b92f38eed62fa657c8b73f2bbc39f30bbee28",
+  "image_id": "sha256:3abfd4b82212106e357989750b9c0c9859aa511f5305a9a55c18c8de7198b655",
+  "start_command": {
+    "app_name": "/init"
+  },
+  "sensor": {
+    "version": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+    "args": [
+      "/opt/_mint/bin/mint-sensor",
+      "-log-level",
+      "warn",
+      "-log-format",
+      "text"
+    ]
+  },
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.24.1",
+      "display_name": "Alpine Linux v3.24"
+    }
+  },
+  "monitors": {
+    "fan": {
+      "monitor_pid": 1,
+      "monitor_ppid": 0,
+      "event_count": 8,
+      "main_process": {
+        "pid": 16,
+        "name": "init",
+        "path": "/bin/busybox",
+        "cmd": "/bin/sh -e /init",
+        "cwd": "/",
+        "root": "/",
+        "ppid": 1
+      },
+      "processes": {
+        "16": {
+          "pid": 16,
+          "name": "init",
+          "path": "/bin/busybox",
+          "cmd": "/bin/sh -e /init",
+          "cwd": "/",
+          "root": "/",
+          "ppid": 1
+        }
+      },
+      "process_files": {
+        "16": {
+          "/bin/busybox": {
+            "event_count": 1,
+            "first_eid": 3,
+            "reads": 1,
+            "execs": 1
+          },
+          "/init": {
+            "event_count": 4,
+            "first_eid": 1,
+            "reads": 2
+          },
+          "/lib/ld-musl-x86_64.so.1": {
+            "event_count": 1,
+            "first_eid": 4,
+            "reads": 1
+          },
+          "/package/admin/s6-overlay-helpers-0.1.2.0/command/s6-overlay-suexec": {
+            "event_count": 2,
+            "first_eid": 7,
+            "reads": 1
+          }
+        }
+      }
+    },
+    "pt": {
+      "enabled": true,
+      "arch_name": "amd64",
+      "syscall_count": 54,
+      "syscall_num": 21,
+      "syscall_stats": {
+        "0": {
+          "num": 0,
+          "name": "read",
+          "count": 1
+        },
+        "10": {
+          "num": 10,
+          "name": "mprotect",
+          "count": 2
+        },
+        "102": {
+          "num": 102,
+          "name": "getuid",
+          "count": 2
+        },
+        "104": {
+          "num": 104,
+          "name": "getgid",
+          "count": 1
+        },
+        "107": {
+          "num": 107,
+          "name": "geteuid",
+          "count": 1
+        },
+        "108": {
+          "num": 108,
+          "name": "getegid",
+          "count": 1
+        },
+        "110": {
+          "num": 110,
+          "name": "getppid",
+          "count": 1
+        },
+        "12": {
+          "num": 12,
+          "name": "brk",
+          "count": 2
+        },
+        "13": {
+          "num": 13,
+          "name": "rt_sigaction",
+          "count": 7
+        },
+        "14": {
+          "num": 14,
+          "name": "rt_sigprocmask",
+          "count": 1
+        },
+        "158": {
+          "num": 158,
+          "name": "arch_prctl",
+          "count": 2
+        },
+        "2": {
+          "num": 2,
+          "name": "open",
+          "count": 2
+        },
+        "20": {
+          "num": 20,
+          "name": "writev",
+          "count": 5
+        },
+        "218": {
+          "num": 218,
+          "name": "set_tid_address",
+          "count": 2
+        },
+        "3": {
+          "num": 3,
+          "name": "close",
+          "count": 4
+        },
+        "33": {
+          "num": 33,
+          "name": "dup2",
+          "count": 4
+        },
+        "39": {
+          "num": 39,
+          "name": "getpid",
+          "count": 2
+        },
+        "59": {
+          "num": 59,
+          "name": "execve",
+          "count": 2
+        },
+        "72": {
+          "num": 72,
+          "name": "fcntl",
+          "count": 7
+        },
+        "79": {
+          "num": 79,
+          "name": "getcwd",
+          "count": 1
+        },
+        "9": {
+          "num": 9,
+          "name": "mmap",
+          "count": 4
+        }
+      },
+      "fs_activity": {
+        "/command/s6-overlay-suexec": {
+          "ops_all": 2,
+          "ops_checkfile": 0,
+          "syscalls": {
+            "59": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        },
+        "/init": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "2": {}
+          },
+          "pids": {
+            "16": {}
+          },
+          "is_subdir": false
+        }
+      }
+    }
+  },
+  "image": {
+    "files": [
+      null,
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/arch",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/ash",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/bbconfig",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/bin/busybox",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true,
+          "X": true
+        },
+        "file_size": 804616,
+        "sha1_hash": "eb0a3d12a71e8a3838c528d8a70259a8d907d824",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/chattr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/dmesg",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/dumpkmap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/fatattr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/fdflush",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/fsync",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/getopt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/gunzip",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/gzip",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/ionice",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/iostat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/ipcalc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/kbd_mode",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/kill",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/linux32",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/linux64",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/login",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/lsattr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/lzop",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/makemime",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/more",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/mount",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/mountpoint",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/mpstat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/pipe_progress",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/reformime",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/rev",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/run-parts",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/sed",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/setpriv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/setserial",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/sh",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/su",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/tar",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/umount",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/usleep",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/bin/zcat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-overlay-suexec",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "../package/admin/s6-overlay-helpers/command/s6-overlay-suexec",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nsswitch.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 205,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/passwd",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 837,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/resolv.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 224,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/cert.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/002c0b4f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0179095f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/062cdee6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/064e0aa9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/06dc52d5.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/09789157.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0a775a30.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 23,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0b1b94ef.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0b9bc432.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0bf05006.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0f5dc4f3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/0f6fa695.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 34,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1001acf7.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 23,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/14bc7599.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1cef98f5.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1d3472b9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1e08bfd1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/1e09d511.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/2923b3f9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/2ae6433e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/2ccbdda3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/30e1580d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/32888f65.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/3bde41ac.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/3e359ba6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/3fb36b73.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/40193066.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/4042bcee.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/406c9bb1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/48bec511.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/4b718d9b.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/4bfab552.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5443e9e3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/54657681.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5860aaa6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5931b5bc.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5f15c80c.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/5f618aec.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/607986c7.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6805c744.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/68dd7389.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6a9bdba3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6d41d539.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/6fa5da56.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/749e9e03.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/75d1b2ed.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7719f463.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 71,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/773e07ad.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7a3adc42.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7a780d93.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 29,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7f3d5d1d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/7fa05551.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8160b96c.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8508e720.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 29,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/865fbdf9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/878d9bca.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 32,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8cb5ee0f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8d89cda1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/8f103249.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9046744a.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/90c5a3c8.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 30,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/930ac5d2.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9482e63a.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9846683b.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/988a38cb.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9b46e03d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9bf03295.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9d04f354.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9e654b62.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9ef4a08a.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/9f727ac7.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a09a51ae.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a3418fda.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 23,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a89d74c2.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/a94d09e5.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 21,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b0d5255e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b0e59380.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b433981b.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b7a5b843.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b81b93f0.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/b8d25de6.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 30,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/bf53fb88.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/c01eb047.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 30,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/c28a8a30.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ACCVRAIZ1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-AC_RAIZ_FNMT-RCM.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 74,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ANF_Secure_Server_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Actalis_Authentication_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Amazon_Root_CA_4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Atos_TrustedRoot_2011.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 96,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-BJCA_Global_Root_CA1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-BJCA_Global_Root_CA2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Buypass_Class_2_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Buypass_Class_3_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-CA_Disig_Root_R2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-CFCA_EV_ROOT.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-COMODO_ECC_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-COMODO_RSA_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certainly_Root_E1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certainly_Root_R1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certigna_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_EC-384_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_Trusted_Network_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_Trusted_Network_CA_2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Certum_Trusted_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_BR_Root_CA_1_2020.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_BR_Root_CA_2_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_EV_Root_CA_1_2020.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_EV_Root_CA_2_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_Root_Class_3_CA_2_2009.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-D-TRUST_Root_Class_3_CA_2_EV_2009.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Assured_ID_Root_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Assured_ID_Root_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Global_Root_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Global_Root_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_TLS_ECC_P384_Root_G5.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 68,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_TLS_RSA4096_Root_G5.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-DigiCert_Trusted_Root_G4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 63,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GDCA_TrustAUTH_R5_ROOT.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GTS_Root_R1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GTS_Root_R3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GTS_Root_R4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_ECC_Root_CA_-_R4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_ECC_Root_CA_-_R5.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_CA_-_R3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_CA_-_R6.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_E46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-GlobalSign_Root_R46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Go_Daddy_Root_Certificate_Authority_-_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 79,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-HARICA_TLS_ECC_Root_CA_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-HARICA_TLS_RSA_Root_CA_2021.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 98,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 94,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-HiPKI_Root_CA_-_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Hongkong_Post_Root_CA_3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ISRG_Root_X1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ISRG_Root_X2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-IdenTrust_Commercial_Root_CA_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-IdenTrust_Public_Sector_Root_CA_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Izenpe.com.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Microsec_e-Szigno_Root_CA_2009.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Microsoft_ECC_Root_Certificate_Authority_2017.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Microsoft_RSA_Root_Certificate_Authority_2017.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-NAVER_Global_Root_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 80,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 83,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_Server_Root_ECC_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 63,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_Server_Root_RSA_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 63,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_WISeKey_Global_Root_GB_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 70,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-OISTE_WISeKey_Global_Root_GC_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 70,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-QuoVadis_Root_CA_1_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-QuoVadis_Root_CA_2_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-QuoVadis_Root_CA_3_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_EV_Root_Certification_Authority_ECC.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 82,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_EV_Root_Certification_Authority_RSA_R2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 85,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_Root_Certification_Authority_ECC.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 79,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_Root_Certification_Authority_RSA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 79,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_TLS_ECC_Root_CA_2022.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SSL.com_TLS_RSA_Root_CA_2022.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SZAFIR_ROOT_CA2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Sectigo_Public_Server_Authentication_Root_E46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Sectigo_Public_Server_Authentication_Root_R46.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SecureSign_Root_CA14.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SecureSign_Root_CA15.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Security_Communication_ECC_RootCA1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Security_Communication_RootCA2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 69,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Starfield_Root_Certificate_Authority_-_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 80,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Starfield_Services_Root_Certificate_Authority_-_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 89,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-SwissSign_RSA_TLS_Root_CA_2022_-_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-T-TeleSec_GlobalRoot_Class_2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-T-TeleSec_GlobalRoot_Class_3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 84,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TWCA_CYBER_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TWCA_Global_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TWCA_Root_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Telekom_Security_TLS_ECC_Root_2020.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Telekom_Security_TLS_RSA_Root_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-Telia_Root_CA_v2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_Global_Root_CA_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_Global_Root_CA_G4.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_TLS_ECC_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TrustAsia_TLS_RSA_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-TunTrust_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-UCA_Extended_Validation_Root.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 67,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-UCA_Global_G2_Root.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-USERTrust_ECC_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-USERTrust_RSA_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 76,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-certSIGN_Root_CA_G2.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-e-Szigno_Root_CA_2017.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-e-Szigno_TLS_Root_CA_2023.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-ePKI_Root_Certification_Authority.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 72,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_ECC_Root_CA_-_C3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_ECC_Root_CA_-_G3.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_Root_CA_-_C1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-emSign_Root_CA_-_G1.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-vTrus_ECC_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca-cert-vTrus_Root_CA.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/ssl/certs/ca-certificates.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 179359,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ca6e4ad9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cbf06781.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cc450945.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 22,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cd58d51e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/cd8c0d63.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ce5e74ef.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/d4dae3dd.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/d52c538d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/d6325660.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/da0cfd1d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/dc4d6a89.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/dd8e9d41.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ddcda989.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/de6d66f3.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e18bfb83.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e35234b1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 34,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e36a6752.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e73d606e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e868b802.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 33,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/e8de2f56.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ecccd8db.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ed858448.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 29,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/eed8c118.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ef954a4e.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f0c70a8d.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f30dd6ad.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f44703f1.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/f51bb24c.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fb717492.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fc5a8f99.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fd64f3fc.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 28,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/fe8a2cd8.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 27,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/feffd413.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ff34af3f.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/certs/ffdd40f9.0",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/init",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 1012,
+        "sha1_hash": "6f1542f390b1ace43cbed15a32c855e94968734e",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/lib/ld-musl-x86_64.so.1",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 670312,
+        "sha1_hash": "1c36e90298092e128f24de888da03bc09dce6b8a",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib/libc.musl-x86_64.so.1",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "ld-musl-x86_64.so.1",
+        "file_size": 19,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-overlay-helpers",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "s6-overlay-helpers-0.1.2.0",
+        "file_size": 26,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/package/admin/s6-overlay-helpers-0.1.2.0",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-helpers-0.1.2.0/command/s6-overlay-suexec",
+        "modex": 8389101,
+        "mode": "urwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 42216,
+        "sha1_hash": "8ce34be08bef0f4d72f6cbf44987cd11703334e3",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-helpers/command/s6-overlay-suexec",
+        "modex": 8389101,
+        "mode": "urwxr-xr-x",
+        "file_size": 42216,
+        "sha1_hash": "8ce34be08bef0f4d72f6cbf44987cd11703334e3",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/run",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/acpid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/adjtimex",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/blkdiscard",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/blkid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/blockdev",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/fbsplash",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/fdisk",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/findfs",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/fsck",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/fstrim",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/getty",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/halt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/hwclock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/ifdown",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/ifenslave",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/ifup",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/init",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/inotifyd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/ipaddr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/iplink",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/ipneigh",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/iproute",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/iprule",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/klogd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/loadkmap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/logread",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/losetup",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/mdev",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/mkdosfs",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/mkfs.vfat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/mkswap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/nologin",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/pivot_root",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/poweroff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/raidautorun",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/reboot",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/route",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/setconsole",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/swapoff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/swapon",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/switch_root",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/syslogd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/tunctl",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/udhcpc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/vconfig",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/watchdog",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/sbin/zcip",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/tmp",
+        "modex": 2148532735,
+        "mode": "dtrwxrwxrwx",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/[[",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/awk",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/beep",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/bunzip2",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/bzcat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/bzip2",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/cal",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/chvt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/clear",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/cmp",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/cpio",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/crontab",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/cryptpw",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/deallocvt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/diff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/dos2unix",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/eject",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/fallocate",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/flock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/fuser",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/groups",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/hd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/hexdump",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/ipcrm",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/ipcs",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/killall",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/last",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/less",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/logger",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/lsof",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/lsusb",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/lzcat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/lzma",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/lzopcat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/mesg",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/microcom",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/mkpasswd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/nmeter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/nsenter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/nslookup",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/openvt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/pscan",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/pstree",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/renice",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/reset",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/resize",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/s6-overlay-suexec",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "../../command/s6-overlay-suexec",
+        "file_size": 31,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/setkeycodes",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/setsid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/sha3sum",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/showkey",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/strings",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/time",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/traceroute",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/traceroute6",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/tree",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/ttysize",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/udhcpc6",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/unix2dos",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/unlzma",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/unlzop",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/unshare",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/unxz",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/unzip",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/uudecode",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/uuencode",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/vi",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/vlock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/volname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/wget",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/which",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/whois",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/xxd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/xzcat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/usr/local/share/ca-certificates",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/add-shell",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/addgroup",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/adduser",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/brctl",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/crond",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/delgroup",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/deluser",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/ether-wake",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/fbset",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/killall5",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/loadfont",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/nanddump",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/nandwrite",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/nbd-client",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/ntpd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/partprobe",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/rdate",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/rdev",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/readahead",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/remove-shell",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/rfkill",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/sendmail",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/setfont",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/sbin/setlogcons",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/bin/busybox",
+        "file_size": 12,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ACCVRAIZ1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2772,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1972,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 904,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ANF_Secure_Server_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2118,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Actalis_Authentication_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2049,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1188,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1883,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 656,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Amazon_Root_CA_4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 737,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_2011.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1261,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_ECC_TLS_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 782,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Atos_TrustedRoot_Root_CA_RSA_TLS_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1931,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2167,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/BJCA_Global_Root_CA1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1952,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/BJCA_Global_Root_CA2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 806,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Buypass_Class_2_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Buypass_Class_3_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/CA_Disig_Root_R2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1935,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/CFCA_EV_ROOT.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1984,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/COMODO_ECC_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 940,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/COMODO_RSA_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2086,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certainly_Root_E1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 741,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certainly_Root_R1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certigna_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2264,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_EC-384_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1354,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_Trusted_Network_CA_2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2078,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Certum_Trusted_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2053,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_1_2020.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1050,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_2_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2025,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_1_2020.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1050,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_2_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2025,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1517,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1537,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1306,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 851,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1294,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Global_Root_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 839,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_TLS_ECC_P384_Root_G5.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 790,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_TLS_RSA4096_Root_G5.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1931,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/DigiCert_Trusted_Root_G4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1988,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GDCA_TrustAUTH_R5_ROOT.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1980,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GTS_Root_R1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1911,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GTS_Root_R3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 765,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GTS_Root_R4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 765,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 704,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_ECC_Root_CA_-_R5.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 794,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1229,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_CA_-_R6.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1972,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_E46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 769,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/GlobalSign_Root_R46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1367,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/HARICA_TLS_ECC_Root_CA_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 867,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/HARICA_TLS_RSA_Root_CA_2021.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2017,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1017,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2155,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/HiPKI_Root_CA_-_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1939,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Hongkong_Post_Root_CA_3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2074,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ISRG_Root_X1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1939,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ISRG_Root_X2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 790,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/IdenTrust_Commercial_Root_CA_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/IdenTrust_Public_Sector_Root_CA_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1931,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Izenpe.com.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2122,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Microsec_e-Szigno_Root_CA_2009.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1460,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 875,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2021,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/NAVER_Global_Root_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2013,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1476,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_Server_Root_ECC_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 826,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_Server_Root_RSA_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1972,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1346,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 895,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_1_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_2_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/QuoVadis_Root_CA_3_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1923,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 956,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2114,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_ECC.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 944,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_Root_Certification_Authority_RSA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2094,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_TLS_ECC_Root_CA_2022.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 834,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SSL.com_TLS_RSA_Root_CA_2022.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1980,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SZAFIR_ROOT_CA2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1257,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_E46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 834,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_R46.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1980,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SecureSign_Root_CA14.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1948,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SecureSign_Root_CA15.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 802,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Security_Communication_ECC_RootCA1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 830,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Security_Communication_RootCA2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1261,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Starfield_Root_Certificate_Authority_-_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1399,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1424,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/SwissSign_RSA_TLS_Root_CA_2022_-_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1992,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1367,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1367,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1582,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TWCA_CYBER_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1984,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1883,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1269,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Telekom_Security_TLS_ECC_Root_2020.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 843,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Telekom_Security_TLS_RSA_Root_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2037,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/Telia_Root_CA_v2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1952,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2017,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G4.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 871,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_TLS_ECC_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 822,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TrustAsia_TLS_RSA_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1968,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/TunTrust_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2037,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/UCA_Extended_Validation_Root.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1915,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/UCA_Global_G2_Root.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/USERTrust_ECC_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 948,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/USERTrust_RSA_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2094,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/certSIGN_Root_CA_G2.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1891,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/e-Szigno_Root_CA_2017.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 843,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/e-Szigno_TLS_Root_CA_2023.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1034,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/ePKI_Root_Certification_Authority.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2033,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_C3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 814,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_G3.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 859,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_Root_CA_-_C1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1257,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/emSign_Root_CA_-_G1.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1302,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/vTrus_ECC_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 774,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/ca-certificates/mozilla/vTrus_Root_CA.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1911,
+        "uid": 0,
+        "gid": 0
+      }
+    ]
+  }
+}

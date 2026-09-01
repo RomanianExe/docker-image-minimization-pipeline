@@ -1,0 +1,40 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference, so
+#                     pipeline/build.sh pulls that reference directly rather
+#                     than going through `compose pull`.
+#   container_name  - stable name the functional tests address (replaces the
+#                     vendor file's own container_name: kib).
+#   ports !override - remap onto this project's own host-port range.
+#
+# elasticsearch.depends_on/healthcheck - the vendor file already declares an
+#   Elasticsearch healthcheck but wires Kibana to it with a bare
+#   `depends_on: [elasticsearch]`, which waits only for the container to be
+#   created. Kibana started against a not-yet-ready Elasticsearch spends
+#   minutes in a retry loop and reports "unavailable" for the whole of
+#   STARTUP_WAIT, so the condition is upgraded to service_healthy. The
+#   healthcheck itself is the example's own.
+#
+# elasticsearch.ports !reset - upstream publishes 9200/9300 on the host; the
+#   pipeline reaches Elasticsearch only through Kibana, over the compose
+#   network.
+#
+# elasticsearch.image - bumped to 7.17.28 in lockstep with the Kibana image, for
+#   the JDK/cgroup-v2 reason documented in pipeline.env. Kibana refuses to talk
+#   to an Elasticsearch of a different minor version, so the two move together
+#   or not at all.
+services:
+  kibana:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    depends_on: !override
+      elasticsearch:
+        condition: service_healthy
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  elasticsearch:
+    image: elasticsearch:7.17.28
+    ports: !reset null

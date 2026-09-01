@@ -1,0 +1,734 @@
+{
+  "document": "doc.report.container",
+  "version": "ov/container/1.1",
+  "target_type": "container",
+  "target_id": "c226d2fe59916e4aad9cc43b4576bf0f04a5eb01c96d23d4e6c1d8b50065af61",
+  "image_id": "sha256:7ae49670d3b4da7e625eff93dac3ebd72cdcc8496b0454499d254ffeea3da9f9",
+  "start_command": {
+    "app_name": "/react-rust-postgres"
+  },
+  "sensor": {
+    "version": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+    "args": [
+      "/opt/_mint/bin/mint-sensor",
+      "-log-level",
+      "warn",
+      "-log-format",
+      "text"
+    ]
+  },
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "12",
+      "display_name": "Debian GNU/Linux 12 (bookworm)"
+    }
+  },
+  "monitors": {
+    "fan": {
+      "monitor_pid": 1,
+      "monitor_ppid": 0,
+      "event_count": 14,
+      "main_process": {
+        "pid": 17,
+        "name": "react-rust-post",
+        "path": "/react-rust-postgres",
+        "cmd": "",
+        "cwd": "/",
+        "root": "/",
+        "ppid": 1
+      },
+      "processes": {
+        "17": {
+          "pid": 17,
+          "name": "react-rust-post",
+          "path": "/react-rust-postgres",
+          "cmd": "",
+          "cwd": "/",
+          "root": "/",
+          "ppid": 1
+        }
+      },
+      "process_files": {
+        "17": {
+          "/etc/host.conf": {
+            "event_count": 2,
+            "first_eid": 13,
+            "reads": 1
+          },
+          "/etc/ld.so.cache": {
+            "event_count": 1,
+            "first_eid": 4
+          },
+          "/etc/nsswitch.conf": {
+            "event_count": 2,
+            "first_eid": 11,
+            "reads": 1
+          },
+          "/react-rust-postgres": {
+            "event_count": 2,
+            "first_eid": 1,
+            "reads": 1,
+            "execs": 2
+          },
+          "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": {
+            "event_count": 1,
+            "first_eid": 3,
+            "reads": 1
+          },
+          "/usr/lib/x86_64-linux-gnu/libc.so.6": {
+            "event_count": 4,
+            "first_eid": 7,
+            "reads": 3
+          },
+          "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+            "event_count": 2,
+            "first_eid": 5,
+            "reads": 1
+          }
+        }
+      }
+    },
+    "pt": {
+      "enabled": true,
+      "arch_name": "amd64",
+      "syscall_count": 3073,
+      "syscall_num": 48,
+      "syscall_stats": {
+        "0": {
+          "num": 0,
+          "name": "read",
+          "count": 35
+        },
+        "1": {
+          "num": 1,
+          "name": "write",
+          "count": 468
+        },
+        "10": {
+          "num": 10,
+          "name": "mprotect",
+          "count": 83
+        },
+        "11": {
+          "num": 11,
+          "name": "munmap",
+          "count": 17
+        },
+        "12": {
+          "num": 12,
+          "name": "brk",
+          "count": 4
+        },
+        "13": {
+          "num": 13,
+          "name": "rt_sigaction",
+          "count": 12
+        },
+        "131": {
+          "num": 131,
+          "name": "sigaltstack",
+          "count": 54
+        },
+        "14": {
+          "num": 14,
+          "name": "rt_sigprocmask",
+          "count": 79
+        },
+        "157": {
+          "num": 157,
+          "name": "prctl",
+          "count": 26
+        },
+        "158": {
+          "num": 158,
+          "name": "arch_prctl",
+          "count": 1
+        },
+        "16": {
+          "num": 16,
+          "name": "ioctl",
+          "count": 4
+        },
+        "17": {
+          "num": 17,
+          "name": "pread64",
+          "count": 2
+        },
+        "202": {
+          "num": 202,
+          "name": "futex",
+          "count": 101
+        },
+        "204": {
+          "num": 204,
+          "name": "sched_getaffinity",
+          "count": 29
+        },
+        "21": {
+          "num": 21,
+          "name": "access",
+          "count": 1
+        },
+        "218": {
+          "num": 218,
+          "name": "set_tid_address",
+          "count": 1
+        },
+        "219": {
+          "num": 219,
+          "name": "restart_syscall",
+          "count": 22
+        },
+        "232": {
+          "num": 232,
+          "name": "epoll_wait",
+          "count": 1662
+        },
+        "233": {
+          "num": 233,
+          "name": "epoll_ctl",
+          "count": 54
+        },
+        "257": {
+          "num": 257,
+          "name": "openat",
+          "count": 14
+        },
+        "262": {
+          "num": 262,
+          "name": "newfstatat",
+          "count": 13
+        },
+        "273": {
+          "num": 273,
+          "name": "set_robust_list",
+          "count": 27
+        },
+        "288": {
+          "num": 288,
+          "name": "accept4",
+          "count": 2
+        },
+        "290": {
+          "num": 290,
+          "name": "eventfd2",
+          "count": 26
+        },
+        "291": {
+          "num": 291,
+          "name": "epoll_create1",
+          "count": 26
+        },
+        "3": {
+          "num": 3,
+          "name": "close",
+          "count": 17
+        },
+        "302": {
+          "num": 302,
+          "name": "prlimit64",
+          "count": 2
+        },
+        "307": {
+          "num": 307,
+          "name": "sendmmsg",
+          "count": 1
+        },
+        "318": {
+          "num": 318,
+          "name": "getrandom",
+          "count": 26
+        },
+        "332": {
+          "num": 332,
+          "name": "statx",
+          "count": 6
+        },
+        "334": {
+          "num": 334,
+          "name": "rseq",
+          "count": 27
+        },
+        "41": {
+          "num": 41,
+          "name": "socket",
+          "count": 5
+        },
+        "42": {
+          "num": 42,
+          "name": "connect",
+          "count": 4
+        },
+        "435": {
+          "num": 435,
+          "name": "clone3",
+          "count": 26
+        },
+        "44": {
+          "num": 44,
+          "name": "sendto",
+          "count": 15
+        },
+        "45": {
+          "num": 45,
+          "name": "recvfrom",
+          "count": 18
+        },
+        "49": {
+          "num": 49,
+          "name": "bind",
+          "count": 1
+        },
+        "50": {
+          "num": 50,
+          "name": "listen",
+          "count": 1
+        },
+        "51": {
+          "num": 51,
+          "name": "getsockname",
+          "count": 2
+        },
+        "52": {
+          "num": 52,
+          "name": "getpeername",
+          "count": 1
+        },
+        "53": {
+          "num": 53,
+          "name": "socketpair",
+          "count": 1
+        },
+        "54": {
+          "num": 54,
+          "name": "setsockopt",
+          "count": 5
+        },
+        "55": {
+          "num": 55,
+          "name": "getsockopt",
+          "count": 1
+        },
+        "63": {
+          "num": 63,
+          "name": "uname",
+          "count": 1
+        },
+        "7": {
+          "num": 7,
+          "name": "poll",
+          "count": 4
+        },
+        "72": {
+          "num": 72,
+          "name": "fcntl",
+          "count": 50
+        },
+        "8": {
+          "num": 8,
+          "name": "lseek",
+          "count": 5
+        },
+        "9": {
+          "num": 9,
+          "name": "mmap",
+          "count": 91
+        }
+      },
+      "fs_activity": {
+        "/etc/host.conf": {
+          "ops_all": 2,
+          "ops_checkfile": 2,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "18": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/hosts": {
+          "ops_all": 2,
+          "ops_checkfile": 2,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "18": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/ld.so.cache": {
+          "ops_all": 2,
+          "ops_checkfile": 2,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/nsswitch.conf": {
+          "ops_all": 4,
+          "ops_checkfile": 3,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "18": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/resolv.conf": {
+          "ops_all": 4,
+          "ops_checkfile": 3,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "18": {}
+          },
+          "is_subdir": false
+        },
+        "/lib/x86_64-linux-gnu/libc.so.6": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        },
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/lib/x86_64-linux-gnu/libc.so.6": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "262": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        },
+        "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "262": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        }
+      }
+    }
+  },
+  "image": {
+    "files": [
+      null,
+      {
+        "file_type": "symlink",
+        "file_path": "/bin",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "usr/bin",
+        "file_size": 7,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/host.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 9,
+        "sha1_hash": "b10cafadc043aec4056a948914f011bc39d2ec13",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/hosts",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 172,
+        "sha1_hash": "a9d6de3f76a409e1cbdaef9f4d6f632e44dc4ea2",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/ld.so.cache",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 4523,
+        "sha1_hash": "b4972c167d5ef5ed9cf93513aa9226b34be03e27",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nsswitch.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 494,
+        "sha1_hash": "6dffef69c10367a91b048d9180a4424eede80b74",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/passwd",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 839,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/resolv.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 314,
+        "sha1_hash": "012e99aba1f47a788fac395aada2554fc9aeb00c",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "usr/lib",
+        "file_size": 7,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 215000,
+        "sha1_hash": "2ae43971459c5256179755cd66c67514d5ed9522",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/lib/x86_64-linux-gnu/libc.so.6",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1926232,
+        "sha1_hash": "4afd40c9fab267a550de1c6883ccb5d499a710cc",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 125312,
+        "sha1_hash": "6cee473a1819d3524615a779bd0591a22b580082",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib64",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "usr/lib64",
+        "file_size": 9,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib64/ld-linux-x86-64.so.2",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/react-rust-postgres",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true,
+          "X": true
+        },
+        "file_size": 7497960,
+        "sha1_hash": "06c313ac59ed49885ffa6e46f1b234b9f10dea08",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/run",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/tmp",
+        "modex": 2148532735,
+        "mode": "dtrwxrwxrwx",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/usr/bin",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 12288,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/bin/ld.so",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/lib64/ld-linux-x86-64.so.2",
+        "file_size": 27,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/usr/lib",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 215000,
+        "sha1_hash": "2ae43971459c5256179755cd66c67514d5ed9522",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true
+        },
+        "file_size": 1926232,
+        "sha1_hash": "4afd40c9fab267a550de1c6883ccb5d499a710cc",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 125312,
+        "sha1_hash": "6cee473a1819d3524615a779bd0591a22b580082",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/x86_64-linux-gnu/libnss_dns.so.2",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 14400,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/x86_64-linux-gnu/libnss_files.so.2",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 14400,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/lib/x86_64-linux-gnu/libresolv.so.2",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 60328,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/usr/lib64",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/usr/lib64/ld-linux-x86-64.so.2",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      }
+    ]
+  }
+}

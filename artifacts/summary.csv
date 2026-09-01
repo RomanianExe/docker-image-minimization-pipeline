@@ -1,0 +1,38 @@
+example,cluster,source,base_image,status,original_size_bytes,original_components,original_vulns,slim_size_bytes,slim_components,slim_vulns,size_reduction_pct,component_reduction,vulnerability_reduction,tests_original,tests_slim,note
+angular,Node/JS,compose build,,processed,242807563,1824,782,66611586,970,225,72.6,854,557,PASS,PASS,
+apache-php,PHP,compose build,,processed,167773412,197,1929,33723017,4,59,79.9,193,1870,PASS,PASS,
+aspnet-mssql,.NET,compose build,,processed,85388703,100,271,66138661,8,13,22.5,92,258,PASS,PASS,
+django,Python,compose build,,processed,27718999,63,178,11358428,1,71,59.0,62,107,PASS,PASS,
+elasticsearch-logstash-kibana,Java/Node,prebuilt,kibana:7.17.28,baseline only,356322853,977,482,,,,,,,,,"reached slim; fix written (`COMPOSE_NETWORK=elastic`), not validated. Baseline measures Kibana 7.17.28, not the vendor's 7.16.1 — see §12.3"
+fastapi,Python,compose build,,processed,62337285,169,414,21448485,6,42,65.6,163,372,PASS,PASS,
+flask,Python,compose build,,processed,23798617,80,51,9787365,2,20,58.9,78,31,PASS,PASS,
+flask-redis,Python,compose build,,processed,25046244,82,51,11577522,3,20,53.8,79,31,PASS,PASS,
+gitea-postgres,Go,prebuilt,gitea/gitea:latest,baseline only,72158565,338,120,,,,,,,,,slim image is sound; mint's leftover `/data` skeleton pre-populates the named volume as root
+minecraft,Java,prebuilt,itzg/minecraft-server:latest,baseline only,353706844,486,1455,,,,,,,,,"reached slim; host-side test assertion rewritten, not validated"
+nextcloud-postgres,PHP,prebuilt,nextcloud:apache,baseline only,555553556,459,1261,,,,,,,,,"reached slim; fix written (`SLIM_INCLUDE_BINS=/usr/bin/rsync`), not validated"
+nextcloud-redis-mariadb,PHP,prebuilt,nextcloud:apache,processed,555553556,459,1261,407677919,170,7,26.6,289,1254,PASS,PASS,
+nginx-aspnet-mysql,.NET,compose build,,processed,86705181,103,325,48999990,4,1,43.5,99,324,PASS,PASS,
+nginx-flask-mongo,Python,compose build,,processed,25798261,82,51,11756466,2,20,54.4,80,31,PASS,PASS,
+nginx-flask-mysql,Python,compose build,,processed,24355600,80,62,11048492,2,20,54.6,78,42,PASS,PASS,
+nginx-golang,Go,compose build,,processed,123401523,59,574,4804703,3,43,96.1,56,531,PASS,PASS,
+nginx-golang-mysql,Go,compose build,,processed,4156598,6,41,4419230,6,41,-6.3,0,0,PASS,PASS,
+nginx-golang-postgres,Go,compose build,,processed,4251260,5,42,4516955,5,42,-6.2,0,0,PASS,PASS,
+nginx-nodejs-redis,Node/JS,compose build,,processed,42809197,512,246,35234680,58,91,17.7,454,155,PASS,PASS,
+nginx-wsgi-flask,Python,compose build,,processed,31835507,75,326,8196145,1,89,74.3,74,237,PASS,PASS,
+pihole-cloudflared-DoH,C,prebuilt,pihole/pihole:latest,baseline only,42673765,94,76,,,,,,,,,"reached slim; fix written (`COMPOSE_NETWORK=dns-net`), not validated"
+plex,C++,prebuilt,linuxserver/plex:latest,baseline only,180446187,164,165,,,,,,,,,docker-slim: artifact copier fails on the s6-overlay layout
+portainer,Go,prebuilt,portainer/portainer-ce:alpine,processed,48553782,328,34,38744462,312,11,20.2,16,23,PASS,PASS,
+postgresql-pgadmin,Python,prebuilt,dpage/pgadmin4:latest,baseline only,181560572,210,45,,,,,,,,,"docker-slim: entrypoint elevates via `sudo`, the sensor mount is `nosuid`"
+prometheus-grafana,Go,prebuilt,grafana/grafana:latest,processed,474098752,1791,178,413283970,1760,157,12.8,31,21,PASS,PASS,
+react-express-mongodb,Node/JS,compose build,,processed,89926726,512,244,45668317,146,74,49.2,366,170,PASS,PASS,
+react-express-mysql,Node/JS,compose build,,processed,417884686,661,1791,55605029,76,24,86.7,585,1767,PASS,PASS,
+react-java-mysql,Java,compose build,,processed,133418185,249,567,91150344,98,152,31.7,151,415,PASS,PASS,
+react-nginx,Node/JS,compose build,,processed,26447276,71,10,4481029,1,0,83.1,70,10,PASS,PASS,
+react-rust-postgres,Rust,compose build,,processed,30717422,88,177,4013483,0,0,86.9,88,177,PASS,PASS,
+sparkjava,Java,compose build,,processed,97444975,170,462,53958724,20,44,44.6,150,418,PASS,PASS,
+sparkjava-mysql,Java,compose build,,processed,101159442,172,468,57766179,22,50,42.9,150,418,PASS,PASS,
+spring-postgres,Java,compose build,,processed,133711886,257,575,91430096,106,160,31.6,151,415,PASS,PASS,
+traefik-golang,Go,compose build,,processed,3557103,2,40,3774391,2,40,-6.1,0,0,PASS,PASS,
+vuejs,Node/JS,compose build,,processed,107651316,2183,530,44783449,590,190,58.4,1593,340,PASS,PASS,
+wireguard,C,prebuilt,linuxserver/wireguard:latest,baseline only,40663186,270,59,,,,,,,,,"reached slim; fix written (`SLIM_INCLUDE_PATHS` for s6), not validated"
+wordpress-mysql,PHP,prebuilt,wordpress:latest,processed,274729632,273,1045,140202190,18,4,49.0,255,1041,PASS,PASS,
