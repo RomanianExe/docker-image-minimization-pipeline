@@ -222,7 +222,11 @@ README index is regenerated from those manifests and is never edited by hand.
   passing baseline and a stated cause.
 - **2 WasmEdge** — excluded permanently: no `io.containerd.wasmedge.v1` runtime on the host.
 
-Three of the 25 (`nginx-golang-mysql`, `nginx-golang-postgres`, `traefik-golang`) get
-*larger* under Slim. Their final stage is already `FROM scratch` with a static binary, so
-there is nothing to remove. That result is kept rather than dropped: it marks the boundary
-where this technique stops paying. (§7)
+One of the 25 (`traefik-golang`) gets *larger* under Slim: the image it ships is already
+`FROM scratch` with a static binary, so there is nothing to remove and Slim's own metadata
+adds a little. That result is kept rather than dropped — it marks the boundary where this
+technique stops paying. The `nginx-golang*` entries define a scratch stage too, but their
+compose files pin `target: builder`, so they are measured on what they actually ship; the
+scratch-stage measurement is kept beside them under
+`artifacts/<example>/final-stage-baseline/`. Read together, they show that retargeting the
+build is a far bigger win than Slim. (§7)

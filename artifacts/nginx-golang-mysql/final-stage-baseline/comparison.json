@@ -1,0 +1,34 @@
+{
+  "example": "nginx-golang-mysql",
+  "original": {
+    "image_tag": "dip-nginx-golang-mysql:original",
+    "size_bytes": 4156598,
+    "size_human": "4.16MB",
+    "sbom_component_count": 6,
+    "vulnerability_total": 41,
+    "vulnerability_by_severity": {
+      "High": 24,
+      "Medium": 14,
+      "Critical": 2,
+      "Low": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-nginx-golang-mysql:slim",
+    "size_bytes": 4419230,
+    "size_human": "4.42MB",
+    "sbom_component_count": 6,
+    "vulnerability_total": 41,
+    "vulnerability_by_severity": {
+      "High": 24,
+      "Medium": 14,
+      "Critical": 2,
+      "Low": 1
+    }
+  },
+  "size_reduction_pct": -6.3,
+  "component_reduction": 0,
+  "vulnerability_reduction": 0,
+  "functional_tests_original": "PASS (tests/specific/nginx-golang-mysql/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/nginx-golang-mysql/test.sh)"
+}

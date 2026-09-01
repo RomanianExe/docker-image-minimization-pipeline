@@ -18,11 +18,11 @@ Of the 37 configured examples, 25 build from a Dockerfile the example ships and 
 
 | Metric | Original | Slim | Change |
 |---|---:|---:|---:|
-| Image size | 3.47 GB | 1.80 GB | **−48.1%** |
-| SBOM components | 10,653 | 4,396 | **−58.7%** |
-| Grype findings | 12,725 | 1,710 | **−86.6%** |
+| Image size | 3.71 GB | 1.80 GB | **−51.4%** |
+| SBOM components | 10,765 | 4,396 | **−59.2%** |
+| Grype findings | 13,807 | 1,710 | **−87.6%** |
 
-Median size reduction is **54.1%** across the 26 examples that had anything to remove; the largest is `nginx-golang` at 96.1%. Functional tests pass on both the original and the slim image for all 29 processed examples — a slim image that fails its tests is never counted as a result.
+Median size reduction is **54.5%** across the 28 examples that had anything to remove; the largest is `nginx-golang-mysql` at 96.2%. Functional tests pass on both the original and the slim image for all 29 processed examples — a slim image that fails its tests is never counted as a result.
 
 **On the vulnerability figure.** Slim removes package metadata along with unused files, so Syft sees less of a minimized image than of the original and part of the drop is reduced detection rather than reduced exposure. Size and component counts are direct measurements; the vulnerability delta is an upper bound. Security decisions should be made on the original image's scan (`docs/methodology.md` §5).
 
@@ -30,7 +30,9 @@ Median size reduction is **54.1%** across the 26 examples that had anything to r
 
 | Example | Cluster | Source | Size orig → slim | Δ size | Components | Vulns | Tests |
 |---|---|---|---|---:|---|---|---|
+| `nginx-golang-mysql` | Go | compose build | 123.4 → 4.7 MB | **-96.2%** | 62 → 6 | 582 → 41 | PASS / PASS |
 | `nginx-golang` | Go | compose build | 123.4 → 4.8 MB | **-96.1%** | 59 → 3 | 574 → 43 | PASS / PASS |
+| `nginx-golang-postgres` | Go | compose build | 123.5 → 4.9 MB | **-96.0%** | 61 → 5 | 583 → 42 | PASS / PASS |
 | `react-rust-postgres` | Rust | compose build | 30.7 → 4.0 MB | **-86.9%** | 88 → 0 | 177 → 0 | PASS / PASS |
 | `react-express-mysql` | Node/JS | compose build | 417.9 → 55.6 MB | **-86.7%** | 661 → 76 | 1791 → 24 | PASS / PASS |
 | `react-nginx` | Node/JS | compose build | 26.4 → 4.5 MB | **-83.1%** | 71 → 1 | 10 → 0 | PASS / PASS |
@@ -57,10 +59,8 @@ Median size reduction is **54.1%** across the 26 examples that had anything to r
 | `nginx-nodejs-redis` | Node/JS | compose build | 42.8 → 35.2 MB | **-17.7%** | 512 → 58 | 246 → 91 | PASS / PASS |
 | `prometheus-grafana` | Go | prebuilt | 474.1 → 413.3 MB | **-12.8%** | 1791 → 1760 | 178 → 157 | PASS / PASS |
 | `traefik-golang` \* | Go | compose build | 3.6 → 3.8 MB | **+6.1%** | 2 → 2 | 40 → 40 | PASS / PASS |
-| `nginx-golang-postgres` \* | Go | compose build | 4.3 → 4.5 MB | **+6.2%** | 5 → 5 | 42 → 42 | PASS / PASS |
-| `nginx-golang-mysql` \* | Go | compose build | 4.2 → 4.4 MB | **+6.3%** | 6 → 6 | 41 → 41 | PASS / PASS |
 
-\* Final stage is already `FROM scratch` with a static binary. There is nothing left to remove and Slim's own metadata makes the image marginally larger — a negative result worth keeping, since it marks the boundary where this technique stops paying (`docs/methodology.md` §7).
+\* The image this example ships is already `FROM scratch` with a static binary — its compose file declares no build `target:`, so the stage built is the Dockerfile's final one. There is nothing left to remove and Slim's own metadata makes the image marginally larger: a negative result worth keeping, since it marks the boundary where this technique stops paying. The `nginx-golang*` entries define a scratch stage too but pin `target: builder`, so they are measured on what they actually ship; the scratch-stage measurement is kept alongside them under `artifacts/<example>/final-stage-baseline/` (`docs/methodology.md` §7).
 
 ## Baseline only
 

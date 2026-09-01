@@ -1,0 +1,17 @@
+{
+  "example": "nginx-golang-mysql",
+  "stage": "original",
+  "image_tag": "dip-nginx-golang-mysql:original",
+  "generated_at": "2026-08-27T11:01:57Z",
+  "size_bytes": 4156598,
+  "size_human": "4.16MB",
+  "sbom_component_count": 6,
+  "vulnerability_total": 41,
+  "vulnerability_by_severity": {
+    "High": 24,
+    "Medium": 14,
+    "Critical": 2,
+    "Low": 1
+  },
+  "functional_tests": "PASS (tests/specific/nginx-golang-mysql/test.sh)"
+}

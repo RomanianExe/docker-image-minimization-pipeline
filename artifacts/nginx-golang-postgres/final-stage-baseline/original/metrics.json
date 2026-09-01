@@ -1,0 +1,17 @@
+{
+  "example": "nginx-golang-postgres",
+  "stage": "original",
+  "image_tag": "dip-nginx-golang-postgres:original",
+  "generated_at": "2026-08-27T11:04:46Z",
+  "size_bytes": 4251260,
+  "size_human": "4.25MB",
+  "sbom_component_count": 5,
+  "vulnerability_total": 42,
+  "vulnerability_by_severity": {
+    "High": 25,
+    "Medium": 14,
+    "Critical": 2,
+    "Low": 1
+  },
+  "functional_tests": "PASS (tests/specific/nginx-golang-postgres/test.sh)"
+}

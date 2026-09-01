@@ -294,20 +294,61 @@ analysis exists.
 
 ## 7. When Slim Adds No Value: Already-`scratch` Images
 
-`nginx-golang` first showed that when a Dockerfile already defines an unused final
-`FROM scratch` stage, building that stage directly (no Slim) gives nearly the same result as
-running Slim on the full dev-stage image ("free minimization"). `traefik-golang` sharpens this
-into a clear negative result: its Dockerfile's **default, used** final stage is already
-`FROM scratch` plus a single static Go binary (3.56MB). Running Slim on top of that produced
-**no reduction at all** — identical SBOM component count, identical vulnerability count — and
-the image actually grew slightly (+6.1%) from Slim's own re-packaging overhead.
-`nginx-golang-mysql` confirms the same negative result a third time (+6.3%, 0 component/
-vulnerability change) — this is now an established pattern across three independent Go
-examples, not a one-off.
+The four Go examples all define a Dockerfile whose final stage is `FROM scratch` plus a single
+static binary. Only one of them **builds** it, and that distinction turned out to matter more
+than the finding it was originally used to support.
 
-**Recommendation:** before reaching for Slim, check whether the Dockerfile's final stage is
-already minimal by construction (`scratch`, a static binary, no package manager). If so, Slim
-has no unused files left to remove and is not worth running — build that stage directly instead.
+`traefik-golang`'s compose file declares no build `target:`, so the stage it ships is the
+Dockerfile's final one: `scratch` plus a 3.56MB static binary. Running Slim on top produced
+**no reduction at all** — identical SBOM component count, identical vulnerability count — and
+the image grew 6.1% from Slim's own re-packaging overhead. That is the clean negative result.
+
+The three `nginx-golang*` entries pin `target: builder` in their compose files, so the image
+they actually ship is the 123MB build stage, not the scratch one. Minimizing what they ship
+gives **−96.1%, −96.2% and −96.0%** — three near-identical figures on three near-identical
+applications, which is what a coherent result looks like.
+
+### The correction, and why it is recorded rather than quietly fixed
+
+For most of this project, `nginx-golang-mysql` and `nginx-golang-postgres` were reported here
+as the second and third confirmations of the negative result (+6.3%, +6.2%, zero component or
+vulnerability change), described as "an established pattern across three independent Go
+examples, not a one-off."
+
+That was wrong, and the way it was wrong is worth keeping. Their baselines were measured by
+the pipeline as it existed *before* the migration to compose-driven builds (commit `499af57`),
+which built the Dockerfile's last stage rather than the one compose asks for. After the
+migration nobody re-ran them, so the artifacts kept describing a `scratch` baseline the
+configuration no longer produced. It surfaced only when the local `:original` tags were
+compared byte-for-byte against the recorded sizes: 4.16MB recorded against 123.39MB in the
+daemon, a 29.7x discrepancy that no amount of dependency drift explains. Rebuilding under a
+throwaway tag confirmed it in one command.
+
+The two entries were then re-run against what they ship, and the pre-migration measurement was
+kept — not discarded — under `artifacts/<example>/final-stage-baseline/`. It is a real
+measurement of a real image; it just answers a different question.
+
+### What the three figures together actually show
+
+Because both baselines exist for the same example, `nginx-golang-mysql` can be read as three
+points rather than one:
+
+| Image | Size | How you get there |
+|---|---|---|
+| What compose ships (builder stage) | 123.39 MB | `docker compose build` |
+| The Dockerfile's own final stage | 4.16 MB | delete `target: builder` — one line |
+| Slim applied to that final stage | 4.42 MB | run the whole pipeline |
+
+The one-line compose change removes 96.6% of the image. Slim, run on the result, gives back
+6.3%. **The cheapest minimization available here is not a tool at all — it is building the
+stage the Dockerfile already defines.** That is the "free minimization" flagged in §1's
+multi-stage caveat, now with numbers attached.
+
+**Recommendation:** before reaching for Slim, check two things — whether the Dockerfile
+defines a final stage that is minimal by construction (`scratch`, a static binary, no package
+manager), and whether the compose file actually builds it. If it defines one and does not
+build it, retarget the build first; that is where the reduction is. If it defines one and does
+build it, Slim has nothing left to remove and is not worth running.
 
 ## 8. When the Reverse-Proxy Layer Requires `docker.sock`: Scope Decision
 

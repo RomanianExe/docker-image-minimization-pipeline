@@ -64,10 +64,13 @@ NO_SLIM_REASON = {
     "wireguard": "reached slim; fix written (`SLIM_INCLUDE_PATHS` for s6), not validated",
 }
 
-# Final stage is already `FROM scratch` with a static binary, so there is nothing left for
-# Slim to remove and its added metadata layer makes the image marginally larger
-# (docs/methodology.md §7).
-SCRATCH = {"nginx-golang-mysql", "nginx-golang-postgres", "traefik-golang"}
+# The image the example ships is already `FROM scratch` with a static binary, so there is
+# nothing left for Slim to remove and its added metadata layer makes the image marginally
+# larger (docs/methodology.md §7). Only traefik-golang qualifies: its compose file declares
+# no `target:`, so the stage it builds is the Dockerfile's final one. The nginx-golang*
+# entries define a scratch stage too, but their compose files pin `target: builder`, so
+# that is not the image they ship — see artifacts/nginx-golang-*/final-stage-baseline/.
+SCRATCH = {"traefik-golang"}
 
 
 def read_env(example):
@@ -240,10 +243,14 @@ def render(rows):
     doc += result_table(processed)
     doc += [
         "",
-        "\\* Final stage is already `FROM scratch` with a static binary. There is nothing left "
-        "to remove and Slim's own metadata makes the image marginally larger — a negative result "
-        "worth keeping, since it marks the boundary where this technique stops paying "
-        "(`docs/methodology.md` §7).",
+        "\\* The image this example ships is already `FROM scratch` with a static binary — its "
+        "compose file declares no build `target:`, so the stage built is the Dockerfile's final "
+        "one. There is nothing left to remove and Slim's own metadata makes the image marginally "
+        "larger: a negative result worth keeping, since it marks the boundary where this "
+        "technique stops paying. The `nginx-golang*` entries define a scratch stage too but pin "
+        "`target: builder`, so they are measured on what they actually ship; the scratch-stage "
+        "measurement is kept alongside them under "
+        "`artifacts/<example>/final-stage-baseline/` (`docs/methodology.md` §7).",
         "",
         "## Baseline only",
         "",
