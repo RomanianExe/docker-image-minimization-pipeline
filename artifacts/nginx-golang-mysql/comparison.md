@@ -4,22 +4,42 @@
 
 | Metric | Original (`dip-nginx-golang-mysql:original`) | Slim (`dip-nginx-golang-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 4.16 MB | 4.42 MB | **+6.3% (grew)** |
-| SBOM components (Syft) | 6 | 6 | 0 |
-| Vulnerabilities (Grype) | 41 (2 Critical / 24 High / 14 Medium / 1 Low) | 41 (same breakdown) | 0 |
-| Functional tests (direct + through proxy, exact 5-row DB check) | PASS | PASS | no regression |
+| Image size (real, `docker inspect .Size`) | 123.39MB | 4.70MB | **-96.2%** |
+| SBOM components (Syft) | 62 | 6 | -56 |
+| Vulnerabilities (Grype) | 582 (276 High / 246 Medium / 38 Critical / 20 Low / 2 Unknown) | 41 (24 High / 14 Medium / 2 Critical / 1 Low) | -541 |
+| Functional tests (route through nginx + MySQL round trip) | PASS | PASS | no regression |
 
-## Third confirmation of the "already-scratch" negative result
-Same outcome as `traefik-golang`: an already-minimal `FROM scratch` + static
-Go binary image has nothing left for Slim to remove, and Slim's own
-re-packaging overhead makes it slightly larger, with zero change in SBOM
-components or vulnerabilities. Combined with `nginx-golang` (§7) and
-`traefik-golang`, this is now a well-established pattern across three
-independent Go examples: **check whether the Dockerfile already targets a
-`scratch` stage before running Slim — if so, skip it.**
+## Which image this measures, and why that needed correcting
+
+The vendor compose file pins `target: builder`, so the image this example ships is the
+123.39MB Go build stage — toolchain, module cache and source included —
+not the `FROM scratch` final stage the Dockerfile also defines but never builds. The figures
+above measure what it ships.
+
+Earlier versions of this file measured the scratch stage instead (4.16MB),
+because the pipeline predating commit `499af57` built the Dockerfile's last stage rather than
+the one compose asks for. That baseline is preserved under `final-stage-baseline/` — it is a
+real measurement, it just answers a different question. See `docs/methodology.md` §7.
+
+## Three numbers, not one
+
+| Image | Size | How you get there |
+|---|---:|---|
+| What compose ships (builder stage) | 123.39MB | `docker compose build` |
+| The Dockerfile's own final stage | 4.16MB | delete `target: builder` — one line |
+| Slim applied to that final stage | 4.42MB | run the whole pipeline |
+
+Deleting one line from the compose file removes 96.6% of the image.
+Slim, run on top of that result, gives back 6.3%. The cheapest
+minimization available here is not a tool — it is building the stage the Dockerfile already
+defines.
+
+Slim applied to the shipped image reaches 4.70MB, close to but not below the
+4.16MB the retarget gets for free. It arrives there by observation rather
+than by construction, which is the more fragile of the two routes.
 
 ## Functional validation
-- `tests/generic/container_up.sh` + the exact-count DB check
-  (`tests/specific/nginx-golang-mysql/test.sh`), run against both the direct
-  backend and through the nginx proxy, pass against
-  `dip-nginx-golang-mysql:slim`.
+
+- The request path through the nginx proxy reaches the Go backend, and the backend completes a
+  real MySQL round trip — a failure on either leg returns an error, not a 200.
+- Both assertions pass identically on the original and the minimized image.

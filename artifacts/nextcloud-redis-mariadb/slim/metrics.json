@@ -1,0 +1,16 @@
+{
+  "example": "nextcloud-redis-mariadb",
+  "stage": "slim",
+  "image_tag": "dip-nextcloud-redis-mariadb:slim",
+  "generated_at": "2026-09-01T09:42:48Z",
+  "size_bytes": 407677919,
+  "size_human": "407.68MB",
+  "sbom_component_count": 170,
+  "vulnerability_total": 7,
+  "vulnerability_by_severity": {
+    "High": 4,
+    "Critical": 2,
+    "Low": 1
+  },
+  "functional_tests": "PASS (tests/specific/nextcloud-redis-mariadb/test.sh)"
+}

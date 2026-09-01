@@ -1,0 +1,23 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+# network_mode !reset - the vendor file asks for `network_mode: host`, which
+#   Plex wants so it can be discovered on the LAN. The pipeline cannot use it:
+#   with the host namespace a container publishes nothing, so `ports` is
+#   ignored and every example would contend for the same host ports. Dropping
+#   it puts Plex on the normal compose bridge network, which is all the
+#   functional test needs (it talks to the HTTP API, not to DLNA discovery).
+#   This is a deliberate deviation from the vendor file — recorded here and in
+#   docs/methodology.md §12 rather than hidden.
+#
+# volumes !reset - the vendor file mounts ${PLEX_MEDIA_PATH}, whose vendored
+#   default (/media/your/plex/path) is a placeholder that does not exist. There
+#   is no media library to test against either way.
+services:
+  plex:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    network_mode: !reset null
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"

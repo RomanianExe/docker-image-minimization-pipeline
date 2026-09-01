@@ -1,0 +1,16 @@
+{
+  "example": "prometheus-grafana",
+  "stage": "slim",
+  "image_tag": "dip-prometheus-grafana:slim",
+  "generated_at": "2026-08-31T21:46:05Z",
+  "size_bytes": 413283970,
+  "size_human": "413.28MB",
+  "sbom_component_count": 1760,
+  "vulnerability_total": 157,
+  "vulnerability_by_severity": {
+    "High": 100,
+    "Medium": 54,
+    "Low": 3
+  },
+  "functional_tests": "PASS (tests/specific/prometheus-grafana/test.sh)"
+}

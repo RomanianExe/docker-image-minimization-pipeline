@@ -1,0 +1,31 @@
+{
+  "example": "react-rust-postgres",
+  "original": {
+    "image_tag": "dip-react-rust-postgres:original",
+    "size_bytes": 30717422,
+    "size_human": "30.72MB",
+    "sbom_component_count": 88,
+    "vulnerability_total": 177,
+    "vulnerability_by_severity": {
+      "Negligible": 58,
+      "High": 17,
+      "Medium": 63,
+      "Critical": 7,
+      "Low": 8,
+      "Unknown": 24
+    }
+  },
+  "slim": {
+    "image_tag": "dip-react-rust-postgres:slim",
+    "size_bytes": 4013483,
+    "size_human": "4.01MB",
+    "sbom_component_count": 0,
+    "vulnerability_total": 0,
+    "vulnerability_by_severity": {}
+  },
+  "size_reduction_pct": 86.9,
+  "component_reduction": 88,
+  "vulnerability_reduction": 177,
+  "functional_tests_original": "PASS (tests/specific/react-rust-postgres/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/react-rust-postgres/test.sh)"
+}

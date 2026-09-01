@@ -2,9 +2,9 @@
   "example": "nginx-golang-postgres",
   "stage": "slim",
   "image_tag": "dip-nginx-golang-postgres:slim",
-  "generated_at": "2026-08-27T11:05:26Z",
-  "size_bytes": 4516955,
-  "size_human": "4.52MB",
+  "generated_at": "2026-09-01T18:59:43Z",
+  "size_bytes": 4910369,
+  "size_human": "4.91MB",
   "sbom_component_count": 5,
   "vulnerability_total": 42,
   "vulnerability_by_severity": {

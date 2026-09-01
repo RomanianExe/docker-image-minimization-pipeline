@@ -1,0 +1,339 @@
+{
+  "document": "doc.report.container",
+  "version": "ov/container/1.1",
+  "target_type": "container",
+  "target_id": "c669724fa6ada8d9910fcfed782d84e82404de5919b5d143440f90085cb37ff0",
+  "image_id": "sha256:107abf91eba53928b926498c4928f8575c9fa008133cb7bd18789f42d2ddb027",
+  "start_command": {
+    "app_name": "/usr/local/bin/backend"
+  },
+  "sensor": {
+    "version": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+    "args": [
+      "/opt/_mint/bin/mint-sensor",
+      "-log-level",
+      "warn",
+      "-log-format",
+      "text"
+    ]
+  },
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "unknown",
+      "version": "",
+      "display_name": "unknown"
+    }
+  },
+  "monitors": {
+    "fan": {
+      "monitor_pid": 1,
+      "monitor_ppid": 0,
+      "event_count": 1,
+      "main_process": {
+        "pid": 14,
+        "name": "backend",
+        "path": "/usr/local/bin/backend",
+        "cmd": "/usr/local/bin/backend",
+        "cwd": "/",
+        "root": "/",
+        "ppid": 1
+      },
+      "processes": {
+        "14": {
+          "pid": 14,
+          "name": "backend",
+          "path": "/usr/local/bin/backend",
+          "cmd": "/usr/local/bin/backend",
+          "cwd": "/",
+          "root": "/",
+          "ppid": 1
+        }
+      },
+      "process_files": {
+        "14": {
+          "/usr/local/bin/backend": {
+            "event_count": 1,
+            "first_eid": 1,
+            "reads": 1,
+            "execs": 1
+          }
+        }
+      }
+    },
+    "pt": {
+      "enabled": true,
+      "arch_name": "amd64",
+      "syscall_count": 607,
+      "syscall_num": 36,
+      "syscall_stats": {
+        "0": {
+          "num": 0,
+          "name": "read",
+          "count": 49
+        },
+        "1": {
+          "num": 1,
+          "name": "write",
+          "count": 26
+        },
+        "13": {
+          "num": 13,
+          "name": "rt_sigaction",
+          "count": 114
+        },
+        "131": {
+          "num": 131,
+          "name": "sigaltstack",
+          "count": 12
+        },
+        "14": {
+          "num": 14,
+          "name": "rt_sigprocmask",
+          "count": 17
+        },
+        "15": {
+          "num": 15,
+          "name": "rt_sigreturn",
+          "count": 1
+        },
+        "158": {
+          "num": 158,
+          "name": "arch_prctl",
+          "count": 1
+        },
+        "186": {
+          "num": 186,
+          "name": "gettid",
+          "count": 11
+        },
+        "202": {
+          "num": 202,
+          "name": "futex",
+          "count": 70
+        },
+        "204": {
+          "num": 204,
+          "name": "sched_getaffinity",
+          "count": 1
+        },
+        "219": {
+          "num": 219,
+          "name": "restart_syscall",
+          "count": 1
+        },
+        "233": {
+          "num": 233,
+          "name": "epoll_ctl",
+          "count": 15
+        },
+        "234": {
+          "num": 234,
+          "name": "tgkill",
+          "count": 1
+        },
+        "257": {
+          "num": 257,
+          "name": "openat",
+          "count": 16
+        },
+        "262": {
+          "num": 262,
+          "name": "newfstatat",
+          "count": 3
+        },
+        "281": {
+          "num": 281,
+          "name": "epoll_pwait",
+          "count": 46
+        },
+        "288": {
+          "num": 288,
+          "name": "accept4",
+          "count": 3
+        },
+        "291": {
+          "num": 291,
+          "name": "epoll_create1",
+          "count": 1
+        },
+        "293": {
+          "num": 293,
+          "name": "pipe2",
+          "count": 1
+        },
+        "3": {
+          "num": 3,
+          "name": "close",
+          "count": 12
+        },
+        "318": {
+          "num": 318,
+          "name": "getrandom",
+          "count": 2
+        },
+        "35": {
+          "num": 35,
+          "name": "nanosleep",
+          "count": 129
+        },
+        "39": {
+          "num": 39,
+          "name": "getpid",
+          "count": 1
+        },
+        "41": {
+          "num": 41,
+          "name": "socket",
+          "count": 7
+        },
+        "42": {
+          "num": 42,
+          "name": "connect",
+          "count": 3
+        },
+        "49": {
+          "num": 49,
+          "name": "bind",
+          "count": 3
+        },
+        "5": {
+          "num": 5,
+          "name": "fstat",
+          "count": 3
+        },
+        "50": {
+          "num": 50,
+          "name": "listen",
+          "count": 1
+        },
+        "51": {
+          "num": 51,
+          "name": "getsockname",
+          "count": 4
+        },
+        "52": {
+          "num": 52,
+          "name": "getpeername",
+          "count": 2
+        },
+        "54": {
+          "num": 54,
+          "name": "setsockopt",
+          "count": 16
+        },
+        "55": {
+          "num": 55,
+          "name": "getsockopt",
+          "count": 3
+        },
+        "56": {
+          "num": 56,
+          "name": "clone",
+          "count": 5
+        },
+        "63": {
+          "num": 63,
+          "name": "uname",
+          "count": 1
+        },
+        "72": {
+          "num": 72,
+          "name": "fcntl",
+          "count": 5
+        },
+        "9": {
+          "num": 9,
+          "name": "mmap",
+          "count": 21
+        }
+      },
+      "fs_activity": {
+        "/etc/hosts": {
+          "ops_all": 3,
+          "ops_checkfile": 2,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "14": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/resolv.conf": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "14": {}
+          },
+          "is_subdir": false
+        },
+        "/run/secrets/db-password": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "14": {}
+          },
+          "is_subdir": false
+        }
+      }
+    }
+  },
+  "image": {
+    "files": [
+      null,
+      {
+        "file_type": "file",
+        "file_path": "/etc/hosts",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 232,
+        "sha1_hash": "9d3dd10f65e37bdc178f660f2f33eee082bb5164",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/resolv.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 224,
+        "sha1_hash": "e9b0c83e82656db2d373772ab604182ec9449c99",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/run/secrets/db-password",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "sha1_hash": "58c40ef61f3b67723721187ba6f413268b7af0a6",
+        "uid": 1000,
+        "gid": 986
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/local/bin/backend",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true,
+          "X": true
+        },
+        "file_size": 7479701,
+        "sha1_hash": "e2b2c45daeab4b736647998f3041879ce0c967fb",
+        "uid": 0,
+        "gid": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+
+profile dip-portainer-apparmor-profile flags=(attach_disconnected,mediate_deleted) {
+
+  network,
+
+  /portainer rix,
+
+
+  /data/certs/cert.pem r,
+  /data/certs/key.pem r,
+  /data/chisel/private-key.pem r,
+  /data/portainer.db r,
+  /data/portainer.key r,
+  /data/portainer.pub r,
+  /etc/hosts r,
+  /etc/nsswitch.conf r,
+  /etc/passwd r,
+  /etc/resolv.conf r,
+  /etc/ssl/cert.pem r,
+  /etc/ssl/certs r,
+  /etc/ssl/certs/ca-certificates.crt r,
+  /etc/ssl1.1/cert.pem r,
+  /etc/ssl1.1/certs r,
+  /public/index.html r,
+  /run r,
+  /tmp r,
+
+}

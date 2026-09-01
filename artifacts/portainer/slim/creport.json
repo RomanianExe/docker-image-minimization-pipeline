@@ -1,0 +1,688 @@
+{
+  "document": "doc.report.container",
+  "version": "ov/container/1.1",
+  "target_type": "container",
+  "target_id": "595f308a06d8dfd260c5797e6240a8b457474d045aad7c3d3bdfcd5adf0d208b",
+  "image_id": "sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949",
+  "start_command": {
+    "app_name": "/portainer"
+  },
+  "sensor": {
+    "version": "linux/amd64|Aurora|1.41.8-1-g4b0d7e91|4b0d7e915ef33a98a2b32ccc10c8558086b27fe4|2025-12-12_05:28:51AM",
+    "args": [
+      "/opt/_mint/bin/mint-sensor",
+      "-log-level",
+      "warn",
+      "-log-format",
+      "text"
+    ]
+  },
+  "system": {
+    "type": "Linux",
+    "release": "6.18.33.2-microsoft-standard-WSL2",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.24.1",
+      "display_name": "Alpine Linux v3.24"
+    }
+  },
+  "monitors": {
+    "fan": {
+      "monitor_pid": 1,
+      "monitor_ppid": 0,
+      "event_count": 19,
+      "main_process": {
+        "pid": 15,
+        "name": "portainer",
+        "path": "/portainer",
+        "cmd": "/portainer",
+        "cwd": "/",
+        "root": "/",
+        "ppid": 1
+      },
+      "processes": {
+        "15": {
+          "pid": 15,
+          "name": "portainer",
+          "path": "/portainer",
+          "cmd": "/portainer",
+          "cwd": "/",
+          "root": "/",
+          "ppid": 1
+        }
+      },
+      "process_files": {
+        "15": {
+          "/etc/nsswitch.conf": {
+            "event_count": 2,
+            "first_eid": 12,
+            "reads": 1
+          },
+          "/etc/ssl/certs/ca-certificates.crt": {
+            "event_count": 4,
+            "first_eid": 14,
+            "reads": 2
+          },
+          "/portainer": {
+            "event_count": 11,
+            "first_eid": 1,
+            "reads": 9,
+            "execs": 11
+          },
+          "/public/index.html": {
+            "event_count": 2,
+            "first_eid": 18,
+            "reads": 1
+          }
+        }
+      }
+    },
+    "pt": {
+      "enabled": true,
+      "arch_name": "amd64",
+      "syscall_count": 3588,
+      "syscall_num": 52,
+      "syscall_stats": {
+        "0": {
+          "num": 0,
+          "name": "read",
+          "count": 187
+        },
+        "1": {
+          "num": 1,
+          "name": "write",
+          "count": 104
+        },
+        "13": {
+          "num": 13,
+          "name": "rt_sigaction",
+          "count": 114
+        },
+        "131": {
+          "num": 131,
+          "name": "sigaltstack",
+          "count": 28
+        },
+        "137": {
+          "num": 137,
+          "name": "statfs",
+          "count": 1
+        },
+        "14": {
+          "num": 14,
+          "name": "rt_sigprocmask",
+          "count": 41
+        },
+        "15": {
+          "num": 15,
+          "name": "rt_sigreturn",
+          "count": 89
+        },
+        "157": {
+          "num": 157,
+          "name": "prctl",
+          "count": 60
+        },
+        "158": {
+          "num": 158,
+          "name": "arch_prctl",
+          "count": 1
+        },
+        "16": {
+          "num": 16,
+          "name": "ioctl",
+          "count": 2
+        },
+        "17": {
+          "num": 17,
+          "name": "pread64",
+          "count": 13
+        },
+        "18": {
+          "num": 18,
+          "name": "pwrite64",
+          "count": 89
+        },
+        "186": {
+          "num": 186,
+          "name": "gettid",
+          "count": 27
+        },
+        "202": {
+          "num": 202,
+          "name": "futex",
+          "count": 1120
+        },
+        "204": {
+          "num": 204,
+          "name": "sched_getaffinity",
+          "count": 5
+        },
+        "217": {
+          "num": 217,
+          "name": "getdents64",
+          "count": 4
+        },
+        "219": {
+          "num": 219,
+          "name": "restart_syscall",
+          "count": 2
+        },
+        "233": {
+          "num": 233,
+          "name": "epoll_ctl",
+          "count": 32
+        },
+        "234": {
+          "num": 234,
+          "name": "tgkill",
+          "count": 89
+        },
+        "24": {
+          "num": 24,
+          "name": "sched_yield",
+          "count": 75
+        },
+        "257": {
+          "num": 257,
+          "name": "openat",
+          "count": 34
+        },
+        "258": {
+          "num": 258,
+          "name": "mkdirat",
+          "count": 5
+        },
+        "262": {
+          "num": 262,
+          "name": "newfstatat",
+          "count": 17
+        },
+        "267": {
+          "num": 267,
+          "name": "readlinkat",
+          "count": 2
+        },
+        "28": {
+          "num": 28,
+          "name": "madvise",
+          "count": 3
+        },
+        "281": {
+          "num": 281,
+          "name": "epoll_pwait",
+          "count": 194
+        },
+        "288": {
+          "num": 288,
+          "name": "accept4",
+          "count": 7
+        },
+        "290": {
+          "num": 290,
+          "name": "eventfd2",
+          "count": 1
+        },
+        "291": {
+          "num": 291,
+          "name": "epoll_create1",
+          "count": 1
+        },
+        "3": {
+          "num": 3,
+          "name": "close",
+          "count": 28
+        },
+        "302": {
+          "num": 302,
+          "name": "prlimit64",
+          "count": 2
+        },
+        "318": {
+          "num": 318,
+          "name": "getrandom",
+          "count": 2
+        },
+        "35": {
+          "num": 35,
+          "name": "nanosleep",
+          "count": 780
+        },
+        "39": {
+          "num": 39,
+          "name": "getpid",
+          "count": 92
+        },
+        "41": {
+          "num": 41,
+          "name": "socket",
+          "count": 10
+        },
+        "42": {
+          "num": 42,
+          "name": "connect",
+          "count": 3
+        },
+        "49": {
+          "num": 49,
+          "name": "bind",
+          "count": 5
+        },
+        "5": {
+          "num": 5,
+          "name": "fstat",
+          "count": 15
+        },
+        "50": {
+          "num": 50,
+          "name": "listen",
+          "count": 3
+        },
+        "51": {
+          "num": 51,
+          "name": "getsockname",
+          "count": 9
+        },
+        "52": {
+          "num": 52,
+          "name": "getpeername",
+          "count": 3
+        },
+        "54": {
+          "num": 54,
+          "name": "setsockopt",
+          "count": 30
+        },
+        "55": {
+          "num": 55,
+          "name": "getsockopt",
+          "count": 1
+        },
+        "56": {
+          "num": 56,
+          "name": "clone",
+          "count": 14
+        },
+        "63": {
+          "num": 63,
+          "name": "uname",
+          "count": 3
+        },
+        "72": {
+          "num": 72,
+          "name": "fcntl",
+          "count": 80
+        },
+        "73": {
+          "num": 73,
+          "name": "flock",
+          "count": 1
+        },
+        "74": {
+          "num": 74,
+          "name": "fsync",
+          "count": 1
+        },
+        "75": {
+          "num": 75,
+          "name": "fdatasync",
+          "count": 87
+        },
+        "77": {
+          "num": 77,
+          "name": "ftruncate",
+          "count": 1
+        },
+        "79": {
+          "num": 79,
+          "name": "getcwd",
+          "count": 10
+        },
+        "9": {
+          "num": 9,
+          "name": "mmap",
+          "count": 61
+        }
+      },
+      "fs_activity": {
+        "/data/certs/cert.pem": {
+          "ops_all": 3,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/data/certs/key.pem": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/data/chisel/private-key.pem": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/data/portainer.db": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/data/portainer.key": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/data/portainer.pub": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/hosts": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {},
+            "262": {}
+          },
+          "pids": {
+            "28": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/nsswitch.conf": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "28": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/resolv.conf": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "32": {}
+          },
+          "is_subdir": false
+        },
+        "/etc/ssl/certs/ca-certificates.crt": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "18": {}
+          },
+          "is_subdir": false
+        },
+        "/portainer": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "15": {}
+          },
+          "is_subdir": false
+        },
+        "/public/index.html": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "28": {}
+          },
+          "is_subdir": false
+        }
+      }
+    }
+  },
+  "image": {
+    "files": [
+      null,
+      {
+        "file_type": "file",
+        "file_path": "/data/certs/cert.pem",
+        "modex": 384,
+        "mode": "-rw-------",
+        "file_size": 518,
+        "sha1_hash": "0868bf0f79be01f9814dcd4d481ee30df2da1b93",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/data/certs/key.pem",
+        "modex": 384,
+        "mode": "-rw-------",
+        "file_size": 227,
+        "sha1_hash": "da689f3d21c8e58225907fa45ff7d50fee6a8f19",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/data/chisel/private-key.pem",
+        "modex": 384,
+        "mode": "-rw-------",
+        "file_size": 227,
+        "sha1_hash": "ac8fb4bf3dfa7eb7835796406e010b2b33824403",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/data/portainer.db",
+        "modex": 384,
+        "mode": "-rw-------",
+        "file_size": 32768,
+        "sha1_hash": "dd3674caced7fc2be6afe36304b36e524d96d9df",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/data/portainer.key",
+        "modex": 384,
+        "mode": "-rw-------",
+        "file_size": 227,
+        "sha1_hash": "8f79c629f6a140ba3e22d928feb587f1092e16fc",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/data/portainer.pub",
+        "modex": 384,
+        "mode": "-rw-------",
+        "file_size": 190,
+        "sha1_hash": "23a09749bc1368c5ece30fbfbbba03f7cdf0767a",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/hosts",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 172,
+        "sha1_hash": "5fb109f8fdaeedec3b8228a656f21694d36180fb",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/nsswitch.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 205,
+        "sha1_hash": "f4306c327bf44767da8da4e3a13bf40bdd4d3aaa",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/passwd",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 702,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/resolv.conf",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 224,
+        "sha1_hash": "e9b0c83e82656db2d373772ab604182ec9449c99",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl/cert.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "certs/ca-certificates.crt",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/etc/ssl/certs",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/ssl/certs/ca-certificates.crt",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 179359,
+        "sha1_hash": "016bf289ef7ea958da187e8d57d5c09f9503b82d",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl1.1/cert.pem",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/etc/ssl/cert.pem",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/etc/ssl1.1/certs",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "/etc/ssl/certs",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/portainer",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "flags": {
+          "R": true,
+          "X": true
+        },
+        "file_size": 105947298,
+        "sha1_hash": "f24656a62abc8c625e5ae77dbc3dd951ccd8cc89",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/public/index.html",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 14269,
+        "sha1_hash": "92d064e3540c41061dacd638c0427827be838e66",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/run",
+        "modex": 2147484141,
+        "mode": "drwxr-xr-x",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/tmp",
+        "modex": 2148532735,
+        "mode": "dtrwxrwxrwx",
+        "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      }
+    ]
+  }
+}

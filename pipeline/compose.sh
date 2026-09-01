@@ -50,4 +50,8 @@ if [[ -f "$OVERRIDE" ]]; then
   FILES+=(-f "$OVERRIDE")
 fi
 
-exec docker compose -p "dip-$EXAMPLE" "${FILES[@]}" "$@"
+# Compose project names must be lowercase; one awesome-compose directory
+# (pihole-cloudflared-DoH) is not. Lowercasing here keeps the project name
+# derivable from the example name everywhere else (pipeline/slim.sh builds the
+# network name the same way).
+exec docker compose -p "dip-${EXAMPLE,,}" "${FILES[@]}" "$@"

@@ -1,0 +1,19 @@
+{
+  "example": "react-rust-postgres",
+  "stage": "original",
+  "image_tag": "dip-react-rust-postgres:original",
+  "generated_at": "2026-08-31T20:32:01Z",
+  "size_bytes": 30717422,
+  "size_human": "30.72MB",
+  "sbom_component_count": 88,
+  "vulnerability_total": 177,
+  "vulnerability_by_severity": {
+    "Negligible": 58,
+    "High": 17,
+    "Medium": 63,
+    "Critical": 7,
+    "Low": 8,
+    "Unknown": 24
+  },
+  "functional_tests": "PASS (tests/specific/react-rust-postgres/test.sh)"
+}

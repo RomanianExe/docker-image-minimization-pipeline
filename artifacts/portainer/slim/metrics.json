@@ -1,0 +1,16 @@
+{
+  "example": "portainer",
+  "stage": "slim",
+  "image_tag": "dip-portainer:slim",
+  "generated_at": "2026-08-31T22:02:15Z",
+  "size_bytes": 38744462,
+  "size_human": "38.74MB",
+  "sbom_component_count": 312,
+  "vulnerability_total": 11,
+  "vulnerability_by_severity": {
+    "High": 6,
+    "Critical": 2,
+    "Medium": 3
+  },
+  "functional_tests": "PASS (tests/specific/portainer/test.sh)"
+}

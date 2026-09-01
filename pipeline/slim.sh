@@ -56,7 +56,7 @@ if [[ -n "$SLIM_DEPS" ]]; then
   # them by service name — the DNS aliases compose sets up, rather than the
   # deprecated --link this replaced. COMPOSE_NETWORK names it for the examples
   # that declare their own networks instead of using compose's default.
-  NETWORK_ARGS=(--network "dip-${EXAMPLE}_${COMPOSE_NETWORK:-default}")
+  NETWORK_ARGS=(--network "dip-${EXAMPLE,,}_${COMPOSE_NETWORK:-default}")
   sleep "${STARTUP_WAIT:-0}"
 fi
 
@@ -64,12 +64,19 @@ fi
 # exercise more than one route during Slim's dynamic analysis — important for
 # apps with multiple pages/static assets that a single GET on HEALTH_PATH would
 # never touch, and which Slim could otherwise strip as "unused".
-PROBE_ARGS=(--http-probe-cmd "GET:${HEALTH_PATH}")
+# HEALTH_PATH is unset for the examples that speak no HTTP (SLIM_PROBE=none),
+# so it is read defensively here — the probe arguments built in this block are
+# discarded further down for those examples anyway.
+PROBE_ARGS=()
+if [[ -n "${HEALTH_PATH:-}" ]]; then
+  PROBE_ARGS+=(--http-probe-cmd "GET:${HEALTH_PATH}")
+fi
 for path in ${EXTRA_PROBE_PATHS:-}; do
   PROBE_ARGS+=(--http-probe-cmd "GET:${path}")
 done
 
-# POST_PROBE_PATH/POST_PROBE_BODY (optional in pipeline.env): a GET-only probe
+# POST_PROBE_PATH/POST_PROBE_BODY/POST_PROBE_CONTENT_TYPE (optional in
+# pipeline.env): a GET-only probe
 # never exercises code paths that only run on a write request (found on
 # react-express-mongodb: body-parser's JSON parsing lazily requires
 # iconv-lite's encodings module, which Slim stripped because a GET-only probe
@@ -81,6 +88,7 @@ if [[ -n "${POST_PROBE_PATH:-}" ]]; then
   HEALTH_PATH="$HEALTH_PATH" \
   POST_PROBE_PATH="$POST_PROBE_PATH" \
   POST_PROBE_BODY="$POST_PROBE_BODY" \
+  POST_PROBE_CONTENT_TYPE="${POST_PROBE_CONTENT_TYPE:-application/json}" \
   python3 -c '
 import json, os
 commands = [{"method": "GET", "resource": os.environ["HEALTH_PATH"]}]
@@ -89,7 +97,7 @@ for path in os.environ.get("EXTRA_GET_PATHS", "").split():
 commands.append({
     "method": "POST",
     "resource": os.environ["POST_PROBE_PATH"],
-    "headers": ["Content-Type: application/json"],
+    "headers": ["Content-Type: " + os.environ["POST_PROBE_CONTENT_TYPE"]],
     "body": os.environ["POST_PROBE_BODY"],
 })
 print(json.dumps({"commands": commands}))
@@ -112,10 +120,95 @@ done
 # outside compose, so the same file is restated here as a plain mount. --exclude-mounts (docker-slim's
 # default) keeps this out of the final minimized image, matching how the file
 # is provided at runtime in production rather than baked into the image.
+# A leading "/" marks an absolute host path (e.g. the Docker socket for the
+# portainer example); anything else is resolved relative to the repo root, as
+# the source-tree examples expect.
 MOUNT_ARGS=()
 if [[ -n "${APP_MOUNT:-}" ]]; then
-  MOUNT_ARGS=(--mount "$ROOT_DIR/$APP_MOUNT")
+  if [[ "$APP_MOUNT" == /* ]]; then
+    MOUNT_ARGS=(--mount "$APP_MOUNT")
+  else
+    MOUNT_ARGS=(--mount "$ROOT_DIR/$APP_MOUNT")
+  fi
 fi
+
+# SLIM_MOUNTS (space-separated "source:/container/path" specs, optional in
+# pipeline.env): volumes to give docker-slim's analysis container, passed to
+# mint verbatim. This exists for the prebuilt server images that keep their
+# state in a directory the compose file backs with a named volume.
+#
+# Why it matters: under compose that directory is a volume, wiped by
+# `down -v` between stages, so neither stage inherits the other's state.
+# docker-slim runs its container with no volumes at all, so everything the
+# analysed run writes there lands in the container filesystem and is baked into
+# the minified image. Found on gitea-postgres, where probing the installer
+# produced a "minimized" image that came up already installed, carrying a
+# generated app.ini — no longer the same image as the original, which makes the
+# whole before/after comparison meaningless.
+#
+# Giving Slim a throwaway named volume at the same path reproduces what compose
+# does. It must be paired with SLIM_EXCLUDE_PATTERNS for the same path: three
+# mint mechanisms were tried and only the combination works, verified on a
+# purpose-built two-image probe rather than inferred:
+#
+#   * --preserve-path is broken in this version (1.41.8). It fails with
+#     `fsutil.ArchiveFiles: bad file - /opt/_mint/artifacts/...` and carries the
+#     path into the output image anyway.
+#   * --exclude-mounts (documented as on by default) does NOT exclude a mounted
+#     volume's contents. Probe: an image whose CMD writes /state/written.txt,
+#     run with `--mount vol:/state`. The write lands in the volume, as it should
+#     — and written.txt is still baked into the minified image.
+#   * --exclude-pattern alone removes the FILES but leaves the DIRECTORIES, and
+#     that is not harmless: gitea's init only fixes ownership on directories it
+#     creates itself, so the leftovers made it fail with "open
+#     /data/git/.ssh/authorized_keys.tmp: permission denied" — an empty
+#     directory tree was enough to break the image.
+#
+# Mount plus exclude-pattern removes the tree cleanly. The mount is not
+# redundant: without it the analysed run writes into the container filesystem,
+# which is a different code path from the volume the example really uses.
+# The volume is recreated empty on every run, so a stage never inherits state
+# from the previous one — the same guarantee `compose down -v` gives the
+# functional-test stages.
+for m in ${SLIM_MOUNTS:-}; do
+  SRC="${m%%:*}"
+  if [[ "$SRC" != /* ]]; then
+    docker volume rm -f "$SRC" >/dev/null 2>&1 || true
+    docker volume create "$SRC" >/dev/null
+  fi
+  MOUNT_ARGS+=(--mount "$m")
+done
+
+# SLIM_EXCLUDE_PATTERNS (space-separated glob patterns): paths to drop from the
+# output image. See the note above for why this is needed even when the path is
+# already a mount.
+for p in ${SLIM_EXCLUDE_PATTERNS:-}; do
+  MOUNT_ARGS+=(--exclude-pattern "$p")
+done
+
+# SLIM_INCLUDE_BINS (space-separated absolute paths, optional in pipeline.env):
+# binaries to keep unconditionally, whatever the dynamic analysis concluded.
+#
+# This exists because Slim's analysis is not deterministic for programs that run
+# exactly once during container startup. Found on the two nextcloud examples,
+# which are the SAME image (nextcloud:apache) with the same pipeline config:
+# one run produced a slim image containing /usr/bin/rsync, the other did not,
+# and the second crashloops with "/entrypoint.sh: 206: rsync: not found" —
+# the entrypoint uses rsync to unpack /usr/src/nextcloud into the web root, so
+# the container never starts. Nothing in the configuration differed; the
+# observation of that one early exec did.
+#
+# Anything the image needs only at startup belongs here rather than being left
+# to chance.
+for p in ${SLIM_INCLUDE_BINS:-}; do
+  MOUNT_ARGS+=(--include-bin "$p")
+done
+
+# SLIM_INCLUDE_PATHS (space-separated, optional): keep a path as the ORIGINAL
+# image has it.
+for p in ${SLIM_INCLUDE_PATHS:-}; do
+  MOUNT_ARGS+=(--include-path "$p")
+done
 
 # RUN_COMMAND (optional, see run-pipeline.sh) overrides both the command
 # Slim runs during its own analysis (--cmd) and the CMD baked into the
@@ -126,10 +219,31 @@ if [[ -n "${RUN_COMMAND:-}" ]]; then
   CMD_ARGS=(--cmd "$RUN_COMMAND" --new-cmd "$RUN_COMMAND" --image-overrides cmd)
 fi
 
+# SLIM_PROBE=none (pipeline.env, optional): the example speaks no HTTP, so
+# there is nothing for the HTTP prober to drive — minecraft's game protocol on
+# 25565 and wireguard's UDP tunnel are the two cases. Slim then has only the
+# container's own startup to observe, so instead of "continue when the probe
+# finishes" it is told to run the container for SLIM_RUN_SECONDS and take
+# whatever that exercised. That is a strictly weaker signal than a probed run
+# and the results have to be read as such — see docs/methodology.md §12.
+if [[ "${SLIM_PROBE:-http}" == "none" ]]; then
+  # --http-probe=false is required, not implied by --continue-after: mint still
+  # tries to probe otherwise and aborts with "NO EXPOSED PORTS" before it ever
+  # starts the container.
+  PROBE_ARGS=(--http-probe=false --continue-after "${SLIM_RUN_SECONDS:-30}")
+else
+  PROBE_ARGS=(--http-probe "${PROBE_ARGS[@]}")
+fi
+
+echo "--- [$EXAMPLE] docker-slim invocation ---" >&2
+printf '%q ' docker-slim build --target "$ORIGINAL_TAG" --tag "$SLIM_TAG" \
+  "${PROBE_ARGS[@]}" --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
+  "${NETWORK_ARGS[@]}" "${ENV_ARGS[@]}" "${MOUNT_ARGS[@]}" "${CMD_ARGS[@]}" >&2
+echo >&2
+
 docker-slim build \
   --target "$ORIGINAL_TAG" \
   --tag "$SLIM_TAG" \
-  --http-probe \
   "${PROBE_ARGS[@]}" \
   --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
   "${NETWORK_ARGS[@]}" \
@@ -143,6 +257,13 @@ docker-slim build \
 if [[ -n "$SLIM_DEPS" ]]; then
   "$ROOT_DIR/pipeline/compose.sh" "$EXAMPLE" down -v --remove-orphans
 fi
+
+for m in ${SLIM_MOUNTS:-}; do
+  SRC="${m%%:*}"
+  if [[ "$SRC" != /* ]]; then
+    docker volume rm -f "$SRC" >/dev/null 2>&1 || true
+  fi
+done
 
 # docker-slim writes slim.report.json into the current working directory, not
 # --copy-meta-artifacts's dir — move it alongside the other slim artifacts.

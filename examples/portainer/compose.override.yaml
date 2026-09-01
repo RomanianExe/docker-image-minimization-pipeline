@@ -1,0 +1,20 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference, so
+#                     pipeline/build.sh pulls that reference directly rather
+#                     than going through `compose pull`.
+#   container_name  - stable name the functional tests address (replaces the
+#                     vendor file's own container_name: portainer).
+#   ports !override - remap onto this project's own host-port range.
+#
+# volumes are deliberately NOT reset: one of them is the Docker socket this
+# example exists to talk to, the other is its own data volume.
+services:
+  portainer:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"

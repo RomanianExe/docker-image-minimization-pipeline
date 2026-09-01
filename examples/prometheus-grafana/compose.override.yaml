@@ -1,0 +1,42 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference, so
+#                     pipeline/build.sh pulls that reference directly rather
+#                     than going through `compose pull`.
+#   container_name  - stable name the functional tests address. Note the vendor
+#                     file already sets container_name: grafana; this replaces
+#                     it, and compose keeps the service-name DNS alias either
+#                     way, so prometheus is still reachable as `prometheus`.
+#   ports !override - remap onto this project's own host-port range.
+#
+# grafana.volumes is deliberately NOT reset. Unlike the source bind mounts in
+# the buildable examples, ./grafana here is provisioning configuration — the
+# datasource definition that points Grafana at prometheus. Dropping it would
+# quietly remove the only thing that makes this a two-service example, and the
+# datasource assertion in the functional test would be testing nothing.
+#
+# prometheus.ports !reset - upstream publishes 9090 on the host; the pipeline
+#   reaches prometheus only through Grafana, over the compose network.
+#
+# prometheus.image - the vendor file says `prom/prometheus`, unpinned, and its
+#   vendored prometheus.yml declares `api_version: v1` for alertmanager.
+#   Prometheus 3.x removed v1 and now refuses the config outright
+#   ("expected Alertmanager api version to be one of [v2] but got v1"), so the
+#   unpinned tag crashloops today. The alternative would be shipping a patched
+#   prometheus.yml, but the config is part of the example's own content; the
+#   drift is in the unpinned tag, so the tag is what gets pinned — the same
+#   call already made for postgres in spring-postgres, nginx-golang-postgres
+#   and gitea-postgres. This is a dependency service, not the minimized image,
+#   so the pin does not affect any measurement.
+services:
+  grafana:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    ports: !reset null

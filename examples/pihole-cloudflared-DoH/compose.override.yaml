@@ -1,0 +1,30 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+# ports !override - this is the one change that makes the example runnable at
+#   all on a normal workstation. Upstream publishes 53/tcp and 53/udp on all
+#   host interfaces; systemd-resolved already holds :53 here, so `compose up`
+#   fails outright. The pipeline reaches Pi-hole over HTTP for the probe and
+#   over the container network for the DNS assertion, so only the admin UI port
+#   is published. Nothing about the image under test changes — the resolver
+#   still listens on 53 inside the container, and the functional test still
+#   queries it there.
+#
+# volumes !reset - upstream bind-mounts /etc/pihole and /etc/dnsmasq.d straight
+#   from the HOST root filesystem. That would write Pi-hole's configuration
+#   into the machine's real /etc and share it between the original and slim
+#   stages. Dropped, so each stage starts from the image's own initial state.
+#
+# cap_add (NET_ADMIN) is kept as upstream declares it, and so is the fixed
+# 172.20.0.2 address the pihole config refers to by IP.
+services:
+  pihole:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    environment:
+      FTLCONF_webserver_api_password: changeit
+    volumes: !reset null
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}/tcp"
+  cloudflared:
+    ports: !reset null

@@ -1,0 +1,33 @@
+{
+  "example": "prometheus-grafana",
+  "original": {
+    "image_tag": "dip-prometheus-grafana:original",
+    "size_bytes": 474098752,
+    "size_human": "474.10MB",
+    "sbom_component_count": 1791,
+    "vulnerability_total": 178,
+    "vulnerability_by_severity": {
+      "High": 114,
+      "Medium": 59,
+      "Unknown": 4,
+      "Low": 1
+    }
+  },
+  "slim": {
+    "image_tag": "dip-prometheus-grafana:slim",
+    "size_bytes": 413283970,
+    "size_human": "413.28MB",
+    "sbom_component_count": 1760,
+    "vulnerability_total": 157,
+    "vulnerability_by_severity": {
+      "High": 100,
+      "Medium": 54,
+      "Low": 3
+    }
+  },
+  "size_reduction_pct": 12.8,
+  "component_reduction": 31,
+  "vulnerability_reduction": 21,
+  "functional_tests_original": "PASS (tests/specific/prometheus-grafana/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/prometheus-grafana/test.sh)"
+}

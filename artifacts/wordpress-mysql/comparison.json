@@ -1,0 +1,33 @@
+{
+  "example": "wordpress-mysql",
+  "original": {
+    "image_tag": "dip-wordpress-mysql:original",
+    "size_bytes": 274729632,
+    "size_human": "274.73MB",
+    "sbom_component_count": 273,
+    "vulnerability_total": 1045,
+    "vulnerability_by_severity": {
+      "Negligible": 671,
+      "High": 114,
+      "Critical": 45,
+      "Low": 31,
+      "Medium": 160,
+      "Unknown": 24
+    }
+  },
+  "slim": {
+    "image_tag": "dip-wordpress-mysql:slim",
+    "size_bytes": 140202190,
+    "size_human": "140.20MB",
+    "sbom_component_count": 18,
+    "vulnerability_total": 4,
+    "vulnerability_by_severity": {
+      "High": 4
+    }
+  },
+  "size_reduction_pct": 49.0,
+  "component_reduction": 255,
+  "vulnerability_reduction": 1041,
+  "functional_tests_original": "PASS (tests/specific/wordpress-mysql/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/wordpress-mysql/test.sh)"
+}

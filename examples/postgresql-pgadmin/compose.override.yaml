@@ -1,0 +1,26 @@
+# Pipeline-side compose override, layered on top of the vendor compose file
+# (vendor/ is never modified).
+#
+#   image           - pin the service to the tag currently being processed
+#                     (${TARGET_IMAGE} = <name>:original or <name>:slim). For a
+#                     PREBUILT example this REPLACES the upstream reference, so
+#                     pipeline/build.sh pulls that reference directly rather
+#                     than going through `compose pull`.
+#   container_name  - stable name the functional tests address (replaces the
+#                     vendor file's own container_name: pgadmin).
+#   ports !override - remap onto this project's own host-port range.
+#
+# postgres.ports !reset - upstream publishes 5432 on the host, which collides
+#   with a local postgres; nothing here reaches it from outside the network.
+#   Note this example declares no volume for postgres, so the PostgreSQL 18
+#   PGDATA relocation that forced an image pin in spring-postgres,
+#   nginx-golang-postgres and gitea-postgres does not bite here — postgres:latest
+#   starts cleanly and is left unpinned, exactly as the vendor file has it.
+services:
+  pgadmin:
+    image: ${TARGET_IMAGE}
+    container_name: ${IMAGE_NAME}-test
+    ports: !override
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+  postgres:
+    ports: !reset null

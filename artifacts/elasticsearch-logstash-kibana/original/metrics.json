@@ -1,0 +1,18 @@
+{
+  "example": "elasticsearch-logstash-kibana",
+  "stage": "original",
+  "image_tag": "dip-elasticsearch-logstash-kibana:original",
+  "generated_at": "2026-09-01T09:45:34Z",
+  "size_bytes": 356322853,
+  "size_human": "356.32MB",
+  "sbom_component_count": 977,
+  "vulnerability_total": 482,
+  "vulnerability_by_severity": {
+    "Medium": 295,
+    "High": 70,
+    "Critical": 5,
+    "Low": 110,
+    "Negligible": 2
+  },
+  "functional_tests": "PASS (tests/specific/elasticsearch-logstash-kibana/test.sh)"
+}

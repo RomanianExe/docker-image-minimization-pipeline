@@ -1,0 +1,17 @@
+{
+  "example": "wireguard",
+  "stage": "original",
+  "image_tag": "dip-wireguard:original",
+  "generated_at": "2026-09-01T10:01:47Z",
+  "size_bytes": 40663186,
+  "size_human": "40.66MB",
+  "sbom_component_count": 270,
+  "vulnerability_total": 59,
+  "vulnerability_by_severity": {
+    "Critical": 3,
+    "High": 31,
+    "Medium": 23,
+    "Unknown": 2
+  },
+  "functional_tests": "PASS (tests/specific/wireguard/test.sh)"
+}
