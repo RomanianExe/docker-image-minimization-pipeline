@@ -53,7 +53,7 @@ for EXAMPLE in "${EXAMPLES[@]}"; do
     # First line that looks like a cause, rather than the last line of output —
     # mint prints three lines of community links after every failure.
     REASON=$(grep -aoE 'FAIL: .*|OCI runtime [^"]*|param\.error [^ ]*|error=[a-z.]+ message=.*|dependency failed[^"]*' \
-             "$LOG" | head -1 | cut -c1-140)
+             "$LOG" | head -1 | cut -c1-140 || true)
     printf '>>> %s  FAILED :: %s\n' "$EXAMPLE" "${REASON:-see $LOG}"
   fi
 done

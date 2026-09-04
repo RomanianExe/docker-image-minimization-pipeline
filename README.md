@@ -8,8 +8,9 @@ components ([Syft](https://github.com/anchore/syft)) and vulnerabilities
 ([Grype](https://github.com/anchore/grype)).
 
 **Headline result: all 25 buildable awesome-compose examples processed end to end, plus 4
-prebuilt ones. Median size reduction is 54.1% across the 26 that had anything to remove, and
-the functional tests pass on every minimized image.** Full numbers in
+prebuilt ones — 29 validated results in total. The median size reduction is 54.5% across the
+28 examples that had anything to remove, and the functional tests pass on every minimized
+image.** Full numbers in
 [`artifacts/summary.md`](artifacts/summary.md); the reasoning, the negative results and the
 failures are in [`docs/methodology.md`](docs/methodology.md).
 
@@ -28,15 +29,17 @@ things, so a number without a passing test beside it is not reported here.
 | Slim Toolkit (`mint` / `docker-slim`) | 1.41.8 | dynamic analysis + minimization |
 | Syft | 1.51.0 | SBOM generation |
 | Grype | 0.117.0 | vulnerability scanning |
+| Skopeo | 1.13.3 | normalize local images to OCI for portable size measurement |
 | Python | 3.14 (3.8+ is enough; stdlib only) | metrics, comparison, summary |
 | `bash`, `curl` | — | test scripts |
 
-Install the three analysis tools:
+Install the analysis tools (on Debian/Ubuntu, install Skopeo from the system package repository):
 
 ```bash
 curl -sL https://raw.githubusercontent.com/mintoolkit/mint/master/scripts/install-mint.sh | sudo -E bash -
 curl -sSfL https://get.anchore.io/syft  | sudo sh -s -- -b /usr/local/bin
 curl -sSfL https://get.anchore.io/grype | sudo sh -s -- -b /usr/local/bin
+sudo apt-get install skopeo
 ```
 
 Verify — every one of these must succeed before the pipeline will run:
@@ -44,7 +47,7 @@ Verify — every one of these must succeed before the pipeline will run:
 ```bash
 docker run --rm hello-world
 docker compose version
-docker-slim --version && syft version && grype version
+docker-slim --version && syft version && grype version && skopeo --version
 ```
 
 The examples themselves come from a vendored copy of awesome-compose in
@@ -166,7 +169,9 @@ Per example, under `artifacts/<name>/`:
 |---|---|
 | `original/sbom.json`, `slim/sbom.json` | Syft SBOMs, before and after |
 | `original/vulns.json`, `slim/vulns.json` | Grype findings, before and after |
-| `original/metrics.json`, `slim/metrics.json` | size, component count, vulnerability counts, test result |
+| `original/metrics.json`, `slim/metrics.json` | cumulative uncompressed OCI layer size, component count, vulnerability counts, test result |
+| `original/size-evidence.json`, `slim/size-evidence.json` | Skopeo command/version, verified OCI descriptors, platform, and layer-size total |
+| `original/size-oci-index.json`, `size-oci-manifest.json` (and slim equivalents) | OCI metadata used as compact measurement evidence; blobs are temporary and not retained |
 | `slim/slim.report.json`, `creport.json` | what Slim removed, and its analysis record |
 | `slim/*-seccomp.json`, `*-apparmor-profile` | hardening profiles Slim derives from the observed behaviour |
 | `comparison.json` | the before/after delta |
