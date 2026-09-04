@@ -8,6 +8,8 @@ def main() -> None:
     original_path, slim_path, output_path = sys.argv[1:4]
     original = json.load(open(original_path))
     slim = json.load(open(slim_path))
+    if original.get("size_metric") != slim.get("size_metric"):
+        raise ValueError("original and slim metrics use different size measurements")
 
     size_reduction_pct = round(
         (1 - slim["size_bytes"] / original["size_bytes"]) * 100, 1
@@ -17,6 +19,7 @@ def main() -> None:
 
     comparison = {
         "example": original["example"],
+        "size_metric": original.get("size_metric"),
         "original": {
             "image_tag": original["image_tag"],
             "size_bytes": original["size_bytes"],

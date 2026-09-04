@@ -2,18 +2,19 @@
   "example": "angular",
   "stage": "original",
   "image_tag": "dip-angular:original",
-  "generated_at": "2026-08-27T10:54:20Z",
-  "size_bytes": 242807563,
-  "size_human": "242.81MB",
+  "generated_at": "2026-09-04T22:57:17Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 821201408,
+  "size_human": "821.20MB",
   "sbom_component_count": 1824,
-  "vulnerability_total": 782,
+  "vulnerability_total": 801,
   "vulnerability_by_severity": {
-    "High": 315,
-    "Medium": 262,
-    "Critical": 50,
+    "High": 326,
+    "Medium": 266,
+    "Critical": 51,
     "Negligible": 84,
     "Low": 52,
-    "Unknown": 19
+    "Unknown": 22
   },
   "functional_tests": "PASS (tests/specific/angular/test.sh)"
 }

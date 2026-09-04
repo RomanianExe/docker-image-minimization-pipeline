@@ -236,12 +236,12 @@ else
 fi
 
 echo "--- [$EXAMPLE] docker-slim invocation ---" >&2
-printf '%q ' docker-slim build --target "$ORIGINAL_TAG" --tag "$SLIM_TAG" \
+printf '%q ' mint build --target "$ORIGINAL_TAG" --tag "$SLIM_TAG" \
   "${PROBE_ARGS[@]}" --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
   "${NETWORK_ARGS[@]}" "${ENV_ARGS[@]}" "${MOUNT_ARGS[@]}" "${CMD_ARGS[@]}" >&2
 echo >&2
 
-docker-slim build \
+mint build \
   --target "$ORIGINAL_TAG" \
   --tag "$SLIM_TAG" \
   "${PROBE_ARGS[@]}" \

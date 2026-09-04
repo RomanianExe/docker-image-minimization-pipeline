@@ -1,36 +1,37 @@
 {
   "example": "angular",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-angular:original",
-    "size_bytes": 242807563,
-    "size_human": "242.81MB",
+    "size_bytes": 821201408,
+    "size_human": "821.20MB",
     "sbom_component_count": 1824,
-    "vulnerability_total": 782,
+    "vulnerability_total": 801,
     "vulnerability_by_severity": {
-      "High": 315,
-      "Medium": 262,
-      "Critical": 50,
+      "High": 326,
+      "Medium": 266,
+      "Critical": 51,
       "Negligible": 84,
       "Low": 52,
-      "Unknown": 19
+      "Unknown": 22
     }
   },
   "slim": {
     "image_tag": "dip-angular:slim",
-    "size_bytes": 66611586,
-    "size_human": "66.61MB",
+    "size_bytes": 200330752,
+    "size_human": "200.33MB",
     "sbom_component_count": 970,
-    "vulnerability_total": 225,
+    "vulnerability_total": 235,
     "vulnerability_by_severity": {
-      "High": 112,
-      "Medium": 84,
+      "High": 120,
+      "Medium": 86,
       "Critical": 7,
       "Low": 22
     }
   },
-  "size_reduction_pct": 72.6,
+  "size_reduction_pct": 75.6,
   "component_reduction": 854,
-  "vulnerability_reduction": 557,
+  "vulnerability_reduction": 566,
   "functional_tests_original": "PASS (tests/specific/angular/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/angular/test.sh)"
 }

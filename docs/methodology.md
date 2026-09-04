@@ -465,8 +465,8 @@ influence.
 `slim.report.json` that does not match the ID the output tag actually resolves to. This
 reproduces identically when building the source image with plain `docker build`, so it is
 a quirk of this `mint` version rather than anything introduced here. It is cosmetic for
-this project's results: the metrics are collected from the tag itself
-(`docker inspect <tag>`), which is the image that is tested.
+this project's results: the metrics are collected from the tag itself through a normalized
+OCI export, which is the image that is tested.
 
 ## 12. Prebuilt Examples: Minimizing Images Nobody Built Here
 

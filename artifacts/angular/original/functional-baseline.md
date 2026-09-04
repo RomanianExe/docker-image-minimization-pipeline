@@ -11,8 +11,8 @@ top, same as other examples' unused dev stage.
 
 ## Build verification
 - Built via `pipeline/build.sh angular original` (`--target builder`).
-- Image tag: `dip-angular:original`, real size: 242.81MB — by far the largest
-  original image processed so far (full Angular CLI toolchain).
+- Image tag: `dip-angular:original`, normalized cumulative uncompressed OCI layer size:
+  821.10MB (full Angular CLI toolchain).
 
 ## Exposed functionality
 - `GET /` → `200 OK`, HTML shell with `<title>Angular</title>` and

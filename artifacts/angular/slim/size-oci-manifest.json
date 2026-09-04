@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "mediaType": "application/vnd.oci.image.manifest.v1+json",
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:fe26f333f8f16a7a007ae34505e97d24fa6704ad227665fb6a93cc6d479854a9",
+    "size": 3012
+  },
+  "layers": [
+    {
+      "digest": "sha256:e91d221818cb53318e607bbddfda594fe82feaad4bf59f4ff2497f0e05e97231",
+      "size": 200330752,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ]
+}
