@@ -1,5 +1,5 @@
 example,cluster,source,base_image,status,original_size_bytes,original_components,original_vulns,slim_size_bytes,slim_components,slim_vulns,size_reduction_pct,component_reduction,vulnerability_reduction,tests_original,tests_slim,note
-angular,Node/JS,compose build,,processed,242807563,1824,782,66611586,970,225,72.6,854,557,PASS,PASS,
+angular,Node/JS,compose build,,processed,821201408,1824,801,200330752,970,235,75.6,854,566,PASS,PASS,
 apache-php,PHP,compose build,,processed,167773412,197,1929,33723017,4,59,79.9,193,1870,PASS,PASS,
 aspnet-mssql,.NET,compose build,,processed,85388703,100,271,66138661,8,13,22.5,92,258,PASS,PASS,
 django,Python,compose build,,processed,27718999,63,178,11358428,1,71,59.0,62,107,PASS,PASS,
@@ -18,7 +18,7 @@ nginx-golang,Go,compose build,,processed,123401523,59,574,4804703,3,43,96.1,56,5
 nginx-golang-mysql,Go,compose build,,processed,123393935,62,582,4696217,6,41,96.2,56,541,PASS,PASS,
 nginx-golang-postgres,Go,compose build,,processed,123481582,61,583,4910369,5,42,96.0,56,541,PASS,PASS,
 nginx-nodejs-redis,Node/JS,compose build,,processed,42809197,512,246,35234680,58,91,17.7,454,155,PASS,PASS,
-nginx-wsgi-flask,Python,compose build,,processed,31835507,75,326,8196145,1,89,74.3,74,237,PASS,PASS,
+nginx-wsgi-flask,Python,compose build,,processed,84309504,75,333,19215360,1,90,77.2,74,243,PASS,PASS,
 pihole-cloudflared-DoH,C,prebuilt,pihole/pihole:latest,baseline only,42673765,94,76,,,,,,,,,"reached slim; fix written (`COMPOSE_NETWORK=dns-net`), not validated"
 plex,C++,prebuilt,linuxserver/plex:latest,baseline only,180446187,164,165,,,,,,,,,docker-slim: artifact copier fails on the s6-overlay layout
 portainer,Go,prebuilt,portainer/portainer-ce:alpine,processed,48553782,328,34,38744462,312,11,20.2,16,23,PASS,PASS,

@@ -36,11 +36,11 @@ echo "PASS: /info correctly echoed back all injected proxy-style headers"
 # Dockerfile creates a "nonroot" user and switches to it (USER nonroot) for
 # tightened security — worth checking Slim's minimization didn't silently
 # revert the container to running as root.
-RUNTIME_USER=$(docker exec "$CONTAINER" whoami)
+RUNTIME_USER=$(docker inspect "$CONTAINER" --format '{{.Config.User}}')
 if [[ "$RUNTIME_USER" != "nonroot" ]]; then
-  echo "FAIL: expected container to run as 'nonroot', got '$RUNTIME_USER'" >&2
-  exit 1
+    echo "FAIL: expected container to run as 'nonroot', got '$RUNTIME_USER'" >&2
+    exit 1
 fi
-echo "PASS: container still runs as non-root user 'nonroot'"
+echo "PASS: container still configured to run as non-root user 'nonroot'"
 
 echo "All nginx-wsgi-flask functional tests passed."

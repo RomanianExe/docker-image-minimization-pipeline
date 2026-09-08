@@ -1,0 +1,46 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-nginx-wsgi-flask:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-nginx-wsgi-flask:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:7c6abdb1afcb6ca2df64707efa9b6113b6b3b0a0948ad804d1876a1e9301fa2a",
+    "size": 402,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:35fed7a3450d9fd86b9e1ff5bed9491b35595d516128b9f9677b8fe572654641",
+    "size": 4449
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:97b4a1dbe9e92fe4736cdf4008fc7c3632a0318739f4b348759e040423e10316",
+      "size": 19215360
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:97b4a1dbe9e92fe4736cdf4008fc7c3632a0318739f4b348759e040423e10316",
+      "size": 19215360,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 19215360
+}
