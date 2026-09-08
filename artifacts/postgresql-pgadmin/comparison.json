@@ -1,0 +1,35 @@
+{
+  "example": "postgresql-pgadmin",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "original": {
+    "image_tag": "dip-postgresql-pgadmin:original",
+    "size_bytes": 547432960,
+    "size_human": "547.43MB",
+    "sbom_component_count": 210,
+    "vulnerability_total": 65,
+    "vulnerability_by_severity": {
+      "High": 25,
+      "Critical": 4,
+      "Medium": 19,
+      "Unknown": 13,
+      "Low": 4
+    }
+  },
+  "slim": {
+    "image_tag": "dip-postgresql-pgadmin:slim",
+    "size_bytes": 135214080,
+    "size_human": "135.21MB",
+    "sbom_component_count": 6,
+    "vulnerability_total": 21,
+    "vulnerability_by_severity": {
+      "High": 7,
+      "Medium": 9,
+      "Low": 5
+    }
+  },
+  "size_reduction_pct": 75.3,
+  "component_reduction": 204,
+  "vulnerability_reduction": 44,
+  "functional_tests_original": "PASS (tests/specific/postgresql-pgadmin/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/postgresql-pgadmin/test.sh)"
+}

@@ -7,6 +7,8 @@ CONTAINER="${1:?Usage: test.sh <container-name> <base-url>}"
 BASE_URL="${2:?Usage: test.sh <container-name> <base-url>}"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+TEMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TEMP_DIR"' EXIT
 
 "$ROOT_DIR/tests/generic/container_up.sh" "$CONTAINER"
 
@@ -23,6 +25,16 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 
 # linuxserver images run everything under s6; the preferences file only exists
 # once the init sequence actually reached Plex.
-docker exec "$CONTAINER" sh -c 'test -f "/config/Library/Application Support/Plex Media Server/Preferences.xml"'
+PREFERENCES="$TEMP_DIR/Preferences.xml"
+if ! docker cp \
+    "$CONTAINER:/config/Library/Application Support/Plex Media Server/Preferences.xml" \
+    "$PREFERENCES"; then
+  echo "FAIL: Plex preferences file could not be copied from '$CONTAINER'" >&2
+  exit 1
+fi
+if [[ ! -s "$PREFERENCES" ]]; then
+  echo "FAIL: Plex preferences file is missing or empty" >&2
+  exit 1
+fi
 
 echo "All plex functional tests passed."

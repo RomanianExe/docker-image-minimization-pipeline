@@ -537,10 +537,10 @@ drop is package *metadata* becoming invisible to Syft rather than code being rem
 the asymmetry itself is the point, and it is far more pronounced here than on the buildable
 set.
 
-### 12.3 The eight marked out of scope
+### 12.3 The seven marked out of scope
 
-The remaining eight are **out of scope for this project's results**. All eight are fully
-configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all eight pass
+The remaining seven are **out of scope for this project's results**. All seven are fully
+configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all seven pass
 the `original` stage, so `artifacts/<example>/original/` holds a real baseline for each.
 None produces a slim image that both builds and passes its tests. They are kept in the
 repository as evidence, not as pending work.
@@ -553,19 +553,29 @@ deliverable, not a gap in Stage 7.
 
 Grouped by cause:
 
-**Blocked by docker-slim itself (3).** Nothing in the pipeline configuration can move these.
+**Blocked by docker-slim itself (4).** Nothing in the pipeline configuration can move these.
 
 - `postgresql-pgadmin` — the analysis container dies with `sudo: effective uid is not 0, is
   /usr/bin/sudo on a file system with the 'nosuid' option set`. pgAdmin's entrypoint elevates
   through `sudo`, and mint's sensor makes that impossible. mint exits `code=-1`.
-- `plex` — mint's artifact copier cannot handle the s6-overlay layout:
-  `cloneDirPath() - os.MkdirAll(/opt/_mint/artifacts/files/package/admin/s6-overlay-helpers)
-  error - file exists`. Also `code=-1`.
-- `gitea-postgres` — the most instructive of the three, because the minimized image is
+- `plex` — remained baseline-only because the upstream image relies on s6-overlay v3 as its
+  PID-1 init and supervision system. Mint's dynamic-analysis execution model inserts its
+  instrumentation before the workload, so the s6 entrypoint is no longer PID 1 and aborts with
+  `s6-overlay-suexec: fatal: can only run as pid 1`. No supported Mint 1.41.8 option was
+  identified that preserves the original PID-1 topology while retaining dynamic instrumentation.
+  Bypassing `/init` was rejected because it would change the runtime contract being evaluated.
+- `wireguard` — remained baseline-only for the same s6-overlay v3 PID-1 incompatibility as
+  `plex`. Its original image uses `ENTRYPOINT ["/init"]`; Mint's instrumentation makes that
+  entrypoint non-PID-1, so it aborts with `s6-overlay-suexec: fatal: can only run as pid 1`.
+  Mint reported `MINIFIED`, but the dynamic analysis had failed at startup and the generated
+  image restarted during post-Slim validation. That output is not treated as a successful
+  minimization result. Bypassing `/init` was rejected because it would change the runtime
+  contract being evaluated.
+- `gitea-postgres` — the most instructive of the four, because the minimized image is
   *not* broken. See 12.6.
 
-**Reached the slim stage but not validated (5).** `nextcloud-postgres`,
-`pihole-cloudflared-DoH`, `minecraft`, `wireguard` and `elasticsearch-logstash-kibana` each hit
+**Reached the slim stage but not validated (4).** `nextcloud-postgres`,
+`pihole-cloudflared-DoH`, `minecraft` and `elasticsearch-logstash-kibana` each hit
 a distinct, diagnosed cause with a fix written into their configuration (`SLIM_INCLUDE_BINS`,
 `SLIM_INCLUDE_PATHS`, `COMPOSE_NETWORK`, a host-side test assertion). Those fixes are **not
 validated** — the runs that would confirm them were not completed. The configurations are left

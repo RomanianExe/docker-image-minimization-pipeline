@@ -2,15 +2,16 @@
   "example": "plex",
   "stage": "original",
   "image_tag": "dip-plex:original",
-  "generated_at": "2026-09-01T09:13:01Z",
-  "size_bytes": 180446187,
-  "size_human": "180.45MB",
+  "generated_at": "2026-09-08T23:09:24Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 440616448,
+  "size_human": "440.62MB",
   "sbom_component_count": 164,
-  "vulnerability_total": 165,
+  "vulnerability_total": 171,
   "vulnerability_by_severity": {
     "High": 4,
-    "Low": 27,
-    "Medium": 132,
+    "Medium": 145,
+    "Low": 20,
     "Negligible": 2
   },
   "functional_tests": "PASS (tests/specific/plex/test.sh)"
