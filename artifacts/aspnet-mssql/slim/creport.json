@@ -2,8 +2,8 @@
   "document": "doc.report.container",
   "version": "ov/container/1.1",
   "target_type": "container",
-  "target_id": "a81f51563c6a4b91a4bcae9aeab49a1e905295f8fb2c0de1cbd61c23fef05056",
-  "image_id": "sha256:438282a748c0da9f1bfdb4d0bb8aff03e4f23fa4ebd44657e8d88014d0dadf11",
+  "target_id": "2d48df034dbfcc28bdf88499922200567d957cbdce0166e41f62e5a50a8d8ba2",
+  "image_id": "sha256:676bb0ec0c4fa64a0010a13dbe74eb4a090c3aae1107ae3d47f5351f9f65d1ff",
   "start_command": {
     "app_name": "dotnet",
     "app_args": [
@@ -33,12 +33,12 @@
     "fan": {
       "monitor_pid": 1,
       "monitor_ppid": 0,
-      "event_count": 511,
+      "event_count": 512,
       "main_process": {
         "pid": 16,
         "name": "dotnet",
         "path": "/usr/share/dotnet/dotnet",
-        "cmd": "",
+        "cmd": "dotnet aspnetapp.dll",
         "cwd": "/app",
         "root": "/",
         "ppid": 1
@@ -48,7 +48,7 @@
           "pid": 16,
           "name": "dotnet",
           "path": "/usr/share/dotnet/dotnet",
-          "cmd": "",
+          "cmd": "dotnet aspnetapp.dll",
           "cwd": "/app",
           "root": "/",
           "ppid": 1
@@ -85,8 +85,8 @@
             "reads": 5
           },
           "/app/wwwroot/js/site.min.js": {
-            "event_count": 3,
-            "first_eid": 498
+            "event_count": 4,
+            "first_eid": 501
           },
           "/etc/ld.so.cache": {
             "event_count": 28,
@@ -132,17 +132,17 @@
             "first_eid": 48,
             "reads": 1
           },
-          "/root/.aspnet/DataProtection-Keys/ba959ab2-055f-4ae3-974c-e5ef5341fae3.tmp": {
+          "/root/.aspnet/DataProtection-Keys/1fbbf610-df8b-416a-9efd-fb9bff6e5eca.tmp": {
             "event_count": 2,
             "first_eid": 427,
             "writes": 1
           },
-          "/root/.aspnet/DataProtection-Keys/key-c8c02390-5019-4e7f-9929-0f5d98f1ffcd.xml": {
+          "/root/.aspnet/DataProtection-Keys/key-8c1e35ae-f2bd-47e2-b191-9f1c90529214.xml": {
             "event_count": 2,
             "first_eid": 429,
             "reads": 1
           },
-          "/tmp/CASESENSITIVETEST05965b8f238e4adf89d219dcf1af747a": {
+          "/tmp/CASESENSITIVETEST6c1c753937114417acf141950dbaa14f": {
             "event_count": 1,
             "first_eid": 195
           },
@@ -699,7 +699,7 @@
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/5.0.17/System.Net.WebSockets.dll": {
             "event_count": 3,
-            "first_eid": 499,
+            "first_eid": 498,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/5.0.17/System.Numerics.Vectors.dll": {
@@ -893,38 +893,38 @@
     "pt": {
       "enabled": true,
       "arch_name": "amd64",
-      "syscall_count": 25708,
+      "syscall_count": 26344,
       "syscall_num": 72,
       "syscall_stats": {
         "0": {
           "num": 0,
           "name": "read",
-          "count": 195
+          "count": 196
         },
         "1": {
           "num": 1,
           "name": "write",
-          "count": 67
+          "count": 65
         },
         "10": {
           "num": 10,
           "name": "mprotect",
-          "count": 3205
+          "count": 3183
         },
         "107": {
           "num": 107,
           "name": "geteuid",
-          "count": 24
+          "count": 26
         },
         "11": {
           "num": 11,
           "name": "munmap",
-          "count": 193
+          "count": 190
         },
         "12": {
           "num": 12,
           "name": "brk",
-          "count": 91
+          "count": 85
         },
         "124": {
           "num": 124,
@@ -939,7 +939,7 @@
         "131": {
           "num": 131,
           "name": "sigaltstack",
-          "count": 102
+          "count": 96
         },
         "133": {
           "num": 133,
@@ -959,27 +959,27 @@
         "143": {
           "num": 143,
           "name": "sched_getparam",
-          "count": 29
+          "count": 25
         },
         "144": {
           "num": 144,
           "name": "sched_setscheduler",
-          "count": 29
+          "count": 25
         },
         "145": {
           "num": 145,
           "name": "sched_getscheduler",
-          "count": 29
+          "count": 25
         },
         "146": {
           "num": 146,
           "name": "sched_get_priority_max",
-          "count": 29
+          "count": 25
         },
         "147": {
           "num": 147,
           "name": "sched_get_priority_min",
-          "count": 29
+          "count": 25
         },
         "158": {
           "num": 158,
@@ -999,22 +999,22 @@
         "186": {
           "num": 186,
           "name": "gettid",
-          "count": 52
+          "count": 49
         },
         "202": {
           "num": 202,
           "name": "futex",
-          "count": 5455
+          "count": 6312
         },
         "203": {
           "num": 203,
           "name": "sched_setaffinity",
-          "count": 74
+          "count": 67
         },
         "204": {
           "num": 204,
           "name": "sched_getaffinity",
-          "count": 92
+          "count": 91
         },
         "21": {
           "num": 21,
@@ -1034,7 +1034,7 @@
         "219": {
           "num": 219,
           "name": "restart_syscall",
-          "count": 144
+          "count": 151
         },
         "22": {
           "num": 22,
@@ -1044,12 +1044,12 @@
         "221": {
           "num": 221,
           "name": "fadvise64",
-          "count": 10
+          "count": 11
         },
         "232": {
           "num": 232,
           "name": "epoll_wait",
-          "count": 18
+          "count": 19
         },
         "233": {
           "num": 233,
@@ -1059,7 +1059,7 @@
         "24": {
           "num": 24,
           "name": "sched_yield",
-          "count": 6491
+          "count": 6371
         },
         "253": {
           "num": 253,
@@ -1074,17 +1074,17 @@
         "257": {
           "num": 257,
           "name": "openat",
-          "count": 476
+          "count": 472
         },
         "273": {
           "num": 273,
           "name": "set_robust_list",
-          "count": 51
+          "count": 48
         },
         "28": {
           "num": 28,
           "name": "madvise",
-          "count": 2636
+          "count": 2616
         },
         "288": {
           "num": 288,
@@ -1099,7 +1099,7 @@
         "293": {
           "num": 293,
           "name": "pipe2",
-          "count": 21
+          "count": 22
         },
         "3": {
           "num": 3,
@@ -1124,7 +1124,7 @@
         "39": {
           "num": 39,
           "name": "getpid",
-          "count": 58
+          "count": 55
         },
         "4": {
           "num": 4,
@@ -1159,7 +1159,7 @@
         "5": {
           "num": 5,
           "name": "fstat",
-          "count": 385
+          "count": 386
         },
         "50": {
           "num": 50,
@@ -1179,12 +1179,12 @@
         "56": {
           "num": 56,
           "name": "clone",
-          "count": 50
+          "count": 47
         },
         "6": {
           "num": 6,
           "name": "lstat",
-          "count": 2998
+          "count": 2999
         },
         "63": {
           "num": 63,
@@ -1204,7 +1204,7 @@
         "73": {
           "num": 73,
           "name": "flock",
-          "count": 28
+          "count": 30
         },
         "79": {
           "num": 79,
@@ -1214,7 +1214,7 @@
         "8": {
           "num": 8,
           "name": "lseek",
-          "count": 34
+          "count": 35
         },
         "82": {
           "num": 82,
@@ -1239,7 +1239,7 @@
         "9": {
           "num": 9,
           "name": "mmap",
-          "count": 941
+          "count": 924
         },
         "91": {
           "num": 91,
@@ -1249,7 +1249,7 @@
         "98": {
           "num": 98,
           "name": "getrusage",
-          "count": 6
+          "count": 7
         },
         "99": {
           "num": 99,
@@ -1328,11 +1328,11 @@
             "6": {}
           },
           "pids": {
-            "50": {},
-            "56": {},
+            "51": {},
             "57": {},
-            "64": {},
-            "65": {}
+            "58": {},
+            "59": {},
+            "60": {}
           },
           "is_subdir": false
         },
@@ -1345,21 +1345,22 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
         "/app/wwwroot/js/site.min.js": {
-          "ops_all": 7,
-          "ops_checkfile": 4,
+          "ops_all": 9,
+          "ops_checkfile": 5,
           "syscalls": {
             "257": {},
             "6": {}
           },
           "pids": {
-            "63": {},
-            "64": {},
-            "65": {}
+            "58": {},
+            "59": {},
+            "60": {},
+            "63": {}
           },
           "is_subdir": false
         },
@@ -1372,7 +1373,7 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
@@ -1385,7 +1386,7 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
@@ -1398,7 +1399,7 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
@@ -1411,7 +1412,7 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
@@ -1424,7 +1425,7 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
@@ -1437,7 +1438,7 @@
           },
           "pids": {
             "16": {},
-            "65": {}
+            "59": {}
           },
           "is_subdir": false
         },
@@ -1461,7 +1462,7 @@
             "89": {}
           },
           "pids": {
-            "56": {}
+            "57": {}
           },
           "is_subdir": false
         },
@@ -1543,7 +1544,7 @@
           },
           "is_subdir": false
         },
-        "/root/.aspnet/DataProtection-Keys/ba959ab2-055f-4ae3-974c-e5ef5341fae3.tmp": {
+        "/root/.aspnet/DataProtection-Keys/1fbbf610-df8b-416a-9efd-fb9bff6e5eca.tmp": {
           "ops_all": 3,
           "ops_checkfile": 3,
           "syscalls": {
@@ -1556,7 +1557,7 @@
           },
           "is_subdir": false
         },
-        "/root/.aspnet/DataProtection-Keys/key-c8c02390-5019-4e7f-9929-0f5d98f1ffcd.xml": {
+        "/root/.aspnet/DataProtection-Keys/key-8c1e35ae-f2bd-47e2-b191-9f1c90529214.xml": {
           "ops_all": 2,
           "ops_checkfile": 1,
           "syscalls": {
@@ -1568,7 +1569,7 @@
           },
           "is_subdir": false
         },
-        "/tmp/CASESENSITIVETEST05965b8f238e4adf89d219dcf1af747a": {
+        "/tmp/CASESENSITIVETEST6c1c753937114417acf141950dbaa14f": {
           "ops_all": 1,
           "ops_checkfile": 1,
           "syscalls": {
@@ -2136,7 +2137,7 @@
           },
           "pids": {
             "16": {},
-            "56": {}
+            "57": {}
           },
           "is_subdir": false
         },
@@ -2705,7 +2706,7 @@
           },
           "pids": {
             "16": {},
-            "66": {}
+            "52": {}
           },
           "is_subdir": false
         },
@@ -4408,7 +4409,7 @@
           },
           "pids": {
             "16": {},
-            "63": {}
+            "52": {}
           },
           "is_subdir": false
         },
@@ -5703,8 +5704,8 @@
       {
         "file_type": "file",
         "file_path": "/app/appsettings.json",
-        "modex": 493,
-        "mode": "-rwxr-xr-x",
+        "modex": 511,
+        "mode": "-rwxrwxrwx",
         "flags": {
           "R": true
         },
@@ -5762,8 +5763,8 @@
       {
         "file_type": "file",
         "file_path": "/app/wwwroot/css/site.min.css",
-        "modex": 493,
-        "mode": "-rwxr-xr-x",
+        "modex": 511,
+        "mode": "-rwxrwxrwx",
         "flags": {
           "R": true
         },
@@ -5784,8 +5785,8 @@
       {
         "file_type": "file",
         "file_path": "/app/wwwroot/js/site.min.js",
-        "modex": 493,
-        "mode": "-rwxr-xr-x",
+        "modex": 511,
+        "mode": "-rwxrwxrwx",
         "file_size": 0,
         "sha1_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
         "uid": 0,
@@ -5907,7 +5908,7 @@
         "file_path": "/etc/resolv.conf",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 224,
+        "file_size": 222,
         "uid": 0,
         "gid": 0
       },
@@ -8643,14 +8644,14 @@
       },
       {
         "file_type": "file",
-        "file_path": "/root/.aspnet/DataProtection-Keys/key-c8c02390-5019-4e7f-9929-0f5d98f1ffcd.xml",
+        "file_path": "/root/.aspnet/DataProtection-Keys/key-8c1e35ae-f2bd-47e2-b191-9f1c90529214.xml",
         "modex": 420,
         "mode": "-rw-r--r--",
         "flags": {
           "R": true
         },
-        "file_size": 998,
-        "sha1_hash": "af1c81d70af29c2af0f7d2972b203a67cd9722ae",
+        "file_size": 1000,
+        "sha1_hash": "de7496d9f88dbf742c9dda18e6c6e29e5cc8c01b",
         "uid": 0,
         "gid": 0
       },

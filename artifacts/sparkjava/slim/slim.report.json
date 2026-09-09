@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,23 +22,17 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:ff3e8f600d98e4d0c7b84bcd95615fe8157e9961002473ddec0da233bf4dae22",
+      "id": "sha256:95cff99d58ba198c3edeb69b5277fcec71130bbc259ef01b426ab13509d7b3a4",
       "tags": [
         "original"
       ],
       "names": [
         "dip-sparkjava:original"
-      ],
-      "digests": [
-        "sha256:ff3e8f600d98e4d0c7b84bcd95615fe8157e9961002473ddec0da233bf4dae22"
-      ],
-      "full_digests": [
-        "dip-sparkjava@sha256:ff3e8f600d98e4d0c7b84bcd95615fe8157e9961002473ddec0da233bf4dae22"
       ]
     },
-    "size": 97444975,
-    "size_human": "97 MB",
-    "create_time": "2026-08-23T12:04:32Z",
+    "size": 268955098,
+    "size_human": "269 MB",
+    "create_time": "2026-09-09T20:33:29Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "exposed_ports": [
@@ -46,6 +40,9 @@
     ],
     "os": "linux",
     "labels": {
+      "com.docker.compose.project": "dip-sparkjava",
+      "com.docker.compose.service": "sparkjava",
+      "com.docker.compose.version": "5.4.0",
       "org.opencontainers.image.ref.name": "ubuntu",
       "org.opencontainers.image.version": "20.04"
     },
@@ -61,30 +58,30 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 53958724,
-  "minified_image_size_human": "54 MB",
+  "minified_image_size": 134432804,
+  "minified_image_size_human": "134 MB",
   "minified_image": "dip-sparkjava:slim",
-  "minified_image_id": "sha256:bf5fef2a79b1777694070f7dcd7268c3655244b3493122d1dee9c1575768ba6a",
-  "minified_image_digest": "sha256:6151001119aff57291d6c7dcad4d08795e58a0f14a405873b286cfb146b93925",
+  "minified_image_id": "sha256:633b4a6abb162787d5ecf4d691a2e954abb71896737260d37efce374594cacbf",
+  "minified_image_digest": "sha256:7ced8bceb2081a1f9c7d50019e21a0e531cc5b22a69d0a625a8eb7b46b7d042c",
   "minified_image_has_data": true,
-  "minified_by": 1.805916963492317,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/ff3e8f600d98e4d0c7b84bcd95615fe8157e9961002473ddec0da233bf4dae22/artifacts",
+  "minified_by": 2.000665685735455,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/95cff99d58ba198c3edeb69b5277fcec71130bbc259ef01b426ab13509d7b3a4/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-sparkjava-seccomp.json",
   "apparmor_profile_name": "dip-sparkjava-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:ff3e8f600d98e4d0c7b84bcd95615fe8157e9961002473ddec0da233bf4dae22",
+      "id": "sha256:95cff99d58ba198c3edeb69b5277fcec71130bbc259ef01b426ab13509d7b3a4",
       "full_name": "dip-sparkjava:original",
       "repo_name": "dip-sparkjava",
       "version_tag": "original",
       "raw_tags": [
         "dip-sparkjava:original"
       ],
-      "create_time": "2026-08-23T12:04:32Z",
-      "new_size": 286830592,
-      "new_size_human": "287 MB",
+      "create_time": "2026-09-09T20:33:29Z",
+      "new_size": 268955098,
+      "new_size_human": "269 MB",
       "instructions": [
         {
           "type": "ARG",
@@ -148,8 +145,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 81657856,
-          "size_human": "82 MB",
+          "size": 72813617,
+          "size_human": "73 MB",
           "params": "file:f9ee450324e6ff2c946bc9aae5cf7e35e240dbd387d8b9f5ee1ed5b8434b9894 in /",
           "command_snippet": "ADD file:f9ee450324e6ff2c946bc9aae5cf7e35e24...",
           "command_all": "ADD file:f9ee450324e6ff2c946bc9aae5cf7e35e240dbd387d8b9f5ee1ed5b8434b9894 /",
@@ -228,8 +225,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 61358080,
-          "size_human": "61 MB",
+          "size": 52875437,
+          "size_human": "53 MB",
           "command_snippet": "RUN set -eux;     apt-get update;     DEBIAN...",
           "command_all": "RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         gnupg         fontconfig         ca-certificates p11-kit         tzdata         locales     ;     echo \"en_US.UTF-8 UTF-8\" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/*",
           "system_commands": [
@@ -268,8 +265,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 140853248,
-          "size_human": "141 MB",
+          "size": 140330128,
+          "size_human": "140 MB",
           "command_snippet": "RUN set -eux;     ARCH=\"$(dpkg --print-archi...",
           "command_all": "RUN set -eux;     ARCH=\"$(dpkg --print-architecture)\";     case \"${ARCH}\" in        amd64)          ESUM='aaed740c38ff1e87a4b920f9deb165d419d9fdf23f423740d2ecb280eeab9647';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jre_x64_linux_hotspot_17.0.15_6.tar.gz';          ;;        arm64)          ESUM='c89467f543bd434b71f3b748adeeeb1b2692f90242824b78205be1ae72ba385f';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jre_aarch64_linux_hotspot_17.0.15_6.tar.gz';          ;;        armhf)          ESUM='c5ba30280b49f5654440c897265819ed749259afd2d46d3136720ab182933679';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jre_arm_linux_hotspot_17.0.15_6.tar.gz';          ;;        ppc64el)          ESUM='f35795f3f62885460e96ebcc2ee4e34bb59ab0d1668f0dc0642070ed89e3dda9';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jre_ppc64le_linux_hotspot_17.0.15_6.tar.gz';          ;;        s390x)          ESUM='68275080c9010d1ef0cab7002c8489777c85952dc9c422d2aad4b20cd5123d69';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jre_s390x_linux_hotspot_17.0.15_6.tar.gz';          ;;        *)          echo \"Unsupported arch: ${ARCH}\";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     wget --progress=dot:giga -O /tmp/openjdk.tar.gz.sig ${BINARY_URL}.sig;     export GNUPGHOME=\"$(mktemp -d)\";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 3B04D753C9050D9A5D343F39843C48A565F8F04B;     gpg --batch --verify /tmp/openjdk.tar.gz.sig /tmp/openjdk.tar.gz;     rm -rf \"${GNUPGHOME}\" /tmp/openjdk.tar.gz.sig;     echo \"${ESUM} */tmp/openjdk.tar.gz\" | sha256sum -c -;     mkdir -p \"$JAVA_HOME\";     tar --extract         --file /tmp/openjdk.tar.gz         --directory \"$JAVA_HOME\"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz;     find \"$JAVA_HOME/lib\" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;",
           "system_commands": [
@@ -328,8 +325,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 12288,
-          "size_human": "12 kB",
+          "size": 0,
           "command_snippet": "RUN set -eux;     echo \"Verifying install .....",
           "command_all": "RUN set -eux;     echo \"Verifying install ...\";     echo \"java --version\"; java --version;     echo \"Complete.\"",
           "system_commands": [
@@ -351,8 +347,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 12288,
-          "size_human": "12 kB",
+          "size": 5309,
+          "size_human": "5.3 kB",
           "params": "--chmod=755 entrypoint.sh /__cacert_entrypoint.sh",
           "command_snippet": "COPY --chmod=755 entrypoint.sh /__cacert_ent...",
           "command_all": "COPY --chmod=755 entrypoint.sh /__cacert_entrypoint.sh",
@@ -381,7 +377,7 @@
         },
         {
           "type": "ARG",
-          "time": "2026-08-23T12:04:32Z",
+          "time": "2026-09-09T20:33:29Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -391,46 +387,46 @@
           "command_all": "ARG DEPENDENCY=/workdir/server/target",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:00:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:30:00+03:00",
           "inst_set_time_index": 2,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "EXPOSE",
-          "time": "2026-08-23T12:04:32Z",
+          "time": "2026-09-09T20:33:29Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
           "size": 0,
-          "params": "8080/tcp",
-          "command_snippet": "EXPOSE 8080/tcp",
-          "command_all": "EXPOSE 8080/tcp",
+          "params": "[8080/tcp]",
+          "command_snippet": "EXPOSE [8080/tcp]",
+          "command_all": "EXPOSE [8080/tcp]",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:00:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:30:00+03:00",
           "inst_set_time_index": 2,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-23T12:04:32Z",
+          "time": "2026-09-09T20:33:29Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 2936832,
+          "size": 2930607,
           "size_human": "2.9 MB",
           "params": "/workdir/server/target/app.jar /app.jar",
           "command_snippet": "COPY /workdir/server/target/app.jar /app.jar",
           "command_all": "COPY /workdir/server/target/app.jar /app.jar",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:00:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:30:00+03:00",
           "inst_set_time_index": 2,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-23T12:04:32Z",
+          "time": "2026-09-09T20:33:29Z",
           "is_last_instruction": true,
           "is_nop": false,
           "local_image_exists": true,
@@ -444,7 +440,7 @@
             "dip-sparkjava:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:00:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:30:00+03:00",
           "inst_set_time_index": 2,
           "inst_set_time_reverse_index": 0
         }

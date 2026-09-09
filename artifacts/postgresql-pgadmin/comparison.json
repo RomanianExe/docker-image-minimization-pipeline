@@ -8,11 +8,11 @@
     "sbom_component_count": 210,
     "vulnerability_total": 65,
     "vulnerability_by_severity": {
-      "High": 25,
-      "Critical": 4,
+      "High": 32,
+      "Critical": 6,
       "Medium": 19,
-      "Unknown": 13,
-      "Low": 4
+      "Low": 4,
+      "Unknown": 4
     }
   },
   "slim": {

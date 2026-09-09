@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,26 +22,25 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:3332bc85f24cb78ccc45eafdd4b5f9064bf39af097e00aa51e8dfdfff4de7d90",
+      "id": "sha256:f844adaada8fca72c4a5e407d32f7780ab98411bc8bf4568175a6fee27dd56e0",
       "tags": [
         "original"
       ],
       "names": [
         "dip-nginx-nodejs-redis:original"
-      ],
-      "digests": [
-        "sha256:3332bc85f24cb78ccc45eafdd4b5f9064bf39af097e00aa51e8dfdfff4de7d90"
-      ],
-      "full_digests": [
-        "dip-nginx-nodejs-redis@sha256:3332bc85f24cb78ccc45eafdd4b5f9064bf39af097e00aa51e8dfdfff4de7d90"
       ]
     },
-    "size": 42809197,
-    "size_human": "43 MB",
-    "create_time": "2026-08-27T11:28:30Z",
+    "size": 120350465,
+    "size_human": "120 MB",
+    "create_time": "2026-09-09T20:01:18Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "os": "linux",
+    "labels": {
+      "com.docker.compose.project": "dip-nginx-nodejs-redis",
+      "com.docker.compose.service": "web1",
+      "com.docker.compose.version": "5.4.0"
+    },
     "env_vars": [
       "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
       "NODE_VERSION=14.17.3",
@@ -51,30 +50,30 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 35234680,
-  "minified_image_size_human": "35 MB",
+  "minified_image_size": 80427890,
+  "minified_image_size_human": "80 MB",
   "minified_image": "dip-nginx-nodejs-redis:slim",
-  "minified_image_id": "sha256:13913e041012b2945966aa734882c0eb33f8c4c6ed266efcb6fee409541f78de",
-  "minified_image_digest": "sha256:1399a565dd008a2882b2d617dc4ffe4a4b8dff05345244bff28bf8fd050cc74a",
+  "minified_image_id": "sha256:cca00dee1e219dc8daf9b204960eb39bcbffc729fd0fab95687f4720b6a5fa4e",
+  "minified_image_digest": "sha256:d66580a4fa9460752da24988d0b6eb8eabfd4b0536833d938b9ebca25aab7d87",
   "minified_image_has_data": true,
-  "minified_by": 1.2149733444435993,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/3332bc85f24cb78ccc45eafdd4b5f9064bf39af097e00aa51e8dfdfff4de7d90/artifacts",
+  "minified_by": 1.4963772517220084,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/f844adaada8fca72c4a5e407d32f7780ab98411bc8bf4568175a6fee27dd56e0/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nginx-nodejs-redis-seccomp.json",
   "apparmor_profile_name": "dip-nginx-nodejs-redis-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:3332bc85f24cb78ccc45eafdd4b5f9064bf39af097e00aa51e8dfdfff4de7d90",
+      "id": "sha256:f844adaada8fca72c4a5e407d32f7780ab98411bc8bf4568175a6fee27dd56e0",
       "full_name": "dip-nginx-nodejs-redis:original",
       "repo_name": "dip-nginx-nodejs-redis",
       "version_tag": "original",
       "raw_tags": [
         "dip-nginx-nodejs-redis:original"
       ],
-      "create_time": "2026-08-27T11:28:30Z",
-      "new_size": 140963840,
-      "new_size_human": "141 MB",
+      "create_time": "2026-09-09T20:01:18Z",
+      "new_size": 120350465,
+      "new_size_human": "120 MB",
       "instructions": [
         {
           "type": "ADD",
@@ -82,8 +81,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 6221824,
-          "size_human": "6.2 MB",
+          "size": 5595013,
+          "size_human": "5.6 MB",
           "params": "file:f278386b0cef68136129f5f58c52445590a417b624d62bca158d4dc926c340df in /",
           "command_snippet": "ADD file:f278386b0cef68136129f5f58c52445590a...",
           "command_all": "ADD file:f278386b0cef68136129f5f58c52445590a417b624d62bca158d4dc926c340df /",
@@ -91,7 +90,7 @@
           "source_type": "file",
           "inst_set_time_bucket": "2021-06-16T01:15:00+03:00",
           "inst_set_time_index": 0,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 3
         },
         {
           "type": "CMD",
@@ -106,7 +105,7 @@
           "command_all": "CMD [\"/bin/sh\"]\n",
           "inst_set_time_bucket": "2021-06-16T01:15:00+03:00",
           "inst_set_time_index": 0,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 3
         },
         {
           "type": "ENV",
@@ -120,7 +119,7 @@
           "command_all": "ENV NODE_VERSION=14.17.3",
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "RUN",
@@ -128,8 +127,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 121393152,
-          "size_human": "121 MB",
+          "size": 104196892,
+          "size_human": "104 MB",
           "command_snippet": "RUN addgroup -g 1000 node && \\\n\tadduser -u 1...",
           "command_all": "RUN addgroup -g 1000 node && \\\n\tadduser -u 1000 -G node -s /bin/sh -D node && \\\n\tapk add --no-cache         libstdc++ && \\\n\tapk add --no-cache --virtual .build-deps         curl && \\\n\tARCH= && \\\n\talpineArch=\"$(apk --print-arch)\" && \\\n\tcase \"${alpineArch##*-}\" in         x86_64)           ARCH='x64'           CHECKSUM=\"58d33d68cf72b41044ea40cfb8ac39c64e3e537b8475426f33b5b54d5712c2b8\"           ;;         *) ;;       esac && \\\n\tif [ -n \"${CHECKSUM}\" ]; then     set -eu;     curl -fsSLO --compressed \"https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\";     echo \"$CHECKSUM  node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\" | sha256sum -c - && \\\n\ttar -xJf \"node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\" -C /usr/local --strip-components=1 --no-same-owner && \\\n\tln -s /usr/local/bin/node /usr/local/bin/nodejs;   else     echo \"Building from source\" && \\\n\tapk add --no-cache --virtual .build-deps-full         binutils-gold         g++         gcc         gnupg         libgcc         linux-headers         make         python3 && \\\n\tfor key in       4ED778F539E3634C779C87C6D7062848A1AB005C       94AE36675C464D64BAFA68DD7434390BDBE9B9C5       74F12602B6F1C4E913FAA37AD3A89613643B6201       71DCFD284A79C3B38668286BC97EC7A07EDE3FC1       8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600       C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8       C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C       DD8F2338BAE7501E3DD5AC78C273792F7D83545D       A48C2BEE680E841632CD4E44F07496B3EB3C1762       108F52B48DB57BB0CC439B2997B01419BD92F80A       B9E2F5981AA6E0CD28160D9FF13993A75599653C     ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$key\" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\" ;     done && \\\n\tcurl -fsSLO --compressed \"https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.xz\" && \\\n\tcurl -fsSLO --compressed \"https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc\" && \\\n\tgpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc && \\\n\tgrep \" node-v$NODE_VERSION.tar.xz\\$\" SHASUMS256.txt | sha256sum -c - && \\\n\ttar -xf \"node-v$NODE_VERSION.tar.xz\" && \\\n\tcd \"node-v$NODE_VERSION\" && \\\n\t./configure && \\\n\tmake -j$(getconf _NPROCESSORS_ONLN) V= && \\\n\tmake install && \\\n\tapk del .build-deps-full && \\\n\tcd .. && \\\n\trm -Rf \"node-v$NODE_VERSION\" && \\\n\trm \"node-v$NODE_VERSION.tar.xz\" SHASUMS256.txt.asc SHASUMS256.txt;   fi && \\\n\trm -f \"node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\" && \\\n\tapk del .build-deps && \\\n\tnode --version && \\\n\tnpm --version",
           "system_commands": [
@@ -165,7 +164,7 @@
           ],
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "ENV",
@@ -179,7 +178,7 @@
           "command_all": "ENV YARN_VERSION=1.22.5",
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "RUN",
@@ -187,8 +186,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 8032256,
-          "size_human": "8.0 MB",
+          "size": 7838466,
+          "size_human": "7.8 MB",
           "command_snippet": "RUN apk add --no-cache --virtual .build-deps...",
           "command_all": "RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar && \\\n\tfor key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$key\" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\" ;   done && \\\n\tcurl -fsSLO --compressed \"https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz\" && \\\n\tcurl -fsSLO --compressed \"https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc\" && \\\n\tgpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz && \\\n\tmkdir -p /opt && \\\n\ttar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ && \\\n\tln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn && \\\n\tln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg && \\\n\trm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz && \\\n\tapk del .build-deps-yarn && \\\n\tyarn --version",
           "system_commands": [
@@ -207,7 +206,7 @@
           ],
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "COPY",
@@ -215,8 +214,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 116,
+          "size_human": "116 B",
           "params": "file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/",
           "command_snippet": "COPY file:238737301d47304174e4d24f4def935b29...",
           "command_all": "COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce /usr/local/bin/",
@@ -224,7 +223,7 @@
           "source_type": "file",
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "ENTRYPOINT",
@@ -239,7 +238,7 @@
           "command_all": "ENTRYPOINT [\"docker-entrypoint.sh\"]\n",
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "CMD",
@@ -254,16 +253,15 @@
           "command_all": "CMD [\"node\"]\n",
           "inst_set_time_bucket": "2021-07-09T02:15:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "WORKDIR",
-          "time": "2026-08-27T11:28:25Z",
+          "time": "2026-09-02T16:52:50Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 16384,
-          "size_human": "16 kB",
+          "size": 0,
           "params": "/usr/src/app",
           "command_snippet": "WORKDIR /usr/src/app",
           "command_all": "WORKDIR /usr/src/app",
@@ -272,69 +270,69 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
+          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 0
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "COPY",
-          "time": "2026-08-27T11:28:26Z",
+          "time": "2026-09-09T20:01:17Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 36864,
-          "size_human": "37 kB",
+          "size": 16040,
+          "size_human": "16 kB",
           "params": "package.json package-lock.json ./",
           "command_snippet": "COPY package.json package-lock.json ./",
           "command_all": "COPY package.json package-lock.json ./",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
-          "inst_set_time_index": 2,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-27T11:28:26Z",
+          "time": "2026-09-09T20:01:17Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 20,
+          "size_human": "20 B",
           "params": ".npmrc .",
           "command_snippet": "COPY .npmrc .",
           "command_all": "COPY .npmrc .",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
-          "inst_set_time_index": 2,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-27T11:28:27Z",
+          "time": "2026-09-09T20:01:17Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 21,
+          "size_human": "21 B",
           "params": ".yarnrc.yml .",
           "command_snippet": "COPY .yarnrc.yml .",
           "command_all": "COPY .yarnrc.yml .",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
-          "inst_set_time_index": 2,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-08-27T11:28:29Z",
+          "time": "2026-09-09T20:01:18Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 5181440,
-          "size_human": "5.2 MB",
+          "size": 2703210,
+          "size_human": "2.7 MB",
           "command_snippet": "RUN npm ci",
           "command_all": "RUN npm ci",
           "system_commands": [
@@ -342,30 +340,30 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
-          "inst_set_time_index": 2,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-27T11:28:30Z",
+          "time": "2026-09-09T20:01:18Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 687,
+          "size_human": "687 B",
           "params": "./server.js ./",
           "command_snippet": "COPY ./server.js ./",
           "command_all": "COPY ./server.js ./",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
-          "inst_set_time_index": 2,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-27T11:28:30Z",
+          "time": "2026-09-09T20:01:18Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -380,8 +378,8 @@
             "dip-nginx-nodejs-redis:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
-          "inst_set_time_index": 2,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         }
       ]

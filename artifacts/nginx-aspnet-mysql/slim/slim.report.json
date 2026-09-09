@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,26 +22,25 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:4b150eda088723d906660d46dbaf626e055332891e15e42f33859a482568f89e",
+      "id": "sha256:ca908b4b4d6c748107a8358e979019475d5b75f41c9da06c7c64682a85012f88",
       "tags": [
         "original"
       ],
       "names": [
         "dip-nginx-aspnet-mysql:original"
-      ],
-      "digests": [
-        "sha256:4b150eda088723d906660d46dbaf626e055332891e15e42f33859a482568f89e"
-      ],
-      "full_digests": [
-        "dip-nginx-aspnet-mysql@sha256:4b150eda088723d906660d46dbaf626e055332891e15e42f33859a482568f89e"
       ]
     },
-    "size": 86705181,
-    "size_human": "87 MB",
-    "create_time": "2026-08-27T11:22:35Z",
+    "size": 208734092,
+    "size_human": "209 MB",
+    "create_time": "2026-09-02T16:44:01Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "os": "linux",
+    "labels": {
+      "com.docker.compose.project": "dip-nginx-aspnet-mysql",
+      "com.docker.compose.service": "backend",
+      "com.docker.compose.version": "5.4.0"
+    },
     "env_vars": [
       "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
       "ASPNETCORE_URLS=http://+:80",
@@ -53,30 +52,30 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 48999990,
-  "minified_image_size_human": "49 MB",
+  "minified_image_size": 100092328,
+  "minified_image_size_human": "100 MB",
   "minified_image": "dip-nginx-aspnet-mysql:slim",
-  "minified_image_id": "sha256:41e59a5b4071ad48d39ffb742f14f9af2e5472d262d0c01e4ce53e74e7926dc8",
-  "minified_image_digest": "sha256:d70ce25cca6394352dca3b8031c44ec1a3eb0ba2f7bd703338ac4b1b88725f89",
+  "minified_image_id": "sha256:eb5acdd433ba9ee0135df31ddce229cf886649cfb70547f68eab39f13bfd327c",
+  "minified_image_digest": "sha256:b8662d56a4c98804be70dafeb8d59395ce3825980a4b95a73874b079069a56eb",
   "minified_image_has_data": true,
-  "minified_by": 1.7694938509171125,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/4b150eda088723d906660d46dbaf626e055332891e15e42f33859a482568f89e/artifacts",
+  "minified_by": 2.085415497579395,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/ca908b4b4d6c748107a8358e979019475d5b75f41c9da06c7c64682a85012f88/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nginx-aspnet-mysql-seccomp.json",
   "apparmor_profile_name": "dip-nginx-aspnet-mysql-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:4b150eda088723d906660d46dbaf626e055332891e15e42f33859a482568f89e",
+      "id": "sha256:ca908b4b4d6c748107a8358e979019475d5b75f41c9da06c7c64682a85012f88",
       "full_name": "dip-nginx-aspnet-mysql:original",
       "repo_name": "dip-nginx-aspnet-mysql",
       "version_tag": "original",
       "raw_tags": [
         "dip-nginx-aspnet-mysql:original"
       ],
-      "create_time": "2026-08-27T11:22:35Z",
-      "new_size": 222564352,
-      "new_size_human": "223 MB",
+      "create_time": "2026-09-02T16:44:01Z",
+      "new_size": 208734092,
+      "new_size_human": "209 MB",
       "instructions": [
         {
           "type": "RUN",
@@ -85,8 +84,8 @@
           "is_exec_form": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 92725248,
-          "size_human": "93 MB",
+          "size": 80658745,
+          "size_human": "81 MB",
           "command_snippet": "RUN []",
           "command_all": "RUN []",
           "system_commands": [
@@ -119,8 +118,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 37236736,
-          "size_human": "37 MB",
+          "size": 36234138,
+          "size_human": "36 MB",
           "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
           "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends         ca-certificates                 libc6         libgcc1         libgssapi-krb5-2         libicu67         libssl1.1         libstdc++6         zlib1g && \\\n\trm -rf /var/lib/apt/lists/*",
           "system_commands": [
@@ -156,7 +155,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 71139328,
+          "size": 70718540,
           "size_human": "71 MB",
           "params": "/dotnet /usr/share/dotnet",
           "command_snippet": "COPY /dotnet /usr/share/dotnet",
@@ -173,8 +172,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 12288,
-          "size_human": "12 kB",
+          "size": 24,
+          "size_human": "24 B",
           "command_snippet": "RUN ln -s /usr/share/dotnet/dotnet /usr/bin/...",
           "command_all": "RUN ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet",
           "system_commands": [
@@ -208,8 +207,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20639744,
-          "size_human": "21 MB",
+          "size": 20344481,
+          "size_human": "20 MB",
           "params": "/shared/Microsoft.AspNetCore.App /usr/share/dotnet/shared/Microsoft.AspNetCore.App",
           "command_snippet": "COPY /shared/Microsoft.AspNetCore.App /usr/s...",
           "command_all": "COPY /shared/Microsoft.AspNetCore.App /usr/share/dotnet/shared/Microsoft.AspNetCore.App",
@@ -221,12 +220,11 @@
         },
         {
           "type": "WORKDIR",
-          "time": "2026-08-27T11:22:21Z",
+          "time": "2026-09-02T16:43:47Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 8192,
-          "size_human": "8.2 kB",
+          "size": 0,
           "params": "/app",
           "command_snippet": "WORKDIR /app",
           "command_all": "WORKDIR /app",
@@ -235,30 +233,30 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
+          "inst_set_time_bucket": "2026-09-02T19:30:00+03:00",
           "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-27T11:22:35Z",
+          "time": "2026-09-02T16:44:01Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 802816,
-          "size_human": "803 kB",
+          "size": 778164,
+          "size_human": "778 kB",
           "params": "/build .",
           "command_snippet": "COPY /build .",
           "command_all": "COPY /build .",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
+          "inst_set_time_bucket": "2026-09-02T19:30:00+03:00",
           "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-27T11:22:35Z",
+          "time": "2026-09-02T16:44:01Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -273,7 +271,7 @@
             "dip-nginx-aspnet-mysql:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T14:15:00+03:00",
+          "inst_set_time_bucket": "2026-09-02T19:30:00+03:00",
           "inst_set_time_index": 3,
           "inst_set_time_reverse_index": 0
         }

@@ -2,7 +2,7 @@
   "example": "plex",
   "stage": "original",
   "image_tag": "dip-plex:original",
-  "generated_at": "2026-09-08T23:09:24Z",
+  "generated_at": "2026-09-09T20:07:01Z",
   "size_metric": "oci_uncompressed_layer_bytes",
   "size_bytes": 440616448,
   "size_human": "440.62MB",

@@ -6,29 +6,29 @@
     "size_bytes": 916799488,
     "size_human": "916.80MB",
     "sbom_component_count": 977,
-    "vulnerability_total": 540,
+    "vulnerability_total": 548,
     "vulnerability_by_severity": {
-      "Medium": 352,
-      "High": 70,
+      "Medium": 354,
+      "High": 74,
       "Critical": 5,
-      "Low": 111,
+      "Low": 113,
       "Negligible": 2
     }
   },
   "slim": {
     "image_tag": "dip-elasticsearch-logstash-kibana:slim",
-    "size_bytes": 165392896,
-    "size_human": "165.39MB",
+    "size_bytes": 374818304,
+    "size_human": "374.82MB",
     "sbom_component_count": 537,
-    "vulnerability_total": 135,
+    "vulnerability_total": 143,
     "vulnerability_by_severity": {
-      "High": 62,
+      "High": 66,
       "Critical": 4,
-      "Medium": 59,
-      "Low": 10
+      "Medium": 61,
+      "Low": 12
     }
   },
-  "size_reduction_pct": 82.0,
+  "size_reduction_pct": 59.1,
   "component_reduction": 440,
   "vulnerability_reduction": 405,
   "functional_tests_original": "PASS (tests/specific/elasticsearch-logstash-kibana/test.sh)",

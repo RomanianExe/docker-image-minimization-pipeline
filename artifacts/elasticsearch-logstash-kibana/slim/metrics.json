@@ -2,17 +2,17 @@
   "example": "elasticsearch-logstash-kibana",
   "stage": "slim",
   "image_tag": "dip-elasticsearch-logstash-kibana:slim",
-  "generated_at": "2026-09-08T23:55:12Z",
+  "generated_at": "2026-09-09T19:21:13Z",
   "size_metric": "oci_uncompressed_layer_bytes",
-  "size_bytes": 165392896,
-  "size_human": "165.39MB",
+  "size_bytes": 374818304,
+  "size_human": "374.82MB",
   "sbom_component_count": 537,
-  "vulnerability_total": 135,
+  "vulnerability_total": 143,
   "vulnerability_by_severity": {
-    "High": 62,
+    "High": 66,
     "Critical": 4,
-    "Medium": 59,
-    "Low": 10
+    "Medium": 61,
+    "Low": 12
   },
   "functional_tests": "PASS (tests/specific/elasticsearch-logstash-kibana/test.sh)"
 }

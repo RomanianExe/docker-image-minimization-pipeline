@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,25 +22,22 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949",
+      "id": "sha256:00f45a92647575c07a848612dcdb00fb109c969ee66972c77e0860ecc782bcf6",
       "tags": [
-        "alpine",
         "original"
       ],
       "names": [
-        "dip-portainer:original",
-        "portainer/portainer-ce:alpine"
+        "dip-portainer:original"
       ],
       "digests": [
         "sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949"
       ],
       "full_digests": [
-        "dip-portainer@sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949",
         "portainer/portainer-ce@sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949"
       ]
     },
-    "size": 48553782,
-    "size_human": "49 MB",
+    "size": 163597111,
+    "size_human": "164 MB",
     "create_time": "2026-08-27T04:31:48Z",
     "runtime_name": "docker",
     "architecture": "amd64",
@@ -77,30 +74,29 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 38744462,
-  "minified_image_size_human": "39 MB",
+  "minified_image_size": 106142283,
+  "minified_image_size_human": "106 MB",
   "minified_image": "dip-portainer:slim",
-  "minified_image_id": "sha256:d96987071e80d68eaa1a7a61fbe4409bd2298b42c39736c408ffeb650c4ef652",
-  "minified_image_digest": "sha256:6d6005a3b8aafe1f46918cd6abd4aa866b842db69b92e4292b6c07503bb3f8c0",
+  "minified_image_id": "sha256:ab651e30e080526f7052021aa12dbf27d4ed86407d3104bf6a26952815b6b3c3",
+  "minified_image_digest": "sha256:8c056912353a5093394977591751d12338ebb814987b9e016ea08606652932fc",
   "minified_image_has_data": true,
-  "minified_by": 1.253179925430375,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949/artifacts",
+  "minified_by": 1.5413000962114223,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/00f45a92647575c07a848612dcdb00fb109c969ee66972c77e0860ecc782bcf6/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-portainer-seccomp.json",
   "apparmor_profile_name": "dip-portainer-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949",
+      "id": "sha256:00f45a92647575c07a848612dcdb00fb109c969ee66972c77e0860ecc782bcf6",
       "full_name": "dip-portainer:original",
       "repo_name": "dip-portainer",
       "version_tag": "original",
       "raw_tags": [
-        "dip-portainer:original",
-        "portainer/portainer-ce:alpine"
+        "dip-portainer:original"
       ],
       "create_time": "2026-08-27T04:31:48Z",
-      "new_size": 164392960,
+      "new_size": 163597111,
       "new_size_human": "164 MB",
       "instructions": [
         {
@@ -109,8 +105,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 9072640,
-          "size_human": "9.1 MB",
+          "size": 8415579,
+          "size_human": "8.4 MB",
           "params": "alpine-minirootfs-3.24.1-x86_64.tar.gz /",
           "command_snippet": "ADD alpine-minirootfs-3.24.1-x86_64.tar.gz /",
           "command_all": "ADD alpine-minirootfs-3.24.1-x86_64.tar.gz /",
@@ -159,8 +155,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 12288,
-          "size_human": "12 kB",
+          "size": 652,
+          "size_human": "652 B",
           "params": "dist/mustache-templates /mustache-templates/",
           "command_snippet": "COPY dist/mustache-templates /mustache-templ...",
           "command_all": "COPY dist/mustache-templates /mustache-templates/",
@@ -176,7 +172,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 105955328,
+          "size": 105947298,
           "size_human": "106 MB",
           "params": "dist/portainer /",
           "command_snippet": "COPY dist/portainer /",
@@ -193,7 +189,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 49324032,
+          "size": 49227483,
           "size_human": "49 MB",
           "params": "dist/public /public/",
           "command_snippet": "COPY dist/public /public/",
@@ -210,8 +206,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 24576,
-          "size_human": "25 kB",
+          "size": 6099,
+          "size_human": "6.1 kB",
           "params": "build/docker-extension /",
           "command_snippet": "COPY build/docker-extension /",
           "command_all": "COPY build/docker-extension /",
@@ -227,8 +223,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 4096,
-          "size_human": "4.1 kB",
+          "size": 0,
           "params": "dist/storybook* /storybook/",
           "command_snippet": "COPY dist/storybook* /storybook/",
           "command_all": "COPY dist/storybook* /storybook/",
@@ -383,8 +378,7 @@
           "command_all": "ENTRYPOINT [\"/portainer\"]\n",
           "comment": "buildkit.dockerfile.v0",
           "raw_tags": [
-            "dip-portainer:original",
-            "portainer/portainer-ce:alpine"
+            "dip-portainer:original"
           ],
           "is_buildkit_instruction": true,
           "inst_set_time_bucket": "2026-08-27T07:30:00+03:00",

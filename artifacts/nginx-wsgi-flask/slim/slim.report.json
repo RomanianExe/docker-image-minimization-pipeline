@@ -22,7 +22,7 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:cc912095777473c75780f8484df25ca8522a7aa73c0bdb7afae33008114fb779",
+      "id": "sha256:8379a7252adf2077108ff1b933ddc0a1f8161aabeccd811c03c0307131ec909b",
       "tags": [
         "original"
       ],
@@ -30,9 +30,9 @@
         "dip-nginx-wsgi-flask:original"
       ]
     },
-    "size": 79223910,
+    "size": 79105410,
     "size_human": "79 MB",
-    "create_time": "2026-09-08T19:40:18Z",
+    "create_time": "2026-09-09T20:02:18Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "user": "nonroot",
@@ -59,29 +59,29 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 18598059,
+  "minified_image_size": 18552575,
   "minified_image_size_human": "19 MB",
   "minified_image": "dip-nginx-wsgi-flask:slim",
-  "minified_image_id": "sha256:a55c7e3a8c40662d56960f5bb6ee5e08796d65ceb4ca82378a074cd204d08ccf",
-  "minified_image_digest": "sha256:196e76ab38125c801ad0902d9298bc1571a65fc309023920d1d05c3022a7921a",
+  "minified_image_id": "sha256:3eae5103cdbb9d243ada31dfe0fdbe04fb630bc157179274bcbb0c4091333485",
+  "minified_image_digest": "sha256:9f7450e2fecbc8cb6bd50d5630a56e2c68ceaf1cbce31eb8e06534d4b0d87f75",
   "minified_image_has_data": true,
-  "minified_by": 4.259794530171132,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/cc912095777473c75780f8484df25ca8522a7aa73c0bdb7afae33008114fb779/artifacts",
+  "minified_by": 4.263850705360307,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/8379a7252adf2077108ff1b933ddc0a1f8161aabeccd811c03c0307131ec909b/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nginx-wsgi-flask-seccomp.json",
   "apparmor_profile_name": "dip-nginx-wsgi-flask-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:cc912095777473c75780f8484df25ca8522a7aa73c0bdb7afae33008114fb779",
+      "id": "sha256:8379a7252adf2077108ff1b933ddc0a1f8161aabeccd811c03c0307131ec909b",
       "full_name": "dip-nginx-wsgi-flask:original",
       "repo_name": "dip-nginx-wsgi-flask",
       "version_tag": "original",
       "raw_tags": [
         "dip-nginx-wsgi-flask:original"
       ],
-      "create_time": "2026-09-08T19:40:18Z",
-      "new_size": 79223910,
+      "create_time": "2026-09-09T20:02:18Z",
+      "new_size": 79105410,
       "new_size_human": "79 MB",
       "instructions": [
         {
@@ -99,7 +99,7 @@
           "source_type": "file",
           "inst_set_time_bucket": "2021-03-31T23:00:00+03:00",
           "inst_set_time_index": 0,
-          "inst_set_time_reverse_index": 5
+          "inst_set_time_reverse_index": 4
         },
         {
           "type": "CMD",
@@ -114,7 +114,7 @@
           "command_all": "CMD [\"/bin/sh\"]\n",
           "inst_set_time_bucket": "2021-03-31T23:00:00+03:00",
           "inst_set_time_index": 0,
-          "inst_set_time_reverse_index": 5
+          "inst_set_time_reverse_index": 4
         },
         {
           "type": "ENV",
@@ -128,7 +128,7 @@
           "command_all": "ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
           "inst_set_time_bucket": "2021-03-31T23:30:00+03:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 4
+          "inst_set_time_reverse_index": 3
         },
         {
           "type": "ENV",
@@ -142,7 +142,7 @@
           "command_all": "ENV LANG=C.UTF-8",
           "inst_set_time_bucket": "2021-04-01T11:45:00+03:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 3
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "RUN",
@@ -161,7 +161,7 @@
           ],
           "inst_set_time_bucket": "2021-04-01T11:45:00+03:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 3
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "ENV",
@@ -175,7 +175,7 @@
           "command_all": "ENV GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568",
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "ENV",
@@ -189,7 +189,7 @@
           "command_all": "ENV PYTHON_VERSION=3.9.2",
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "RUN",
@@ -230,7 +230,7 @@
           ],
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "RUN",
@@ -251,7 +251,7 @@
           ],
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "ENV",
@@ -265,7 +265,7 @@
           "command_all": "ENV PYTHON_PIP_VERSION=21.0.1",
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "ENV",
@@ -279,7 +279,7 @@
           "command_all": "ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/b60e2320d9e8d02348525bd74e871e466afdf77c/get-pip.py",
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "ENV",
@@ -293,7 +293,7 @@
           "command_all": "ENV PYTHON_GET_PIP_SHA256=c3b81e5d06371e135fb3156dc7d8fd6270735088428c4a9a5ec1f342e2024565",
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "RUN",
@@ -316,7 +316,7 @@
           ],
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "CMD",
@@ -331,11 +331,11 @@
           "command_all": "CMD [\"python3\"]\n",
           "inst_set_time_bucket": "2021-04-01T12:00:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "RUN",
-          "time": "2026-09-02T16:53:41Z",
+          "time": "2026-09-09T20:02:09Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -348,13 +348,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
           "inst_set_time_index": 4,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-02T16:53:41Z",
+          "time": "2026-09-09T20:02:09Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -367,13 +367,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
           "inst_set_time_index": 4,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-02T16:53:41Z",
+          "time": "2026-09-09T20:02:09Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -386,13 +386,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
           "inst_set_time_index": 4,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-02T16:53:41Z",
+          "time": "2026-09-09T20:02:10Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -406,13 +406,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
           "inst_set_time_index": 4,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-02T16:53:41Z",
+          "time": "2026-09-09T20:02:10Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -424,13 +424,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
           "inst_set_time_index": 4,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 0
         },
         {
           "type": "WORKDIR",
-          "time": "2026-09-02T16:53:41Z",
+          "time": "2026-09-09T20:02:10Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -443,13 +443,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
           "inst_set_time_index": 4,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 0
         },
         {
           "type": "USER",
-          "time": "2026-09-08T19:40:12Z",
+          "time": "2026-09-09T20:02:10Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -459,30 +459,30 @@
           "command_all": "USER nonroot",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-09-08T19:40:12Z",
+          "time": "2026-09-09T20:02:10Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
           "size": 1499,
           "size_human": "1.5 kB",
-          "params": "--chown=nonroot:nonroot . .",
-          "command_snippet": "COPY --chown=nonroot:nonroot . .",
-          "command_all": "COPY --chown=nonroot:nonroot . .",
+          "params": ". .",
+          "command_snippet": "COPY . .",
+          "command_all": "COPY . .",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "ENV",
-          "time": "2026-09-08T19:40:12Z",
+          "time": "2026-09-09T20:02:10Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -492,13 +492,13 @@
           "command_all": "ENV VIRTUAL_ENV=/home/app/venv",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-08T19:40:15Z",
+          "time": "2026-09-09T20:02:13Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -511,13 +511,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "ENV",
-          "time": "2026-09-08T19:40:15Z",
+          "time": "2026-09-09T20:02:13Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -527,13 +527,13 @@
           "command_all": "ENV PATH=/home/app/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-08T19:40:15Z",
+          "time": "2026-09-09T20:02:13Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -545,67 +545,65 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "COPY",
+          "time": "2026-09-09T20:02:13Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 7257,
+          "size_human": "7.3 kB",
+          "params": "requirements.lock /locks/requirements.lock",
+          "command_snippet": "COPY requirements.lock /locks/requirements.l...",
+          "command_all": "COPY requirements.lock /locks/requirements.lock",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-09-08T19:40:18Z",
+          "time": "2026-09-09T20:02:18Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 13749462,
-          "size_human": "14 MB",
-          "command_snippet": "RUN pip install --upgrade \"pip<24\"",
-          "command_all": "RUN pip install --upgrade \"pip<24\"",
+          "size": 18721449,
+          "size_human": "19 MB",
+          "command_snippet": "RUN pip install --require-hashes -r /locks/r...",
+          "command_all": "RUN pip install --require-hashes -r /locks/requirements.lock",
           "system_commands": [
-            "pip install --upgrade \"pip<24\""
+            "pip install --require-hashes -r /locks/requirements.lock"
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
-          "inst_set_time_reverse_index": 0
-        },
-        {
-          "type": "RUN",
-          "time": "2026-09-08T19:40:18Z",
-          "is_nop": false,
-          "local_image_exists": false,
-          "layer_index": 0,
-          "size": 5097744,
-          "size_human": "5.1 MB",
-          "command_snippet": "RUN pip install -r requirements.txt     \"Wer...",
-          "command_all": "RUN pip install -r requirements.txt     \"Werkzeug<2.0\" \"Jinja2<3.0\" \"MarkupSafe<2.1\" \"itsdangerous<2.0\" \"click<8.0\"",
-          "system_commands": [
-            "pip install -r requirements.txt     \"Werkzeug<2.0\" \"Jinja2<3.0\" \"MarkupSafe<2.1\" \"itsdangerous<2.0\" \"click<8.0\""
-          ],
-          "comment": "buildkit.dockerfile.v0",
-          "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "EXPOSE",
-          "time": "2026-09-08T19:40:18Z",
+          "time": "2026-09-09T20:02:18Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
           "size": 0,
-          "params": "[5000/tcp]",
-          "command_snippet": "EXPOSE [5000/tcp]",
-          "command_all": "EXPOSE [5000/tcp]",
+          "params": "5000/tcp",
+          "command_snippet": "EXPOSE 5000/tcp",
+          "command_all": "EXPOSE 5000/tcp",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-09-08T19:40:18Z",
+          "time": "2026-09-09T20:02:18Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -620,8 +618,8 @@
             "dip-nginx-wsgi-flask:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-09-08T22:30:00+03:00",
-          "inst_set_time_index": 5,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         }
       ]

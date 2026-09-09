@@ -1,0 +1,46 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-traefik-golang:original",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-traefik-golang:original",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:b97d416af74c98eb528d005ee2d8d2b96e8be9394c9fd8d5446820a1907e5720",
+    "size": 400,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:f7174b14019a6803d10ee23fb685c7e1b175b20c076470f90eac2518db5ec401",
+    "size": 825
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:be5fb55402bdbb46fb10a0b743f3e71636d82154da541ffc281b2caceef51b00",
+      "size": 6242304
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:be5fb55402bdbb46fb10a0b743f3e71636d82154da541ffc281b2caceef51b00",
+      "size": 6242304,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 6242304
+}

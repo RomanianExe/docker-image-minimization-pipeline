@@ -2,17 +2,17 @@
   "example": "nginx-golang-mysql",
   "stage": "original",
   "image_tag": "dip-nginx-golang-mysql:original",
-  "generated_at": "2026-09-01T18:56:43Z",
-  "size_bytes": 123393935,
-  "size_human": "123.39MB",
+  "generated_at": "2026-09-09T19:57:40Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 348119040,
+  "size_human": "348.12MB",
   "sbom_component_count": 62,
   "vulnerability_total": 582,
   "vulnerability_by_severity": {
     "High": 276,
-    "Critical": 38,
+    "Critical": 40,
     "Medium": 246,
-    "Low": 20,
-    "Unknown": 2
+    "Low": 20
   },
   "functional_tests": "PASS (tests/specific/nginx-golang-mysql/test.sh)"
 }

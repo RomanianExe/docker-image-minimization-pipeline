@@ -2,18 +2,19 @@
   "example": "fastapi",
   "stage": "original",
   "image_tag": "dip-fastapi:original",
-  "generated_at": "2026-08-27T10:23:22Z",
-  "size_bytes": 62337285,
-  "size_human": "62.34MB",
+  "generated_at": "2026-09-09T19:21:36Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 184939008,
+  "size_human": "184.94MB",
   "sbom_component_count": 169,
-  "vulnerability_total": 414,
+  "vulnerability_total": 460,
   "vulnerability_by_severity": {
-    "Critical": 16,
-    "High": 129,
-    "Medium": 145,
+    "Medium": 149,
+    "Critical": 22,
+    "High": 167,
     "Negligible": 54,
-    "Unknown": 47,
-    "Low": 23
+    "Low": 24,
+    "Unknown": 44
   },
   "functional_tests": "PASS (tests/specific/fastapi/test.sh)"
 }

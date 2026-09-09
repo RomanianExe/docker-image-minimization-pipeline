@@ -3,7 +3,6 @@ profile dip-nginx-aspnet-mysql-apparmor-profile flags=(attach_disconnected,media
 
   network,
 
-  /usr/share/dotnet/dotnet rix,
 
 
   /app r,
@@ -298,6 +297,7 @@ profile dip-nginx-aspnet-mysql-apparmor-profile flags=(attach_disconnected,media
   /lib/x86_64-linux-gnu/librt-2.31.so r,
   /lib/x86_64-linux-gnu/librt.so.1 r,
   /lib64/ld-linux-x86-64.so.2 r,
+  /opt/_mint/bin/mint-sensor r,
   /run/secrets/db-password r,
   /tmp r,
   /usr/bin/dotnet r,
@@ -444,6 +444,7 @@ profile dip-nginx-aspnet-mysql-apparmor-profile flags=(attach_disconnected,media
   /usr/share/ca-certificates/mozilla/emSign_ECC_Root_CA_-_G3.crt r,
   /usr/share/ca-certificates/mozilla/emSign_Root_CA_-_C1.crt r,
   /usr/share/ca-certificates/mozilla/emSign_Root_CA_-_G1.crt r,
+  /usr/share/dotnet/dotnet r,
   /usr/share/dotnet/host/fxr/6.0.36/libhostfxr.so r,
   /usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.App.deps.json r,
   /usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.App.runtimeconfig.json r,
@@ -518,6 +519,7 @@ profile dip-nginx-aspnet-mysql-apparmor-profile flags=(attach_disconnected,media
   /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Quic.dll r,
   /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Security.dll r,
   /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Sockets.dll r,
+  /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.WebSockets.dll r,
   /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Numerics.Vectors.dll r,
   /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.ObjectModel.dll r,
   /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Private.CoreLib.dll r,

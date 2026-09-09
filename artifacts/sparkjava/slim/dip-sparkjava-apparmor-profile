@@ -4,8 +4,9 @@ profile dip-sparkjava-apparmor-profile flags=(attach_disconnected,mediate_delete
   network,
 
   /opt/java/openjdk/bin/java rix,
+  /usr/bin/env rix,
 
-  /tmp/hsperfdata_root/19 w,
+  /tmp/hsperfdata_root/20 w,
 
   /__cacert_entrypoint.sh r,
   /app.jar r,
@@ -329,7 +330,6 @@ profile dip-sparkjava-apparmor-profile flags=(attach_disconnected,mediate_delete
   /lib/x86_64-linux-gnu/libtinfo.so.6 r,
   /lib/x86_64-linux-gnu/libtinfo.so.6.2 r,
   /lib64 r,
-  /opt/_mint/bin/mint-sensor r,
   /opt/java/openjdk/conf/net.properties r,
   /opt/java/openjdk/conf/security/java.security r,
   /opt/java/openjdk/lib/jvm.cfg r,
@@ -352,7 +352,6 @@ profile dip-sparkjava-apparmor-profile flags=(attach_disconnected,mediate_delete
   /usr/bin r,
   /usr/bin/bash r,
   /usr/bin/dash r,
-  /usr/bin/env r,
   /usr/bin/rbash r,
   /usr/bin/sh r,
   /usr/lib r,

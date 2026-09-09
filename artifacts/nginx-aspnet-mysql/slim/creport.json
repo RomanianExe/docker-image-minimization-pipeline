@@ -2,8 +2,8 @@
   "document": "doc.report.container",
   "version": "ov/container/1.1",
   "target_type": "container",
-  "target_id": "d525cf0605758fa033429a92f5f0b6219f7c4eb2910d50a700d43bcced8526df",
-  "image_id": "sha256:4b150eda088723d906660d46dbaf626e055332891e15e42f33859a482568f89e",
+  "target_id": "4e78ef7c98e7ca9fea06591a33731a76d25d61bbb3ea010d5eee164f174c0caf",
+  "image_id": "sha256:ca908b4b4d6c748107a8358e979019475d5b75f41c9da06c7c64682a85012f88",
   "start_command": {
     "app_name": "dotnet",
     "app_args": [
@@ -33,12 +33,12 @@
     "fan": {
       "monitor_pid": 1,
       "monitor_ppid": 0,
-      "event_count": 375,
+      "event_count": 384,
       "main_process": {
         "pid": 17,
         "name": "dotnet",
-        "path": "/usr/share/dotnet/dotnet",
-        "cmd": "dotnet aspnetapp.dll",
+        "path": "/opt/_mint/bin/mint-sensor",
+        "cmd": "",
         "cwd": "/app",
         "root": "/",
         "ppid": 1
@@ -47,8 +47,8 @@
         "17": {
           "pid": 17,
           "name": "dotnet",
-          "path": "/usr/share/dotnet/dotnet",
-          "cmd": "dotnet aspnetapp.dll",
+          "path": "/opt/_mint/bin/mint-sensor",
+          "cmd": "",
           "cwd": "/app",
           "root": "/",
           "ppid": 1
@@ -58,649 +58,663 @@
         "17": {
           "/app/MySqlConnector.dll": {
             "event_count": 1,
-            "first_eid": 92
+            "first_eid": 93
           },
           "/app/aspnetapp.deps.json": {
             "event_count": 3,
-            "first_eid": 47,
+            "first_eid": 48,
             "reads": 2
           },
           "/app/aspnetapp.dll": {
             "event_count": 1,
-            "first_eid": 68
+            "first_eid": 69
           },
           "/app/aspnetapp.runtimeconfig.json": {
             "event_count": 3,
-            "first_eid": 19,
+            "first_eid": 20,
             "reads": 2
           },
           "/etc/host.conf": {
             "event_count": 2,
-            "first_eid": 319,
+            "first_eid": 320,
             "reads": 1
           },
           "/etc/ld.so.cache": {
-            "event_count": 22,
-            "first_eid": 4
+            "event_count": 23,
+            "first_eid": 5
           },
           "/etc/nsswitch.conf": {
             "event_count": 2,
-            "first_eid": 317,
+            "first_eid": 318,
             "reads": 1
           },
           "/etc/ssl/openssl.cnf": {
             "event_count": 4,
-            "first_eid": 338,
+            "first_eid": 344,
             "reads": 3
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
-            "event_count": 1,
+            "event_count": 2,
             "first_eid": 3,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 15,
+            "first_eid": 16,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libdl-2.31.so": {
             "event_count": 2,
-            "first_eid": 7,
+            "first_eid": 8,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
             "event_count": 2,
-            "first_eid": 13,
+            "first_eid": 14,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libm-2.31.so": {
             "event_count": 2,
-            "first_eid": 11,
+            "first_eid": 12,
+            "reads": 1
+          },
+          "/lib/x86_64-linux-gnu/libnss_dns-2.31.so": {
+            "event_count": 2,
+            "first_eid": 326,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libnss_files-2.31.so": {
             "event_count": 2,
-            "first_eid": 322,
+            "first_eid": 323,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libpthread-2.31.so": {
             "event_count": 2,
-            "first_eid": 5,
+            "first_eid": 6,
+            "reads": 1
+          },
+          "/lib/x86_64-linux-gnu/libresolv-2.31.so": {
+            "event_count": 2,
+            "first_eid": 328,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/librt-2.31.so": {
             "event_count": 2,
-            "first_eid": 57,
+            "first_eid": 58,
             "reads": 1
           },
           "/usr/lib/os-release": {
             "event_count": 6,
-            "first_eid": 45,
+            "first_eid": 46,
             "reads": 3
           },
           "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1": {
             "event_count": 2,
-            "first_eid": 336,
+            "first_eid": 342,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libicudata.so.67.1": {
             "event_count": 2,
-            "first_eid": 166,
+            "first_eid": 167,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libicui18n.so.67.1": {
             "event_count": 2,
-            "first_eid": 169,
+            "first_eid": 170,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libicuuc.so.67.1": {
             "event_count": 2,
-            "first_eid": 164,
+            "first_eid": 165,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libssl.so.1.1": {
             "event_count": 2,
-            "first_eid": 334,
+            "first_eid": 340,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28": {
             "event_count": 2,
-            "first_eid": 9,
+            "first_eid": 10,
             "reads": 1
           },
           "/usr/share/dotnet/dotnet": {
             "event_count": 2,
             "first_eid": 1,
-            "reads": 1,
-            "execs": 2
+            "reads": 1
           },
           "/usr/share/dotnet/host/fxr/6.0.36/libhostfxr.so": {
             "event_count": 2,
-            "first_eid": 17,
+            "first_eid": 18,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.App.deps.json": {
             "event_count": 3,
-            "first_eid": 42,
+            "first_eid": 43,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.App.runtimeconfig.json": {
             "event_count": 6,
-            "first_eid": 25,
+            "first_eid": 26,
             "reads": 4
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Connections.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 247,
+            "first_eid": 248,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.HostFiltering.dll": {
             "event_count": 3,
-            "first_eid": 256,
+            "first_eid": 257,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 105,
+            "first_eid": 106,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 244,
+            "first_eid": 245,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Hosting.dll": {
             "event_count": 3,
-            "first_eid": 108,
+            "first_eid": 109,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Http.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 77,
+            "first_eid": 78,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Http.Extensions.dll": {
             "event_count": 3,
-            "first_eid": 284,
+            "first_eid": 285,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Http.Features.dll": {
             "event_count": 3,
-            "first_eid": 293,
+            "first_eid": 294,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Http.Results.dll": {
             "event_count": 3,
-            "first_eid": 367,
+            "first_eid": 373,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Http.dll": {
             "event_count": 3,
-            "first_eid": 241,
+            "first_eid": 242,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.HttpOverrides.dll": {
             "event_count": 3,
-            "first_eid": 259,
+            "first_eid": 260,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Metadata.dll": {
             "event_count": 3,
-            "first_eid": 364,
+            "first_eid": 370,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Routing.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 262,
+            "first_eid": 263,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Routing.dll": {
             "event_count": 3,
-            "first_eid": 80,
+            "first_eid": 81,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Server.IIS.dll": {
             "event_count": 3,
-            "first_eid": 171,
+            "first_eid": 172,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Server.IISIntegration.dll": {
             "event_count": 3,
-            "first_eid": 174,
+            "first_eid": 175,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Server.Kestrel.Core.dll": {
             "event_count": 3,
-            "first_eid": 137,
+            "first_eid": 138,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll": {
             "event_count": 3,
-            "first_eid": 143,
+            "first_eid": 144,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll": {
             "event_count": 3,
-            "first_eid": 250,
+            "first_eid": 251,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.Server.Kestrel.dll": {
             "event_count": 3,
-            "first_eid": 140,
+            "first_eid": 141,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.WebUtilities.dll": {
             "event_count": 3,
-            "first_eid": 373,
+            "first_eid": 379,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.dll": {
             "event_count": 3,
-            "first_eid": 70,
+            "first_eid": 71,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 102,
+            "first_eid": 103,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.Binder.dll": {
             "event_count": 3,
-            "first_eid": 192,
+            "first_eid": 193,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.CommandLine.dll": {
             "event_count": 3,
-            "first_eid": 177,
+            "first_eid": 178,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {
             "event_count": 3,
-            "first_eid": 134,
+            "first_eid": 135,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.FileExtensions.dll": {
             "event_count": 3,
-            "first_eid": 189,
+            "first_eid": 190,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.Json.dll": {
             "event_count": 3,
-            "first_eid": 195,
+            "first_eid": 196,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Configuration.dll": {
             "event_count": 3,
-            "first_eid": 114,
+            "first_eid": 115,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 89,
+            "first_eid": 90,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.DependencyInjection.dll": {
             "event_count": 3,
-            "first_eid": 126,
+            "first_eid": 127,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Features.dll": {
             "event_count": 3,
-            "first_eid": 86,
+            "first_eid": 87,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.FileProviders.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 183,
+            "first_eid": 184,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.FileProviders.Physical.dll": {
             "event_count": 3,
-            "first_eid": 180,
+            "first_eid": 181,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.FileSystemGlobbing.dll": {
             "event_count": 3,
-            "first_eid": 207,
+            "first_eid": 208,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Hosting.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 73,
+            "first_eid": 74,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Hosting.dll": {
             "event_count": 3,
-            "first_eid": 120,
+            "first_eid": 121,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.Abstractions.dll": {
             "event_count": 3,
-            "first_eid": 211,
+            "first_eid": 212,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.Configuration.dll": {
             "event_count": 3,
-            "first_eid": 220,
+            "first_eid": 221,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.Console.dll": {
             "event_count": 3,
-            "first_eid": 226,
+            "first_eid": 227,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.Debug.dll": {
             "event_count": 3,
-            "first_eid": 232,
+            "first_eid": 233,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.EventLog.dll": {
             "event_count": 3,
-            "first_eid": 217,
+            "first_eid": 218,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.EventSource.dll": {
             "event_count": 3,
-            "first_eid": 235,
+            "first_eid": 236,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Logging.dll": {
             "event_count": 3,
-            "first_eid": 111,
+            "first_eid": 112,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.ObjectPool.dll": {
             "event_count": 3,
-            "first_eid": 265,
+            "first_eid": 266,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
             "event_count": 3,
-            "first_eid": 223,
+            "first_eid": 224,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Options.dll": {
             "event_count": 3,
-            "first_eid": 214,
+            "first_eid": 215,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Extensions.Primitives.dll": {
             "event_count": 3,
-            "first_eid": 117,
+            "first_eid": 118,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.Net.Http.Headers.dll": {
             "event_count": 3,
-            "first_eid": 349,
+            "first_eid": 355,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/System.IO.Pipelines.dll": {
             "event_count": 3,
-            "first_eid": 281,
+            "first_eid": 282,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/Microsoft.NETCore.App.deps.json": {
             "event_count": 6,
-            "first_eid": 34,
+            "first_eid": 35,
             "reads": 4
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/Microsoft.NETCore.App.runtimeconfig.json": {
             "event_count": 6,
-            "first_eid": 22,
+            "first_eid": 23,
             "reads": 4
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/Microsoft.Win32.Primitives.dll": {
             "event_count": 3,
-            "first_eid": 305,
+            "first_eid": 306,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Collections.Concurrent.dll": {
             "event_count": 3,
-            "first_eid": 201,
+            "first_eid": 202,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Collections.dll": {
             "event_count": 3,
-            "first_eid": 123,
+            "first_eid": 124,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.ComponentModel.Primitives.dll": {
             "event_count": 3,
-            "first_eid": 96,
+            "first_eid": 97,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.ComponentModel.TypeConverter.dll": {
             "event_count": 3,
-            "first_eid": 302,
+            "first_eid": 303,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.ComponentModel.dll": {
             "event_count": 3,
-            "first_eid": 83,
+            "first_eid": 84,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Console.dll": {
             "event_count": 3,
-            "first_eid": 274,
+            "first_eid": 275,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Data.Common.dll": {
             "event_count": 3,
-            "first_eid": 93,
+            "first_eid": 94,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Diagnostics.DiagnosticSource.dll": {
             "event_count": 3,
-            "first_eid": 238,
+            "first_eid": 239,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Diagnostics.Tracing.dll": {
             "event_count": 1,
-            "first_eid": 149
+            "first_eid": 150
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.IO.FileSystem.Watcher.dll": {
             "event_count": 3,
-            "first_eid": 198,
+            "first_eid": 199,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Linq.Expressions.dll": {
             "event_count": 3,
-            "first_eid": 287,
+            "first_eid": 288,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Linq.dll": {
             "event_count": 3,
-            "first_eid": 186,
+            "first_eid": 187,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Memory.dll": {
             "event_count": 3,
-            "first_eid": 204,
+            "first_eid": 205,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.NameResolution.dll": {
             "event_count": 3,
-            "first_eid": 314,
+            "first_eid": 315,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Primitives.dll": {
             "event_count": 3,
-            "first_eid": 253,
+            "first_eid": 254,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Quic.dll": {
             "event_count": 3,
-            "first_eid": 146,
+            "first_eid": 147,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Security.dll": {
             "event_count": 3,
-            "first_eid": 311,
+            "first_eid": 312,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.Sockets.dll": {
             "event_count": 3,
-            "first_eid": 277,
+            "first_eid": 278,
+            "reads": 2
+          },
+          "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.WebSockets.dll": {
+            "event_count": 3,
+            "first_eid": 382,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Numerics.Vectors.dll": {
             "event_count": 1,
-            "first_eid": 363
+            "first_eid": 369
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.ObjectModel.dll": {
             "event_count": 3,
-            "first_eid": 268,
+            "first_eid": 269,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Private.CoreLib.dll": {
             "event_count": 3,
-            "first_eid": 63,
+            "first_eid": 64,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Private.Uri.dll": {
             "event_count": 3,
-            "first_eid": 355,
+            "first_eid": 361,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Private.Xml.dll": {
             "event_count": 3,
-            "first_eid": 343,
+            "first_eid": 349,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Reflection.Emit.ILGeneration.dll": {
             "event_count": 1,
-            "first_eid": 299
+            "first_eid": 300
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Reflection.Emit.Lightweight.dll": {
             "event_count": 1,
-            "first_eid": 300
+            "first_eid": 301
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Reflection.Primitives.dll": {
             "event_count": 1,
-            "first_eid": 301
+            "first_eid": 302
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Runtime.CompilerServices.Unsafe.dll": {
             "event_count": 3,
-            "first_eid": 359,
+            "first_eid": 365,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Runtime.InteropServices.RuntimeInformation.dll": {
             "event_count": 3,
-            "first_eid": 271,
+            "first_eid": 272,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Runtime.InteropServices.dll": {
             "event_count": 3,
-            "first_eid": 346,
+            "first_eid": 352,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Runtime.Intrinsics.dll": {
             "event_count": 1,
-            "first_eid": 362
+            "first_eid": 368
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Runtime.Numerics.dll": {
             "event_count": 3,
-            "first_eid": 296,
+            "first_eid": 297,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Runtime.dll": {
             "event_count": 1,
-            "first_eid": 69
+            "first_eid": 70
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Security.Claims.dll": {
             "event_count": 3,
-            "first_eid": 290,
+            "first_eid": 291,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Security.Cryptography.Algorithms.dll": {
             "event_count": 3,
-            "first_eid": 324,
+            "first_eid": 330,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Security.Cryptography.Primitives.dll": {
             "event_count": 3,
-            "first_eid": 327,
+            "first_eid": 333,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Security.Cryptography.X509Certificates.dll": {
             "event_count": 3,
-            "first_eid": 352,
+            "first_eid": 358,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Text.Encoding.Extensions.dll": {
             "event_count": 1,
-            "first_eid": 358
+            "first_eid": 364
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Text.Encodings.Web.dll": {
             "event_count": 3,
-            "first_eid": 370,
+            "first_eid": 376,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Text.Json.dll": {
             "event_count": 3,
-            "first_eid": 229,
+            "first_eid": 230,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Text.RegularExpressions.dll": {
             "event_count": 3,
-            "first_eid": 308,
+            "first_eid": 309,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Threading.Thread.dll": {
             "event_count": 1,
-            "first_eid": 210
+            "first_eid": 211
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Threading.ThreadPool.dll": {
             "event_count": 1,
-            "first_eid": 280
+            "first_eid": 281
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Threading.dll": {
             "event_count": 3,
-            "first_eid": 131,
+            "first_eid": 132,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Transactions.Local.dll": {
             "event_count": 3,
-            "first_eid": 99,
+            "first_eid": 100,
             "reads": 2
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Xml.ReaderWriter.dll": {
             "event_count": 1,
-            "first_eid": 342
+            "first_eid": 348
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/libSystem.Native.so": {
             "event_count": 2,
-            "first_eid": 129,
+            "first_eid": 130,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/libSystem.Security.Cryptography.Native.OpenSsl.so": {
             "event_count": 2,
-            "first_eid": 330,
+            "first_eid": 336,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/libclrjit.so": {
             "event_count": 2,
-            "first_eid": 66,
+            "first_eid": 67,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/libcoreclr.so": {
             "event_count": 2,
-            "first_eid": 54,
+            "first_eid": 55,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/libcoreclrtraceptprovider.so": {
             "event_count": 2,
-            "first_eid": 59,
+            "first_eid": 60,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/libhostpolicy.so": {
             "event_count": 2,
-            "first_eid": 37,
+            "first_eid": 38,
             "reads": 1
           },
           "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/netstandard.dll": {
             "event_count": 1,
-            "first_eid": 76
+            "first_eid": 77
           }
         }
       }
@@ -708,33 +722,33 @@
     "pt": {
       "enabled": true,
       "arch_name": "amd64",
-      "syscall_count": 11006,
-      "syscall_num": 68,
+      "syscall_count": 10910,
+      "syscall_num": 69,
       "syscall_stats": {
         "0": {
           "num": 0,
           "name": "read",
-          "count": 152
+          "count": 155
         },
         "1": {
           "num": 1,
           "name": "write",
-          "count": 57
+          "count": 54
         },
         "10": {
           "num": 10,
           "name": "mprotect",
-          "count": 2264
+          "count": 2235
         },
         "11": {
           "num": 11,
           "name": "munmap",
-          "count": 139
+          "count": 140
         },
         "12": {
           "num": 12,
           "name": "brk",
-          "count": 142
+          "count": 127
         },
         "124": {
           "num": 124,
@@ -749,7 +763,7 @@
         "131": {
           "num": 131,
           "name": "sigaltstack",
-          "count": 85
+          "count": 77
         },
         "133": {
           "num": 133,
@@ -769,27 +783,27 @@
         "143": {
           "num": 143,
           "name": "sched_getparam",
-          "count": 31
+          "count": 27
         },
         "144": {
           "num": 144,
           "name": "sched_setscheduler",
-          "count": 35
+          "count": 31
         },
         "145": {
           "num": 145,
           "name": "sched_getscheduler",
-          "count": 31
+          "count": 27
         },
         "146": {
           "num": 146,
           "name": "sched_get_priority_max",
-          "count": 35
+          "count": 31
         },
         "147": {
           "num": 147,
           "name": "sched_get_priority_min",
-          "count": 35
+          "count": 31
         },
         "157": {
           "num": 157,
@@ -804,32 +818,32 @@
         "16": {
           "num": 16,
           "name": "ioctl",
-          "count": 3
+          "count": 5
         },
         "17": {
           "num": 17,
           "name": "pread64",
-          "count": 172
+          "count": 174
         },
         "186": {
           "num": 186,
           "name": "gettid",
-          "count": 44
+          "count": 40
         },
         "202": {
           "num": 202,
           "name": "futex",
-          "count": 1469
+          "count": 1323
         },
         "203": {
           "num": 203,
           "name": "sched_setaffinity",
-          "count": 66
+          "count": 58
         },
         "204": {
           "num": 204,
           "name": "sched_getaffinity",
-          "count": 74
+          "count": 70
         },
         "21": {
           "num": 21,
@@ -849,7 +863,7 @@
         "219": {
           "num": 219,
           "name": "restart_syscall",
-          "count": 120
+          "count": 117
         },
         "232": {
           "num": 232,
@@ -864,7 +878,7 @@
         "24": {
           "num": 24,
           "name": "sched_yield",
-          "count": 1213
+          "count": 1365
         },
         "253": {
           "num": 253,
@@ -884,12 +898,12 @@
         "273": {
           "num": 273,
           "name": "set_robust_list",
-          "count": 44
+          "count": 40
         },
         "28": {
           "num": 28,
           "name": "madvise",
-          "count": 1823
+          "count": 1802
         },
         "288": {
           "num": 288,
@@ -909,12 +923,17 @@
         "3": {
           "num": 3,
           "name": "close",
-          "count": 240
+          "count": 242
         },
         "302": {
           "num": 302,
           "name": "prlimit64",
           "count": 8
+        },
+        "307": {
+          "num": 307,
+          "name": "sendmmsg",
+          "count": 1
         },
         "324": {
           "num": 324,
@@ -924,22 +943,22 @@
         "39": {
           "num": 39,
           "name": "getpid",
-          "count": 41
+          "count": 37
         },
         "4": {
           "num": 4,
           "name": "stat",
-          "count": 140
+          "count": 141
         },
         "41": {
           "num": 41,
           "name": "socket",
-          "count": 8
+          "count": 9
         },
         "42": {
           "num": 42,
           "name": "connect",
-          "count": 3
+          "count": 4
         },
         "44": {
           "num": 44,
@@ -949,7 +968,7 @@
         "45": {
           "num": 45,
           "name": "recvfrom",
-          "count": 3
+          "count": 5
         },
         "47": {
           "num": 47,
@@ -964,7 +983,7 @@
         "5": {
           "num": 5,
           "name": "fstat",
-          "count": 270
+          "count": 275
         },
         "50": {
           "num": 50,
@@ -979,17 +998,17 @@
         "54": {
           "num": 54,
           "name": "setsockopt",
-          "count": 10
+          "count": 11
         },
         "56": {
           "num": 56,
           "name": "clone",
-          "count": 43
+          "count": 39
         },
         "6": {
           "num": 6,
           "name": "lstat",
-          "count": 691
+          "count": 697
         },
         "63": {
           "num": 63,
@@ -999,12 +1018,12 @@
         "7": {
           "num": 7,
           "name": "poll",
-          "count": 16
+          "count": 19
         },
         "72": {
           "num": 72,
           "name": "fcntl",
-          "count": 207
+          "count": 209
         },
         "73": {
           "num": 73,
@@ -1034,7 +1053,7 @@
         "9": {
           "num": 9,
           "name": "mmap",
-          "count": 737
+          "count": 729
         },
         "91": {
           "num": 91,
@@ -1125,7 +1144,7 @@
           "is_subdir": false
         },
         "/etc/ld.so.cache": {
-          "ops_all": 22,
+          "ops_all": 23,
           "ops_checkfile": 1,
           "syscalls": {
             "257": {}
@@ -1214,6 +1233,17 @@
           },
           "is_subdir": false
         },
+        "/lib/x86_64-linux-gnu/libnss_dns.so.2": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        },
         "/lib/x86_64-linux-gnu/libnss_files.so.2": {
           "ops_all": 1,
           "ops_checkfile": 1,
@@ -1226,6 +1256,17 @@
           "is_subdir": false
         },
         "/lib/x86_64-linux-gnu/libpthread.so.0": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "17": {}
+          },
+          "is_subdir": false
+        },
+        "/lib/x86_64-linux-gnu/libresolv.so.2": {
           "ops_all": 1,
           "ops_checkfile": 1,
           "syscalls": {
@@ -1487,7 +1528,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -1523,7 +1564,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -1631,7 +1672,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -2236,6 +2277,18 @@
           },
           "is_subdir": false
         },
+        "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.WebSockets.dll": {
+          "ops_all": 2,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {},
+            "4": {}
+          },
+          "pids": {
+            "51": {}
+          },
+          "is_subdir": false
+        },
         "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Numerics.Vectors.dll": {
           "ops_all": 2,
           "ops_checkfile": 1,
@@ -2244,7 +2297,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -2340,7 +2393,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -2376,7 +2429,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -2460,7 +2513,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -2472,7 +2525,7 @@
             "4": {}
           },
           "pids": {
-            "55": {}
+            "51": {}
           },
           "is_subdir": false
         },
@@ -2718,8 +2771,8 @@
         "file_path": "/etc/hosts",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 229,
-        "sha1_hash": "ff43a980ea9b719d8dfcdfc49ddc9c7dec4f3c7b",
+        "file_size": 172,
+        "sha1_hash": "8c1509c229dc22c0348851ee0e0a438501eff2f3",
         "uid": 0,
         "gid": 0
       },
@@ -2770,8 +2823,8 @@
         "file_path": "/etc/resolv.conf",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 224,
-        "sha1_hash": "e9b0c83e82656db2d373772ab604182ec9449c99",
+        "file_size": 312,
+        "sha1_hash": "ff4a61bb8520517533417f50855c9d160f1ff1e4",
         "uid": 0,
         "gid": 0
       },
@@ -5229,7 +5282,11 @@
         "file_path": "/lib/x86_64-linux-gnu/libnss_dns-2.31.so",
         "modex": 420,
         "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
         "file_size": 26952,
+        "sha1_hash": "03bc3a1e018b3df508b18b4307420de0dac668a4",
         "uid": 0,
         "gid": 0
       },
@@ -5238,6 +5295,7 @@
         "file_path": "/lib/x86_64-linux-gnu/libnss_dns.so.2",
         "modex": 134218239,
         "mode": "Lrwxrwxrwx",
+        "link_ref": "libnss_dns-2.31.so",
         "file_size": 18,
         "uid": 0,
         "gid": 0
@@ -5293,7 +5351,11 @@
         "file_path": "/lib/x86_64-linux-gnu/libresolv-2.31.so",
         "modex": 420,
         "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
         "file_size": 93000,
+        "sha1_hash": "f545388849107d2e346571075e6c3b101db75b7e",
         "uid": 0,
         "gid": 0
       },
@@ -5302,6 +5364,7 @@
         "file_path": "/lib/x86_64-linux-gnu/libresolv.so.2",
         "modex": 134218239,
         "mode": "Lrwxrwxrwx",
+        "link_ref": "libresolv-2.31.so",
         "file_size": 17,
         "uid": 0,
         "gid": 0
@@ -5341,13 +5404,23 @@
       },
       {
         "file_type": "file",
+        "file_path": "/opt/_mint/bin/mint-sensor",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 6332568,
+        "sha1_hash": "65a854916ff71068777929886909638c4b445577",
+        "uid": 1000,
+        "gid": 1000
+      },
+      {
+        "file_type": "file",
         "file_path": "/run/secrets/db-password",
-        "modex": 420,
-        "mode": "-rw-r--r--",
+        "modex": 511,
+        "mode": "-rwxrwxrwx",
         "file_size": 8,
         "sha1_hash": "880d6e7efd2ef44b6cc7b4ce14f9a7766707ba68",
         "uid": 1000,
-        "gid": 986
+        "gid": 1000
       },
       {
         "file_type": "dir",
@@ -6694,8 +6767,7 @@
         "modex": 493,
         "mode": "-rwxr-xr-x",
         "flags": {
-          "R": true,
-          "X": true
+          "R": true
         },
         "file_size": 141760,
         "sha1_hash": "37953e954ca3a1e7993c7d50ad11e9d2fd2ad864",
@@ -7658,6 +7730,19 @@
         },
         "file_size": 572416,
         "sha1_hash": "37c53d456ddcf3f27519fbc860fe6457ebc27246",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.36/System.Net.WebSockets.dll",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
+        "file_size": 176640,
+        "sha1_hash": "a812ef965327af684e118d57c751599e5c68c8f0",
         "uid": 0,
         "gid": 0
       },

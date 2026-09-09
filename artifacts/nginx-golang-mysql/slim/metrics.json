@@ -2,9 +2,10 @@
   "example": "nginx-golang-mysql",
   "stage": "slim",
   "image_tag": "dip-nginx-golang-mysql:slim",
-  "generated_at": "2026-09-01T18:57:51Z",
-  "size_bytes": 4696217,
-  "size_human": "4.70MB",
+  "generated_at": "2026-09-09T19:58:45Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 8112640,
+  "size_human": "8.11MB",
   "sbom_component_count": 6,
   "vulnerability_total": 41,
   "vulnerability_by_severity": {

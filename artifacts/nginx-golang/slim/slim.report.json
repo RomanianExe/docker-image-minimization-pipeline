@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,30 +22,24 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406",
+      "id": "sha256:a3ecd1d31e0f40a3378b116bde0677d3275904403fe595933c29938ea84f35a9",
       "tags": [
         "original"
       ],
       "names": [
         "dip-nginx-golang-backend:original"
-      ],
-      "digests": [
-        "sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406"
-      ],
-      "full_digests": [
-        "dip-nginx-golang-backend@sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406"
       ]
     },
-    "size": 123401523,
-    "size_human": "123 MB",
-    "create_time": "2026-08-23T12:35:18Z",
+    "size": 337497424,
+    "size_human": "338 MB",
+    "create_time": "2026-09-09T20:00:43Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "os": "linux",
     "labels": {
       "com.docker.compose.project": "dip-nginx-golang",
       "com.docker.compose.service": "backend",
-      "com.docker.compose.version": "5.5.0"
+      "com.docker.compose.version": "5.4.0"
     },
     "env_vars": [
       "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
@@ -58,30 +52,30 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 4804703,
-  "minified_image_size_human": "4.8 MB",
+  "minified_image_size": 7940790,
+  "minified_image_size_human": "7.9 MB",
   "minified_image": "dip-nginx-golang-backend:slim",
-  "minified_image_id": "sha256:feb031b9e044d8b5a3390d691720815aa99d6594094f82090aaa72202352ce1b",
-  "minified_image_digest": "sha256:036670d16e445abc95b9d3368b206cc4d53220e24d4fc7905077996a548257ed",
+  "minified_image_id": "sha256:fe12492d94b329139544ed1820b1250f8c82541f4f5d3b252d9e0cecf4702d86",
+  "minified_image_digest": "sha256:5c212ee1c42a79e0d9ec01a6dbd7cb5c62c8290e7d1281e91cdcb4c493bc7fae",
   "minified_image_has_data": true,
-  "minified_by": 25.68348615929018,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406/artifacts",
+  "minified_by": 42.50174403302442,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/a3ecd1d31e0f40a3378b116bde0677d3275904403fe595933c29938ea84f35a9/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nginx-golang-backend-seccomp.json",
   "apparmor_profile_name": "dip-nginx-golang-backend-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:2eb279bd1aed75cc0d97e218259b577b74e24d026f9ed3ccda0c1e11005f5406",
+      "id": "sha256:a3ecd1d31e0f40a3378b116bde0677d3275904403fe595933c29938ea84f35a9",
       "full_name": "dip-nginx-golang-backend:original",
       "repo_name": "dip-nginx-golang-backend",
       "version_tag": "original",
       "raw_tags": [
         "dip-nginx-golang-backend:original"
       ],
-      "create_time": "2026-08-23T12:35:18Z",
-      "new_size": 377913344,
-      "new_size_human": "378 MB",
+      "create_time": "2026-09-09T20:00:43Z",
+      "new_size": 337497424,
+      "new_size_human": "338 MB",
       "instructions": [
         {
           "type": "ADD",
@@ -89,8 +83,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 7725056,
-          "size_human": "7.7 MB",
+          "size": 7049701,
+          "size_human": "7.0 MB",
           "params": "file:e4d600fc4c9c293efe360be7b30ee96579925d1b4634c94332e2ec73f7d8eca1 in /",
           "command_snippet": "ADD file:e4d600fc4c9c293efe360be7b30ee965799...",
           "command_all": "ADD file:e4d600fc4c9c293efe360be7b30ee96579925d1b4634c94332e2ec73f7d8eca1 /",
@@ -98,7 +92,7 @@
           "source_type": "file",
           "inst_set_time_bucket": "2023-01-09T19:00:00+02:00",
           "inst_set_time_index": 0,
-          "inst_set_time_reverse_index": 3
+          "inst_set_time_reverse_index": 4
         },
         {
           "type": "CMD",
@@ -113,7 +107,7 @@
           "command_all": "CMD [\"/bin/sh\"]\n",
           "inst_set_time_bucket": "2023-01-09T19:00:00+02:00",
           "inst_set_time_index": 0,
-          "inst_set_time_reverse_index": 3
+          "inst_set_time_reverse_index": 4
         },
         {
           "type": "RUN",
@@ -121,8 +115,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 1413120,
-          "size_human": "1.4 MB",
+          "size": 519585,
+          "size_human": "520 kB",
           "command_snippet": "RUN apk add --no-cache ca-certificates",
           "command_all": "RUN apk add --no-cache ca-certificates",
           "system_commands": [
@@ -130,7 +124,7 @@
           ],
           "inst_set_time_bucket": "2023-01-09T19:45:00+02:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 3
         },
         {
           "type": "ENV",
@@ -144,7 +138,7 @@
           "command_all": "ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
           "inst_set_time_bucket": "2023-01-09T19:45:00+02:00",
           "inst_set_time_index": 1,
-          "inst_set_time_reverse_index": 2
+          "inst_set_time_reverse_index": 3
         },
         {
           "type": "ENV",
@@ -158,7 +152,7 @@
           "command_all": "ENV GOLANG_VERSION=1.18.10",
           "inst_set_time_bucket": "2023-01-11T02:00:00+02:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "RUN",
@@ -166,8 +160,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 360579072,
-          "size_human": "361 MB",
+          "size": 322138353,
+          "size_human": "322 MB",
           "command_snippet": "RUN set -eux; \tapk add --no-cache --virtual ...",
           "command_all": "RUN set -eux; \tapk add --no-cache --virtual .fetch-deps gnupg; \tarch=\"$(apk --print-arch)\"; \turl=; \tcase \"$arch\" in \t\t'x86_64') \t\t\texport GOAMD64='v1' GOARCH='amd64' GOOS='linux'; \t\t\t;; \t\t'armhf') \t\t\texport GOARCH='arm' GOARM='6' GOOS='linux'; \t\t\t;; \t\t'armv7') \t\t\texport GOARCH='arm' GOARM='7' GOOS='linux'; \t\t\t;; \t\t'aarch64') \t\t\texport GOARCH='arm64' GOOS='linux'; \t\t\t;; \t\t'x86') \t\t\texport GO386='softfloat' GOARCH='386' GOOS='linux'; \t\t\t;; \t\t'ppc64le') \t\t\texport GOARCH='ppc64le' GOOS='linux'; \t\t\t;; \t\t's390x') \t\t\texport GOARCH='s390x' GOOS='linux'; \t\t\t;; \t\t*) echo >&2 \"error: unsupported architecture '$arch' (likely packaging update needed)\"; exit 1 ;; \tesac; \tbuild=; \tif [ -z \"$url\" ]; then \t\tbuild=1; \t\turl='https://dl.google.com/go/go1.18.10.src.tar.gz'; \t\tsha256='9cedcca58845df0c9474ae00274c44a95c9dfaefb132fc59921c28c7c106f8e6'; \tfi; \t\twget -O go.tgz.asc \"$url.asc\"; \twget -O go.tgz \"$url\"; \techo \"$sha256 *go.tgz\" | sha256sum -c -; \t\tGNUPGHOME=\"$(mktemp -d)\"; export GNUPGHOME; \tgpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; \tgpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; \tgpg --batch --verify go.tgz.asc go.tgz; \tgpgconf --kill all; \trm -rf \"$GNUPGHOME\" go.tgz.asc; \t\ttar -C /usr/local -xzf go.tgz; \trm go.tgz; \t\tif [ -n \"$build\" ]; then \t\tapk add --no-cache --virtual .build-deps \t\t\tbash \t\t\tgcc \t\t\tgo \t\t\tmusl-dev \t\t; \t\t\t\texport GOCACHE='/tmp/gocache'; \t\t\t\t( \t\t\tcd /usr/local/go/src; \t\t\texport GOROOT_BOOTSTRAP=\"$(go env GOROOT)\" GOHOSTOS=\"$GOOS\" GOHOSTARCH=\"$GOARCH\"; \t\t\t./make.bash; \t\t); \t\t\t\tapk del --no-network .build-deps; \t\t\t\trm -rf \t\t\t/usr/local/go/pkg/*/cmd \t\t\t/usr/local/go/pkg/bootstrap \t\t\t/usr/local/go/pkg/obj \t\t\t/usr/local/go/pkg/tool/*/api \t\t\t/usr/local/go/pkg/tool/*/go_bootstrap \t\t\t/usr/local/go/src/cmd/dist/dist \t\t\t\"$GOCACHE\" \t\t; \tfi; \t\tapk del --no-network .fetch-deps; \t\tgo version",
           "system_commands": [
@@ -233,7 +227,7 @@
           ],
           "inst_set_time_bucket": "2023-01-11T02:00:00+02:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "ENV",
@@ -247,7 +241,7 @@
           "command_all": "ENV GOPATH=/go",
           "inst_set_time_bucket": "2023-01-11T02:00:00+02:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "ENV",
@@ -261,7 +255,7 @@
           "command_all": "ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
           "inst_set_time_bucket": "2023-01-11T02:00:00+02:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "RUN",
@@ -269,8 +263,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 16384,
-          "size_human": "16 kB",
+          "size": 0,
           "command_snippet": "RUN mkdir -p \"$GOPATH/src\" \"$GOPATH/bin\" && ...",
           "command_all": "RUN mkdir -p \"$GOPATH/src\" \"$GOPATH/bin\" && \\\n\tchmod -R 777 \"$GOPATH\"",
           "system_commands": [
@@ -279,7 +272,7 @@
           ],
           "inst_set_time_bucket": "2023-01-11T02:00:00+02:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "WORKDIR",
@@ -296,16 +289,15 @@
           ],
           "inst_set_time_bucket": "2023-01-11T02:00:00+02:00",
           "inst_set_time_index": 2,
-          "inst_set_time_reverse_index": 1
+          "inst_set_time_reverse_index": 2
         },
         {
           "type": "WORKDIR",
-          "time": "2026-08-23T12:35:10Z",
+          "time": "2026-09-02T16:48:41Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 8192,
-          "size_human": "8.2 kB",
+          "size": 0,
           "params": "/code",
           "command_snippet": "WORKDIR /code",
           "command_all": "WORKDIR /code",
@@ -314,13 +306,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
+          "inst_set_time_bucket": "2026-09-02T19:45:00+03:00",
           "inst_set_time_index": 3,
-          "inst_set_time_reverse_index": 0
+          "inst_set_time_reverse_index": 1
         },
         {
           "type": "ENV",
-          "time": "2026-08-23T12:35:11Z",
+          "time": "2026-09-09T20:00:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -330,13 +322,13 @@
           "command_all": "ENV CGO_ENABLED=0",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "ENV",
-          "time": "2026-08-23T12:35:11Z",
+          "time": "2026-09-09T20:00:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -346,13 +338,13 @@
           "command_all": "ENV GOPATH=/go",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "ENV",
-          "time": "2026-08-23T12:35:11Z",
+          "time": "2026-09-09T20:00:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -362,35 +354,35 @@
           "command_all": "ENV GOCACHE=/go-build",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-23T12:35:11Z",
+          "time": "2026-09-09T20:00:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 16384,
-          "size_human": "16 kB",
+          "size": 279,
+          "size_human": "279 B",
           "params": "go.mod go.sum ./",
           "command_snippet": "COPY go.mod go.sum ./",
           "command_all": "COPY go.mod go.sum ./",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-08-23T12:35:13Z",
+          "time": "2026-09-09T20:00:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 626688,
-          "size_human": "627 kB",
+          "size": 291421,
+          "size_human": "291 kB",
           "command_snippet": "RUN go mod download",
           "command_all": "RUN go mod download",
           "system_commands": [
@@ -398,34 +390,34 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-23T12:35:14Z",
+          "time": "2026-09-09T20:00:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 16384,
-          "size_human": "16 kB",
+          "size": 1653,
+          "size_human": "1.7 kB",
           "params": ". .",
           "command_snippet": "COPY . .",
           "command_all": "COPY . .",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "RUN",
-          "time": "2026-08-23T12:35:18Z",
+          "time": "2026-09-09T20:00:43Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 7512064,
+          "size": 7496432,
           "size_human": "7.5 MB",
           "command_snippet": "RUN go build -o bin/backend main.go",
           "command_all": "RUN go build -o bin/backend main.go",
@@ -434,13 +426,13 @@
           ],
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-23T12:35:18Z",
+          "time": "2026-09-09T20:00:43Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -455,8 +447,8 @@
             "dip-nginx-golang-backend:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T15:30:00+03:00",
-          "inst_set_time_index": 3,
+          "inst_set_time_bucket": "2026-09-09T23:00:00+03:00",
+          "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         }
       ]

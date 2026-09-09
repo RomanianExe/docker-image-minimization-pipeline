@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 2,
+  "manifests": [
+    {
+      "digest": "sha256:c0f18d1e523e5104c339a0a34ba96904e17b1b6e3253b81fd7f3a23cbe4341b0",
+      "size": 401,
+      "mediaType": "application/vnd.oci.image.manifest.v1+json"
+    }
+  ]
+}

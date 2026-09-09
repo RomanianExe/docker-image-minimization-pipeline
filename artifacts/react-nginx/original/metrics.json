@@ -2,14 +2,16 @@
   "example": "react-nginx",
   "stage": "original",
   "image_tag": "dip-react-nginx:original",
-  "generated_at": "2026-08-23T10:30:00Z",
-  "size_bytes": 26447276,
-  "size_human": "26.45MB",
+  "generated_at": "2026-09-09T20:27:22Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 70879744,
+  "size_human": "70.88MB",
   "sbom_component_count": 71,
-  "vulnerability_total": 10,
+  "vulnerability_total": 16,
   "vulnerability_by_severity": {
-    "High": 4,
-    "Medium": 6
+    "High": 6,
+    "Medium": 7,
+    "Unknown": 3
   },
   "functional_tests": "PASS (tests/specific/react-nginx/test.sh)"
 }

@@ -1,35 +1,36 @@
 {
   "example": "nginx-flask-mysql",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-nginx-flask-mysql:original",
-    "size_bytes": 24355600,
-    "size_human": "24.36MB",
+    "size_bytes": 76188160,
+    "size_human": "76.19MB",
     "sbom_component_count": 80,
-    "vulnerability_total": 62,
+    "vulnerability_total": 52,
     "vulnerability_by_severity": {
-      "High": 24,
+      "High": 14,
       "Medium": 28,
-      "Unknown": 4,
-      "Low": 5,
-      "Negligible": 1
+      "Low": 6,
+      "Negligible": 1,
+      "Unknown": 3
     }
   },
   "slim": {
     "image_tag": "dip-nginx-flask-mysql:slim",
-    "size_bytes": 11048492,
-    "size_human": "11.05MB",
+    "size_bytes": 26728448,
+    "size_human": "26.73MB",
     "sbom_component_count": 2,
-    "vulnerability_total": 20,
+    "vulnerability_total": 21,
     "vulnerability_by_severity": {
       "High": 5,
       "Medium": 11,
-      "Low": 3,
+      "Low": 4,
       "Negligible": 1
     }
   },
-  "size_reduction_pct": 54.6,
+  "size_reduction_pct": 64.9,
   "component_reduction": 78,
-  "vulnerability_reduction": 42,
+  "vulnerability_reduction": 31,
   "functional_tests_original": "PASS (tests/specific/nginx-flask-mysql/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/nginx-flask-mysql/test.sh)"
 }

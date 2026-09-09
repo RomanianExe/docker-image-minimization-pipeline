@@ -2,15 +2,16 @@
   "example": "sparkjava",
   "stage": "original",
   "image_tag": "dip-sparkjava:original",
-  "generated_at": "2026-08-23T12:05:00Z",
-  "size_bytes": 97444975,
-  "size_human": "97.44MB",
+  "generated_at": "2026-09-09T20:33:43Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 274244608,
+  "size_human": "274.24MB",
   "sbom_component_count": 170,
-  "vulnerability_total": 462,
+  "vulnerability_total": 519,
   "vulnerability_by_severity": {
     "High": 28,
-    "Medium": 281,
-    "Low": 141,
+    "Medium": 346,
+    "Low": 133,
     "Negligible": 12
   },
   "functional_tests": "PASS (tests/specific/sparkjava/test.sh)"

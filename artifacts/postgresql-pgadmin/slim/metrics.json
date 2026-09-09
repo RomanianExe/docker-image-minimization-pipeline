@@ -2,7 +2,7 @@
   "example": "postgresql-pgadmin",
   "stage": "slim",
   "image_tag": "dip-postgresql-pgadmin:slim",
-  "generated_at": "2026-09-08T23:05:48Z",
+  "generated_at": "2026-09-09T20:12:12Z",
   "size_metric": "oci_uncompressed_layer_bytes",
   "size_bytes": 135214080,
   "size_human": "135.21MB",

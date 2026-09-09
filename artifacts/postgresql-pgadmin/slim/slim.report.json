@@ -45,8 +45,8 @@
     "architecture": "amd64",
     "user": "5050",
     "exposed_ports": [
-      "443/tcp",
-      "80/tcp"
+      "80/tcp",
+      "443/tcp"
     ],
     "os": "linux",
     "volumes": [
@@ -65,8 +65,8 @@
   "minified_image_size": 132584991,
   "minified_image_size_human": "133 MB",
   "minified_image": "dip-postgresql-pgadmin:slim",
-  "minified_image_id": "sha256:c6cb5a5b226470c81a7ceeaca8e48d77e3363f0d27dea263da39d857e2356c1d",
-  "minified_image_digest": "sha256:b7a4b714fb61f9b1cc1c9fe033da203d5a5b5b7fa8b32a96cda79e73381d58aa",
+  "minified_image_id": "sha256:83d038e1616feda157b3373c6bc78707db481d47c65fba90ee6db1f9b50fb82a",
+  "minified_image_digest": "sha256:b73c642a0c8f041303786738d4790c102f52380b0c9bc9da1579ddaf23cd7dba",
   "minified_image_has_data": true,
   "minified_by": 3.986504611219531,
   "artifact_location": "/tmp/mint-state/.mint-state/images/78bcd13ffb0a9a6dff344f4c4a212e3b7622cf1a5a83566c79e550b2ab561487/artifacts",

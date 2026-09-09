@@ -7,7 +7,7 @@ profile dip-react-express-mongodb-apparmor-profile flags=(attach_disconnected,me
   /usr/bin/env rix,
   /usr/local/bin/node rix,
 
-  /root/.npm/_logs/2026-08-27T10_27_18_057Z-debug-0.log w,
+  /root/.npm/_logs/2026-09-09T20_18_34_771Z-debug-0.log w,
 
   /bin/sh r,
   /etc/host.conf r,

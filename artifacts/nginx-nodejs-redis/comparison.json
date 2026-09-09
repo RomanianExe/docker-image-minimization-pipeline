@@ -1,34 +1,35 @@
 {
   "example": "nginx-nodejs-redis",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-nginx-nodejs-redis:original",
-    "size_bytes": 42809197,
-    "size_human": "42.81MB",
+    "size_bytes": 125442048,
+    "size_human": "125.44MB",
     "sbom_component_count": 512,
-    "vulnerability_total": 246,
+    "vulnerability_total": 254,
     "vulnerability_by_severity": {
       "Critical": 17,
-      "High": 129,
-      "Medium": 82,
-      "Low": 18
+      "High": 133,
+      "Medium": 85,
+      "Low": 19
     }
   },
   "slim": {
     "image_tag": "dip-nginx-nodejs-redis:slim",
-    "size_bytes": 35234680,
-    "size_human": "35.23MB",
+    "size_bytes": 80753152,
+    "size_human": "80.75MB",
     "sbom_component_count": 58,
-    "vulnerability_total": 91,
+    "vulnerability_total": 93,
     "vulnerability_by_severity": {
       "High": 41,
-      "Medium": 31,
+      "Medium": 32,
       "Critical": 5,
-      "Low": 14
+      "Low": 15
     }
   },
-  "size_reduction_pct": 17.7,
+  "size_reduction_pct": 35.6,
   "component_reduction": 454,
-  "vulnerability_reduction": 155,
+  "vulnerability_reduction": 161,
   "functional_tests_original": "PASS (tests/specific/nginx-nodejs-redis/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/nginx-nodejs-redis/test.sh)"
 }

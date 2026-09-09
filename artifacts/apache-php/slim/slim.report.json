@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,29 +22,28 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:b978c79c534628f85f69a832ab35fb36661ddb4fa824b0fde59e7f01c5ce2b8d",
+      "id": "sha256:0c02d4df9be1de19c84bb57b11c6a5e63c6037888ccb28fe1e7660dac5a457e3",
       "tags": [
         "original"
       ],
       "names": [
         "dip-apache-php:original"
-      ],
-      "digests": [
-        "sha256:b978c79c534628f85f69a832ab35fb36661ddb4fa824b0fde59e7f01c5ce2b8d"
-      ],
-      "full_digests": [
-        "dip-apache-php@sha256:b978c79c534628f85f69a832ab35fb36661ddb4fa824b0fde59e7f01c5ce2b8d"
       ]
     },
-    "size": 167773412,
-    "size_human": "168 MB",
-    "create_time": "2026-08-23T09:53:21Z",
+    "size": 471538240,
+    "size_human": "472 MB",
+    "create_time": "2026-09-09T19:09:41Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "exposed_ports": [
       "80/tcp"
     ],
     "os": "linux",
+    "labels": {
+      "com.docker.compose.project": "dip-apache-php",
+      "com.docker.compose.service": "web",
+      "com.docker.compose.version": "5.4.0"
+    },
     "env_vars": [
       "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
       "PHPIZE_DEPS=autoconf \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\tlibc-dev \t\tmake \t\tpkg-config \t\tre2c",
@@ -66,30 +65,30 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 33723017,
-  "minified_image_size_human": "34 MB",
+  "minified_image_size": 77039326,
+  "minified_image_size_human": "77 MB",
   "minified_image": "dip-apache-php:slim",
-  "minified_image_id": "sha256:1ac8aee8e2acf1e379bde44c73537995ad73154e2fa1a1d8200b92e08c104f5e",
-  "minified_image_digest": "sha256:769583975ea92e7bc89ac4235d0d9f817a459d0b72ab8dfbc679889c1ef99bf5",
+  "minified_image_id": "sha256:250c0f27ca7b6730d2f25f4da7de60c71cf5744380303de68a85476f634242cc",
+  "minified_image_digest": "sha256:ec75728512b8922af8f6857f4b4e14fbe896b3d4a198655ce4b641f1b2b2aafe",
   "minified_image_has_data": true,
-  "minified_by": 4.975041586581652,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/b978c79c534628f85f69a832ab35fb36661ddb4fa824b0fde59e7f01c5ce2b8d/artifacts",
+  "minified_by": 6.120747214221474,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/0c02d4df9be1de19c84bb57b11c6a5e63c6037888ccb28fe1e7660dac5a457e3/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-apache-php-seccomp.json",
   "apparmor_profile_name": "dip-apache-php-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:b978c79c534628f85f69a832ab35fb36661ddb4fa824b0fde59e7f01c5ce2b8d",
+      "id": "sha256:0c02d4df9be1de19c84bb57b11c6a5e63c6037888ccb28fe1e7660dac5a457e3",
       "full_name": "dip-apache-php:original",
       "repo_name": "dip-apache-php",
       "version_tag": "original",
       "raw_tags": [
         "dip-apache-php:original"
       ],
-      "create_time": "2026-08-23T09:53:21Z",
-      "new_size": 502898688,
-      "new_size_human": "503 MB",
+      "create_time": "2026-09-09T19:09:41Z",
+      "new_size": 471538240,
+      "new_size_human": "472 MB",
       "instructions": [
         {
           "type": "ADD",
@@ -97,8 +96,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 91783168,
-          "size_human": "92 MB",
+          "size": 80372880,
+          "size_human": "80 MB",
           "params": "file:5e8343ab9a73edc27c2889634896e792ab289b85c206de0fc31183fdc0a32ac7 in /",
           "command_snippet": "ADD file:5e8343ab9a73edc27c2889634896e792ab2...",
           "command_all": "ADD file:5e8343ab9a73edc27c2889634896e792ab289b85c206de0fc31183fdc0a32ac7 /",
@@ -129,8 +128,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 46,
+          "size_human": "46 B",
           "command_snippet": "RUN set -eux; \t{ \t\techo 'Package: php*'; \t\te...",
           "command_all": "RUN set -eux; \t{ \t\techo 'Package: php*'; \t\techo 'Pin: release *'; \t\techo 'Pin-Priority: -1'; \t} > /etc/apt/preferences.d/no-debian-php",
           "system_commands": [
@@ -164,8 +163,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 283648000,
-          "size_human": "284 MB",
+          "size": 268985289,
+          "size_human": "269 MB",
           "command_snippet": "RUN set -eux; \tapt-get update; \tapt-get inst...",
           "command_all": "RUN set -eux; \tapt-get update; \tapt-get install -y --no-install-recommends \t\t$PHPIZE_DEPS \t\tca-certificates \t\tcurl \t\txz-utils \t; \trm -rf /var/lib/apt/lists/*",
           "system_commands": [
@@ -198,8 +197,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 36864,
-          "size_human": "37 kB",
+          "size": 0,
           "command_snippet": "RUN set -eux; \tmkdir -p \"$PHP_INI_DIR/conf.d...",
           "command_all": "RUN set -eux; \tmkdir -p \"$PHP_INI_DIR/conf.d\"; \t[ ! -d /var/www/html ]; \tmkdir -p /var/www/html; \tchown www-data:www-data /var/www/html; \tchmod 777 /var/www/html",
           "system_commands": [
@@ -248,8 +246,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 50356224,
-          "size_human": "50 MB",
+          "size": 47499254,
+          "size_human": "48 MB",
           "command_snippet": "RUN set -eux; \tapt-get update; \tapt-get inst...",
           "command_all": "RUN set -eux; \tapt-get update; \tapt-get install -y --no-install-recommends apache2; \trm -rf /var/lib/apt/lists/*; \t\tsed -ri 's/^export ([^=]+)=(.*)$/: ${\\1:=\\2}\\nexport \\1/' \"$APACHE_ENVVARS\"; \t\t. \"$APACHE_ENVVARS\"; \tfor dir in \t\t\"$APACHE_LOCK_DIR\" \t\t\"$APACHE_RUN_DIR\" \t\t\"$APACHE_LOG_DIR\" \t; do \t\trm -rvf \"$dir\"; \t\tmkdir -p \"$dir\"; \t\tchown \"$APACHE_RUN_USER:$APACHE_RUN_GROUP\" \"$dir\"; \t\tchmod 777 \"$dir\"; \tdone; \t\trm -rvf /var/www/html/*; \t\tln -sfT /dev/stderr \"$APACHE_LOG_DIR/error.log\"; \tln -sfT /dev/stdout \"$APACHE_LOG_DIR/access.log\"; \tln -sfT /dev/stdout \"$APACHE_LOG_DIR/other_vhosts_access.log\"; \tchown -R --no-dereference \"$APACHE_RUN_USER:$APACHE_RUN_GROUP\" \"$APACHE_LOG_DIR\"",
           "system_commands": [
@@ -281,8 +279,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 45056,
-          "size_human": "45 kB",
+          "size": 68,
+          "size_human": "68 B",
           "command_snippet": "RUN a2dismod mpm_event && \\\n\ta2enmod mpm_pre...",
           "command_all": "RUN a2dismod mpm_event && \\\n\ta2enmod mpm_prefork",
           "system_commands": [
@@ -299,8 +297,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 45056,
-          "size_human": "45 kB",
+          "size": 237,
+          "size_human": "237 B",
           "command_snippet": "RUN { \t\techo '<FilesMatch \\.php$>'; \t\techo '...",
           "command_all": "RUN { \t\techo '<FilesMatch \\.php$>'; \t\techo '\\tSetHandler application/x-httpd-php'; \t\techo '</FilesMatch>'; \t\techo; \t\techo 'DirectoryIndex disabled'; \t\techo 'DirectoryIndex index.php index.html'; \t\techo; \t\techo '<Directory /var/www/>'; \t\techo '\\tOptions -Indexes'; \t\techo '\\tAllowOverride All'; \t\techo '</Directory>'; \t} | tee \"$APACHE_CONFDIR/conf-available/docker-php.conf\" && \\\n\ta2enconf docker-php",
           "system_commands": [
@@ -443,7 +441,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 12152832,
+          "size": 11972993,
           "size_human": "12 MB",
           "command_snippet": "RUN set -eux; \t\tsavedAptMark=\"$(apt-mark sho...",
           "command_all": "RUN set -eux; \t\tsavedAptMark=\"$(apt-mark showmanual)\"; \tapt-get update; \tapt-get install -y --no-install-recommends gnupg dirmngr; \trm -rf /var/lib/apt/lists/*; \t\tmkdir -p /usr/src; \tcd /usr/src; \t\tcurl -fsSL -o php.tar.xz \"$PHP_URL\"; \t\tif [ -n \"$PHP_SHA256\" ]; then \t\techo \"$PHP_SHA256 *php.tar.xz\" | sha256sum -c -; \tfi; \t\tif [ -n \"$PHP_ASC_URL\" ]; then \t\tcurl -fsSL -o php.tar.xz.asc \"$PHP_ASC_URL\"; \t\texport GNUPGHOME=\"$(mktemp -d)\"; \t\tfor key in $GPG_KEYS; do \t\t\tgpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\"; \t\tdone; \t\tgpg --batch --verify php.tar.xz.asc php.tar.xz; \t\tgpgconf --kill all; \t\trm -rf \"$GNUPGHOME\"; \tfi; \t\tapt-mark auto '.*' > /dev/null; \tapt-mark manual $savedAptMark > /dev/null; \tapt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false",
@@ -483,8 +481,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 587,
+          "size_human": "587 B",
           "params": "file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/",
           "command_snippet": "COPY file:ce57c04b70896f77cc11eb2766417d8a12...",
           "command_all": "COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 /usr/local/bin/",
@@ -500,8 +498,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 64684032,
-          "size_human": "65 MB",
+          "size": 62698300,
+          "size_human": "63 MB",
           "command_snippet": "RUN set -eux; \t\tsavedAptMark=\"$(apt-mark sho...",
           "command_all": "RUN set -eux; \t\tsavedAptMark=\"$(apt-mark showmanual)\"; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tlibargon2-dev \t\tlibcurl4-openssl-dev \t\tlibedit-dev \t\tlibonig-dev \t\tlibsodium-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibxml2-dev \t\tzlib1g-dev \t\t${PHP_EXTRA_BUILD_DEPS:-} \t; \trm -rf /var/lib/apt/lists/*; \t\texport \t\tCFLAGS=\"$PHP_CFLAGS\" \t\tCPPFLAGS=\"$PHP_CPPFLAGS\" \t\tLDFLAGS=\"$PHP_LDFLAGS\" \t; \tdocker-php-source extract; \tcd /usr/src/php; \tgnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\"; \tdebMultiarch=\"$(dpkg-architecture --query DEB_BUILD_MULTIARCH)\"; \tif [ ! -d /usr/include/curl ]; then \t\tln -sT \"/usr/include/$debMultiarch/curl\" /usr/local/include/curl; \tfi; \t./configure \t\t--build=\"$gnuArch\" \t\t--with-config-file-path=\"$PHP_INI_DIR\" \t\t--with-config-file-scan-dir=\"$PHP_INI_DIR/conf.d\" \t\t\t\t--enable-option-checking=fatal \t\t\t\t--with-mhash \t\t\t\t--with-pic \t\t\t\t--enable-ftp \t\t--enable-mbstring \t\t--enable-mysqlnd \t\t--with-password-argon2 \t\t--with-sodium=shared \t\t--with-pdo-sqlite=/usr \t\t--with-sqlite3=/usr \t\t\t\t--with-curl \t\t--with-libedit \t\t--with-openssl \t\t--with-zlib \t\t\t\t--with-pear \t\t\t\t$(test \"$gnuArch\" = 's390x-linux-gnu' && \\\n\techo '--without-pcre-jit') \t\t--with-libdir=\"lib/$debMultiarch\" \t\t\t\t${PHP_EXTRA_CONFIGURE_ARGS:-} \t; \tmake -j \"$(nproc)\"; \tfind -type f -name '*.a' -delete; \tmake install; \tfind /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; \tmake clean; \t\tcp -v php.ini-* \"$PHP_INI_DIR/\"; \t\tcd /; \tdocker-php-source delete; \t\tapt-mark auto '.*' > /dev/null; \t[ -z \"$savedAptMark\" ] || apt-mark manual $savedAptMark; \tfind /usr/local -type f -executable -exec ldd '{}' ';' \t\t| awk '/=>/ { print $(NF-1) }' \t\t| sort -u \t\t| xargs -r dpkg-query --search \t\t| cut -d: -f1 \t\t| sort -u \t\t| xargs -r apt-mark manual \t; \tapt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \t\tpecl update-channels; \trm -rf /tmp/pear ~/.pearrc; \t\tphp --version",
           "system_commands": [
@@ -518,8 +516,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 32768,
-          "size_human": "33 kB",
+          "size": 6757,
+          "size_human": "6.8 kB",
           "params": "multi:e4407f0002276f00cc93b01e48696c1f677a5f7d3d194b3a84bec1cc5e733bcb in /usr/local/bin/",
           "command_snippet": "COPY multi:e4407f0002276f00cc93b01e48696c1f6...",
           "command_all": "COPY multi:e4407f0002276f00cc93b01e48696c1f677a5f7d3d194b3a84bec1cc5e733bcb /usr/local/bin/",
@@ -535,8 +533,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 28672,
-          "size_human": "29 kB",
+          "size": 17,
+          "size_human": "17 B",
           "command_snippet": "RUN docker-php-ext-enable sodium",
           "command_all": "RUN docker-php-ext-enable sodium",
           "system_commands": [
@@ -581,8 +579,8 @@
           "is_nop": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 20480,
-          "size_human": "20 kB",
+          "size": 1346,
+          "size_human": "1.3 kB",
           "params": "file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/",
           "command_snippet": "COPY file:e3123fcb6566efa979f945bfac1c94c854...",
           "command_all": "COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 /usr/local/bin/",
@@ -640,24 +638,24 @@
         },
         {
           "type": "COPY",
-          "time": "2026-08-23T09:53:21Z",
+          "time": "2026-09-09T19:09:41Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 24576,
-          "size_human": "25 kB",
+          "size": 466,
+          "size_human": "466 B",
           "params": "app/ /var/www/html/",
           "command_snippet": "COPY app/ /var/www/html/",
           "command_all": "COPY app/ /var/www/html/",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T12:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T22:00:00+03:00",
           "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-23T09:53:21Z",
+          "time": "2026-09-09T19:09:41Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -672,7 +670,7 @@
             "dip-apache-php:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-23T12:45:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T22:00:00+03:00",
           "inst_set_time_index": 4,
           "inst_set_time_reverse_index": 0
         }

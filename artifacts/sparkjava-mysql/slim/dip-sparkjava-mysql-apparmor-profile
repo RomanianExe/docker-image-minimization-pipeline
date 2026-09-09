@@ -3,10 +3,9 @@ profile dip-sparkjava-mysql-apparmor-profile flags=(attach_disconnected,mediate_
 
   network,
 
-  /opt/java/openjdk/bin/java rix,
   /usr/bin/env rix,
 
-  /tmp/hsperfdata_root/20 w,
+  /tmp/hsperfdata_root/19 w,
 
   /__cacert_entrypoint.sh r,
   /app.jar r,
@@ -323,15 +322,20 @@ profile dip-sparkjava-mysql-apparmor-profile flags=(attach_disconnected,mediate_
   /lib/x86_64-linux-gnu/libdl.so.2 r,
   /lib/x86_64-linux-gnu/libm-2.31.so r,
   /lib/x86_64-linux-gnu/libm.so.6 r,
+  /lib/x86_64-linux-gnu/libnss_dns-2.31.so r,
+  /lib/x86_64-linux-gnu/libnss_dns.so.2 r,
   /lib/x86_64-linux-gnu/libnss_files-2.31.so r,
   /lib/x86_64-linux-gnu/libnss_files.so.2 r,
   /lib/x86_64-linux-gnu/libpthread-2.31.so r,
   /lib/x86_64-linux-gnu/libpthread.so.0 r,
+  /lib/x86_64-linux-gnu/libresolv-2.31.so r,
+  /lib/x86_64-linux-gnu/libresolv.so.2 r,
   /lib/x86_64-linux-gnu/librt-2.31.so r,
   /lib/x86_64-linux-gnu/librt.so.1 r,
   /lib/x86_64-linux-gnu/libtinfo.so.6 r,
   /lib/x86_64-linux-gnu/libtinfo.so.6.2 r,
   /lib64 r,
+  /opt/java/openjdk/bin/java r,
   /opt/java/openjdk/conf/net.properties r,
   /opt/java/openjdk/conf/security/java.security r,
   /opt/java/openjdk/lib/jvm.cfg r,

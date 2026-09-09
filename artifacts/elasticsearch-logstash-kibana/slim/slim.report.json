@@ -78,13 +78,13 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 154571788,
-  "minified_image_size_human": "155 MB",
+  "minified_image_size": 363612750,
+  "minified_image_size_human": "364 MB",
   "minified_image": "dip-elasticsearch-logstash-kibana:slim",
-  "minified_image_id": "sha256:17e3b5a23c0451d761fc2f2175a279a514d358fd919e98f8e8691ce9f80a0f9e",
-  "minified_image_digest": "sha256:4e4218cbeecd3d11eaf77fa3c8fedc26b1430db50c46e46db38d4523af9fbe38",
+  "minified_image_id": "sha256:64593e8b3573963c302a4a1f3e1d2b0457273df28c86917805ffd8ca2037265c",
+  "minified_image_digest": "sha256:91acfeb800c6d607b33912e85846b4a287a4651bf9dca8fbcc05f2733f5c71cf",
   "minified_image_has_data": true,
-  "minified_by": 5.690023809519497,
+  "minified_by": 2.4188292462241767,
   "artifact_location": "/tmp/mint-state/.mint-state/images/926aaaed455b312834811b83724588491957f5aca46e9c6a2b1a081e56674f6a/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-elasticsearch-logstash-kibana-seccomp.json",

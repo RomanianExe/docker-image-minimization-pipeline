@@ -1,0 +1,46 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-aspnet-mssql:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-aspnet-mssql:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:80550b6c848c6335b5cc196e53b634742e656b6dc049d7e3268606b7e6820a4e",
+    "size": 403,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:0befd34926e1fd534018800986898347f724a424bc14136cabae05440d73b139",
+    "size": 3167
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:14be6cd5a8a4706db61cff77ae3118d2be238bd25c0f07b76034db0d03194449",
+      "size": 136998912
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:14be6cd5a8a4706db61cff77ae3118d2be238bd25c0f07b76034db0d03194449",
+      "size": 136998912,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 136998912
+}

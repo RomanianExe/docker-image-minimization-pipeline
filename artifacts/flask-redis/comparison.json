@@ -1,35 +1,36 @@
 {
   "example": "flask-redis",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-flask-redis:original",
-    "size_bytes": 25046244,
-    "size_human": "25.05MB",
+    "size_bytes": 77639168,
+    "size_human": "77.64MB",
     "sbom_component_count": 82,
-    "vulnerability_total": 51,
+    "vulnerability_total": 41,
     "vulnerability_by_severity": {
-      "High": 21,
+      "High": 11,
       "Medium": 22,
-      "Unknown": 4,
-      "Low": 3,
-      "Negligible": 1
+      "Low": 4,
+      "Negligible": 1,
+      "Unknown": 3
     }
   },
   "slim": {
     "image_tag": "dip-flask-redis:slim",
-    "size_bytes": 11577522,
-    "size_human": "11.58MB",
+    "size_bytes": 28742144,
+    "size_human": "28.74MB",
     "sbom_component_count": 3,
-    "vulnerability_total": 20,
+    "vulnerability_total": 21,
     "vulnerability_by_severity": {
       "High": 5,
       "Medium": 11,
-      "Low": 3,
+      "Low": 4,
       "Negligible": 1
     }
   },
-  "size_reduction_pct": 53.8,
+  "size_reduction_pct": 63.0,
   "component_reduction": 79,
-  "vulnerability_reduction": 31,
+  "vulnerability_reduction": 20,
   "functional_tests_original": "PASS (tests/specific/flask-redis/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/flask-redis/test.sh)"
 }

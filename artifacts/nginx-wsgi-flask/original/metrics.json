@@ -2,10 +2,10 @@
   "example": "nginx-wsgi-flask",
   "stage": "original",
   "image_tag": "dip-nginx-wsgi-flask:original",
-  "generated_at": "2026-09-08T19:41:14Z",
+  "generated_at": "2026-09-09T20:02:28Z",
   "size_metric": "oci_uncompressed_layer_bytes",
-  "size_bytes": 84309504,
-  "size_human": "84.31MB",
+  "size_bytes": 84147200,
+  "size_human": "84.15MB",
   "sbom_component_count": 75,
   "vulnerability_total": 333,
   "vulnerability_by_severity": {

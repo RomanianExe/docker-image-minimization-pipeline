@@ -2,16 +2,17 @@
   "example": "nginx-nodejs-redis",
   "stage": "original",
   "image_tag": "dip-nginx-nodejs-redis:original",
-  "generated_at": "2026-08-27T12:18:51Z",
-  "size_bytes": 42809197,
-  "size_human": "42.81MB",
+  "generated_at": "2026-09-09T20:01:33Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 125442048,
+  "size_human": "125.44MB",
   "sbom_component_count": 512,
-  "vulnerability_total": 246,
+  "vulnerability_total": 254,
   "vulnerability_by_severity": {
     "Critical": 17,
-    "High": 129,
-    "Medium": 82,
-    "Low": 18
+    "High": 133,
+    "Medium": 85,
+    "Low": 19
   },
   "functional_tests": "PASS (tests/specific/nginx-nodejs-redis/test.sh)"
 }

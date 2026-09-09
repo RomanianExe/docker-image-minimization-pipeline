@@ -1,36 +1,37 @@
 {
   "example": "fastapi",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-fastapi:original",
-    "size_bytes": 62337285,
-    "size_human": "62.34MB",
+    "size_bytes": 184939008,
+    "size_human": "184.94MB",
     "sbom_component_count": 169,
-    "vulnerability_total": 414,
+    "vulnerability_total": 460,
     "vulnerability_by_severity": {
-      "Critical": 16,
-      "High": 129,
-      "Medium": 145,
+      "Medium": 149,
+      "Critical": 22,
+      "High": 167,
       "Negligible": 54,
-      "Unknown": 47,
-      "Low": 23
+      "Low": 24,
+      "Unknown": 44
     }
   },
   "slim": {
     "image_tag": "dip-fastapi:slim",
-    "size_bytes": 21448485,
-    "size_human": "21.45MB",
+    "size_bytes": 55171584,
+    "size_human": "55.17MB",
     "sbom_component_count": 6,
-    "vulnerability_total": 42,
+    "vulnerability_total": 43,
     "vulnerability_by_severity": {
       "High": 13,
       "Medium": 23,
-      "Low": 5,
+      "Low": 6,
       "Negligible": 1
     }
   },
-  "size_reduction_pct": 65.6,
+  "size_reduction_pct": 70.2,
   "component_reduction": 163,
-  "vulnerability_reduction": 372,
+  "vulnerability_reduction": 417,
   "functional_tests_original": "PASS (tests/specific/fastapi/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/fastapi/test.sh)"
 }

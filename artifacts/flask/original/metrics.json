@@ -2,17 +2,18 @@
   "example": "flask",
   "stage": "original",
   "image_tag": "dip-flask:original",
-  "generated_at": "2026-08-28T09:43:54Z",
-  "size_bytes": 23798617,
-  "size_human": "23.80MB",
+  "generated_at": "2026-09-09T19:22:52Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 72730112,
+  "size_human": "72.73MB",
   "sbom_component_count": 80,
-  "vulnerability_total": 51,
+  "vulnerability_total": 41,
   "vulnerability_by_severity": {
-    "High": 21,
+    "High": 11,
     "Medium": 22,
-    "Unknown": 4,
-    "Low": 3,
-    "Negligible": 1
+    "Low": 4,
+    "Negligible": 1,
+    "Unknown": 3
   },
   "functional_tests": "PASS (tests/specific/flask/test.sh)"
 }

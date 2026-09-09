@@ -2,16 +2,17 @@
   "example": "vuejs",
   "stage": "original",
   "image_tag": "dip-vuejs:original",
-  "generated_at": "2026-08-27T12:35:24Z",
-  "size_bytes": 107651316,
-  "size_human": "107.65MB",
+  "generated_at": "2026-09-09T20:39:12Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 369480192,
+  "size_human": "369.48MB",
   "sbom_component_count": 2183,
-  "vulnerability_total": 530,
+  "vulnerability_total": 554,
   "vulnerability_by_severity": {
     "Critical": 32,
-    "High": 271,
-    "Medium": 188,
-    "Low": 39
+    "High": 283,
+    "Medium": 195,
+    "Low": 44
   },
   "functional_tests": "PASS (tests/specific/vuejs/test.sh)"
 }

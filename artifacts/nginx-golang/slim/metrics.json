@@ -2,9 +2,10 @@
   "example": "nginx-golang",
   "stage": "slim",
   "image_tag": "dip-nginx-golang-backend:slim",
-  "generated_at": "2026-08-28T09:45:56Z",
-  "size_bytes": 4804703,
-  "size_human": "4.80MB",
+  "generated_at": "2026-09-09T20:01:14Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 8186368,
+  "size_human": "8.19MB",
   "sbom_component_count": 3,
   "vulnerability_total": 43,
   "vulnerability_by_severity": {

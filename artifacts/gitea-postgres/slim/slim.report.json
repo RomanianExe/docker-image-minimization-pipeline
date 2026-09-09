@@ -24,8 +24,8 @@
     "identity": {
       "id": "sha256:79814cfc668dec4406178316613c1a918e0f29cd123cee895faf1ca58bab95b3",
       "tags": [
-        "latest",
-        "original"
+        "original",
+        "latest"
       ],
       "names": [
         "gitea/gitea:latest",
@@ -63,8 +63,8 @@
   "minified_image_size": 139659321,
   "minified_image_size_human": "140 MB",
   "minified_image": "dip-gitea-postgres:slim",
-  "minified_image_id": "sha256:103100dd0cdc59a0184dc22f02d600d01415267f967b0f32b6761eb2eddd7cc3",
-  "minified_image_digest": "sha256:0450db4b1af22424bfa682f6b9c30f6a67ae9f4b944e3a8ec36f27fc3a5ae46d",
+  "minified_image_id": "sha256:f5ba00a34a246cce6809e63c34f574bbf1a413178c211badac9e040d47e1bfa8",
+  "minified_image_digest": "sha256:a1c01a0c747f9f239ba976d50c43f16869b440cf8f1fb3c09853e9766ae46fbb",
   "minified_image_has_data": true,
   "minified_by": 1.3683452105570526,
   "artifact_location": "/tmp/mint-state/.mint-state/images/79814cfc668dec4406178316613c1a918e0f29cd123cee895faf1ca58bab95b3/artifacts",

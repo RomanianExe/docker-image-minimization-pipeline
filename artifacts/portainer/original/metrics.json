@@ -2,16 +2,16 @@
   "example": "portainer",
   "stage": "original",
   "image_tag": "dip-portainer:original",
-  "generated_at": "2026-08-31T22:01:40Z",
-  "size_bytes": 48553782,
-  "size_human": "48.55MB",
+  "generated_at": "2026-09-09T20:08:22Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 163918848,
+  "size_human": "163.92MB",
   "sbom_component_count": 328,
-  "vulnerability_total": 34,
+  "vulnerability_total": 39,
   "vulnerability_by_severity": {
-    "High": 20,
-    "Critical": 2,
-    "Medium": 8,
-    "Unknown": 4
+    "High": 24,
+    "Critical": 6,
+    "Medium": 9
   },
   "functional_tests": "PASS (tests/specific/portainer/test.sh)"
 }

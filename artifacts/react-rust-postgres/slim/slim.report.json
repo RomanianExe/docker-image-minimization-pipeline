@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,23 +22,17 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:7ae49670d3b4da7e625eff93dac3ebd72cdcc8496b0454499d254ffeea3da9f9",
+      "id": "sha256:a8330683bb05ddebc23b54db649f4ca69c4997dd5761c932713b62660da02385",
       "tags": [
         "original"
       ],
       "names": [
         "dip-react-rust-postgres:original"
-      ],
-      "digests": [
-        "sha256:7ae49670d3b4da7e625eff93dac3ebd72cdcc8496b0454499d254ffeea3da9f9"
-      ],
-      "full_digests": [
-        "dip-react-rust-postgres@sha256:7ae49670d3b4da7e625eff93dac3ebd72cdcc8496b0454499d254ffeea3da9f9"
       ]
     },
-    "size": 30717422,
-    "size_human": "31 MB",
-    "create_time": "2026-08-31T20:30:51Z",
+    "size": 82326328,
+    "size_human": "82 MB",
+    "create_time": "2026-09-09T20:28:19Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "exposed_ports": [
@@ -48,7 +42,7 @@
     "labels": {
       "com.docker.compose.project": "dip-react-rust-postgres",
       "com.docker.compose.service": "backend",
-      "com.docker.compose.version": "5.5.0"
+      "com.docker.compose.version": "5.4.0"
     },
     "env_vars": [
       "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
@@ -58,30 +52,30 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 4013483,
-  "minified_image_size_human": "4.0 MB",
+  "minified_image_size": 9858953,
+  "minified_image_size_human": "9.9 MB",
   "minified_image": "dip-react-rust-postgres:slim",
-  "minified_image_id": "sha256:f8d42c0ada7071c86a583088251b921ebe032b091356dfa14bfb1a44c18d707f",
-  "minified_image_digest": "sha256:5a0e4deec0cc3f4366b99eb686f0f923a7031e983c2e9c1f3f6f855efb395efa",
+  "minified_image_id": "sha256:776a40dfe5d7b2274b2d73bafece9ace813bc35ac3fb991348df61d4ccc0c013",
+  "minified_image_digest": "sha256:cc22d41436271deafce3c47edf5d5145fbeb7406b7ac207a33e4037a9ffe8b4e",
   "minified_image_has_data": true,
-  "minified_by": 7.653557271825992,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/7ae49670d3b4da7e625eff93dac3ebd72cdcc8496b0454499d254ffeea3da9f9/artifacts",
+  "minified_by": 8.350412868384705,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/a8330683bb05ddebc23b54db649f4ca69c4997dd5761c932713b62660da02385/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-react-rust-postgres-seccomp.json",
   "apparmor_profile_name": "dip-react-rust-postgres-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:7ae49670d3b4da7e625eff93dac3ebd72cdcc8496b0454499d254ffeea3da9f9",
+      "id": "sha256:a8330683bb05ddebc23b54db649f4ca69c4997dd5761c932713b62660da02385",
       "full_name": "dip-react-rust-postgres:original",
       "repo_name": "dip-react-rust-postgres",
       "version_tag": "original",
       "raw_tags": [
         "dip-react-rust-postgres:original"
       ],
-      "create_time": "2026-08-31T20:30:51Z",
-      "new_size": 92753920,
-      "new_size_human": "93 MB",
+      "create_time": "2026-09-09T20:28:19Z",
+      "new_size": 82326328,
+      "new_size_human": "82 MB",
       "instructions": [
         {
           "type": "RUN",
@@ -90,8 +84,8 @@
           "is_exec_form": true,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 85250048,
-          "size_human": "85 MB",
+          "size": 74829488,
+          "size_human": "75 MB",
           "command_snippet": "RUN []",
           "command_all": "RUN []",
           "system_commands": [
@@ -104,7 +98,7 @@
         },
         {
           "type": "ENV",
-          "time": "2026-08-31T20:30:51Z",
+          "time": "2026-09-09T20:28:19Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -114,13 +108,13 @@
           "command_all": "ENV ROCKET_ENV=production",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-31T23:30:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:15:00+03:00",
           "inst_set_time_index": 1,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "EXPOSE",
-          "time": "2026-08-31T20:30:51Z",
+          "time": "2026-09-09T20:28:19Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
@@ -130,30 +124,30 @@
           "command_all": "EXPOSE 8000/tcp",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-31T23:30:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:15:00+03:00",
           "inst_set_time_index": 1,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "COPY",
-          "time": "2026-08-31T20:30:51Z",
+          "time": "2026-09-09T20:28:19Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 7503872,
+          "size": 7496840,
           "size_human": "7.5 MB",
           "params": "/code/target/release/react-rust-postgres /react-rust-postgres",
           "command_snippet": "COPY /code/target/release/react-rust-postgre...",
           "command_all": "COPY /code/target/release/react-rust-postgres /react-rust-postgres",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-31T23:30:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:15:00+03:00",
           "inst_set_time_index": 1,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-31T20:30:51Z",
+          "time": "2026-09-09T20:28:19Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -168,7 +162,7 @@
             "dip-react-rust-postgres:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-31T23:30:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:15:00+03:00",
           "inst_set_time_index": 1,
           "inst_set_time_reverse_index": 0
         }
