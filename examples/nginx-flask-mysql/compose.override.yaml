@@ -28,6 +28,8 @@ services:
     container_name: ${IMAGE_NAME}-test
     build:
       dockerfile: ${DIP_ROOT}/examples/nginx-flask-mysql/Dockerfile.patched
+      additional_contexts:
+        dip_locks: ${DIP_ROOT}/examples/nginx-flask-mysql
     volumes: !reset null
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"

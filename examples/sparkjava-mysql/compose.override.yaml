@@ -15,6 +15,10 @@ services:
   db:
     image: mariadb:10.6.4-focal@sha256:c014ba1efc5dbd711d0520c7762d57807f35549de3414eb31e942a420c8a2ed2
   backend:
+    build:
+      dockerfile: ${DIP_ROOT}/examples/sparkjava-mysql/Dockerfile.patched
+      additional_contexts:
+        dip_pom: ${DIP_ROOT}/examples/sparkjava-mysql
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test
     volumes: !reset null

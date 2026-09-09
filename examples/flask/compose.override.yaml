@@ -13,6 +13,10 @@
 #                     processed without colliding.
 services:
   web:
+    build:
+      dockerfile: ${DIP_ROOT}/examples/flask/Dockerfile.patched
+      additional_contexts:
+        dip_locks: ${DIP_ROOT}/examples/flask
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test
     volumes: !reset null

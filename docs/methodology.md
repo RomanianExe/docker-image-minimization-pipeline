@@ -169,6 +169,31 @@ the original count and may under-report OS-package vulnerabilities.
 build original → SBOM + vulnerability scan (security decisions made here) → slim → deploy slim image
 ```
 
+### 5.1 Reproducibility boundary
+
+The pipeline pins every effective external runtime image by digest. Local Node installs already
+use committed `package-lock.json` files through `npm ci`, Vue uses committed `yarn.lock`
+through `yarn install --immutable`, and the Go examples use exact `go.mod` requirements with
+committed `go.sum` checksums.
+
+The Python examples use project-owned, hash-checked `requirements.lock` files supplied to the
+otherwise unchanged vendor build contexts through Compose named build contexts. These locks freeze
+the exact dependency graphs observed in the tested original images. Angular's separately installed
+global CLI is pinned to `@angular/cli@13.3.11`, while its application dependencies continue to
+use the vendor `npm ci` flow.
+
+`react-rust-postgres` uses a project-owned `Cargo.lock` with `--locked`. Its original image
+was unavailable when the lock was created, so it is explicitly a new controlled baseline generated
+from the unchanged vendored `Cargo.toml` and Rust 1.90 toolchain, not a reconstruction of a
+historical resolution. SparkJava and SparkJava MySQL likewise freeze the controlled-resolution
+versions of `maven-compiler-plugin` (3.1) and `maven-assembly-plugin` (2.2-beta-5), without
+introducing a Maven lockfile system.
+
+This boundary is deliberately incomplete. The Nginx WSGI images still use `apk add curl` and
+`apk add bash`; package-version pins alone cannot freeze mutable Alpine repositories, so those
+remain documented residual inputs rather than fragile apparent pins. Dockerfile base-image tags
+and Linux package-repository snapshots are also outside the current reproducibility scope.
+
 ## 6. Excluded Cluster: Rust/WASM (out of scope)
 
 The Rust/WASM cluster (`wasmedge-mysql-nginx`, `wasmedge-kafka-mysql`, and — while

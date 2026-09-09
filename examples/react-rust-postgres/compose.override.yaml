@@ -49,6 +49,8 @@ services:
     build:
       dockerfile: ${DIP_ROOT}/examples/react-rust-postgres/Dockerfile.patched
       target: production
+      additional_contexts:
+        dip_rust_lock: ${DIP_ROOT}/examples/react-rust-postgres
     depends_on: !override
       db:
         condition: service_healthy
