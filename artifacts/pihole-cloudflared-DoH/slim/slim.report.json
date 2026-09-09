@@ -44,12 +44,12 @@
     "runtime_name": "docker",
     "architecture": "amd64",
     "exposed_ports": [
-      "53/udp",
-      "67/udp",
-      "80/tcp",
       "123/udp",
       "443/tcp",
-      "53/tcp"
+      "53/tcp",
+      "53/udp",
+      "67/udp",
+      "80/tcp"
     ],
     "os": "linux",
     "labels": {
@@ -71,13 +71,13 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 59312313,
-  "minified_image_size_human": "59 MB",
+  "minified_image_size": 60094115,
+  "minified_image_size_human": "60 MB",
   "minified_image": "dip-pihole-cloudflared-doh:slim",
-  "minified_image_id": "sha256:96c16ce92d1efad028120c78693b1970a9c2f81cdb9188b6db5a60a38da1b6a0",
-  "minified_image_digest": "sha256:80a6e031902739f2a0dc2a7d5920145224f6703b7048aa62a6250f987060060e",
+  "minified_image_id": "sha256:54283ed538f33f8322e60facbca42c47c230cdbc625822ccd945f430081af923",
+  "minified_image_digest": "sha256:7bcfeebba12d26263a5f809d3c4052f0c20cf9ef675058960b78f067dd3e3bbb",
   "minified_image_has_data": true,
-  "minified_by": 1.6676172450061086,
+  "minified_by": 1.6459221672538151,
   "artifact_location": "/tmp/mint-state/.mint-state/images/27b410ff85b3449158c1ed568b4078c6037463952ad9939b673b28ba13bd9aa7/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-pihole-cloudflared-doh-seccomp.json",

@@ -2,7 +2,7 @@
   "example": "pihole-cloudflared-DoH",
   "stage": "original",
   "image_tag": "dip-pihole-cloudflared-doh:original",
-  "generated_at": "2026-09-09T20:03:46Z",
+  "generated_at": "2026-09-09T21:42:39Z",
   "size_metric": "oci_uncompressed_layer_bytes",
   "size_bytes": 101292544,
   "size_human": "101.29MB",

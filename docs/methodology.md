@@ -547,13 +547,14 @@ attempts and is documented in 12.5.
 
 ### 12.2 Results
 
-Four examples completed the full pipeline with functional tests passing on both stages.
+Five examples completed the full pipeline with functional tests passing on both stages.
 
 | Example | Target service | Size | Reduction | SBOM components | Vulnerabilities |
 |---|---|---|---|---|---|
 | `wordpress-mysql` | `wordpress:latest` | 274.73 → 140.20 MB | **-49.0%** | 273 → 18 | 1045 → 4 |
 | `nextcloud-redis-mariadb` | `nextcloud:apache` | 555.55 → 407.68 MB | **-26.6%** | 459 → 170 | 1261 → 7 |
 | `portainer` | `portainer/portainer-ce:alpine` | 48.55 → 38.74 MB | **-20.2%** | 328 → 312 | 34 → 11 |
+| `pihole-cloudflared-DoH` | `pihole/pihole:2026.07.2` | 101.29 → 60.47 MB | **-40.3%** | 94 → 5 | 112 → 23 |
 | `prometheus-grafana` | `grafana/grafana:latest` | 474.10 → 413.28 MB | **-12.8%** | 1791 → 1760 | 178 → 157 |
 
 The size reductions are modest next to the buildable examples (median ~54%), and that is
@@ -604,20 +605,20 @@ Grouped by cause:
   contract being evaluated.
 - `gitea-postgres` — Mint cannot preserve the image's runtime volume semantics. See 12.6.
 
-**Reached the slim stage but not validated (4).** `nextcloud-postgres`,
-`pihole-cloudflared-DoH`, `minecraft` and `elasticsearch-logstash-kibana` each hit
-a distinct, diagnosed cause with a fix written into their configuration (`SLIM_INCLUDE_BINS`,
-`SLIM_INCLUDE_PATHS`, `COMPOSE_NETWORK`, a host-side test assertion). Those fixes are **not
-validated** — the runs that would confirm them were not completed. The configurations are left
-in place and honestly labelled as unverified rather than presented as results.
+**Reached the slim stage but not validated (3).** `nextcloud-postgres`, `minecraft` and
+`elasticsearch-logstash-kibana` each hit a distinct, diagnosed cause with a fix written into
+their configuration (`SLIM_INCLUDE_BINS`, `SLIM_INCLUDE_PATHS`, or a host-side test assertion).
+Those fixes are **not validated** — the runs that would confirm them were not completed. The
+configurations are left in place and honestly labelled as unverified rather than presented as
+results.
 
-Two of the five failed for the same pipeline-side reason, worth naming because the message is
-misleading: mint answers `info=param.error status='unknown.network'` and exits `code=16777220`
-when `--network` names a compose network that does exist. It is not reporting a missing
-network — it is reporting that `pipeline/slim.sh` built the name from the compose default
+The earlier Pi-hole and ELK failures shared a pipeline-side cause worth naming because the
+message is misleading: mint answers `info=param.error status='unknown.network'` and exits
+`code=16777220` when `--network` names a compose network that does exist. It is not reporting a
+missing network — it is reporting that `pipeline/slim.sh` built the name from the compose default
 (`dip-<example>_default`) while the example declares its own (`dns-net` for
 `pihole-cloudflared-DoH`, `elastic` for `elasticsearch-logstash-kibana`). `COMPOSE_NETWORK`
-exists for exactly this and was simply not set for those two.
+exists for exactly this and is now set for both.
 
 **A note on `elasticsearch-logstash-kibana`, which was previously filed here as blocked by
 the environment.** It is not, and the distinction matters. The vendor pins 7.16.1, whose
@@ -692,7 +693,32 @@ exclusion, removal of explicit path preservation, and `--include-new=false` did 
 upstream volume semantics. Ownership workarounds were intentionally rejected because they would
 modify the workload rather than preserve behavioral equivalence.
 
-### 12.7 Pipeline changes introduced by this category
+### 12.7 `pihole-cloudflared-DoH`: restoring required empty directory metadata
+
+Mint retained the Pi-hole login template but removed the image-owned empty `/etc/pihole`
+directory. This is not runtime state: in the original image it is a `root:root`, mode `0755`
+directory with no contents. Without that initial scaffold, normal FTL startup did not apply
+`FTLCONF_webserver_api_password`, wrote an empty password hash, and redirected `/admin/login`
+as though the user were already authenticated. The configuration and generated data under that
+directory remain runtime state and must not be copied into the minimized image.
+
+Five narrowly observed web files are preserved with `SLIM_INCLUDE_PATHS`:
+`index.lp`, the authenticated header/sidebar/footer templates, and `img/logo-bw.svg`. They repair
+the otherwise missing rendered `/admin/` route without retaining the entire web tree.
+
+Mint has no safe "retain this empty directory only" option: including `/etc/pihole` risks baking
+the analysis run's generated configuration. The Pi-hole-only `SLIM_POST_MINT_DOCKERFILE` wrapper
+therefore adds a final image layer that contains exactly `/etc/pihole/` with `root:root` ownership
+and mode `0755`. Its digest-pinned helper is build-only; the final stage has no `RUN`, so it does
+not require a shell in the minimized image. The layer adds 2,048 normalized uncompressed bytes.
+
+The repaired final image was verified before startup to contain only that directory. At normal
+startup FTL reports `FTLCONF_webserver_api_password is used`, writes a non-empty password hash,
+and serves the login route correctly; the rendered admin route, external DNS query, local
+`pi.hole` DNS answer, and cloudflared dependency all pass. SBOM, Grype, metrics, and comparison
+operate on this repaired final `:slim` tag, not Mint's intermediate output.
+
+### 12.8 Pipeline changes introduced by this category
 
 All are additive; the 25 buildable examples are unaffected.
 
@@ -703,6 +729,7 @@ All are additive; the 25 buildable examples are unaffected.
 | `SLIM_EXCLUDE_PATTERNS` | Drop that path from the output image (required alongside the mount) |
 | `SLIM_INCLUDE_BINS` | Keep a binary the analysis may not observe |
 | `SLIM_INCLUDE_PATHS` | Keep a path the analysis may not observe |
+| `SLIM_POST_MINT_DOCKERFILE` | Example-only final image-metadata repair after Mint |
 | `SLIM_PROBE=none` + `SLIM_RUN_SECONDS` | For examples that speak no HTTP |
 | `POST_PROBE_CONTENT_TYPE` | Form-urlencoded probe bodies, not just JSON |
 | `APP_MOUNT` absolute paths | The Docker socket, for portainer |

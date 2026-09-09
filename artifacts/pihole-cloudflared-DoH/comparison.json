@@ -1,0 +1,34 @@
+{
+  "example": "pihole-cloudflared-DoH",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "original": {
+    "image_tag": "dip-pihole-cloudflared-doh:original",
+    "size_bytes": 101292544,
+    "size_human": "101.29MB",
+    "sbom_component_count": 94,
+    "vulnerability_total": 112,
+    "vulnerability_by_severity": {
+      "High": 58,
+      "Critical": 8,
+      "Medium": 44,
+      "Unknown": 2
+    }
+  },
+  "slim": {
+    "image_tag": "dip-pihole-cloudflared-doh:slim",
+    "size_bytes": 60469760,
+    "size_human": "60.47MB",
+    "sbom_component_count": 5,
+    "vulnerability_total": 23,
+    "vulnerability_by_severity": {
+      "High": 7,
+      "Medium": 14,
+      "Low": 2
+    }
+  },
+  "size_reduction_pct": 40.3,
+  "component_reduction": 89,
+  "vulnerability_reduction": 89,
+  "functional_tests_original": "PASS (tests/specific/pihole-cloudflared-DoH/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/pihole-cloudflared-DoH/test.sh)"
+}
