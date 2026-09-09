@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-golang-postgres:original`) | Slim (`dip-nginx-golang-postgres:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 123.48MB | 4.91MB | **-96.0%** |
+| Image size (normalized OCI uncompressed layers) | 348.08MB | 8.60MB | **-97.5%** |
 | SBOM components (Syft) | 61 | 5 | -56 |
-| Vulnerabilities (Grype) | 583 (277 High / 246 Medium / 38 Critical / 20 Low / 2 Unknown) | 42 (25 High / 14 Medium / 2 Critical / 1 Low) | -541 |
-| Functional tests (route through nginx + PostgreSQL round trip) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 583 | 42 | -541 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Which image this measures, and why that needed correcting
 

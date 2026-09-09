@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-sparkjava:original`) | Slim (`dip-sparkjava:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 97.44 MB | 53.96 MB | **-44.6%** |
+| Image size (normalized OCI uncompressed layers) | 274.24MB | 134.74MB | **-50.9%** |
 | SBOM components (Syft) | 170 | 20 | -150 |
-| Vulnerabilities (Grype) | 462 (28 High / 281 Medium / 141 Low / 12 Negligible) | 44 (15 High / 19 Medium / 10 Low) | -418 |
+| Vulnerabilities (Grype) | 519 | 47 | -472 |
 | Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## First JVM example: smallest minimization ratio observed so far
 Only a **1.81x** reduction (vs. 5-6x for the Python/Node examples). The JVM

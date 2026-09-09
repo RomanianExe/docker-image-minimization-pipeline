@@ -7,10 +7,10 @@ elasticsearch-logstash-kibana,Java/Node,prebuilt,kibana:7.17.28@sha256:69f188281
 fastapi,Python,compose build,,processed,184939008,169,460,55171584,6,43,70.2,163,417,PASS,PASS,
 flask,Python,compose build,,processed,72730112,80,41,23323136,2,21,67.9,78,20,PASS,PASS,
 flask-redis,Python,compose build,,processed,77639168,82,41,28742144,3,21,63.0,79,20,PASS,PASS,
-gitea-postgres,Go,prebuilt,gitea/gitea:1.27.3@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef,baseline only,192115200,338,145,,,,,,,,,slim image is sound; mint's leftover `/data` skeleton pre-populates the named volume as root
-minecraft,Java,prebuilt,itzg/minecraft-server@sha256:d686c51f034dfd8f3a27436340eaad7baf5cb08a873a2d5edb3cbede7e737f9f,baseline only,881534976,486,1442,,,,,,,,,"reached slim; host-side test assertion rewritten, not validated"
-nextcloud-postgres,PHP,prebuilt,nextcloud:34.0.3-apache@sha256:b97df9e0e1ee3c8c6cc009cb3f12ddce915d624d543b3bb93882025fe323a407,baseline only,1558183936,459,1365,,,,,,,,,"reached slim; fix written (`SLIM_INCLUDE_BINS=/usr/bin/rsync`), not validated"
-nextcloud-redis-mariadb,PHP,prebuilt,nextcloud:34.0.3-apache@sha256:b97df9e0e1ee3c8c6cc009cb3f12ddce915d624d543b3bb93882025fe323a407,processed,1558183936,459,1365,407677919,170,7,26.6,289,1254,PASS,PASS,
+gitea-postgres,Go,prebuilt,gitea/gitea:1.27.3@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef,baseline only,192115200,338,145,,,,,,,,,Mint cannot preserve the upstream `/data` volume-initialization semantics
+minecraft,Java,prebuilt,itzg/minecraft-server@sha256:d686c51f034dfd8f3a27436340eaad7baf5cb08a873a2d5edb3cbede7e737f9f,processed,881534976,486,1442,257743360,178,60,70.8,308,1382,PASS,PASS,
+nextcloud-postgres,PHP,prebuilt,nextcloud:34.0.3-apache@sha256:b97df9e0e1ee3c8c6cc009cb3f12ddce915d624d543b3bb93882025fe323a407,processed,1558183936,459,1365,1604986368,170,7,-3.0,289,1358,PASS,PASS,
+nextcloud-redis-mariadb,PHP,prebuilt,nextcloud:34.0.3-apache@sha256:b97df9e0e1ee3c8c6cc009cb3f12ddce915d624d543b3bb93882025fe323a407,processed,1558183936,459,1365,1604991488,170,7,-3.0,289,1358,PASS,PASS,
 nginx-aspnet-mysql,.NET,compose build,,processed,212761600,103,329,100414464,4,1,52.8,99,328,PASS,PASS,
 nginx-flask-mongo,Python,compose build,,processed,80377856,82,41,29252096,2,21,63.6,80,20,PASS,PASS,
 nginx-flask-mysql,Python,compose build,,processed,76188160,80,52,26728448,2,21,64.9,78,31,PASS,PASS,
@@ -19,8 +19,8 @@ nginx-golang-mysql,Go,compose build,,processed,348119040,62,582,8112640,6,41,97.
 nginx-golang-postgres,Go,compose build,,processed,348082688,61,583,8600064,5,42,97.5,56,541,PASS,PASS,
 nginx-nodejs-redis,Node/JS,compose build,,processed,125442048,512,254,80753152,58,93,35.6,454,161,PASS,PASS,
 nginx-wsgi-flask,Python,compose build,,processed,84147200,75,333,19171328,2,90,77.2,73,243,PASS,PASS,
-pihole-cloudflared-DoH,C,prebuilt,pihole/pihole:2026.07.2@sha256:f7d1be836e3bc608b56d82fc9904f5a831cdfbc0dc9c6d58f94e4c985c70038b,baseline only,101292544,94,112,,,,,,,,,"reached slim; fix written (`COMPOSE_NETWORK=dns-net`), not validated"
-plex,C++,prebuilt,linuxserver/plex:1.43.3.10896-cb3ebc72d-ls323@sha256:de95bb12db3ed4e34ad5983113b8af967cfd77786e15669c0703c22133e10107,baseline only,440616448,164,171,,,,,,,,,docker-slim: artifact copier fails on the s6-overlay layout
+pihole-cloudflared-DoH,C,prebuilt,pihole/pihole:2026.07.2@sha256:f7d1be836e3bc608b56d82fc9904f5a831cdfbc0dc9c6d58f94e4c985c70038b,processed,101292544,94,112,60469760,5,23,40.3,89,89,PASS,PASS,
+plex,C++,prebuilt,linuxserver/plex:1.43.3.10896-cb3ebc72d-ls323@sha256:de95bb12db3ed4e34ad5983113b8af967cfd77786e15669c0703c22133e10107,baseline only,440616448,164,171,,,,,,,,,Mint instrumentation makes the s6-overlay v3 `/init` entrypoint non-PID-1
 portainer,Go,prebuilt,portainer/portainer-ce:2.45.0-alpine@sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949,processed,163918848,328,39,106153984,312,16,35.2,16,23,PASS,PASS,
 postgresql-pgadmin,Python,prebuilt,dpage/pgadmin4:9.17@sha256:2f4ce946ddf8360680d7eff4eaba1d91859eb6b4003e6623bad5c63a322c2f4d,processed,547432960,210,65,135214080,6,21,75.3,204,44,PASS,PASS,
 prometheus-grafana,Go,prebuilt,grafana/grafana:13.2.1@sha256:f772d434e8fab0049deb2b1b30abd43342bcfca1537614aa8d36080232cf4283,processed,1405822464,1773,221,998405632,1650,164,29.0,123,57,PASS,PASS,
@@ -34,5 +34,5 @@ sparkjava-mysql,Java,compose build,,processed,278189056,172,525,138684928,22,53,
 spring-postgres,Java,compose build,,processed,314953216,257,635,173874688,106,163,44.8,151,472,PASS,PASS,
 traefik-golang,Go,compose build,,processed,6242304,2,40,6243840,2,40,-0.0,0,0,PASS,PASS,
 vuejs,Node/JS,compose build,,processed,369480192,2183,554,120688640,590,194,67.3,1593,360,PASS,PASS,
-wireguard,C,prebuilt,linuxserver/wireguard:1.0.20260223-r0-ls121@sha256:bf03578ef7318ccc7675b4a82beac4d35cd0da2253194f6b6ecf61656b40f0ee,baseline only,124166144,270,78,,,,,,,,,"reached slim; fix written (`SLIM_INCLUDE_PATHS` for s6), not validated"
+wireguard,C,prebuilt,linuxserver/wireguard:1.0.20260223-r0-ls121@sha256:bf03578ef7318ccc7675b4a82beac4d35cd0da2253194f6b6ecf61656b40f0ee,baseline only,124166144,270,78,,,,,,,,,Mint instrumentation makes the s6-overlay v3 `/init` entrypoint non-PID-1
 wordpress-mysql,PHP,prebuilt,wordpress:7.1.0-apache@sha256:5a93c470ae8220fddf71f6ebe3bc94e615ddc2ae4d9810f795b830fb11c41a17,processed,801263104,273,1115,360488448,18,4,55.0,255,1111,PASS,PASS,

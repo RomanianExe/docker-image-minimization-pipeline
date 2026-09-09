@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-flask-mysql:original`) | Slim (`dip-nginx-flask-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 24.36 MB | 11.05 MB | **-54.6%** |
+| Image size (normalized OCI uncompressed layers) | 76.19MB | 26.73MB | **-64.9%** |
 | SBOM components (Syft) | 80 | 2 | -78 |
-| Vulnerabilities (Grype) | 62 (24 High / 28 Medium / 5 Low / 1 Negligible / 4 Unknown) | 20 (5 High / 11 Medium / 3 Low / 1 Negligible) | -42 |
-| Functional tests (direct + through proxy, exact 4-row DB check) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 52 | 21 | -31 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Recovered via a one-line pipeline-side patch
 Excluded initially because `requirements.txt` under-specifies its
@@ -18,7 +20,7 @@ which was already part of this pipeline's capabilities. No vendor file was
 edited; the patch lives entirely in this project's `examples/` directory.
 
 ## Consistent with the Alpine metadata-loss pattern
-54.6% reduction and SBOM dropping to 2 components matches `nginx-flask-mongo`
+64.9% reduction and SBOM dropping to 2 components matches `nginx-flask-mongo`
 (also Alpine-based Python, similarly extreme metadata loss) — reinforces §5
 and §7's earlier findings rather than revealing anything new.
 

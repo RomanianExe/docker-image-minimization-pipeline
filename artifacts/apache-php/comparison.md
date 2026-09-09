@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-apache-php:original`) | Slim (`dip-apache-php:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 167.77 MB | 33.72 MB | **-79.9%** |
+| Image size (normalized OCI uncompressed layers) | 480.78MB | 77.46MB | **-83.9%** |
 | SBOM components (Syft) | 197 | 4 | -193 |
-| Vulnerabilities (Grype) | 1929 (183 Critical / 488 High / 410 Medium / 48 Low / 784 Negligible / 16 Unknown) | 59 (12 Critical / 26 High / 19 Medium / 2 Low) | -1870 |
+| Vulnerabilities (Grype) | 1955 | 59 | -1896 |
 | Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## First non-Python example: build adaptation required
 Unlike `flask`/`flask-redis`, the vendored `apache-php` Dockerfile does not `COPY`

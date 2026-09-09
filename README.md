@@ -7,10 +7,10 @@ against the minimized image, and reports the before/after difference in size, so
 components ([Syft](https://github.com/anchore/syft)) and vulnerabilities
 ([Grype](https://github.com/anchore/grype)).
 
-**Headline result: all 25 buildable awesome-compose examples processed end to end, plus 4
-prebuilt ones — 29 validated results in total. The median size reduction is 54.5% across the
-28 examples that had anything to remove, and the functional tests pass on every minimized
-image.** Full numbers in
+**Headline result: all 25 buildable awesome-compose examples processed end to end, plus 9
+prebuilt ones — 34 validated results in total. The median size reduction is 63.6% across the
+33 examples other than the already-`scratch` baseline, and the functional tests pass on every
+minimized image.** Full numbers in
 [`artifacts/summary.md`](artifacts/summary.md); the reasoning, the negative results and the
 failures are in [`docs/methodology.md`](docs/methodology.md).
 
@@ -21,6 +21,9 @@ things, so a number without a passing test beside it is not reported here.
 ---
 
 ## 1. Requirements
+
+See [REQUIREMENTS.md](REQUIREMENTS.md) for the complete host-tool checklist, installation
+notes, verification commands, and publishing-only requirements.
 
 | Tool | Version used | Purpose |
 |---|---|---|
@@ -130,7 +133,7 @@ Common optional fields: `COMPOSE_DEPS` (dependency services to start), `COMPOSE_
 (the subset Slim needs), `STARTUP_WAIT`, `PROXY_HOST_PORT`, `APP_ENV`, `EXTRA_PROBE_PATHS`,
 `POST_PROBE_PATH`/`POST_PROBE_BODY` (Slim's probe is GET-only by default — see §9 of the
 methodology for the regression that made this necessary), and the `SLIM_*` family for
-prebuilt images (§12.7). Each existing `pipeline.env` documents its own non-obvious fields
+prebuilt images (§12.9). Each existing `pipeline.env` documents its own non-obvious fields
 in comments; `examples/flask-redis/pipeline.env` is the simplest complete one.
 
 **2 — `examples/<name>/compose.override.yaml`.** Layered over the vendor file, it pins the
@@ -222,8 +225,8 @@ README index is regenerated from those manifests and is never edited by hand.
   results.
 - **12 prebuilt** — ship no Dockerfile, only an `image:`. `docker compose build` has nothing
   to build, so they fall outside the core methodology and are **excluded by default**
-  (§1.1). They were carried through anyway as an explicit extension (§12): 4 produced
-  validated slim images and are reported; 8 are recorded as diagnosed failures, each with a
+  (§1.1). They were carried through anyway as an explicit extension (§12): 9 produced
+  validated slim images and are reported; 3 are recorded as diagnosed failures, each with a
   passing baseline and a stated cause.
 - **2 WasmEdge** — excluded permanently: no `io.containerd.wasmedge.v1` runtime on the host.
 

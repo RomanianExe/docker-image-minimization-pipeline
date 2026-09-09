@@ -1,4 +1,6 @@
 # Functional Baseline — `spring-postgres` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## New pattern: real production stage (exploded JAR layers), not a fat jar
 Unlike `sparkjava`/`sparkjava-mysql` (single fat jar copied whole), this

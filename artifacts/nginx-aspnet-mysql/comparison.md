@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-aspnet-mysql:original`) | Slim (`dip-nginx-aspnet-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 86.71 MB | 49.00 MB | **-43.5%** |
+| Image size (normalized OCI uncompressed layers) | 212.76MB | 100.41MB | **-52.8%** |
 | SBOM components (Syft) | 103 | 4 | -99 |
-| Vulnerabilities (Grype) | 325 (10 Critical / 91 High / 109 Medium / 10 Low / 85 Negligible / 20 Unknown) | 1 (1 High) | -324 |
-| Functional tests (direct + through proxy, exact 5-row DB check) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 329 | 1 | -328 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Extreme metadata loss, consistent with aspnet-mssql
 Dropping to just 1 reported vulnerability (from 325) is an even more

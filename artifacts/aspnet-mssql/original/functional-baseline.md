@@ -1,4 +1,6 @@
 # Functional Baseline — `aspnet-mssql` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## First .NET example, and first multi-page app in the pipeline
 Unlike every previous example (a single route/behavior), this is the stock
@@ -28,7 +30,7 @@ reachable in production. Probed here: `/Home/About`, `/Home/Contact`,
 ## Build verification
 - Built via `pipeline/build.sh aspnet-mssql original`
   (`docker build --target final`).
-- Image tag: `dip-aspnet-mssql:original`, real size (`docker inspect .Size`): 85.39MB.
+- Image tag: `dip-aspnet-mssql:original`, normalized OCI uncompressed-layer size: 211.92MB.
 
 ## Exposed functionality
 - Container listens on port 80.

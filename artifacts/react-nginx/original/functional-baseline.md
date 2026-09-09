@@ -1,4 +1,6 @@
 # Functional Baseline — `react-nginx` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## First "real, used" multi-stage build in this pipeline
 Unlike the `nginx-golang*`/`react-express-mysql`/`react-java-mysql`/`react-rust-postgres`
@@ -14,7 +16,7 @@ which would have been an error).
 ## Build verification
 - Built via `pipeline/build.sh react-nginx original`
   (`docker build`, no `--target`, so the last stage — the nginx one — is built).
-- Image tag: `dip-react-nginx:original`, real size (`docker inspect .Size`): 26.45MB.
+- Image tag: `dip-react-nginx:original`, normalized OCI uncompressed-layer size: 70.88MB.
 
 ## Exposed functionality
 - Container listens on port 80 (nginx).

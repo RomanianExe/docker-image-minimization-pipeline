@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-fastapi:original`) | Slim (`dip-fastapi:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 62.34 MB | 21.45 MB | **-65.6%** |
+| Image size (normalized OCI uncompressed layers) | 184.94MB | 55.17MB | **-70.2%** |
 | SBOM components (Syft) | 169 | 6 | -163 |
-| Vulnerabilities (Grype) | 414 (16 Critical / 129 High / 145 Medium / 23 Low / 54 Negligible / 47 Unknown) | 42 (13 High / 23 Medium / 5 Low / 1 Negligible) | -372 |
-| Functional tests (incl. `/docs`, `/openapi.json`) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 460 | 43 | -417 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Probing framework-internal endpoints, not just app routes
 This example's app code defines a single route, but the base image's own
@@ -21,7 +23,7 @@ survived minimization and were verified with dedicated checks in
 `tests/specific/fastapi/test.sh`, beyond a simple "did the port open" test.
 
 ## In line with other Python examples
-65.6% reduction is close to `flask`/`flask-redis`'s range, confirming the
+70.2% reduction is close to `flask`/`flask-redis`'s range, confirming the
 Python/pip-based minimization pattern generalizes across frameworks (WSGI
 Flask vs. ASGI FastAPI+uvicorn/gunicorn), not just within one.
 

@@ -4,18 +4,20 @@
 
 | Metric | Original (`dip-wordpress-mysql:original`) | Slim (`dip-wordpress-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 274.73 MB | 140.20 MB | **-49.0%** |
+| Image size (normalized OCI uncompressed layers) | 801.26MB | 360.49MB | **-55.0%** |
 | SBOM components (Syft) | 273 | 18 | -255 |
-| Vulnerabilities (Grype) | 1045 (45 Critical / 114 High / 160 Medium / 31 Low / 671 Negligible / 24 Unknown) | 4 (4 High) | -1041 |
-| Functional tests (installer + two static trees) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 1115 | 4 | -1111 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 Prebuilt example: the baseline is `wordpress:latest` pulled and re-tagged, not built.
 See `docs/methodology.md` §12.
 
 ## Best result among the prebuilt entries
 
-49.0% on an image nobody here built, and the largest vulnerability delta of the four
-prebuilt successes. The shape is favourable for this technique: `wordpress:apache` is a
+55.0% on an image nobody here built. The shape is favourable for this technique:
+`wordpress:apache` is a
 PHP application tree plus a full Debian base, and Slim can remove the base almost
 entirely while the application tree is exactly what the probes keep touching.
 

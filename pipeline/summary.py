@@ -54,14 +54,9 @@ EXCLUDED = {
 # Why an example with a valid baseline never produced a validated slim image
 # (docs/methodology.md §12.3-§12.6). Every one of these is a prebuilt entry.
 NO_SLIM_REASON = {
-    "postgresql-pgadmin": "docker-slim: entrypoint elevates via `sudo`, the sensor mount is `nosuid`",
-    "plex": "docker-slim: artifact copier fails on the s6-overlay layout",
-    "gitea-postgres": "slim image is sound; mint's leftover `/data` skeleton pre-populates the named volume as root",
-    "elasticsearch-logstash-kibana": "reached slim; fix written (`COMPOSE_NETWORK=elastic`), not validated. Baseline measures Kibana 7.17.28, not the vendor's 7.16.1 — see §12.3",
-    "nextcloud-postgres": "reached slim; fix written (`SLIM_INCLUDE_BINS=/usr/bin/rsync`), not validated",
-    "pihole-cloudflared-DoH": "reached slim; fix written (`COMPOSE_NETWORK=dns-net`), not validated",
-    "minecraft": "reached slim; host-side test assertion rewritten, not validated",
-    "wireguard": "reached slim; fix written (`SLIM_INCLUDE_PATHS` for s6), not validated",
+    "gitea-postgres": "Mint cannot preserve the upstream `/data` volume-initialization semantics",
+    "plex": "Mint instrumentation makes the s6-overlay v3 `/init` entrypoint non-PID-1",
+    "wireguard": "Mint instrumentation makes the s6-overlay v3 `/init` entrypoint non-PID-1",
 }
 
 # The image the example ships is already `FROM scratch` with a static binary, so there is
@@ -143,12 +138,19 @@ def result_table(rows):
     ]
     for r in sorted(rows, key=lambda r: -r["size_reduction_pct"]):
         star = " \\*" if r["example"] in SCRATCH else ""
+        size_change_pct = (r["slim_size_bytes"] / r["original_size_bytes"] - 1) * 100
+        size_change = (
+            f"{size_change_pct:+.2f}%"
+            if 0 < abs(size_change_pct) < 0.05
+            else f"{size_change_pct:+.1f}%"
+        )
         out.append(
             f"| `{r['example']}`{star} | {r['cluster']} | {r['source']} "
             f"| {mb(r['original_size_bytes']):.1f} → {mb(r['slim_size_bytes']):.1f} MB "
-            # comparison.json states a reduction as a positive number; the table shows the
-            # change to the image, so a 96.1% reduction reads -96.1% and growth reads +.
-            f"| **{-r['size_reduction_pct']:+.1f}%** "
+            # The table shows change to the image, not reduction. Derive it from the recorded
+            # byte counts so a small growth (for example Slim metadata on a scratch image) is
+            # not displayed misleadingly as +0.0% after comparison.json's one-decimal rounding.
+            f"| **{size_change}** "
             f"| {r['original_components']} → {r['slim_components']} "
             f"| {r['original_vulns']} → {r['slim_vulns']} "
             f"| {r['tests_original']} / {r['tests_slim']} |"
@@ -224,8 +226,9 @@ def render(rows):
         f"| Grype findings | {vuln_before:,} | {vuln_after:,} "
         f"| **−{(1 - vuln_after / vuln_before) * 100:.1f}%** |",
         "",
-        f"Median size reduction is **{median:.1f}%** across the {len(real)} examples that had "
-        f"anything to remove; the largest is `{best['example']}` at "
+        f"Median size reduction is **{median:.1f}%** across the {len(real)} examples other "
+        "than the already-`scratch` baseline; the largest is "
+        f"`{best['example']}` at "
         f"{best['size_reduction_pct']:.1f}%. Functional tests pass on both the original and the "
         "slim image for all "
         f"{sum(1 for r in processed if r['tests_slim'] == 'PASS')} processed examples — a slim "
@@ -279,7 +282,9 @@ def main():
     rows = collect()
     (ARTIFACTS / "summary.md").write_text(render(rows))
     with (ARTIFACTS / "summary.csv").open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=FIELDS, extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle, fieldnames=FIELDS, extrasaction="ignore", lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows)
     print(f"Wrote {ARTIFACTS / 'summary.md'} and {ARTIFACTS / 'summary.csv'} ({len(rows)} examples)")

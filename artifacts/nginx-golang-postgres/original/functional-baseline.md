@@ -1,4 +1,6 @@
 # Functional Baseline — `nginx-golang-postgres` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 Near-identical to `nginx-golang-mysql` (same `FROM scratch` final stage,
 Docker-secrets pattern, static reverse-proxy config, exact-5-row DB seed) —

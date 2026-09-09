@@ -9,14 +9,16 @@ non-trivial, multi-route test suite (admin app, redirect, static assets).
 
 | Metric | Original (`dip-django:original`) | Slim (`dip-django:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 27.72 MB | 11.36 MB | **-59.0%** |
+| Image size (normalized OCI uncompressed layers) | 89.57MB | 28.03MB | **-68.7%** |
 | SBOM components (Syft) | 63 | 1 | -62 |
-| Vulnerabilities (Grype) | 178 (9 Critical / 63 High / 88 Medium / 17 Low / 1 Negligible) | 71 (1 Critical / 26 High / 36 Medium / 7 Low / 1 Negligible) | -107 |
-| Functional tests (4 checks) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 182 | 73 | -109 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Consistent with the Python/Alpine cluster pattern
-Size reduction (59.0%) and SBOM visibility loss (63→1) closely match `flask`
-(58.9%, 80→2) and `flask-redis` (53.8%, 82→3) — confirms the pattern already
+Size reduction (68.7%) and SBOM visibility loss (63→1) closely match `flask`
+(67.9%, 80→2) and `flask-redis` (63.0%, 82→3) — confirms the pattern already
 documented in `docs/methodology.md` §5 holds for Django too, not just
 Flask-based apps in this cluster.
 

@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-aspnet-mssql:original`) | Slim (`dip-aspnet-mssql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 85.39 MB | 66.14 MB | **-22.5%** |
+| Image size (normalized OCI uncompressed layers) | 211.92MB | 137.00MB | **-35.4%** |
 | SBOM components (Syft) | 100 | 8 | -92 |
-| Vulnerabilities (Grype) | 271 (10 Critical / 80 High / 87 Medium / 24 Low / 66 Negligible / 4 Unknown) | 13 (1 Critical / 10 High / 2 Medium) | -258 |
-| Functional tests (7 checks: 4 pages, 2 static assets, 1 negative-path 404) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 271 | 13 | -258 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Smallest size reduction ratio observed so far
 Only **1.29x**, the lowest of any example in the pipeline (lower even than

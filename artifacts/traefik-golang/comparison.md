@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-traefik-golang:original`) | Slim (`dip-traefik-golang:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 3.56 MB | 3.77 MB | **+6.1%** (grew) |
-| SBOM components (Syft) | 2 | 2 | 0 |
-| Vulnerabilities (Grype) | 40 (2 Critical / 23 High / 14 Medium / 1 Low) | 40 (same breakdown) | 0 |
+| Image size (normalized OCI uncompressed layers) | 6.24MB | 6.24MB | **+0.02%** (1,536 bytes) |
+| SBOM components (Syft) | 2 | 2 | +0 |
+| Vulnerabilities (Grype) | 40 | 40 | +0 |
 | Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Negative result: Slim adds no value on an already-`scratch` image
 Unlike every other example so far, minimization here has **nothing to remove**:

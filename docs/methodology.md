@@ -92,8 +92,8 @@ prebuilt changes four things at once — the baseline becomes a pull, the *servi
 minimize has to be chosen by hand, the running container is the only specification a test
 can be written against, and runtime state stops being handled by compose — each of which is
 a departure from the methodology rather than a parameter within it. §12 works through those
-four consequences and carries the entries through anyway as an explicit extension: four
-reach a validated slim image and are reported alongside the 25, and eight are recorded as
+four consequences and carries the entries through anyway as an explicit extension: nine
+reach a validated slim image and are reported alongside the 25, and three are recorded as
 diagnosed failures. **Anything below §12 is that extension.** A reader reproducing the core
 methodology, or extending it to further awesome-compose entries, should skip the twelve.
 
@@ -194,12 +194,11 @@ This boundary is deliberately incomplete. The Nginx WSGI images still use `apk a
 remain documented residual inputs rather than fragile apparent pins. Dockerfile base-image tags
 and Linux package-repository snapshots are also outside the current reproducibility scope.
 
-## 6. Excluded Cluster: Rust/WASM (out of scope)
+## 6. Excluded Cluster: WasmEdge (out of scope); recovered Rust example
 
-The Rust/WASM cluster (`wasmedge-mysql-nginx`, `wasmedge-kafka-mysql`, and — while
-technically native Rust, not WASM — `react-rust-postgres`'s backend) was attempted and
-excluded after hitting two independent, concrete blockers, tested directly rather than
-assumed:
+The two WasmEdge examples (`wasmedge-mysql-nginx` and `wasmedge-kafka-mysql`) remain excluded
+because the host cannot run their required runtime. `react-rust-postgres` is native Rust rather
+than WasmEdge and was recovered as a validated buildable result.
 
 1. **The WASM examples cannot be run in this environment at all.** `wasmedge-mysql-nginx`'s
    production image is `FROM scratch` + a `.wasm` binary, requiring the
@@ -209,19 +208,7 @@ assumed:
    CLI either. `docker-slim` itself would need to start a container from this image to run
    its dynamic analysis, which is not possible here — not a pipeline limitation, an
    environment/tooling one.
-2. **Both Rust examples attempted fail to even build**, independent of (1).
-   `wasmedge-mysql-nginx/backend/Cargo.toml` and `react-rust-postgres/backend/Cargo.toml`
-   both ship without a committed `Cargo.lock` (unlike the Node examples, which commit
-   `package-lock.json`). Building today resolves current crates.io dependency versions,
-   several of which now require Rust's "edition 2024" — unsupported by the Rust toolchains
-   pinned in these Dockerfiles (`rust:1.64`, `rust:buster`/Cargo 1.79). This is dependency
-   drift in the upstream vendored examples, not something introduced by this pipeline.
-
-**Conclusion (superseded in part — see below):** the cluster was excluded on the strength of
-the two blockers above. Blocker (1) still stands. Blocker (2) turned out to be weaker than
-this section claimed.
-
-### Correction: `react-rust-postgres` is recoverable, and is now included
+### `react-rust-postgres` is recoverable, and is included
 
 The diagnosis in point 2 was right about the cause and wrong about the remedy. The failure
 is real and reproducible:
@@ -231,20 +218,18 @@ error: failed to parse manifest at .../tokio-postgres-0.7.18/Cargo.toml
 Caused by: feature `edition2024` is required ... not stabilized in this version of Cargo (1.79.0)
 ```
 
-But it does not require "pinning a full working dependency set". The pin that matters is on
-the *compiler*, not on the crates: `rust:buster` is frozen at Rust 1.79 because Debian buster
-is EOL and the tag stopped being rebuilt, so an unpinned dependency tree is being resolved
-against a compiler that has been standing still for years. Point the same, entirely unchanged
-`Cargo.toml` at a current toolchain and it resolves and compiles without a single source
-change — `actix-web = "4.0.0-beta.8"` resolves forward to 4.15, `deadpool-postgres` stays on
-0.9, and `cargo build --release` succeeds in about 20 seconds.
+The durable repair uses a current `rust:1.90-slim-bookworm` toolchain and a project-owned
+`Cargo.lock` generated as a new controlled baseline from the unchanged vendored `Cargo.toml`.
+The patched Dockerfile copies that lock through a named build context and uses `cargo fetch
+--locked` plus `cargo build --release --locked --offline`; it does not modify vendor source or
+silently resolve a newer dependency graph during a build.
 
 The example is therefore handled exactly like the four in §10: a pipeline-side
 `Dockerfile.patched` (build base `rust:buster` → `rust:1.90-slim-bookworm`, runtime base
 `debian:buster-slim` → `debian:bookworm-slim`, and a name on the previously anonymous final
 stage so compose can target it), with `vendor/` untouched. It is the only Rust example in the
-result set and produces one of the best reductions in it: **30.72 MB → 4.01 MB (-86.9%)**,
-88 → 0 SBOM components, 177 → 0 vulnerabilities, functional tests passing on both stages.
+result set and produces one of the best reductions in it: **85.39 MB → 9.88 MB (-88.4%)**,
+88 → 0 SBOM components, 211 → 0 vulnerabilities, functional tests passing on both stages.
 
 The two **WasmEdge** examples remain excluded, on blocker (1) alone: no
 `io.containerd.wasmedge.v1` runtime is registered with this Docker installation and no
@@ -316,10 +301,9 @@ latent bug was found and fixed in `tests/specific/angular/test.sh` too — it on
 there because `main.js` (56KB) happened to fit under the pipe buffer, not because the pattern
 was actually safe.
 
-Coverage at the end of §10: **24 examples across 6 technology clusters** (Python ×7, PHP,
-Node ×6, Java ×4, Go ×4, .NET ×2). Two later additions bring the final total to **29**:
-`react-rust-postgres`, recovered from the exclusion list and adding Rust as a seventh cluster
-(§6), and four of the twelve prebuilt entries that ship no Dockerfile at all (§12). See
+Coverage at the end of §10: **25 buildable examples across 7 technology clusters** (Python ×7,
+PHP, Node ×6, Java ×4, Go ×4, .NET ×2, Rust). The prebuilt-image extension in §12 adds nine
+validated results, bringing the project total to **34**. See
 `artifacts/*/comparison.json` for each, and `artifacts/*/comparison.md` where a written
 analysis exists.
 
@@ -330,16 +314,22 @@ static binary. Only one of them **builds** it, and that distinction turned out t
 than the finding it was originally used to support.
 
 `traefik-golang`'s compose file declares no build `target:`, so the stage it ships is the
-Dockerfile's final one: `scratch` plus a 3.56MB static binary. Running Slim on top produced
+Dockerfile's final one: `scratch` plus a 6.24MB static binary. Running Slim on top produced
 **no reduction at all** — identical SBOM component count, identical vulnerability count — and
-the image grew 6.1% from Slim's own re-packaging overhead. That is the clean negative result.
+the normalized image grew by 1,536 bytes (0.02%) from Slim's own re-packaging overhead. That is
+the clean negative result.
 
 The three `nginx-golang*` entries pin `target: builder` in their compose files, so the image
 they actually ship is the 123MB build stage, not the scratch one. Minimizing what they ship
-gives **−96.1%, −96.2% and −96.0%** — three near-identical figures on three near-identical
+gives **−97.6%, −97.7% and −97.5%** — three near-identical figures on three near-identical
 applications, which is what a coherent result looks like.
 
 ### The correction, and why it is recorded rather than quietly fixed
+
+The legacy scratch-stage figures in this subsection intentionally retain their original
+`docker inspect .Size` measurement: they document the historical target-stage mistake, not the
+current cross-example metric. Current result tables use normalized OCI uncompressed layer bytes
+and must not be compared numerically with those legacy values.
 
 For most of this project, `nginx-golang-mysql` and `nginx-golang-postgres` were reported here
 as the second and third confirmations of the negative result (+6.3%, +6.2%, zero component or
@@ -502,11 +492,11 @@ OCI export, which is the image that is tested.
 ## 12. Prebuilt Examples: Minimizing Images Nobody Built Here
 
 Every example up to this point ships a Dockerfile. The pipeline builds it, minimizes the
-result, and compares the two. Fifteen of the 39 vendored awesome-compose entries do not
-work that way — twelve of them contain no Dockerfile at all and only wire together images
-pulled from a registry, and three more (`react-rust-postgres` and the two WasmEdge entries)
-are a separate story told in §6. This section covers the twelve, why four of them are in
-the results, and why the other eight are not.
+result, and compares the two. Twelve of the 39 vendored awesome-compose entries do not
+work that way: they contain no Dockerfile at all and only wire together images pulled from a
+registry. The two WasmEdge entries are a separate story told in §6; `react-rust-postgres` is a
+buildable, validated result. This section covers the twelve prebuilt entries, why nine are in
+the results, and why the other three are not.
 
 ### 12.1 What is structurally different
 
@@ -547,17 +537,19 @@ attempts and is documented in 12.5.
 
 ### 12.2 Results
 
-Eight examples completed the full pipeline with functional tests passing on both stages.
+Nine examples completed the full pipeline with functional tests passing on both stages.
 
 | Example | Target service | Size | Reduction | SBOM components | Vulnerabilities |
 |---|---|---|---|---|---|
-| `wordpress-mysql` | `wordpress:latest` | 274.73 → 140.20 MB | **-49.0%** | 273 → 18 | 1045 → 4 |
+| `elasticsearch-logstash-kibana` | `kibana:7.17.28` | 916.80 → 374.82 MB | **-59.1%** | 977 → 537 | 548 → 143 |
+| `minecraft` | `itzg/minecraft-server` | 881.53 → 257.74 MB | **-70.8%** | 486 → 178 | 1442 → 60 |
 | `nextcloud-postgres` | `nextcloud:34.0.3-apache` | 1558.18 → 1604.99 MB | **+3.0%** | 459 → 170 | 1365 → 7 |
 | `nextcloud-redis-mariadb` | `nextcloud:34.0.3-apache` | 1558.18 → 1604.99 MB | **+3.0%** | 459 → 170 | 1365 → 7 |
-| `portainer` | `portainer/portainer-ce:alpine` | 48.55 → 38.74 MB | **-20.2%** | 328 → 312 | 34 → 11 |
 | `pihole-cloudflared-DoH` | `pihole/pihole:2026.07.2` | 101.29 → 60.47 MB | **-40.3%** | 94 → 5 | 112 → 23 |
-| `prometheus-grafana` | `grafana/grafana:latest` | 474.10 → 413.28 MB | **-12.8%** | 1791 → 1760 | 178 → 157 |
-| `minecraft` | `itzg/minecraft-server:java25` | 881.53 → 257.74 MB | **-70.8%** | 486 → 178 | 1442 → 60 |
+| `portainer` | `portainer/portainer-ce:2.45.0-alpine` | 163.92 → 106.15 MB | **-35.2%** | 328 → 312 | 39 → 16 |
+| `postgresql-pgadmin` | `dpage/pgadmin4:9.17` | 547.43 → 135.21 MB | **-75.3%** | 210 → 6 | 65 → 21 |
+| `prometheus-grafana` | `grafana/grafana:13.2.1` | 1405.82 → 998.41 MB | **-29.0%** | 1773 → 1650 | 221 → 164 |
+| `wordpress-mysql` | `wordpress:7.1.0-apache` | 801.26 → 360.49 MB | **-55.0%** | 273 → 18 | 1115 → 4 |
 
 The size reductions are modest next to the buildable examples (median ~54%), and that is
 the expected shape rather than a disappointment: a published product image has already been
@@ -566,16 +558,28 @@ Dockerfile that installs a full toolchain and never cleans up. The two Nextcloud
 by 3.0% under the normalized cumulative-layer metric; §12.8 explains why that is the honest
 result of restoring correct declared-volume semantics rather than a failed minimization.
 
+`minecraft` required one exact preservation after Mint reduced the Gradle-generated POSIX
+launcher at `/usr/share/mc-image-helper/bin/mc-image-helper` to a zero-byte file while retaining
+its JAR tree. The empty launcher returned success without invoking Java, so
+`mc-image-helper java-release` produced no value and startup could not resolve the server JAR.
+Preserving that single path restores normal initialization and the full functional test suite.
+
+`postgresql-pgadmin` required Slim-only startup settings rather than a workload change:
+`PGADMIN_DISABLE_POSTFIX=1`, a 35-second HTTP-probe start wait, and preservation of the two
+runtime resources Mint missed (`idna/uts46data.py` and `/pgadmin4/migrations`). The resulting
+Slim image is validated by the same login/static-asset tests and host-side database-state check
+as its original.
+
 The vulnerability numbers move much harder than the sizes. `wordpress-mysql` loses half its
 bytes but 99.6% of its findings (1045 → 4); both Nextcloud variants retain functional
 equivalence while their findings fall from 1365 to 7. The §7 caveat applies in full — much of
 that drop is package *metadata* becoming invisible to Syft rather than code being removed — but
 the asymmetry itself is the point, and it is far more pronounced here than on the buildable set.
 
-### 12.3 The five marked out of scope
+### 12.3 The three marked out of scope
 
-The remaining five are **out of scope for this project's results**. All five are fully
-configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all five pass
+The remaining three are **out of scope for this project's results**. All three are fully
+configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all three pass
 the `original` stage, so `artifacts/<example>/original/` holds a real baseline for each.
 None produces a slim image that both builds and passes its tests. They are kept in the
 repository as evidence, not as pending work.
@@ -588,11 +592,8 @@ deliverable, not a gap in Stage 7.
 
 Grouped by cause:
 
-**Blocked by docker-slim itself (4).** Nothing in the pipeline configuration can move these.
+**Blocked by Mint itself (3).** Nothing in the pipeline configuration can move these.
 
-- `postgresql-pgadmin` — the analysis container dies with `sudo: effective uid is not 0, is
-  /usr/bin/sudo on a file system with the 'nosuid' option set`. pgAdmin's entrypoint elevates
-  through `sudo`, and mint's sensor makes that impossible. mint exits `code=-1`.
 - `plex` — remained baseline-only because the upstream image relies on s6-overlay v3 as its
   PID-1 init and supervision system. Mint's dynamic-analysis execution model inserts its
   instrumentation before the workload, so the s6 entrypoint is no longer PID 1 and aborts with
@@ -607,18 +608,6 @@ Grouped by cause:
   minimization result. Bypassing `/init` was rejected because it would change the runtime
   contract being evaluated.
 - `gitea-postgres` — Mint cannot preserve the image's runtime volume semantics. See 12.6.
-
-**Reached the slim stage but not validated (1).** `elasticsearch-logstash-kibana` has a
-diagnosed fix written into its configuration, but the confirming run was not completed. Its
-configuration is left in place and honestly labelled as unverified rather than presented as a
-result.
-
-`minecraft` is no longer in this group. Mint had reduced the Gradle-generated POSIX launcher at
-`/usr/share/mc-image-helper/bin/mc-image-helper` to a zero-byte file while retaining the helper's
-JAR tree. The launcher therefore exited successfully without invoking Java, so
-`mc-image-helper java-release` returned no value and startup could not resolve the server JAR.
-Explicitly preserving that exact launcher path restores normal initialization; the minimized
-image now passes the complete functional test suite.
 
 The earlier Pi-hole and ELK failures shared a pipeline-side cause worth naming because the
 message is misleading: mint answers `info=param.error status='unknown.network'` and exits
@@ -640,8 +629,8 @@ which passes `-Des.cgroups.hierarchy.override=/` and starts cleanly. It is the o
 deviation in this repository that changes the artifact being measured rather than a dependency
 around it, so it is stated in the example's `pipeline.env` banner rather than left implicit:
 **the baseline in `artifacts/elasticsearch-logstash-kibana/original/` is Kibana 7.17.28, not
-7.16.1.** With that in place the `original` stage passes in full, and the only thing standing
-between this entry and a result is the unset `COMPOSE_NETWORK` above.
+7.16.1.** With `COMPOSE_NETWORK=elastic` and the narrow favicon preservation configured for
+the example, both original and Slim stages now pass in full.
 
 ### 12.4 Tests must measure the product, not the toolbox
 

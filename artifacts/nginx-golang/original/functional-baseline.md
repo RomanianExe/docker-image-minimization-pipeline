@@ -1,4 +1,6 @@
 # Functional Baseline — `nginx-golang` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## First reverse-proxy-pattern example
 Two services in `compose.yaml`: `proxy` (prebuilt `nginx`, config bind-mounted from
@@ -18,8 +20,8 @@ separately as a "free" minimization opportunity — see `comparison.md`.
 ## Build verification
 - Built via `pipeline/build.sh nginx-golang original`
   (`docker build --target builder`).
-- Image tag: `dip-nginx-golang-backend:original`, real size
-  (`docker inspect .Size`): 123.40MB.
+- Image tag: `dip-nginx-golang-backend:original`, normalized OCI uncompressed-layer size:
+  347.69MB.
 
 ## Exposed functionality
 - `backend` listens on port 80, single route `GET /` → `200 OK`, body containing

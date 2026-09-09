@@ -4,15 +4,16 @@
 
 | Metric | Original (`dip-angular:original`) | Slim (`dip-angular:slim`) | Change |
 |---|---|---|---|
-| Image size (cumulative uncompressed OCI layers) | 821.10 MB | 200.33 MB | **-75.6%** |
+| Image size (normalized OCI uncompressed layers) | 821.25MB | 200.33MB | **-75.6%** |
 | SBOM components (Syft) | 1824 | 970 | -854 |
-| Vulnerabilities (Grype) | 782 (50 Critical / 315 High / 262 Medium / 52 Low / 84 Negligible / 19 Unknown) | 225 (7 Critical / 112 High / 84 Medium / 22 Low) | -557 |
-| Functional tests (all 6 dev-server bundles + compiled template) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 803 | 237 | -566 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Current normalized measurement
-The normalized OCI measurement shows a 75.6% reduction. It must not be compared to the
-historical `docker inspect .Size` figures for other examples until those metrics are
-regenerated. Despite the *entire* Angular CLI dev-server toolchain
+The normalized OCI measurement shows a 75.6% reduction and is directly comparable to the
+other normalized results in `artifacts/summary.md`. Despite the *entire* Angular CLI dev-server toolchain
 (TypeScript compiler, webpack, live-reload machinery) remaining necessary at
 runtime — not just at build time, unlike `react-nginx`'s throwaway build
 stage — Slim still found the majority of the base `node:*-bullseye-slim`

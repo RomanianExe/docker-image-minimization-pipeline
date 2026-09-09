@@ -1,5 +1,9 @@
 # Before/After Comparison — `nginx-golang-postgres` example (Stage 5)
 
+> **Historical measurement note.** This retained final-stage experiment uses the legacy
+> `docker inspect .Size` metric to document the target-stage comparison. It is not part of the
+> current normalized OCI cross-example result set; use `artifacts/summary.md` for those metrics.
+
 ## Metrics summary
 
 | Metric | Original (`dip-nginx-golang-postgres:original`) | Slim (`dip-nginx-golang-postgres:slim`) | Change |

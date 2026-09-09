@@ -1,4 +1,6 @@
 # Functional Baseline — `angular` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## New pattern: dev server that JIT-compiles on every request
 Unlike `react-nginx` (build once → serve static bundles via nginx), this

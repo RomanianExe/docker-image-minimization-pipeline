@@ -1,4 +1,6 @@
 # Functional Baseline — `sparkjava` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## Build notes
 - Same "real final stage" pattern as `react-nginx`: the Dockerfile's final,
@@ -7,7 +9,7 @@
   `target:` set there). `pipeline.env` sets `DOCKERFILE_TARGET=` (empty).
 - Build context: `vendor/awesome-compose/sparkjava/sparkjava` (the subdirectory
   containing the Dockerfile, `pom.xml`, and `src/`).
-- Image tag: `dip-sparkjava:original`, real size (`docker inspect .Size`): 97.44MB.
+- Image tag: `dip-sparkjava:original`, normalized OCI uncompressed-layer size: 274.24MB.
 
 ## Exposed functionality
 - Container listens on port 8080.
@@ -30,8 +32,7 @@
 - `sbom.json` — Syft SBOM, 170 components identified (JVM/OS packages from the
   Ubuntu-focal-based `eclipse-temurin:17-jre-focal` image, plus Java libraries
   bundled inside the fat jar itself — SparkJava, Jetty, SLF4J, etc.).
-- `vulns.json` — Grype scan, 462 vulnerabilities (28 High, 281 Medium, 141 Low,
-  12 Negligible). This is the first JVM-based example in the pipeline; the count
+- `vulns.json` — Grype scan, 519 vulnerabilities. This is the first JVM-based example in the pipeline; the count
   is notably higher than the Python/Alpine or Node/nginx-alpine examples, driven
   by the Ubuntu-focal base plus the number of bundled Java libraries in the
   fat jar that Syft can enumerate (unlike compiled Go/Rust binaries).
