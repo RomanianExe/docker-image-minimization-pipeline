@@ -159,6 +159,12 @@ image, before minimization — that is the accurate, auditable security record. 
 image should be the one deployed to production (for its size/attack-surface benefits), but its
 own SBOM/scan results should not be relied upon as a complete picture of what it contains.
 
+This occurred with `elasticsearch-logstash-kibana`: the functionally equivalent minimized image
+removed distribution and package-manager metadata including `/etc/os-release` and
+`/var/lib/dpkg/status`. Consequently, Grype could not fully determine the OS distribution for
+some packages. Its post-minimization vulnerability count is therefore not directly comparable to
+the original count and may under-report OS-package vulnerabilities.
+
 ```
 build original → SBOM + vulnerability scan (security decisions made here) → slim → deploy slim image
 ```
