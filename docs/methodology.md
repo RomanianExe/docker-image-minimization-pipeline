@@ -547,12 +547,13 @@ attempts and is documented in 12.5.
 
 ### 12.2 Results
 
-Five examples completed the full pipeline with functional tests passing on both stages.
+Seven examples completed the full pipeline with functional tests passing on both stages.
 
 | Example | Target service | Size | Reduction | SBOM components | Vulnerabilities |
 |---|---|---|---|---|---|
 | `wordpress-mysql` | `wordpress:latest` | 274.73 → 140.20 MB | **-49.0%** | 273 → 18 | 1045 → 4 |
-| `nextcloud-redis-mariadb` | `nextcloud:apache` | 555.55 → 407.68 MB | **-26.6%** | 459 → 170 | 1261 → 7 |
+| `nextcloud-postgres` | `nextcloud:34.0.3-apache` | 1558.18 → 1604.99 MB | **+3.0%** | 459 → 170 | 1365 → 7 |
+| `nextcloud-redis-mariadb` | `nextcloud:34.0.3-apache` | 1558.18 → 1604.99 MB | **+3.0%** | 459 → 170 | 1365 → 7 |
 | `portainer` | `portainer/portainer-ce:alpine` | 48.55 → 38.74 MB | **-20.2%** | 328 → 312 | 34 → 11 |
 | `pihole-cloudflared-DoH` | `pihole/pihole:2026.07.2` | 101.29 → 60.47 MB | **-40.3%** | 94 → 5 | 112 → 23 |
 | `prometheus-grafana` | `grafana/grafana:latest` | 474.10 → 413.28 MB | **-12.8%** | 1791 → 1760 | 178 → 157 |
@@ -560,18 +561,19 @@ Five examples completed the full pipeline with functional tests passing on both 
 The size reductions are modest next to the buildable examples (median ~54%), and that is
 the expected shape rather than a disappointment: a published product image has already been
 optimized by whoever publishes it, so there is less slack to remove than in an example
-Dockerfile that installs a full toolchain and never cleans up.
+Dockerfile that installs a full toolchain and never cleans up. The two Nextcloud results grow
+by 3.0% under the normalized cumulative-layer metric; §12.8 explains why that is the honest
+result of restoring correct declared-volume semantics rather than a failed minimization.
 
 The vulnerability numbers move much harder than the sizes. `wordpress-mysql` loses half its
-bytes but 99.6% of its findings (1045 → 4); `nextcloud-redis-mariadb` loses a quarter of its
-bytes and 99.4% of its findings (1261 → 7). The §7 caveat applies in full — much of that
-drop is package *metadata* becoming invisible to Syft rather than code being removed — but
-the asymmetry itself is the point, and it is far more pronounced here than on the buildable
-set.
+bytes but 99.6% of its findings (1045 → 4); both Nextcloud variants retain functional
+equivalence while their findings fall from 1365 to 7. The §7 caveat applies in full — much of
+that drop is package *metadata* becoming invisible to Syft rather than code being removed — but
+the asymmetry itself is the point, and it is far more pronounced here than on the buildable set.
 
-### 12.3 The seven marked out of scope
+### 12.3 The six marked out of scope
 
-The remaining seven are **out of scope for this project's results**. All seven are fully
+The remaining six are **out of scope for this project's results**. All six are fully
 configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all seven pass
 the `original` stage, so `artifacts/<example>/original/` holds a real baseline for each.
 None produces a slim image that both builds and passes its tests. They are kept in the
@@ -605,12 +607,11 @@ Grouped by cause:
   contract being evaluated.
 - `gitea-postgres` — Mint cannot preserve the image's runtime volume semantics. See 12.6.
 
-**Reached the slim stage but not validated (3).** `nextcloud-postgres`, `minecraft` and
+**Reached the slim stage but not validated (2).** `minecraft` and
 `elasticsearch-logstash-kibana` each hit a distinct, diagnosed cause with a fix written into
-their configuration (`SLIM_INCLUDE_BINS`, `SLIM_INCLUDE_PATHS`, or a host-side test assertion).
-Those fixes are **not validated** — the runs that would confirm them were not completed. The
-configurations are left in place and honestly labelled as unverified rather than presented as
-results.
+their configuration. Those fixes are **not validated** — the runs that would confirm them were
+not completed. The configurations are left in place and honestly labelled as unverified rather
+than presented as results.
 
 The earlier Pi-hole and ELK failures shared a pipeline-side cause worth naming because the
 message is misleading: mint answers `info=param.error status='unknown.network'` and exits
@@ -718,7 +719,31 @@ and serves the login route correctly; the rendered admin route, external DNS que
 `pi.hole` DNS answer, and cloudflared dependency all pass. SBOM, Grype, metrics, and comparison
 operate on this repaired final `:slim` tag, not Mint's intermediate output.
 
-### 12.8 Pipeline changes introduced by this category
+### 12.8 Nextcloud: restore the empty declared-volume seed
+
+`nextcloud-postgres` and `nextcloud-redis-mariadb` use the same pinned
+`nextcloud:34.0.3-apache` image and therefore exposed the same Mint failure. Mint retained
+`/entrypoint.sh`, `/usr/bin/rsync`, `/upgrade.exclude`, and the complete `/usr/src/nextcloud`
+source tree, but materialized partial analysis-time contents beneath the declared
+`VOLUME /var/www/html` into the optimized image. Docker seeds a newly created volume from that
+image path. The captured `version.php` matched the image version, so the entrypoint skipped its
+first-start rsync and served the incomplete captured tree, producing HTTP 500 responses.
+
+The original image seeds `/var/www/html` empty. Each example now uses an opt-in
+`SLIM_POST_MINT_DOCKERFILE` wrapper that removes every child of that directory, including
+dotfiles, with the project's BuildKit path. The wrapper does not alter `/usr/src/nextcloud`, the
+entrypoint, or runtime configuration, and it adds no package. A `docker create` from each
+repaired image was verified to seed a volume with zero entries. Normal startup consequently logs
+`Initializing nextcloud`, performs the complete rsync, and passes `/index.php`, `/status.php`,
+and static-asset validation for both the PostgreSQL and Redis/MariaDB variants.
+
+The result is intentionally a 3.0% normalized-size increase. The post-Mint removal restores the
+merged filesystem contract, but the normalized metric sums every uncompressed layer blob; it
+therefore still counts Mint's earlier captured layer plus the corrective deletion layer. This is
+reported rather than hidden because functional equivalence takes precedence over an apparently
+smaller but broken image.
+
+### 12.9 Pipeline changes introduced by this category
 
 All are additive; the 25 buildable examples are unaffected.
 

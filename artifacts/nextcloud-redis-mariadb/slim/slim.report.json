@@ -77,13 +77,13 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 1563359693,
+  "minified_image_size": 1563359665,
   "minified_image_size_human": "1.6 GB",
   "minified_image": "dip-nextcloud-redis-mariadb:slim",
-  "minified_image_id": "sha256:281a068f01a668936b75df9222058f5edcc57a402a17f120cb6e2439c7d05e06",
-  "minified_image_digest": "sha256:13d8a087e69cec76351ea0af7349938fa492bada3bf28741a1e2df6a425acfc5",
+  "minified_image_id": "sha256:987942e4efef8acea90e7ba48285791aa982ca01610b8d91fb066c21293395b4",
+  "minified_image_digest": "sha256:1bf548e9ff1d18517f64d6319efab92f6424c67e227a81c61fc58684fc446c5b",
   "minified_image_has_data": true,
-  "minified_by": 0.9740471651011153,
+  "minified_by": 0.9740471825464424,
   "artifact_location": "/tmp/mint-state/.mint-state/images/9025a4a40082a36cfc11ab1765307a79887b604ebc9423acab1912cb716ac168/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nextcloud-redis-mariadb-seccomp.json",

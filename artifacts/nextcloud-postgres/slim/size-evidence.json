@@ -1,0 +1,56 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-nextcloud-postgres:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-nextcloud-postgres:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:ee19138387bf6aebacfd6be934a05567b47b1841d9d78626aa54df0988882aad",
+    "size": 555,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:403b256d8629d321a440c45b24b6b7098027264b1586c4cd78332aff419d5c47",
+    "size": 6459
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:950ca191cfc8b9002c1fa8e63ec8c7c61a2b8352096470fd4f2168e5d21541a3",
+      "size": 1604967936
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:9b162592ced97594f6cf91daefd0baddb89c02601a6c51716264b9b1ab6fdce8",
+      "size": 18432
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:950ca191cfc8b9002c1fa8e63ec8c7c61a2b8352096470fd4f2168e5d21541a3",
+      "size": 1604967936,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:9b162592ced97594f6cf91daefd0baddb89c02601a6c51716264b9b1ab6fdce8",
+      "size": 18432,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 1604986368
+}

@@ -77,13 +77,13 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 1563353221,
+  "minified_image_size": 1563353209,
   "minified_image_size_human": "1.6 GB",
   "minified_image": "dip-nextcloud-postgres:slim",
-  "minified_image_id": "sha256:96ecd261f991c8b369b53c6f18289b5eff176e3d5539d7a81432badc1af67354",
-  "minified_image_digest": "sha256:fa28186a4838e7c8214722b15ca7232dfec53bc9804414d8328b91547b49a7b6",
+  "minified_image_id": "sha256:0253ce7952a140a59127fd030804efd0bbb014374f4fbcaa49137ef4a16f5dc6",
+  "minified_image_digest": "sha256:8959554c4dd7bd247c65663c0275b66615d2e19eb8666df279b63fa0fb207ff3",
   "minified_image_has_data": true,
-  "minified_by": 0.9740511974804701,
+  "minified_by": 0.9740512049571006,
   "artifact_location": "/tmp/mint-state/.mint-state/images/9025a4a40082a36cfc11ab1765307a79887b604ebc9423acab1912cb716ac168/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-nextcloud-postgres-seccomp.json",

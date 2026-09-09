@@ -2,7 +2,7 @@
   "example": "nextcloud-redis-mariadb",
   "stage": "original",
   "image_tag": "dip-nextcloud-redis-mariadb:original",
-  "generated_at": "2026-09-09T19:48:01Z",
+  "generated_at": "2026-09-09T22:46:52Z",
   "size_metric": "oci_uncompressed_layer_bytes",
   "size_bytes": 1558183936,
   "size_human": "1558.18MB",

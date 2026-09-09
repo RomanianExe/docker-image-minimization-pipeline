@@ -2,7 +2,7 @@
   "example": "nextcloud-postgres",
   "stage": "original",
   "image_tag": "dip-nextcloud-postgres:original",
-  "generated_at": "2026-09-09T19:42:10Z",
+  "generated_at": "2026-09-09T22:37:47Z",
   "size_metric": "oci_uncompressed_layer_bytes",
   "size_bytes": 1558183936,
   "size_human": "1558.18MB",
