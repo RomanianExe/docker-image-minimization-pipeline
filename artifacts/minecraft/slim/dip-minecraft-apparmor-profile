@@ -3,7 +3,6 @@ profile dip-minecraft-apparmor-profile flags=(attach_disconnected,mediate_delete
 
   network,
 
-  /opt/java/openjdk/bin/java rix,
   /opt/java/openjdk/lib/jspawnhelper rix,
   /usr/bin/bash rix,
   /usr/bin/cut rix,
@@ -16,6 +15,7 @@ profile dip-minecraft-apparmor-profile flags=(attach_disconnected,mediate_delete
   /usr/bin/id rix,
   /usr/bin/ls rix,
   /usr/bin/openssl rix,
+  /usr/bin/paste rix,
   /usr/bin/rm rix,
   /usr/bin/sed rix,
   /usr/bin/sort rix,
@@ -26,7 +26,7 @@ profile dip-minecraft-apparmor-profile flags=(attach_disconnected,mediate_delete
   /usr/local/bin/mc-monitor rix,
 
   /etc/nsswitch.conf rw,
-  /tmp/hsperfdata_minecraft/411 w,
+  /tmp/hsperfdata_minecraft/413 w,
 
   /bin r,
   /data/.install-vanilla.env r,
@@ -367,6 +367,7 @@ profile dip-minecraft-apparmor-profile flags=(attach_disconnected,mediate_delete
   /lib/x86_64-linux-gnu/libtinfo.so.6 r,
   /lib/x86_64-linux-gnu/libtinfo.so.6.4 r,
   /lib64 r,
+  /opt/java/openjdk/bin/java r,
   /opt/java/openjdk/conf/jaxp.properties r,
   /opt/java/openjdk/conf/logging.properties r,
   /opt/java/openjdk/conf/net.properties r,
@@ -402,7 +403,6 @@ profile dip-minecraft-apparmor-profile flags=(attach_disconnected,mediate_delete
   /usr/bin/X11 r,
   /usr/bin/ld.so r,
   /usr/bin/mc-image-helper r,
-  /usr/bin/paste r,
   /usr/bin/rbash r,
   /usr/bin/sh r,
   /usr/bin/which r,

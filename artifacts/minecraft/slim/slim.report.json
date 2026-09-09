@@ -76,13 +76,13 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 257340322,
+  "minified_image_size": 257353056,
   "minified_image_size_human": "257 MB",
   "minified_image": "dip-minecraft:slim",
-  "minified_image_id": "sha256:1b5a7210dbcef18aac67f4c80007de198a025c283f2d038d7fc9ec97117f7670",
-  "minified_image_digest": "sha256:aaa07ea9602ec31bf277b7c25f3fc2d736e5131811ac47bf893609deb376a66b",
+  "minified_image_id": "sha256:b7549f8fcc99463970fb6e84b1b63fed7f8df785b1f41f21758fb29b1b6911fb",
+  "minified_image_digest": "sha256:20de69c2a3aab315f627d66bd49b82f08eb1963d5c01cc0103f481e045871fcf",
   "minified_image_has_data": true,
-  "minified_by": 3.379952847031877,
+  "minified_by": 3.379785604721943,
   "artifact_location": "/tmp/mint-state/.mint-state/images/900b1a9d4e881ec4cbcbd84b365687b799b4284d54feb7611d7b7279950b3e1d/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-minecraft-seccomp.json",

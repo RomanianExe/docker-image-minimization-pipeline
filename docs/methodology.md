@@ -547,7 +547,7 @@ attempts and is documented in 12.5.
 
 ### 12.2 Results
 
-Seven examples completed the full pipeline with functional tests passing on both stages.
+Eight examples completed the full pipeline with functional tests passing on both stages.
 
 | Example | Target service | Size | Reduction | SBOM components | Vulnerabilities |
 |---|---|---|---|---|---|
@@ -557,6 +557,7 @@ Seven examples completed the full pipeline with functional tests passing on both
 | `portainer` | `portainer/portainer-ce:alpine` | 48.55 → 38.74 MB | **-20.2%** | 328 → 312 | 34 → 11 |
 | `pihole-cloudflared-DoH` | `pihole/pihole:2026.07.2` | 101.29 → 60.47 MB | **-40.3%** | 94 → 5 | 112 → 23 |
 | `prometheus-grafana` | `grafana/grafana:latest` | 474.10 → 413.28 MB | **-12.8%** | 1791 → 1760 | 178 → 157 |
+| `minecraft` | `itzg/minecraft-server:java25` | 881.53 → 257.74 MB | **-70.8%** | 486 → 178 | 1442 → 60 |
 
 The size reductions are modest next to the buildable examples (median ~54%), and that is
 the expected shape rather than a disappointment: a published product image has already been
@@ -571,10 +572,10 @@ equivalence while their findings fall from 1365 to 7. The §7 caveat applies in 
 that drop is package *metadata* becoming invisible to Syft rather than code being removed — but
 the asymmetry itself is the point, and it is far more pronounced here than on the buildable set.
 
-### 12.3 The six marked out of scope
+### 12.3 The five marked out of scope
 
-The remaining six are **out of scope for this project's results**. All six are fully
-configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all seven pass
+The remaining five are **out of scope for this project's results**. All five are fully
+configured — `pipeline.env`, `compose.override.yaml`, functional tests — and all five pass
 the `original` stage, so `artifacts/<example>/original/` holds a real baseline for each.
 None produces a slim image that both builds and passes its tests. They are kept in the
 repository as evidence, not as pending work.
@@ -607,11 +608,17 @@ Grouped by cause:
   contract being evaluated.
 - `gitea-postgres` — Mint cannot preserve the image's runtime volume semantics. See 12.6.
 
-**Reached the slim stage but not validated (2).** `minecraft` and
-`elasticsearch-logstash-kibana` each hit a distinct, diagnosed cause with a fix written into
-their configuration. Those fixes are **not validated** — the runs that would confirm them were
-not completed. The configurations are left in place and honestly labelled as unverified rather
-than presented as results.
+**Reached the slim stage but not validated (1).** `elasticsearch-logstash-kibana` has a
+diagnosed fix written into its configuration, but the confirming run was not completed. Its
+configuration is left in place and honestly labelled as unverified rather than presented as a
+result.
+
+`minecraft` is no longer in this group. Mint had reduced the Gradle-generated POSIX launcher at
+`/usr/share/mc-image-helper/bin/mc-image-helper` to a zero-byte file while retaining the helper's
+JAR tree. The launcher therefore exited successfully without invoking Java, so
+`mc-image-helper java-release` returned no value and startup could not resolve the server JAR.
+Explicitly preserving that exact launcher path restores normal initialization; the minimized
+image now passes the complete functional test suite.
 
 The earlier Pi-hole and ELK failures shared a pipeline-side cause worth naming because the
 message is misleading: mint answers `info=param.error status='unknown.network'` and exits

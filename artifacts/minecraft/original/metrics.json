@@ -2,7 +2,7 @@
   "example": "minecraft",
   "stage": "original",
   "image_tag": "dip-minecraft:original",
-  "generated_at": "2026-09-09T19:31:23Z",
+  "generated_at": "2026-09-09T23:22:50Z",
   "size_metric": "oci_uncompressed_layer_bytes",
   "size_bytes": 881534976,
   "size_human": "881.53MB",
