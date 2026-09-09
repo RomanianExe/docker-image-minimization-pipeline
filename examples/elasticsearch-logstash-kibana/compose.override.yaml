@@ -36,5 +36,7 @@ services:
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"
   elasticsearch:
-    image: elasticsearch:7.17.28
+    image: elasticsearch:7.17.28@sha256:a06b03a2db8db2be43d3c3851e7bcebdd4fff79f4db08c7da6bad7a8776d3e15
     ports: !reset null
+  logstash:
+    image: logstash:7.16.1@sha256:a0d660702a68f36dee1174b68fb9711f989385009d52309b0f7618569cf0f808

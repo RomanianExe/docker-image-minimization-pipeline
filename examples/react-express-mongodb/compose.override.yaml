@@ -12,6 +12,8 @@
 #                     examples that all publish :80/:8000 upstream can be
 #                     processed without colliding.
 services:
+  mongo:
+    image: mongo:4.2.0@sha256:e62fd72f407e19e399f87981d20ca96a8c9a7f649a22ad1ca0b44b29f28844fc
   backend:
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test

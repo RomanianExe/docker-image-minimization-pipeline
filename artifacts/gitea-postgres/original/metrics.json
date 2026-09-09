@@ -2,17 +2,18 @@
   "example": "gitea-postgres",
   "stage": "original",
   "image_tag": "dip-gitea-postgres:original",
-  "generated_at": "2026-09-01T08:48:50Z",
-  "size_bytes": 72158565,
-  "size_human": "72.16MB",
+  "generated_at": "2026-09-09T00:38:08Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 192115200,
+  "size_human": "192.12MB",
   "sbom_component_count": 338,
-  "vulnerability_total": 120,
+  "vulnerability_total": 143,
   "vulnerability_by_severity": {
-    "High": 33,
-    "Critical": 9,
+    "High": 36,
+    "Critical": 11,
     "Medium": 51,
-    "Low": 25,
-    "Unknown": 2
+    "Unknown": 20,
+    "Low": 25
   },
   "functional_tests": "PASS (tests/specific/gitea-postgres/test.sh)"
 }

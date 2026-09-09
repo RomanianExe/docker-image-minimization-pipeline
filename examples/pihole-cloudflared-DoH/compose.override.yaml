@@ -27,4 +27,5 @@ services:
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}/tcp"
   cloudflared:
+    image: visibilityspots/cloudflared:v2026.1.2@sha256:6f845d9b2928d4c9ec684ce6c8d61eb019bae9d5bcb1e51870978901530774eb
     ports: !reset null

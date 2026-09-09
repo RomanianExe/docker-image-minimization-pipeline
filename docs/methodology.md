@@ -577,8 +577,7 @@ Grouped by cause:
   image restarted during post-Slim validation. That output is not treated as a successful
   minimization result. Bypassing `/init` was rejected because it would change the runtime
   contract being evaluated.
-- `gitea-postgres` — the most instructive of the four, because the minimized image is
-  *not* broken. See 12.6.
+- `gitea-postgres` — Mint cannot preserve the image's runtime volume semantics. See 12.6.
 
 **Reached the slim stage but not validated (4).** `nextcloud-postgres`,
 `pihole-cloudflared-DoH`, `minecraft` and `elasticsearch-logstash-kibana` each hit
@@ -658,33 +657,15 @@ analysed run writes where the real deployment writes) *plus* `SLIM_EXCLUDE_PATTE
 same path. The mount is not redundant — without it the run exercises a different code path
 from the one the example actually uses.
 
-### 12.6 `gitea-postgres`: minimization that succeeds and still fails
+### 12.6 `gitea-postgres`: Mint cannot preserve the runtime volume contract
 
-Worth stating separately, because the conclusion is not the obvious one.
-
-The slim gitea image fails at runtime with
-`open /data/git/.ssh/authorized_keys.tmp: permission denied`, and gitea exits. The cause is a
-four-link chain, each link verified independently:
-
-1. mint bakes the mounted volume's contents into the image (12.5, finding 2);
-2. `--exclude-pattern` strips the files but leaves `/data/git` and `/data/gitea` behind
-   (finding 3);
-3. Docker pre-populates a named volume from the image's content on first mount — standard
-   behaviour, and the vendor compose file uses a named volume;
-4. gitea's init only fixes ownership on directories it creates itself, so it skips the
-   pre-existing ones and `/data/git/.ssh` ends up owned by root while gitea runs as `git`.
-
-The decisive test: the same slim image started with `--tmpfs /data` — identical image, only
-without Docker pre-populating from it — installs and runs perfectly. Install completes, `/`
-renders the configured instance name, `/api/v1/version` responds, zero fatal log lines.
-
-**So the minimized image is not broken. The directory skeleton mint leaves behind is.**
-
-Switching the override to a tmpfs would make this example pass and produce reduction figures.
-It was not done. The original image works with the volume the vendor declares and the slim
-image does not; reporting "no regression" under a mount chosen to hide that difference would
-misrepresent exactly what the pipeline exists to measure. `gitea-postgres` is recorded as a
-failure, with the reason and the tmpfs result stated, which is more useful than a number.
+`gitea-postgres` remained baseline-only because Mint 1.41.8 materialized runtime-generated
+state under the declared `/data` volume into the optimized image. This altered fresh named-volume
+initialization and caused `/data/git/.ssh` to be created with root ownership, leading to
+post-install failure when Gitea attempted to rewrite `authorized_keys`. Exclude patterns, mount
+exclusion, removal of explicit path preservation, and `--include-new=false` did not restore the
+upstream volume semantics. Ownership workarounds were intentionally rejected because they would
+modify the workload rather than preserve behavioral equivalence.
 
 ### 12.7 Pipeline changes introduced by this category
 

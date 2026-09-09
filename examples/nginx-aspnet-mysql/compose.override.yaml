@@ -17,6 +17,8 @@
 # compose service name, which compose keeps as a network alias even though
 # container_name is overridden above.
 services:
+  db:
+    image: mariadb:10.7.3-focal@sha256:07e06f2e7ae9dfc63707a83130a62e00167c827f08fcac7a9aa33f4b6dc34e0e
   backend:
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test

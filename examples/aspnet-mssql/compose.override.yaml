@@ -12,6 +12,8 @@
 #                     examples that all publish :80/:8000 upstream can be
 #                     processed without colliding.
 services:
+  db:
+    image: mcr.microsoft.com/azure-sql-edge:1.0.4@sha256:209a502ac7d35a8e9d5ae777bca874930950a6bf0ec4915acf23390321c576e9
   web:
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test

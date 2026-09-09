@@ -210,6 +210,14 @@ for p in ${SLIM_INCLUDE_PATHS:-}; do
   MOUNT_ARGS+=(--include-path "$p")
 done
 
+# SLIM_INCLUDE_NEW (optional boolean): control whether Mint retains files and
+# directories created during dynamic analysis. Leave unset to use Mint's
+# default, preserving existing behavior for every example that does not opt in.
+INCLUDE_NEW_ARGS=()
+if [[ -n "${SLIM_INCLUDE_NEW:-}" ]]; then
+  INCLUDE_NEW_ARGS=(--include-new "$SLIM_INCLUDE_NEW")
+fi
+
 # RUN_COMMAND (optional, see run-pipeline.sh) overrides both the command
 # Slim runs during its own analysis (--cmd) and the CMD baked into the
 # optimized output image (--new-cmd + --image-overrides cmd) — otherwise the
@@ -238,7 +246,7 @@ fi
 echo "--- [$EXAMPLE] docker-slim invocation ---" >&2
 printf '%q ' mint build --target "$ORIGINAL_TAG" --tag "$SLIM_TAG" \
   "${PROBE_ARGS[@]}" --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
-  "${NETWORK_ARGS[@]}" "${ENV_ARGS[@]}" "${MOUNT_ARGS[@]}" "${CMD_ARGS[@]}" >&2
+  "${NETWORK_ARGS[@]}" "${ENV_ARGS[@]}" "${MOUNT_ARGS[@]}" "${INCLUDE_NEW_ARGS[@]}" "${CMD_ARGS[@]}" >&2
 echo >&2
 
 mint build \
@@ -249,6 +257,7 @@ mint build \
   "${NETWORK_ARGS[@]}" \
   "${ENV_ARGS[@]}" \
   "${MOUNT_ARGS[@]}" \
+  "${INCLUDE_NEW_ARGS[@]}" \
   "${CMD_ARGS[@]}" \
   --show-clogs \
   --show-blogs \
