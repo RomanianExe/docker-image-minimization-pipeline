@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-golang-backend:original`) | Slim (`dip-nginx-golang-backend:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 123.40 MB | 4.80 MB | **-96.1%** |
+| Image size (normalized OCI uncompressed layers) | 347.69MB | 8.19MB | **-97.6%** |
 | SBOM components (Syft) | 59 | 3 | -56 |
-| Vulnerabilities (Grype) | 574 (38 Critical / 271 High / 245 Medium / 20 Low) | 43 (2 Critical / 25 High / 15 Medium / 1 Low) | -531 |
-| Functional tests (direct + via proxy) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 584 | 43 | -541 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Largest reduction observed so far, and why
 This is by far the biggest reduction in the pipeline (25.69x per Slim's own

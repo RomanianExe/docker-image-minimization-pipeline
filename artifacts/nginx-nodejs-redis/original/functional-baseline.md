@@ -1,4 +1,6 @@
 # Functional Baseline — `nginx-nodejs-redis` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## PATCHED: pipeline-side RUN_COMMAND fix, no vendor files modified
 `web/.npmrc` sets `ignore-scripts=true` — intended to block install-time

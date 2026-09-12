@@ -2,17 +2,18 @@
   "example": "postgresql-pgadmin",
   "stage": "original",
   "image_tag": "dip-postgresql-pgadmin:original",
-  "generated_at": "2026-09-01T08:52:48Z",
-  "size_bytes": 181560572,
-  "size_human": "181.56MB",
+  "generated_at": "2026-09-09T20:10:02Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 547432960,
+  "size_human": "547.43MB",
   "sbom_component_count": 210,
-  "vulnerability_total": 45,
+  "vulnerability_total": 65,
   "vulnerability_by_severity": {
-    "High": 21,
-    "Critical": 2,
-    "Medium": 16,
+    "High": 32,
+    "Critical": 6,
+    "Medium": 19,
     "Low": 4,
-    "Unknown": 2
+    "Unknown": 4
   },
   "functional_tests": "PASS (tests/specific/postgresql-pgadmin/test.sh)"
 }

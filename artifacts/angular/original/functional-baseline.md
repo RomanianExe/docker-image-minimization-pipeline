@@ -1,4 +1,6 @@
 # Functional Baseline — `angular` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## New pattern: dev server that JIT-compiles on every request
 Unlike `react-nginx` (build once → serve static bundles via nginx), this
@@ -11,8 +13,8 @@ top, same as other examples' unused dev stage.
 
 ## Build verification
 - Built via `pipeline/build.sh angular original` (`--target builder`).
-- Image tag: `dip-angular:original`, real size: 242.81MB — by far the largest
-  original image processed so far (full Angular CLI toolchain).
+- Image tag: `dip-angular:original`, normalized cumulative uncompressed OCI layer size:
+  821.10MB (full Angular CLI toolchain).
 
 ## Exposed functionality
 - `GET /` → `200 OK`, HTML shell with `<title>Angular</title>` and

@@ -21,11 +21,15 @@
 #   current Werkzeug removed a name Flask 2.0.1 imports directly; the patched
 #   copy adds the missing pin. Context stays the vendor directory.
 services:
+  db:
+    image: mariadb:10.7.3-focal@sha256:07e06f2e7ae9dfc63707a83130a62e00167c827f08fcac7a9aa33f4b6dc34e0e
   backend:
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test
     build:
       dockerfile: ${DIP_ROOT}/examples/nginx-flask-mysql/Dockerfile.patched
+      additional_contexts:
+        dip_locks: ${DIP_ROOT}/examples/nginx-flask-mysql
     volumes: !reset null
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"

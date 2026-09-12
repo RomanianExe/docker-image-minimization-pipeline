@@ -2,9 +2,10 @@
   "example": "nextcloud-redis-mariadb",
   "stage": "slim",
   "image_tag": "dip-nextcloud-redis-mariadb:slim",
-  "generated_at": "2026-09-01T09:42:48Z",
-  "size_bytes": 407677919,
-  "size_human": "407.68MB",
+  "generated_at": "2026-09-09T22:51:58Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 1604991488,
+  "size_human": "1604.99MB",
   "sbom_component_count": 170,
   "vulnerability_total": 7,
   "vulnerability_by_severity": {

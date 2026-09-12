@@ -2,8 +2,8 @@
   "document": "doc.report.container",
   "version": "ov/container/1.1",
   "target_type": "container",
-  "target_id": "42ab601d2647d13a57344c4e98a774d53f243db4fb543bfd33629e05ad49b3e3",
-  "image_id": "sha256:5693fb34758bec29ec1e250224c5814ed65546b4c3e8c983388f0b57cb15027b",
+  "target_id": "0f636f3fad952db3d3166b4d808d0e04b752b2bf29b7d91ff4fcfaa8c8c22921",
+  "image_id": "sha256:a59a10089d4a413aa4e768366536e8f710db1e0050654c388c541763101042d5",
   "start_command": {
     "app_name": "/__cacert_entrypoint.sh",
     "app_args": [
@@ -35,7 +35,7 @@
     "fan": {
       "monitor_pid": 1,
       "monitor_ppid": 0,
-      "event_count": 2429,
+      "event_count": 2443,
       "main_process": {
         "pid": 17,
         "name": "__cacert_entryp",
@@ -55,11 +55,11 @@
           "root": "/",
           "ppid": 1
         },
-        "20": {
-          "pid": 20,
-          "name": "java",
-          "path": "/opt/java/openjdk/bin/java",
-          "cmd": "java -jar /app.jar",
+        "19": {
+          "pid": 19,
+          "name": "sh",
+          "path": "/usr/bin/dash",
+          "cmd": "/bin/sh -c java -jar /app.jar",
           "cwd": "/",
           "root": "/",
           "ppid": 17
@@ -68,247 +68,256 @@
       "process_files": {
         "17": {
           "/__cacert_entrypoint.sh": {
-            "event_count": 4,
+            "event_count": 5,
             "first_eid": 1,
             "reads": 3
           },
           "/etc/ld.so.cache": {
             "event_count": 4,
-            "first_eid": 4
+            "first_eid": 6
           },
           "/etc/nsswitch.conf": {
             "event_count": 2,
-            "first_eid": 32,
+            "first_eid": 36,
             "reads": 1
           },
           "/etc/passwd": {
             "event_count": 2,
-            "first_eid": 37,
+            "first_eid": 41,
             "reads": 1
           },
           "/usr/bin/bash": {
-            "event_count": 2,
-            "first_eid": 14,
-            "reads": 1
+            "event_count": 3,
+            "first_eid": 16,
+            "reads": 2
           },
           "/usr/bin/dash": {
             "event_count": 2,
-            "first_eid": 42,
+            "first_eid": 46,
             "reads": 1
           },
           "/usr/bin/env": {
             "event_count": 1,
-            "first_eid": 2,
+            "first_eid": 3,
             "reads": 1,
             "execs": 1
           },
           "/usr/lib/locale/locale-archive": {
             "event_count": 2,
-            "first_eid": 13
+            "first_eid": 15
           },
           "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache": {
             "event_count": 1,
-            "first_eid": 31
+            "first_eid": 35
           },
           "/usr/lib/x86_64-linux-gnu/ld-2.31.so": {
-            "event_count": 3,
-            "first_eid": 3,
-            "reads": 3
+            "event_count": 5,
+            "first_eid": 4,
+            "reads": 4
           },
           "/usr/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 24,
-            "first_eid": 5,
+            "first_eid": 7,
             "reads": 21
           },
           "/usr/lib/x86_64-linux-gnu/libdl-2.31.so": {
             "event_count": 2,
-            "first_eid": 20,
+            "first_eid": 24,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libnss_files-2.31.so": {
             "event_count": 2,
-            "first_eid": 35,
+            "first_eid": 39,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libtinfo.so.6.2": {
             "event_count": 2,
-            "first_eid": 18,
+            "first_eid": 22,
             "reads": 1
           }
         },
-        "20": {
+        "19": {
           "/app.jar": {
-            "event_count": 1674,
-            "first_eid": 74,
-            "reads": 1671
+            "event_count": 1679,
+            "first_eid": 78,
+            "reads": 1676
           },
           "/etc/host.conf": {
             "event_count": 2,
-            "first_eid": 683,
+            "first_eid": 687,
             "reads": 1
           },
           "/etc/ld.so.cache": {
-            "event_count": 3,
-            "first_eid": 59
+            "event_count": 4,
+            "first_eid": 63
           },
           "/etc/nsswitch.conf": {
             "event_count": 2,
-            "first_eid": 100,
+            "first_eid": 104,
             "reads": 1
           },
           "/etc/passwd": {
             "event_count": 4,
-            "first_eid": 105,
+            "first_eid": 109,
             "reads": 2
           },
           "/etc/timezone": {
             "event_count": 2,
-            "first_eid": 822,
+            "first_eid": 831,
             "reads": 1
           },
           "/opt/java/openjdk/bin/java": {
             "event_count": 2,
-            "first_eid": 54,
-            "reads": 1,
-            "execs": 2
+            "first_eid": 58,
+            "reads": 1
           },
           "/opt/java/openjdk/conf/net.properties": {
             "event_count": 2,
-            "first_eid": 704,
+            "first_eid": 713,
             "reads": 1
           },
           "/opt/java/openjdk/conf/security/java.security": {
             "event_count": 9,
-            "first_eid": 687,
+            "first_eid": 696,
             "reads": 8
           },
           "/opt/java/openjdk/lib/jvm.cfg": {
             "event_count": 2,
-            "first_eid": 81,
+            "first_eid": 85,
             "reads": 1
           },
           "/opt/java/openjdk/lib/libextnet.so": {
             "event_count": 5,
-            "first_eid": 723,
+            "first_eid": 732,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libjava.so": {
             "event_count": 5,
-            "first_eid": 116,
+            "first_eid": 120,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libjimage.so": {
             "event_count": 8,
-            "first_eid": 93,
+            "first_eid": 97,
             "reads": 5
           },
           "/opt/java/openjdk/lib/libjli.so": {
             "event_count": 2,
-            "first_eid": 57,
+            "first_eid": 61,
             "reads": 1
           },
           "/opt/java/openjdk/lib/libjsvml.so": {
             "event_count": 5,
-            "first_eid": 123,
+            "first_eid": 127,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libmanagement.so": {
             "event_count": 5,
-            "first_eid": 1339,
+            "first_eid": 1348,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libmanagement_ext.so": {
             "event_count": 5,
-            "first_eid": 1361,
+            "first_eid": 1370,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libnet.so": {
             "event_count": 5,
-            "first_eid": 136,
+            "first_eid": 140,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libnio.so": {
             "event_count": 5,
-            "first_eid": 131,
+            "first_eid": 135,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libverify.so": {
             "event_count": 5,
-            "first_eid": 1180,
+            "first_eid": 1189,
             "reads": 3
           },
           "/opt/java/openjdk/lib/libzip.so": {
             "event_count": 5,
-            "first_eid": 186,
+            "first_eid": 190,
             "reads": 3
           },
           "/opt/java/openjdk/lib/modules": {
             "event_count": 567,
-            "first_eid": 98,
+            "first_eid": 102,
             "reads": 566
           },
           "/opt/java/openjdk/lib/server/classes.jsa": {
             "event_count": 2,
-            "first_eid": 121,
+            "first_eid": 125,
             "reads": 1
           },
           "/opt/java/openjdk/lib/server/libjvm.so": {
             "event_count": 2,
-            "first_eid": 83,
+            "first_eid": 87,
             "reads": 1
           },
           "/opt/java/openjdk/lib/tzdb.dat": {
             "event_count": 14,
-            "first_eid": 824,
+            "first_eid": 833,
             "reads": 13
           },
-          "/tmp/hsperfdata_root/20": {
+          "/tmp/hsperfdata_root/19": {
             "event_count": 9,
-            "first_eid": 107,
+            "first_eid": 111,
             "writes": 8
           },
           "/usr/lib/locale/locale-archive": {
             "event_count": 1,
-            "first_eid": 128
+            "first_eid": 132
           },
           "/usr/lib/x86_64-linux-gnu/ld-2.31.so": {
             "event_count": 1,
-            "first_eid": 56,
+            "first_eid": 60,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 8,
-            "first_eid": 66,
+            "first_eid": 70,
             "reads": 7
           },
           "/usr/lib/x86_64-linux-gnu/libdl-2.31.so": {
             "event_count": 2,
-            "first_eid": 64,
+            "first_eid": 68,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libm-2.31.so": {
             "event_count": 2,
-            "first_eid": 88,
+            "first_eid": 92,
+            "reads": 1
+          },
+          "/usr/lib/x86_64-linux-gnu/libnss_dns-2.31.so": {
+            "event_count": 2,
+            "first_eid": 690,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libnss_files-2.31.so": {
             "event_count": 2,
-            "first_eid": 103,
+            "first_eid": 107,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libpthread-2.31.so": {
             "event_count": 4,
-            "first_eid": 60,
+            "first_eid": 64,
             "reads": 3
+          },
+          "/usr/lib/x86_64-linux-gnu/libresolv-2.31.so": {
+            "event_count": 2,
+            "first_eid": 692,
+            "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/librt-2.31.so": {
             "event_count": 2,
-            "first_eid": 86,
+            "first_eid": 90,
             "reads": 1
           },
           "/usr/share/zoneinfo/Etc/UTC": {
             "event_count": 3,
-            "first_eid": 90,
+            "first_eid": 94,
             "reads": 2
           }
         }
@@ -317,13 +326,13 @@
     "pt": {
       "enabled": true,
       "arch_name": "amd64",
-      "syscall_count": 25575,
-      "syscall_num": 68,
+      "syscall_count": 23812,
+      "syscall_num": 71,
       "syscall_stats": {
         "0": {
           "num": 0,
           "name": "read",
-          "count": 1809
+          "count": 1817
         },
         "1": {
           "num": 1,
@@ -333,7 +342,7 @@
         "10": {
           "num": 10,
           "name": "mprotect",
-          "count": 1030
+          "count": 927
         },
         "102": {
           "num": 102,
@@ -358,7 +367,7 @@
         "11": {
           "num": 11,
           "name": "munmap",
-          "count": 56
+          "count": 54
         },
         "110": {
           "num": 110,
@@ -383,7 +392,7 @@
         "14": {
           "num": 14,
           "name": "rt_sigprocmask",
-          "count": 201
+          "count": 180
         },
         "15": {
           "num": 15,
@@ -393,7 +402,7 @@
         "157": {
           "num": 157,
           "name": "prctl",
-          "count": 64
+          "count": 56
         },
         "158": {
           "num": 158,
@@ -403,7 +412,7 @@
         "16": {
           "num": 16,
           "name": "ioctl",
-          "count": 53
+          "count": 56
         },
         "17": {
           "num": 17,
@@ -413,7 +422,7 @@
         "186": {
           "num": 186,
           "name": "gettid",
-          "count": 7293
+          "count": 7039
         },
         "20": {
           "num": 20,
@@ -423,12 +432,12 @@
         "202": {
           "num": 202,
           "name": "futex",
-          "count": 9549
+          "count": 8074
         },
         "204": {
           "num": 204,
           "name": "sched_getaffinity",
-          "count": 137
+          "count": 123
         },
         "21": {
           "num": 21,
@@ -448,67 +457,67 @@
         "219": {
           "num": 219,
           "name": "restart_syscall",
-          "count": 456
+          "count": 459
         },
         "229": {
           "num": 229,
           "name": "clock_getres",
           "count": 1
         },
-        "230": {
-          "num": 230,
-          "name": "clock_nanosleep",
-          "count": 1
-        },
         "232": {
           "num": 232,
           "name": "epoll_wait",
-          "count": 159
+          "count": 108
         },
         "233": {
           "num": 233,
           "name": "epoll_ctl",
-          "count": 14
+          "count": 12
         },
         "24": {
           "num": 24,
           "name": "sched_yield",
-          "count": 16
+          "count": 10
         },
         "257": {
           "num": 257,
           "name": "openat",
-          "count": 128
+          "count": 135
         },
         "273": {
           "num": 273,
           "name": "set_robust_list",
-          "count": 63
+          "count": 56
         },
         "28": {
           "num": 28,
           "name": "madvise",
-          "count": 6
+          "count": 5
         },
         "290": {
           "num": 290,
           "name": "eventfd2",
-          "count": 12
+          "count": 10
         },
         "291": {
           "num": 291,
           "name": "epoll_create1",
-          "count": 12
+          "count": 10
         },
         "3": {
           "num": 3,
           "name": "close",
-          "count": 102
+          "count": 106
         },
         "302": {
           "num": 302,
           "name": "prlimit64",
           "count": 10
+        },
+        "307": {
+          "num": 307,
+          "name": "sendmmsg",
+          "count": 1
         },
         "33": {
           "num": 33,
@@ -533,17 +542,22 @@
         "41": {
           "num": 41,
           "name": "socket",
-          "count": 17
+          "count": 18
         },
         "42": {
           "num": 42,
           "name": "connect",
-          "count": 8
+          "count": 9
         },
         "43": {
           "num": 43,
           "name": "accept",
-          "count": 25
+          "count": 21
+        },
+        "45": {
+          "num": 45,
+          "name": "recvfrom",
+          "count": 2
         },
         "48": {
           "num": 48,
@@ -558,7 +572,7 @@
         "5": {
           "num": 5,
           "name": "fstat",
-          "count": 105
+          "count": 108
         },
         "50": {
           "num": 50,
@@ -578,7 +592,7 @@
         "54": {
           "num": 54,
           "name": "setsockopt",
-          "count": 11
+          "count": 12
         },
         "55": {
           "num": 55,
@@ -588,7 +602,7 @@
         "56": {
           "num": 56,
           "name": "clone",
-          "count": 63
+          "count": 56
         },
         "59": {
           "num": 59,
@@ -600,15 +614,25 @@
           "name": "lstat",
           "count": 80
         },
+        "61": {
+          "num": 61,
+          "name": "wait4",
+          "count": 1
+        },
         "63": {
           "num": 63,
           "name": "uname",
           "count": 3
         },
+        "7": {
+          "num": 7,
+          "name": "poll",
+          "count": 3
+        },
         "72": {
           "num": 72,
           "name": "fcntl",
-          "count": 34
+          "count": 30
         },
         "73": {
           "num": 73,
@@ -628,7 +652,7 @@
         "8": {
           "num": 8,
           "name": "lseek",
-          "count": 1629
+          "count": 1635
         },
         "81": {
           "num": 81,
@@ -648,7 +672,7 @@
         "9": {
           "num": 9,
           "name": "mmap",
-          "count": 536
+          "count": 708
         },
         "98": {
           "num": 98,
@@ -658,7 +682,7 @@
         "99": {
           "num": 99,
           "name": "sysinfo",
-          "count": 855
+          "count": 840
         }
       },
       "fs_activity": {
@@ -684,9 +708,9 @@
             "6": {}
           },
           "pids": {
+            "19": {},
             "20": {},
-            "21": {},
-            "62": {}
+            "57": {}
           },
           "is_subdir": false
         },
@@ -708,7 +732,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -719,7 +743,7 @@
             "257": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -730,20 +754,20 @@
             "257": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
         "/etc/ld.so.cache": {
-          "ops_all": 7,
+          "ops_all": 8,
           "ops_checkfile": 1,
           "syscalls": {
             "257": {}
           },
           "pids": {
             "17": {},
-            "20": {},
-            "21": {}
+            "19": {},
+            "20": {}
           },
           "is_subdir": false
         },
@@ -755,7 +779,7 @@
             "4": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -767,7 +791,7 @@
           },
           "pids": {
             "17": {},
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -779,7 +803,7 @@
           },
           "pids": {
             "17": {},
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -791,7 +815,7 @@
             "4": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -802,7 +826,7 @@
             "257": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -814,7 +838,7 @@
           },
           "pids": {
             "17": {},
-            "20": {}
+            "19": {}
           },
           "is_subdir": false
         },
@@ -826,11 +850,22 @@
           },
           "pids": {
             "17": {},
-            "20": {}
+            "19": {}
           },
           "is_subdir": false
         },
         "/lib/x86_64-linux-gnu/libm.so.6": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "19": {}
+          },
+          "is_subdir": false
+        },
+        "/lib/x86_64-linux-gnu/libnss_dns.so.2": {
           "ops_all": 1,
           "ops_checkfile": 1,
           "syscalls": {
@@ -849,11 +884,22 @@
           },
           "pids": {
             "17": {},
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
         "/lib/x86_64-linux-gnu/libpthread.so.0": {
+          "ops_all": 1,
+          "ops_checkfile": 1,
+          "syscalls": {
+            "257": {}
+          },
+          "pids": {
+            "19": {}
+          },
+          "is_subdir": false
+        },
+        "/lib/x86_64-linux-gnu/libresolv.so.2": {
           "ops_all": 1,
           "ops_checkfile": 1,
           "syscalls": {
@@ -871,7 +917,7 @@
             "257": {}
           },
           "pids": {
-            "20": {}
+            "19": {}
           },
           "is_subdir": false
         },
@@ -906,7 +952,7 @@
           },
           "pids": {
             "17": {},
-            "20": {}
+            "19": {}
           },
           "is_subdir": false
         },
@@ -918,7 +964,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -930,7 +976,7 @@
             "4": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -941,7 +987,7 @@
             "257": {}
           },
           "pids": {
-            "20": {}
+            "19": {}
           },
           "is_subdir": false
         },
@@ -954,7 +1000,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -967,8 +1013,8 @@
             "4": {}
           },
           "pids": {
-            "20": {},
-            "21": {}
+            "19": {},
+            "20": {}
           },
           "is_subdir": false
         },
@@ -981,7 +1027,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -992,7 +1038,7 @@
             "257": {}
           },
           "pids": {
-            "20": {}
+            "19": {}
           },
           "is_subdir": false
         },
@@ -1004,7 +1050,7 @@
             "4": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1017,7 +1063,7 @@
             "6": {}
           },
           "pids": {
-            "45": {}
+            "43": {}
           },
           "is_subdir": false
         },
@@ -1030,7 +1076,7 @@
             "6": {}
           },
           "pids": {
-            "45": {}
+            "43": {}
           },
           "is_subdir": false
         },
@@ -1043,7 +1089,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1056,7 +1102,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1068,7 +1114,7 @@
             "4": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1081,7 +1127,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1094,7 +1140,7 @@
             "6": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1105,7 +1151,7 @@
             "257": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1118,8 +1164,8 @@
             "6": {}
           },
           "pids": {
-            "20": {},
-            "21": {}
+            "19": {},
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1130,7 +1176,7 @@
             "257": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1141,19 +1187,19 @@
             "257": {}
           },
           "pids": {
-            "21": {},
-            "84": {}
+            "20": {},
+            "62": {}
           },
           "is_subdir": false
         },
-        "/tmp/hsperfdata_root/20": {
+        "/tmp/hsperfdata_root/19": {
           "ops_all": 1,
           "ops_checkfile": 1,
           "syscalls": {
             "257": {}
           },
           "pids": {
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1178,7 +1224,7 @@
           },
           "pids": {
             "17": {},
-            "21": {}
+            "20": {}
           },
           "is_subdir": false
         },
@@ -1254,7 +1300,7 @@
           "R": true
         },
         "file_size": 6874873,
-        "sha1_hash": "213b58e1940bd3beca11e9fe1037e84f258a5d2a",
+        "sha1_hash": "384cdf60af1160c13421b6e693f8da291fa3b3f1",
         "uid": 0,
         "gid": 0
       },
@@ -1293,7 +1339,7 @@
         "file_path": "/dev",
         "modex": 2147484141,
         "mode": "drwxr-xr-x",
-        "file_size": 3660,
+        "file_size": 3640,
         "uid": 0,
         "gid": 0
       },
@@ -1315,8 +1361,8 @@
         "file_path": "/etc/hosts",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 226,
-        "sha1_hash": "a8d87c156cfb494f53f52ccfde3636629276ee87",
+        "file_size": 172,
+        "sha1_hash": "ee9331c132f7441f5e1ca26276df5626a8166271",
         "uid": 0,
         "gid": 0
       },
@@ -1371,8 +1417,8 @@
         "file_path": "/etc/resolv.conf",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 224,
-        "sha1_hash": "e9b0c83e82656db2d373772ab604182ec9449c99",
+        "file_size": 312,
+        "sha1_hash": "ff4a61bb8520517533417f50855c9d160f1ff1e4",
         "uid": 0,
         "gid": 0
       },
@@ -4108,6 +4154,26 @@
       },
       {
         "file_type": "file",
+        "file_path": "/lib/x86_64-linux-gnu/libnss_dns-2.31.so",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 27112,
+        "sha1_hash": "c3c84ead0f44ff83277fd7629ee5533dd8efb637",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib/x86_64-linux-gnu/libnss_dns.so.2",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "libnss_dns-2.31.so",
+        "file_size": 18,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
         "file_path": "/lib/x86_64-linux-gnu/libnss_files-2.31.so",
         "modex": 420,
         "mode": "-rw-r--r--",
@@ -4143,6 +4209,26 @@
         "mode": "Lrwxrwxrwx",
         "link_ref": "libpthread-2.31.so",
         "file_size": 18,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/lib/x86_64-linux-gnu/libresolv-2.31.so",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 101352,
+        "sha1_hash": "01bdd214a8b2ef583e6e7d25d63d06150a831c3f",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/lib/x86_64-linux-gnu/libresolv.so.2",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "link_ref": "libresolv-2.31.so",
+        "file_size": 17,
         "uid": 0,
         "gid": 0
       },
@@ -4202,8 +4288,7 @@
         "modex": 493,
         "mode": "-rwxr-xr-x",
         "flags": {
-          "R": true,
-          "X": true
+          "R": true
         },
         "file_size": 16320,
         "sha1_hash": "6781ce4e400ecb39d1e0370464b16feaee8cf046",
@@ -4447,23 +4532,23 @@
       {
         "file_type": "file",
         "file_path": "/run/secrets/db-password",
-        "modex": 420,
-        "mode": "-rw-r--r--",
+        "modex": 511,
+        "mode": "-rwxrwxrwx",
         "file_size": 8,
         "sha1_hash": "900c47e1bb9b17266ab5d052c6f7111250926bbe",
         "uid": 1000,
-        "gid": 986
+        "gid": 1000
       },
       {
         "file_type": "file",
-        "file_path": "/tmp/hsperfdata_root/20",
+        "file_path": "/tmp/hsperfdata_root/19",
         "modex": 384,
         "mode": "-rw-------",
         "flags": {
           "W": true
         },
         "file_size": 32768,
-        "sha1_hash": "25f55ab63aecf6a31c6dce16fdd8b6f5a8500b4b",
+        "sha1_hash": "d378b04c06dd104e3849f43e5148f83f1fa55806",
         "uid": 0,
         "gid": 0
       },
@@ -4662,7 +4747,11 @@
         "file_path": "/usr/lib/x86_64-linux-gnu/libnss_dns-2.31.so",
         "modex": 420,
         "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
         "file_size": 27112,
+        "sha1_hash": "c3c84ead0f44ff83277fd7629ee5533dd8efb637",
         "uid": 0,
         "gid": 0
       },
@@ -4671,6 +4760,7 @@
         "file_path": "/usr/lib/x86_64-linux-gnu/libnss_dns.so.2",
         "modex": 134218239,
         "mode": "Lrwxrwxrwx",
+        "link_ref": "libnss_dns-2.31.so",
         "file_size": 18,
         "uid": 0,
         "gid": 0
@@ -4726,7 +4816,11 @@
         "file_path": "/usr/lib/x86_64-linux-gnu/libresolv-2.31.so",
         "modex": 420,
         "mode": "-rw-r--r--",
+        "flags": {
+          "R": true
+        },
         "file_size": 101352,
+        "sha1_hash": "01bdd214a8b2ef583e6e7d25d63d06150a831c3f",
         "uid": 0,
         "gid": 0
       },
@@ -4735,6 +4829,7 @@
         "file_path": "/usr/lib/x86_64-linux-gnu/libresolv.so.2",
         "modex": 134218239,
         "mode": "Lrwxrwxrwx",
+        "link_ref": "libresolv-2.31.so",
         "file_size": 17,
         "uid": 0,
         "gid": 0

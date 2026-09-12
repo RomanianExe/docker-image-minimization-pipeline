@@ -1,36 +1,37 @@
 {
   "example": "react-express-mongodb",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-react-express-mongodb:original",
-    "size_bytes": 89926726,
-    "size_human": "89.93MB",
+    "size_bytes": 261621760,
+    "size_human": "261.62MB",
     "sbom_component_count": 512,
-    "vulnerability_total": 244,
+    "vulnerability_total": 247,
     "vulnerability_by_severity": {
-      "High": 86,
+      "High": 87,
       "Critical": 5,
       "Negligible": 62,
-      "Low": 29,
-      "Medium": 58,
+      "Low": 30,
+      "Medium": 59,
       "Unknown": 4
     }
   },
   "slim": {
     "image_tag": "dip-react-express-mongodb:slim",
-    "size_bytes": 45668317,
-    "size_human": "45.67MB",
+    "size_bytes": 109594112,
+    "size_human": "109.59MB",
     "sbom_component_count": 146,
-    "vulnerability_total": 74,
+    "vulnerability_total": 76,
     "vulnerability_by_severity": {
       "High": 33,
       "Critical": 4,
-      "Low": 17,
-      "Medium": 20
+      "Low": 18,
+      "Medium": 21
     }
   },
-  "size_reduction_pct": 49.2,
+  "size_reduction_pct": 58.1,
   "component_reduction": 366,
-  "vulnerability_reduction": 170,
+  "vulnerability_reduction": 171,
   "functional_tests_original": "PASS (tests/specific/react-express-mongodb/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/react-express-mongodb/test.sh)"
 }

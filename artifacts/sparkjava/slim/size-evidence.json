@@ -1,0 +1,46 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-sparkjava:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-sparkjava:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:2c053e89c68f2a732dbca3cfea779a96cacea7343c5145b11bc8f28cb2d5a7b0",
+    "size": 403,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:40f05762d292a18455727f99e9c0a3c7c773078eed5ddc25842235f1dcbb7796",
+    "size": 3959
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:8fb6a4f8c675e2ba793689d1d4a1992e539f5dc698092a07f08d2b706ea5a1d0",
+      "size": 134736896
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:8fb6a4f8c675e2ba793689d1d4a1992e539f5dc698092a07f08d2b706ea5a1d0",
+      "size": 134736896,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 134736896
+}

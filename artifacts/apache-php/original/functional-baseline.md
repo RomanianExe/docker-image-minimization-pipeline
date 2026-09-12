@@ -1,4 +1,6 @@
 # Functional Baseline — `apache-php` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## Build adaptation (important deviation from vendor Dockerfile)
 The vendored Dockerfile (`vendor/awesome-compose/apache-php/app/Dockerfile`) only
@@ -18,7 +20,7 @@ support per-example Dockerfile overrides without modifying vendored files).
 ## Build verification
 - Built via `pipeline/build.sh apache-php original`
   (`docker build --target builder -f examples/apache-php/Dockerfile`).
-- Image tag: `dip-apache-php:original`, real size (`docker inspect .Size`): 167.77MB.
+- Image tag: `dip-apache-php:original`, normalized OCI uncompressed-layer size: 480.78MB.
 
 ## Exposed functionality
 - Container listens on port 80.

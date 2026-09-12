@@ -2,8 +2,8 @@
   "document": "doc.report.container",
   "version": "ov/container/1.1",
   "target_type": "container",
-  "target_id": "11a7fe251c4133457a3a6c5024e58e07882a130072667445f9f46b570ed3086a",
-  "image_id": "sha256:b978c79c534628f85f69a832ab35fb36661ddb4fa824b0fde59e7f01c5ce2b8d",
+  "target_id": "9a1711f5d082541b5ee6b7d85d94dc2edab9f8c065277a958354ec213e50fb3c",
+  "image_id": "sha256:0c02d4df9be1de19c84bb57b11c6a5e63c6037888ccb28fe1e7660dac5a457e3",
   "start_command": {
     "app_name": "docker-php-entrypoint",
     "app_args": [
@@ -33,7 +33,7 @@
     "fan": {
       "monitor_pid": 1,
       "monitor_ppid": 0,
-      "event_count": 645,
+      "event_count": 641,
       "main_process": {
         "pid": 17,
         "name": "docker-php-entr",
@@ -55,9 +55,9 @@
         },
         "20": {
           "pid": 20,
-          "name": "apache2-foregro",
-          "path": "/bin/bash",
-          "cmd": "/bin/bash /usr/local/bin/apache2-foreground",
+          "name": "rm",
+          "path": "/bin/rm",
+          "cmd": "",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
@@ -65,15 +65,15 @@
         "21": {
           "pid": 21,
           "name": "apache2-foregro",
-          "path": "/bin/bash",
-          "cmd": "/bin/bash /usr/local/bin/apache2-foreground",
+          "path": "/usr/bin/dirname",
+          "cmd": "",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
         },
         "22": {
           "pid": 22,
-          "name": "apache2-foregro",
+          "name": "dirname",
           "path": "/usr/bin/dirname",
           "cmd": "",
           "cwd": "/var/www/html",
@@ -84,23 +84,23 @@
           "pid": 23,
           "name": "mkdir",
           "path": "/bin/mkdir",
-          "cmd": "",
+          "cmd": "mkdir -p /var/lock/apache2",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
         },
         "24": {
           "pid": 24,
-          "name": "apache2-foregro",
-          "path": "/bin/bash",
-          "cmd": "",
+          "name": "dirname",
+          "path": "/usr/bin/dirname",
+          "cmd": "dirname /var/log/apache2",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
         },
         "25": {
           "pid": 25,
-          "name": "dirname",
+          "name": "apache2-foregro",
           "path": "/usr/bin/dirname",
           "cmd": "",
           "cwd": "/var/www/html",
@@ -111,7 +111,7 @@
           "pid": 26,
           "name": "mkdir",
           "path": "/bin/mkdir",
-          "cmd": "mkdir -p /var/log/apache2",
+          "cmd": "",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
@@ -120,7 +120,7 @@
           "pid": 27,
           "name": "dirname",
           "path": "/usr/bin/dirname",
-          "cmd": "",
+          "cmd": "dirname /var/run/apache2",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
@@ -138,7 +138,7 @@
           "pid": 29,
           "name": "mkdir",
           "path": "/bin/mkdir",
-          "cmd": "",
+          "cmd": "mkdir -p /var/run/apache2",
           "cwd": "/var/www/html",
           "root": "/",
           "ppid": 17
@@ -204,37 +204,37 @@
           },
           "/etc/apache2/apache2.conf": {
             "event_count": 6,
-            "first_eid": 147,
+            "first_eid": 143,
             "reads": 4
           },
           "/etc/apache2/conf-available/charset.conf": {
             "event_count": 4,
-            "first_eid": 347,
+            "first_eid": 343,
             "reads": 2
           },
           "/etc/apache2/conf-available/docker-php.conf": {
             "event_count": 4,
-            "first_eid": 349,
+            "first_eid": 345,
             "reads": 2
           },
           "/etc/apache2/conf-available/localized-error-pages.conf": {
             "event_count": 4,
-            "first_eid": 351,
+            "first_eid": 347,
             "reads": 2
           },
           "/etc/apache2/conf-available/other-vhosts-access-log.conf": {
             "event_count": 4,
-            "first_eid": 353,
+            "first_eid": 349,
             "reads": 2
           },
           "/etc/apache2/conf-available/security.conf": {
             "event_count": 4,
-            "first_eid": 355,
+            "first_eid": 351,
             "reads": 2
           },
           "/etc/apache2/conf-available/serve-cgi-bin.conf": {
             "event_count": 4,
-            "first_eid": 357,
+            "first_eid": 353,
             "reads": 2
           },
           "/etc/apache2/envvars": {
@@ -244,172 +244,172 @@
           },
           "/etc/apache2/mods-available/access_compat.load": {
             "event_count": 4,
-            "first_eid": 150,
+            "first_eid": 146,
             "reads": 2
           },
           "/etc/apache2/mods-available/alias.conf": {
             "event_count": 4,
-            "first_eid": 324,
+            "first_eid": 320,
             "reads": 2
           },
           "/etc/apache2/mods-available/alias.load": {
             "event_count": 4,
-            "first_eid": 154,
+            "first_eid": 150,
             "reads": 2
           },
           "/etc/apache2/mods-available/auth_basic.load": {
             "event_count": 4,
-            "first_eid": 158,
+            "first_eid": 154,
             "reads": 2
           },
           "/etc/apache2/mods-available/authn_core.load": {
             "event_count": 4,
-            "first_eid": 162,
+            "first_eid": 158,
             "reads": 2
           },
           "/etc/apache2/mods-available/authn_file.load": {
             "event_count": 4,
-            "first_eid": 166,
+            "first_eid": 162,
             "reads": 2
           },
           "/etc/apache2/mods-available/authz_core.load": {
             "event_count": 4,
-            "first_eid": 170,
+            "first_eid": 166,
             "reads": 2
           },
           "/etc/apache2/mods-available/authz_host.load": {
             "event_count": 4,
-            "first_eid": 174,
+            "first_eid": 170,
             "reads": 2
           },
           "/etc/apache2/mods-available/authz_user.load": {
             "event_count": 4,
-            "first_eid": 178,
+            "first_eid": 174,
             "reads": 2
           },
           "/etc/apache2/mods-available/autoindex.conf": {
             "event_count": 4,
-            "first_eid": 326,
+            "first_eid": 322,
             "reads": 2
           },
           "/etc/apache2/mods-available/autoindex.load": {
             "event_count": 4,
-            "first_eid": 182,
+            "first_eid": 178,
             "reads": 2
           },
           "/etc/apache2/mods-available/deflate.conf": {
             "event_count": 4,
-            "first_eid": 328,
+            "first_eid": 324,
             "reads": 2
           },
           "/etc/apache2/mods-available/deflate.load": {
             "event_count": 4,
-            "first_eid": 186,
+            "first_eid": 182,
             "reads": 2
           },
           "/etc/apache2/mods-available/dir.conf": {
             "event_count": 4,
-            "first_eid": 330,
+            "first_eid": 326,
             "reads": 2
           },
           "/etc/apache2/mods-available/dir.load": {
             "event_count": 4,
-            "first_eid": 193,
+            "first_eid": 189,
             "reads": 2
           },
           "/etc/apache2/mods-available/env.load": {
             "event_count": 4,
-            "first_eid": 197,
+            "first_eid": 193,
             "reads": 2
           },
           "/etc/apache2/mods-available/filter.load": {
             "event_count": 4,
-            "first_eid": 201,
+            "first_eid": 197,
             "reads": 2
           },
           "/etc/apache2/mods-available/mime.conf": {
             "event_count": 6,
-            "first_eid": 332,
+            "first_eid": 328,
             "reads": 4
           },
           "/etc/apache2/mods-available/mime.load": {
             "event_count": 4,
-            "first_eid": 205,
+            "first_eid": 201,
             "reads": 2
           },
           "/etc/apache2/mods-available/mpm_prefork.conf": {
             "event_count": 4,
-            "first_eid": 335,
+            "first_eid": 331,
             "reads": 2
           },
           "/etc/apache2/mods-available/mpm_prefork.load": {
             "event_count": 4,
-            "first_eid": 209,
+            "first_eid": 205,
             "reads": 2
           },
           "/etc/apache2/mods-available/negotiation.conf": {
             "event_count": 4,
-            "first_eid": 337,
+            "first_eid": 333,
             "reads": 2
           },
           "/etc/apache2/mods-available/negotiation.load": {
             "event_count": 4,
-            "first_eid": 213,
+            "first_eid": 209,
             "reads": 2
           },
           "/etc/apache2/mods-available/php.load": {
             "event_count": 4,
-            "first_eid": 217,
+            "first_eid": 213,
             "reads": 2
           },
           "/etc/apache2/mods-available/reqtimeout.conf": {
             "event_count": 4,
-            "first_eid": 339,
+            "first_eid": 335,
             "reads": 2
           },
           "/etc/apache2/mods-available/reqtimeout.load": {
             "event_count": 4,
-            "first_eid": 312,
+            "first_eid": 308,
             "reads": 2
           },
           "/etc/apache2/mods-available/setenvif.conf": {
             "event_count": 4,
-            "first_eid": 341,
+            "first_eid": 337,
             "reads": 2
           },
           "/etc/apache2/mods-available/setenvif.load": {
             "event_count": 4,
-            "first_eid": 316,
+            "first_eid": 312,
             "reads": 2
           },
           "/etc/apache2/mods-available/status.conf": {
             "event_count": 4,
-            "first_eid": 343,
+            "first_eid": 339,
             "reads": 2
           },
           "/etc/apache2/mods-available/status.load": {
             "event_count": 4,
-            "first_eid": 320,
+            "first_eid": 316,
             "reads": 2
           },
           "/etc/apache2/ports.conf": {
             "event_count": 4,
-            "first_eid": 345,
+            "first_eid": 341,
             "reads": 2
           },
           "/etc/apache2/sites-available/000-default.conf": {
             "event_count": 4,
-            "first_eid": 359,
+            "first_eid": 355,
             "reads": 2
           },
           "/etc/group": {
             "event_count": 4,
-            "first_eid": 368,
+            "first_eid": 364,
             "reads": 2
           },
           "/etc/host.conf": {
             "event_count": 2,
-            "first_eid": 370,
+            "first_eid": 366,
             "reads": 1
           },
           "/etc/ld.so.cache": {
@@ -418,7 +418,7 @@
           },
           "/etc/mime.types": {
             "event_count": 38,
-            "first_eid": 372,
+            "first_eid": 368,
             "reads": 36
           },
           "/etc/nsswitch.conf": {
@@ -433,7 +433,7 @@
           },
           "/etc/ssl/openssl.cnf": {
             "event_count": 4,
-            "first_eid": 628,
+            "first_eid": 624,
             "reads": 3
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
@@ -448,12 +448,12 @@
           },
           "/lib/x86_64-linux-gnu/libcom_err.so.2.1": {
             "event_count": 4,
-            "first_eid": 292,
+            "first_eid": 288,
             "reads": 2
           },
           "/lib/x86_64-linux-gnu/libcrypt.so.1.1.0": {
             "event_count": 2,
-            "first_eid": 139,
+            "first_eid": 135,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libdl-2.31.so": {
@@ -463,32 +463,32 @@
           },
           "/lib/x86_64-linux-gnu/libexpat.so.1.6.12": {
             "event_count": 2,
-            "first_eid": 141,
+            "first_eid": 137,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
             "event_count": 2,
-            "first_eid": 274,
+            "first_eid": 270,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libgpg-error.so.0.29.0": {
             "event_count": 4,
-            "first_eid": 306,
+            "first_eid": 302,
             "reads": 2
           },
           "/lib/x86_64-linux-gnu/libkeyutils.so.1.9": {
             "event_count": 4,
-            "first_eid": 308,
+            "first_eid": 304,
             "reads": 2
           },
           "/lib/x86_64-linux-gnu/liblzma.so.5.2.5": {
             "event_count": 4,
-            "first_eid": 246,
+            "first_eid": 242,
             "reads": 2
           },
           "/lib/x86_64-linux-gnu/libm-2.31.so": {
             "event_count": 2,
-            "first_eid": 228,
+            "first_eid": 224,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libnss_files-2.31.so": {
@@ -498,17 +498,17 @@
           },
           "/lib/x86_64-linux-gnu/libpcre.so.3.13.3": {
             "event_count": 2,
-            "first_eid": 129,
+            "first_eid": 125,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libpthread-2.31.so": {
             "event_count": 2,
-            "first_eid": 135,
+            "first_eid": 131,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libresolv-2.31.so": {
             "event_count": 4,
-            "first_eid": 224,
+            "first_eid": 220,
             "reads": 2
           },
           "/lib/x86_64-linux-gnu/libtinfo.so.6.2": {
@@ -518,317 +518,317 @@
           },
           "/lib/x86_64-linux-gnu/libutil-2.31.so": {
             "event_count": 4,
-            "first_eid": 226,
+            "first_eid": 222,
             "reads": 2
           },
           "/lib/x86_64-linux-gnu/libz.so.1.2.11": {
             "event_count": 4,
-            "first_eid": 191,
+            "first_eid": 187,
             "reads": 2
           },
-          "/run/apache2/apache2.pid.mY0Vzu": {
+          "/run/apache2/apache2.pid.Ym0SBs": {
             "event_count": 2,
-            "first_eid": 632,
+            "first_eid": 628,
             "writes": 1
           },
           "/usr/lib/apache2/modules/libphp.so": {
             "event_count": 4,
-            "first_eid": 219,
+            "first_eid": 215,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_access_compat.so": {
             "event_count": 4,
-            "first_eid": 152,
+            "first_eid": 148,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_alias.so": {
             "event_count": 4,
-            "first_eid": 156,
+            "first_eid": 152,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_auth_basic.so": {
             "event_count": 4,
-            "first_eid": 160,
+            "first_eid": 156,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_authn_core.so": {
             "event_count": 4,
-            "first_eid": 164,
+            "first_eid": 160,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_authn_file.so": {
             "event_count": 4,
-            "first_eid": 168,
+            "first_eid": 164,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_authz_core.so": {
             "event_count": 4,
-            "first_eid": 172,
+            "first_eid": 168,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_authz_host.so": {
             "event_count": 4,
-            "first_eid": 176,
+            "first_eid": 172,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_authz_user.so": {
             "event_count": 4,
-            "first_eid": 180,
+            "first_eid": 176,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_autoindex.so": {
             "event_count": 4,
-            "first_eid": 184,
+            "first_eid": 180,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_deflate.so": {
             "event_count": 4,
-            "first_eid": 188,
+            "first_eid": 184,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_dir.so": {
             "event_count": 4,
-            "first_eid": 195,
+            "first_eid": 191,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_env.so": {
             "event_count": 4,
-            "first_eid": 199,
+            "first_eid": 195,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_filter.so": {
             "event_count": 4,
-            "first_eid": 203,
+            "first_eid": 199,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_mime.so": {
             "event_count": 4,
-            "first_eid": 207,
+            "first_eid": 203,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_mpm_prefork.so": {
             "event_count": 4,
-            "first_eid": 211,
+            "first_eid": 207,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_negotiation.so": {
             "event_count": 4,
-            "first_eid": 215,
+            "first_eid": 211,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_reqtimeout.so": {
             "event_count": 4,
-            "first_eid": 314,
+            "first_eid": 310,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_setenvif.so": {
             "event_count": 4,
-            "first_eid": 318,
+            "first_eid": 314,
             "reads": 2
           },
           "/usr/lib/apache2/modules/mod_status.so": {
             "event_count": 4,
-            "first_eid": 322,
+            "first_eid": 318,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libapr-1.so.0.7.0": {
             "event_count": 2,
-            "first_eid": 133,
+            "first_eid": 129,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0.6.1": {
             "event_count": 2,
-            "first_eid": 131,
+            "first_eid": 127,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libargon2.so.1": {
             "event_count": 4,
-            "first_eid": 222,
+            "first_eid": 218,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9": {
             "event_count": 4,
-            "first_eid": 298,
+            "first_eid": 294,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9": {
             "event_count": 4,
-            "first_eid": 264,
+            "first_eid": 260,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libbsd.so.0.11.3": {
             "event_count": 4,
-            "first_eid": 268,
+            "first_eid": 264,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1": {
             "event_count": 2,
-            "first_eid": 234,
+            "first_eid": 230,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0": {
             "event_count": 4,
-            "first_eid": 238,
+            "first_eid": 234,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libedit.so.2.0.63": {
             "event_count": 4,
-            "first_eid": 242,
+            "first_eid": 238,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libffi.so.7.1.0": {
             "event_count": 4,
-            "first_eid": 310,
+            "first_eid": 306,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.8": {
             "event_count": 4,
-            "first_eid": 286,
+            "first_eid": 282,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libgmp.so.10.4.1": {
             "event_count": 4,
-            "first_eid": 284,
+            "first_eid": 280,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libgnutls.so.30.29.1": {
             "event_count": 4,
-            "first_eid": 278,
+            "first_eid": 274,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2": {
             "event_count": 4,
-            "first_eid": 258,
+            "first_eid": 254,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libhogweed.so.6.4": {
             "event_count": 4,
-            "first_eid": 280,
+            "first_eid": 276,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libicudata.so.67.1": {
             "event_count": 4,
-            "first_eid": 270,
+            "first_eid": 266,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libicuuc.so.67.1": {
             "event_count": 4,
-            "first_eid": 244,
+            "first_eid": 240,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.7": {
             "event_count": 4,
-            "first_eid": 250,
+            "first_eid": 246,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1": {
             "event_count": 4,
-            "first_eid": 290,
+            "first_eid": 286,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libkrb5.so.3.3": {
             "event_count": 4,
-            "first_eid": 288,
+            "first_eid": 284,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1": {
             "event_count": 4,
-            "first_eid": 294,
+            "first_eid": 290,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2.11.5": {
             "event_count": 4,
-            "first_eid": 262,
+            "first_eid": 258,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2.11.5": {
             "event_count": 4,
-            "first_eid": 260,
+            "first_eid": 256,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libmd.so.0.0.4": {
             "event_count": 4,
-            "first_eid": 300,
+            "first_eid": 296,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libnettle.so.8.4": {
             "event_count": 4,
-            "first_eid": 282,
+            "first_eid": 278,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14.20.1": {
             "event_count": 4,
-            "first_eid": 248,
+            "first_eid": 244,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libonig.so.5.1.0": {
             "event_count": 4,
-            "first_eid": 240,
+            "first_eid": 236,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0": {
             "event_count": 4,
-            "first_eid": 302,
+            "first_eid": 298,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2": {
             "event_count": 4,
-            "first_eid": 256,
+            "first_eid": 252,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/librtmp.so.1": {
             "event_count": 4,
-            "first_eid": 252,
+            "first_eid": 248,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25": {
             "event_count": 4,
-            "first_eid": 296,
+            "first_eid": 292,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libsodium.so.23.3.0": {
             "event_count": 2,
-            "first_eid": 626,
+            "first_eid": 622,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6": {
             "event_count": 4,
-            "first_eid": 236,
+            "first_eid": 232,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libssh2.so.1.0.1": {
             "event_count": 4,
-            "first_eid": 254,
+            "first_eid": 250,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libssl.so.1.1": {
             "event_count": 2,
-            "first_eid": 232,
+            "first_eid": 228,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28": {
             "event_count": 2,
-            "first_eid": 272,
+            "first_eid": 268,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.0": {
             "event_count": 4,
-            "first_eid": 304,
+            "first_eid": 300,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0": {
             "event_count": 4,
-            "first_eid": 276,
+            "first_eid": 272,
             "reads": 2
           },
           "/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0": {
             "event_count": 2,
-            "first_eid": 143,
+            "first_eid": 139,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libxml2.so.2.9.10": {
             "event_count": 4,
-            "first_eid": 230,
+            "first_eid": 226,
             "reads": 2
           },
           "/usr/local/bin/apache2-foreground": {
@@ -843,22 +843,22 @@
           },
           "/usr/local/etc/php/conf.d/docker-php-ext-sodium.ini": {
             "event_count": 2,
-            "first_eid": 621,
+            "first_eid": 617,
             "reads": 1
           },
           "/usr/local/lib/php/extensions/no-debug-non-zts-20200930/sodium.so": {
             "event_count": 2,
-            "first_eid": 623,
+            "first_eid": 619,
             "reads": 1
           },
           "/usr/sbin/apache2": {
             "event_count": 2,
-            "first_eid": 125,
+            "first_eid": 121,
             "reads": 1
           },
           "/usr/share/zoneinfo/Etc/UTC": {
             "event_count": 3,
-            "first_eid": 618,
+            "first_eid": 614,
             "reads": 2
           }
         },
@@ -866,42 +866,44 @@
           "/bin/rm": {
             "event_count": 2,
             "first_eid": 33,
-            "reads": 1
+            "reads": 1,
+            "execs": 2
           },
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 36
+            "first_eid": 38
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
-            "event_count": 1,
+            "event_count": 3,
             "first_eid": 35,
-            "reads": 1
+            "reads": 2
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 37,
+            "first_eid": 39,
             "reads": 1
           }
         },
         "21": {
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 44
+            "first_eid": 45
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
-            "event_count": 2,
-            "first_eid": 42,
-            "reads": 2
+            "event_count": 1,
+            "first_eid": 44,
+            "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 45,
+            "first_eid": 46,
             "reads": 1
           },
           "/usr/bin/dirname": {
             "event_count": 2,
-            "first_eid": 40,
-            "reads": 1
+            "first_eid": 42,
+            "reads": 1,
+            "execs": 2
           }
         },
         "22": {
@@ -910,9 +912,9 @@
             "first_eid": 51
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
-            "event_count": 2,
-            "first_eid": 49,
-            "reads": 2
+            "event_count": 1,
+            "first_eid": 50,
+            "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
@@ -921,7 +923,7 @@
           },
           "/usr/bin/dirname": {
             "event_count": 2,
-            "first_eid": 47,
+            "first_eid": 48,
             "reads": 1,
             "execs": 2
           }
@@ -971,106 +973,107 @@
         "24": {
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 73
+            "first_eid": 71
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
-            "event_count": 3,
+            "event_count": 1,
             "first_eid": 70,
-            "reads": 2
+            "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 74,
+            "first_eid": 72,
             "reads": 1
           },
           "/usr/bin/dirname": {
             "event_count": 2,
             "first_eid": 68,
-            "reads": 1
+            "reads": 1,
+            "execs": 2
           }
         },
         "25": {
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 79
+            "first_eid": 77
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
             "event_count": 1,
-            "first_eid": 78,
+            "first_eid": 76,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 80,
+            "first_eid": 78,
             "reads": 1
           },
           "/usr/bin/dirname": {
             "event_count": 2,
-            "first_eid": 76,
+            "first_eid": 74,
             "reads": 1,
             "execs": 2
           }
         },
         "26": {
           "/bin/mkdir": {
-            "event_count": 4,
-            "first_eid": 82,
-            "reads": 3,
-            "execs": 4
+            "event_count": 2,
+            "first_eid": 80,
+            "reads": 1,
+            "execs": 2
           },
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 87
+            "first_eid": 83
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
             "event_count": 1,
-            "first_eid": 86,
+            "first_eid": 82,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 90,
+            "first_eid": 86,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libdl-2.31.so": {
             "event_count": 2,
-            "first_eid": 94,
+            "first_eid": 90,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libpthread-2.31.so": {
             "event_count": 2,
-            "first_eid": 96,
+            "first_eid": 92,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libselinux.so.1": {
             "event_count": 2,
-            "first_eid": 88,
+            "first_eid": 84,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.10.1": {
             "event_count": 2,
-            "first_eid": 92,
+            "first_eid": 88,
             "reads": 1
           }
         },
         "27": {
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 101
+            "first_eid": 97
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
             "event_count": 1,
-            "first_eid": 100,
+            "first_eid": 96,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 102,
+            "first_eid": 98,
             "reads": 1
           },
           "/usr/bin/dirname": {
             "event_count": 2,
-            "first_eid": 98,
+            "first_eid": 94,
             "reads": 1,
             "execs": 2
           }
@@ -1078,21 +1081,21 @@
         "28": {
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 107
+            "first_eid": 103
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
             "event_count": 1,
-            "first_eid": 106,
+            "first_eid": 102,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 108,
+            "first_eid": 104,
             "reads": 1
           },
           "/usr/bin/dirname": {
             "event_count": 2,
-            "first_eid": 104,
+            "first_eid": 100,
             "reads": 1,
             "execs": 2
           }
@@ -1100,82 +1103,82 @@
         "29": {
           "/bin/mkdir": {
             "event_count": 2,
-            "first_eid": 110,
+            "first_eid": 106,
             "reads": 1,
             "execs": 2
           },
           "/etc/ld.so.cache": {
             "event_count": 1,
-            "first_eid": 113
+            "first_eid": 109
           },
           "/lib/x86_64-linux-gnu/ld-2.31.so": {
             "event_count": 1,
-            "first_eid": 112,
+            "first_eid": 108,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libc-2.31.so": {
             "event_count": 2,
-            "first_eid": 116,
+            "first_eid": 112,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libdl-2.31.so": {
             "event_count": 2,
-            "first_eid": 120,
+            "first_eid": 116,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libpthread-2.31.so": {
             "event_count": 2,
-            "first_eid": 122,
+            "first_eid": 118,
             "reads": 1
           },
           "/lib/x86_64-linux-gnu/libselinux.so.1": {
             "event_count": 2,
-            "first_eid": 114,
+            "first_eid": 110,
             "reads": 1
           },
           "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.10.1": {
             "event_count": 2,
-            "first_eid": 118,
+            "first_eid": 114,
             "reads": 1
           }
         },
         "31": {
           "/etc/group": {
             "event_count": 2,
-            "first_eid": 642,
+            "first_eid": 638,
             "reads": 1
           }
         },
         "32": {
           "/etc/group": {
             "event_count": 2,
-            "first_eid": 640,
+            "first_eid": 636,
             "reads": 1
           }
         },
         "33": {
           "/etc/group": {
             "event_count": 2,
-            "first_eid": 635,
+            "first_eid": 630,
             "reads": 1
           }
         },
         "34": {
           "/etc/group": {
             "event_count": 2,
-            "first_eid": 634,
+            "first_eid": 631,
             "reads": 1
           }
         },
         "35": {
           "/etc/group": {
             "event_count": 2,
-            "first_eid": 636,
+            "first_eid": 633,
             "reads": 1
           },
           "/var/www/html/index.php": {
             "event_count": 2,
-            "first_eid": 644,
+            "first_eid": 640,
             "reads": 1
           }
         }
@@ -1184,13 +1187,13 @@
     "pt": {
       "enabled": true,
       "arch_name": "amd64",
-      "syscall_count": 8830,
+      "syscall_count": 8826,
       "syscall_num": 67,
       "syscall_stats": {
         "0": {
           "num": 0,
           "name": "read",
-          "count": 441
+          "count": 438
         },
         "1": {
           "num": 1,
@@ -1450,7 +1453,7 @@
         "56": {
           "num": 56,
           "name": "clone",
-          "count": 16
+          "count": 15
         },
         "59": {
           "num": 59,
@@ -3181,7 +3184,7 @@
           },
           "is_subdir": false
         },
-        "/var/run/apache2/apache2.pid.mY0Vzu": {
+        "/var/run/apache2/apache2.pid.Ym0SBs": {
           "ops_all": 1,
           "ops_checkfile": 1,
           "syscalls": {
@@ -3313,7 +3316,8 @@
         "modex": 493,
         "mode": "-rwxr-xr-x",
         "flags": {
-          "R": true
+          "R": true,
+          "X": true
         },
         "file_size": 72704,
         "sha1_hash": "4cd900d9611c000a6620f42951377328ba0f1eb8",
@@ -4272,7 +4276,7 @@
         "modex": 420,
         "mode": "-rw-r--r--",
         "file_size": 172,
-        "sha1_hash": "72ef1e37483d89c9d48646502d2fec64bf85edaf",
+        "sha1_hash": "db5fa8715635a68158091984604f47084c809062",
         "uid": 0,
         "gid": 0
       },
@@ -4340,8 +4344,8 @@
         "file_path": "/etc/resolv.conf",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 224,
-        "sha1_hash": "e9b0c83e82656db2d373772ab604182ec9449c99",
+        "file_size": 222,
+        "sha1_hash": "418dc7b5b43d5f5fb6d3ca4715e985ebde35bf09",
         "uid": 0,
         "gid": 0
       },
@@ -7139,7 +7143,7 @@
         "file_path": "/proc/self/fd/1",
         "modex": 134217920,
         "mode": "L-wx------",
-        "link_ref": "pipe:[18397]",
+        "link_ref": "pipe:[714511]",
         "file_size": 64,
         "uid": 0,
         "gid": 0
@@ -7149,7 +7153,7 @@
         "file_path": "/proc/self/fd/2",
         "modex": 134217920,
         "mode": "L-wx------",
-        "link_ref": "pipe:[18398]",
+        "link_ref": "pipe:[714512]",
         "file_size": 64,
         "uid": 0,
         "gid": 0
@@ -7165,12 +7169,30 @@
       },
       {
         "file_type": "dir",
+        "file_path": "/run/apache2",
+        "modex": 2147484159,
+        "mode": "drwxrwxrwx",
+        "file_size": 4096,
+        "uid": 33,
+        "gid": 33
+      },
+      {
+        "file_type": "dir",
         "file_path": "/run/lock",
         "modex": 2148532735,
         "mode": "dtrwxrwxrwx",
         "file_size": 4096,
         "uid": 0,
         "gid": 0
+      },
+      {
+        "file_type": "dir",
+        "file_path": "/run/lock/apache2",
+        "modex": 2147484159,
+        "mode": "drwxrwxrwx",
+        "file_size": 4096,
+        "uid": 33,
+        "gid": 33
       },
       {
         "file_type": "dir",
@@ -9865,8 +9887,8 @@
       {
         "file_type": "file",
         "file_path": "/var/www/html/index.php",
-        "modex": 420,
-        "mode": "-rw-r--r--",
+        "modex": 511,
+        "mode": "-rwxrwxrwx",
         "flags": {
           "R": true
         },

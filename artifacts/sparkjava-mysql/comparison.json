@@ -1,33 +1,34 @@
 {
   "example": "sparkjava-mysql",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-sparkjava-mysql:original",
-    "size_bytes": 101159442,
-    "size_human": "101.16MB",
+    "size_bytes": 278189056,
+    "size_human": "278.19MB",
     "sbom_component_count": 172,
-    "vulnerability_total": 468,
+    "vulnerability_total": 525,
     "vulnerability_by_severity": {
       "High": 33,
-      "Medium": 282,
-      "Low": 141,
+      "Medium": 347,
+      "Low": 133,
       "Negligible": 12
     }
   },
   "slim": {
     "image_tag": "dip-sparkjava-mysql:slim",
-    "size_bytes": 57766179,
-    "size_human": "57.77MB",
+    "size_bytes": 138684928,
+    "size_human": "138.68MB",
     "sbom_component_count": 22,
-    "vulnerability_total": 50,
+    "vulnerability_total": 53,
     "vulnerability_by_severity": {
       "High": 20,
-      "Medium": 20,
-      "Low": 10
+      "Medium": 22,
+      "Low": 11
     }
   },
-  "size_reduction_pct": 42.9,
+  "size_reduction_pct": 50.1,
   "component_reduction": 150,
-  "vulnerability_reduction": 418,
+  "vulnerability_reduction": 472,
   "functional_tests_original": "PASS (tests/specific/sparkjava-mysql/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/sparkjava-mysql/test.sh)"
 }

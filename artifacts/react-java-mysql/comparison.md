@@ -4,13 +4,15 @@
 
 | Metric | Original (`dip-react-java-mysql:original`) | Slim (`dip-react-java-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 133.42 MB | 91.15 MB | **-31.7%** |
+| Image size (normalized OCI uncompressed layers) | 314.52MB | 173.44MB | **-44.9%** |
 | SBOM components (Syft) | 249 | 98 | -151 |
-| Vulnerabilities (Grype) | 567 (8 Critical / 78 High / 319 Medium / 150 Low / 12 Negligible) | 152 (8 Critical / 65 High / 62 Medium / 17 Low) | -415 |
-| Functional tests (custom secrets processor + DB round trip) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 627 | 155 | -472 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Consistent with spring-postgres's ratio
-31.7% here vs. 31.6% for `spring-postgres` — nearly identical, both Spring
+44.9% here vs. 44.8% for `spring-postgres` — nearly identical, both Spring
 Boot apps with comparable dependency surfaces (Spring Data JPA, Hibernate,
 Tomcat, HikariCP). Reinforces that within the JVM cluster, minimization
 ratio tracks framework weight rather than varying per-example once the

@@ -281,7 +281,6 @@ profile dip-nginx-flask-mysql-apparmor-profile flags=(attach_disconnected,mediat
   /usr/local/bin/python-config r,
   /usr/local/bin/python3 r,
   /usr/local/bin/python3-config r,
-  /usr/local/bin/python3-config r,
   /usr/local/bin/python3.10-config r,
   /usr/local/lib/libpython3.10.so r,
   /usr/local/lib/libpython3.10.so.1.0 r,

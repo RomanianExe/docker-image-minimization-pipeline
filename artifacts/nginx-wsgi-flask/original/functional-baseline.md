@@ -1,4 +1,6 @@
 # Functional Baseline — `nginx-wsgi-flask` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## PATCHED: three-layer dependency-drift chain, vendor files untouched
 Fixing this example required peeling back a chain of unpinned transitive

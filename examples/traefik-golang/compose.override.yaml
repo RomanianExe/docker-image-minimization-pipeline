@@ -12,6 +12,8 @@
 #                     examples that all publish :80/:8000 upstream can be
 #                     processed without colliding.
 services:
+  frontend:
+    image: traefik:2.6@sha256:adf62c4c01290c29816f00b36a309df577771701e2feb2c9214fd3b6bd1e2894
   backend:
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test

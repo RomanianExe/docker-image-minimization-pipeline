@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-nodejs-redis:original`) | Slim (`dip-nginx-nodejs-redis:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 42.81 MB | 35.23 MB | **-17.7%** |
+| Image size (normalized OCI uncompressed layers) | 125.44MB | 80.75MB | **-35.6%** |
 | SBOM components (Syft) | 512 | 58 | -454 |
-| Vulnerabilities (Grype) | 246 (17 Critical / 129 High / 82 Medium / 18 Low) | 91 (5 Critical / 41 High / 31 Medium / 14 Low) | -155 |
-| Functional tests (stateful Redis round trip) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 254 | 93 | -161 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Recovered via a pipeline-side fix, not a vendor edit
 This example was initially excluded (§ "A different failure class" in

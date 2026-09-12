@@ -2,17 +2,18 @@
   "example": "aspnet-mssql",
   "stage": "original",
   "image_tag": "dip-aspnet-mssql:original",
-  "generated_at": "2026-08-23T13:30:00Z",
-  "size_bytes": 85388703,
-  "size_human": "85.39MB",
+  "generated_at": "2026-09-09T19:11:00Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 211922944,
+  "size_human": "211.92MB",
   "sbom_component_count": 100,
   "vulnerability_total": 271,
   "vulnerability_by_severity": {
-    "Critical": 10,
     "High": 80,
     "Medium": 87,
-    "Low": 24,
+    "Critical": 10,
     "Negligible": 66,
+    "Low": 24,
     "Unknown": 4
   },
   "functional_tests": "PASS (tests/specific/aspnet-mssql/test.sh)"

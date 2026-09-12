@@ -1,9 +1,11 @@
 # Functional Baseline — `flask-redis` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## Build verification
 - Built via `pipeline/build.sh flask-redis original` (`docker build --target builder`),
   same approach validated against `docker compose build` for the `flask` example.
-- Image tag: `dip-flask-redis:original`, real size (per `docker inspect .Size`): 25.0MB.
+- Image tag: `dip-flask-redis:original`, normalized OCI uncompressed-layer size: 77.64MB.
 
 ## Services & communication
 - Two services: `web` (custom build, Flask) and `redis` (prebuilt `redislabs/redismod`).

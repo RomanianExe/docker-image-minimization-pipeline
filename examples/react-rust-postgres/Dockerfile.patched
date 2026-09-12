@@ -6,8 +6,8 @@
 #
 # Fix 1 (frozen toolchain): the vendored base is `rust:buster`. Debian buster
 # is EOL, so that tag stopped being rebuilt and is frozen at Rust 1.79. The
-# project ships no Cargo.lock (.dockerignore excludes it), so `cargo fetch`
-# resolves dependencies fresh on every build; today `tokio-postgres = "^0.7"`
+# project shipped no Cargo.lock (.dockerignore excludes it), so `cargo fetch`
+# resolved dependencies fresh on every build; today `tokio-postgres = "^0.7"`
 # resolves to 0.7.18, whose manifest requires edition2024 (Rust >= 1.85):
 #
 #   error: failed to parse manifest at .../tokio-postgres-0.7.18/Cargo.toml
@@ -17,8 +17,8 @@
 # This is upstream drift, not a defect in the example: an unpinned dependency
 # tree resolved against a pinned-by-abandonment compiler. Bumping the base to
 # a current Rust is enough — the source itself needs no change, and the
-# unchanged Cargo.toml resolves and compiles cleanly on 1.90 (actix-web
-# "4.0.0-beta.8" resolves forward to 4.15, deadpool-postgres stays on 0.9).
+# unchanged Cargo.toml resolves and compiles cleanly on 1.90. The project-owned
+# Cargo.lock is a newly generated controlled baseline, not historical recovery.
 #
 # Fix 2 (runtime base): the final stage was `debian:buster-slim`, also EOL and
 # with a glibc too old for a binary linked on bookworm. It follows the build
@@ -37,7 +37,8 @@ ENV ROCKET_ENV=development
 WORKDIR /code
 RUN cargo init
 COPY Cargo.toml /code/Cargo.toml
-RUN cargo fetch
+COPY --from=dip_rust_lock Cargo.lock /code/Cargo.lock
+RUN cargo fetch --locked
 COPY . /code
 
 FROM base AS development
@@ -65,7 +66,7 @@ CMD [ "cargo", "run", "--offline" ]
 
 FROM base AS builder
 
-RUN cargo build --release --offline
+RUN cargo build --release --locked --offline
 
 FROM debian:bookworm-slim AS production
 

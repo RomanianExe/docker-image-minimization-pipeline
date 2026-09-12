@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,10 +22,10 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef",
+      "id": "sha256:79814cfc668dec4406178316613c1a918e0f29cd123cee895faf1ca58bab95b3",
       "tags": [
-        "latest",
-        "original"
+        "original",
+        "latest"
       ],
       "names": [
         "gitea/gitea:latest",
@@ -35,12 +35,11 @@
         "sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef"
       ],
       "full_digests": [
-        "gitea/gitea@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef",
-        "dip-gitea-postgres@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef"
+        "gitea/gitea@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef"
       ]
     },
-    "size": 72158565,
-    "size_human": "72 MB",
+    "size": 191102163,
+    "size_human": "191 MB",
     "create_time": "2026-08-29T17:03:09Z",
     "runtime_name": "docker",
     "architecture": "amd64",
@@ -61,21 +60,21 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 59812867,
-  "minified_image_size_human": "60 MB",
+  "minified_image_size": 139659321,
+  "minified_image_size_human": "140 MB",
   "minified_image": "dip-gitea-postgres:slim",
-  "minified_image_id": "sha256:e044d4fe83eecc82f8f891ff1775148d58b7507f391a6484abcafca1a451afde",
-  "minified_image_digest": "sha256:7639dd5632fa8e2519dfa6c384bc67e64145936a5292eacda145c63c5b65c2a4",
+  "minified_image_id": "sha256:f5ba00a34a246cce6809e63c34f574bbf1a413178c211badac9e040d47e1bfa8",
+  "minified_image_digest": "sha256:a1c01a0c747f9f239ba976d50c43f16869b440cf8f1fb3c09853e9766ae46fbb",
   "minified_image_has_data": true,
-  "minified_by": 1.2064053876568064,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef/artifacts",
+  "minified_by": 1.3683452105570526,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/79814cfc668dec4406178316613c1a918e0f29cd123cee895faf1ca58bab95b3/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-gitea-postgres-seccomp.json",
   "apparmor_profile_name": "dip-gitea-postgres-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef",
+      "id": "sha256:79814cfc668dec4406178316613c1a918e0f29cd123cee895faf1ca58bab95b3",
       "full_name": "gitea/gitea:latest",
       "repo_name": "gitea/gitea",
       "version_tag": "latest",
@@ -84,8 +83,8 @@
         "dip-gitea-postgres:original"
       ],
       "create_time": "2026-08-29T17:03:09Z",
-      "new_size": 193847296,
-      "new_size_human": "194 MB",
+      "new_size": 191102163,
+      "new_size_human": "191 MB",
       "instructions": [
         {
           "type": "ADD",
@@ -93,8 +92,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 9072640,
-          "size_human": "9.1 MB",
+          "size": 8415579,
+          "size_human": "8.4 MB",
           "params": "alpine-minirootfs-3.24.1-x86_64.tar.gz /",
           "command_snippet": "ADD alpine-minirootfs-3.24.1-x86_64.tar.gz /",
           "command_all": "ADD alpine-minirootfs-3.24.1-x86_64.tar.gz /",
@@ -143,8 +142,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 60018688,
-          "size_human": "60 MB",
+          "size": 58064529,
+          "size_human": "58 MB",
           "command_snippet": "RUN apk --no-cache add     bash     ca-certi...",
           "command_all": "RUN apk --no-cache add     bash     ca-certificates     curl     gettext     git     linux-pam     openssh     s6     sqlite     su-exec     gnupg",
           "system_commands": [
@@ -162,8 +161,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 32768,
-          "size_human": "33 kB",
+          "size": 3291,
+          "size_human": "3.3 kB",
           "command_snippet": "RUN addgroup     -S -g 1000     git && \\\n\tad...",
           "command_all": "RUN addgroup     -S -g 1000     git && \\\n\tadduser     -S -H -D     -h /data/git     -s /bin/bash     -u 1000     -G git     git && \\\n\techo \"git:*\" | chpasswd -e",
           "system_commands": [
@@ -183,8 +182,8 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 98304,
-          "size_human": "98 kB",
+          "size": 10090,
+          "size_human": "10 kB",
           "params": "/tmp/local /",
           "command_snippet": "COPY /tmp/local /",
           "command_all": "COPY /tmp/local /",
@@ -200,7 +199,7 @@
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 124624896,
+          "size": 124608674,
           "size_human": "125 MB",
           "params": "/go/src/gitea.dev/gitea /app/gitea/gitea",
           "command_snippet": "COPY /go/src/gitea.dev/gitea /app/gitea/gite...",

@@ -18,11 +18,18 @@
 # container_name is overridden above.
 services:
   backend:
+    build:
+      dockerfile: ${DIP_ROOT}/examples/nginx-flask-mongo/Dockerfile.patched
+      additional_contexts:
+        dip_locks: ${DIP_ROOT}/examples/nginx-flask-mongo
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test
     volumes: !reset null
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"
   web:
+    image: nginx:1.31.5@sha256:05b8cb60c354a44ab824ea6e7dc69b46d50762cdbe728a347a5b656e6fb3d7c4
     ports: !override
       - "${PROXY_HOST_PORT}:80"
+  mongo:
+    image: mongo:8.3.9@sha256:613a7cc66be5bbf1796252660b43c9b8969a5ad1dab6180c9d917b7472867e64

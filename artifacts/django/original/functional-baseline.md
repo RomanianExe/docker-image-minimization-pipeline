@@ -1,4 +1,6 @@
 # Functional Baseline — `django` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 First example processed via `pipeline/run-pipeline.sh` (Stage 6 automation), not
 manual step-by-step commands.
@@ -13,7 +15,7 @@ of a 404. This was confirmed by direct exploration (curling `/`, `/admin/`,
 
 ## Build verification
 - Built via `pipeline/build.sh django original` (`docker build --target builder`).
-- Image tag: `dip-django:original`, real size (`docker inspect .Size`): 27.72MB.
+- Image tag: `dip-django:original`, normalized OCI uncompressed-layer size: 89.57MB.
 
 ## Exposed functionality
 - `GET /` → `200 OK`, Django's default DEBUG landing page.

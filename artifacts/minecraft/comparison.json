@@ -1,0 +1,36 @@
+{
+  "example": "minecraft",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "original": {
+    "image_tag": "dip-minecraft:original",
+    "size_bytes": 881534976,
+    "size_human": "881.53MB",
+    "sbom_component_count": 486,
+    "vulnerability_total": 1442,
+    "vulnerability_by_severity": {
+      "Medium": 1351,
+      "Critical": 3,
+      "High": 31,
+      "Low": 46,
+      "Negligible": 11
+    }
+  },
+  "slim": {
+    "image_tag": "dip-minecraft:slim",
+    "size_bytes": 257743360,
+    "size_human": "257.74MB",
+    "sbom_component_count": 178,
+    "vulnerability_total": 60,
+    "vulnerability_by_severity": {
+      "High": 30,
+      "Critical": 5,
+      "Medium": 21,
+      "Low": 4
+    }
+  },
+  "size_reduction_pct": 70.8,
+  "component_reduction": 308,
+  "vulnerability_reduction": 1382,
+  "functional_tests_original": "PASS (tests/specific/minecraft/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/minecraft/test.sh)"
+}

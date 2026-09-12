@@ -4,21 +4,23 @@
 
 | Metric | Original (`dip-portainer:original`) | Slim (`dip-portainer:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 48.55 MB | 38.74 MB | **-20.2%** |
+| Image size (normalized OCI uncompressed layers) | 163.92MB | 106.15MB | **-35.2%** |
 | SBOM components (Syft) | 328 | 312 | -16 |
-| Vulnerabilities (Grype) | 34 (2 Critical / 20 High / 8 Medium / 4 Unknown) | 11 (2 Critical / 6 High / 3 Medium) | -23 |
-| Functional tests (SPA + two API branches + socket mount) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 39 | 16 | -23 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 Prebuilt example: the baseline is `portainer/portainer-ce:alpine` pulled and re-tagged,
 not built. See `docs/methodology.md` §12.
 
 ## A modest ratio, and why the component count barely moves
 
-20.2% is the second-smallest reduction among the prebuilt successes, and the SBOM drops
+35.2% is a modest reduction among the prebuilt successes, and the SBOM drops
 by only 16 of 328 components. Both figures have the same cause: this image is already
 close to minimal — an Alpine base, the portainer binary, and a static frontend tree.
 What Slim removed is the busybox userland and the `apk` tooling; what it kept is the
-binary and the assets, which is where the 38.74 MB lives. There is no large unused
+binary and the assets, which account for most of the 106.15 MB normalized image. There is no large unused
 dependency tree to delete, so the technique has little to work with.
 
 The 312 remaining components are almost entirely Go modules that Syft reads out of the

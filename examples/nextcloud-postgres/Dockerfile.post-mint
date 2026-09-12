@@ -1,0 +1,7 @@
+# Restore the original empty seed for Nextcloud's declared /var/www/html
+# volume. The entrypoint subsequently populates it from /usr/src/nextcloud.
+FROM dip-nextcloud-postgres:slim
+RUN rm -rf -- \
+    /var/www/html/* \
+    /var/www/html/.[!.]* \
+    /var/www/html/..?*

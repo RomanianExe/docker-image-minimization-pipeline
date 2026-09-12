@@ -9,8 +9,8 @@ profile dip-vuejs-apparmor-profile flags=(attach_disconnected,mediate_deleted) {
   /project/node_modules/.cache/babel-loader/9c15c54bfd2eb8aa42a5517a9e235eb2.json w,
   /project/node_modules/.cache/babel-loader/ab66f574ea8c9d4a2bb6786273be09ea.json w,
   /project/node_modules/.cache/eslint/5f826bf6.json w,
-  /tmp/yarn--1787834126003-0.6714814004664367/node rw,
-  /tmp/yarn--1787834126003-0.6714814004664367/yarn rw,
+  /tmp/yarn--1788986359877-0.10877352925674155/node rw,
+  /tmp/yarn--1788986359877-0.10877352925674155/yarn rw,
 
   /.dockerenv r,
   /bin/arch r,

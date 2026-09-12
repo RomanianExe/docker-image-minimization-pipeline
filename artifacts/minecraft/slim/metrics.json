@@ -1,0 +1,18 @@
+{
+  "example": "minecraft",
+  "stage": "slim",
+  "image_tag": "dip-minecraft:slim",
+  "generated_at": "2026-09-09T23:30:55Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 257743360,
+  "size_human": "257.74MB",
+  "sbom_component_count": 178,
+  "vulnerability_total": 60,
+  "vulnerability_by_severity": {
+    "High": 30,
+    "Critical": 5,
+    "Medium": 21,
+    "Low": 4
+  },
+  "functional_tests": "PASS (tests/specific/minecraft/test.sh)"
+}

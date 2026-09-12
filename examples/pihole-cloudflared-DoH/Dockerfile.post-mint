@@ -1,0 +1,11 @@
+# Recreate only the empty directory metadata that Mint omitted from Pi-hole.
+# The helper is build-only and digest-pinned; the final image inherits Mint's
+# output unchanged except for /etc/pihole (root:root, 0755, empty).
+FROM busybox:1.36.1@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662 AS scaffold
+RUN mkdir -p -m 0755 /scaffold/etc/pihole
+
+# pipeline/slim.sh has already created this local tag with Mint before this
+# wrapper is built. Keeping it literal also permits Docker's legacy builder to
+# perform the repair on hosts where Buildx is unavailable.
+FROM dip-pihole-cloudflared-doh:slim
+COPY --from=scaffold --chown=0:0 /scaffold/etc/pihole /etc/pihole

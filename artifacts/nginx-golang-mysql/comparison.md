@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-golang-mysql:original`) | Slim (`dip-nginx-golang-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 123.39MB | 4.70MB | **-96.2%** |
+| Image size (normalized OCI uncompressed layers) | 348.12MB | 8.11MB | **-97.7%** |
 | SBOM components (Syft) | 62 | 6 | -56 |
-| Vulnerabilities (Grype) | 582 (276 High / 246 Medium / 38 Critical / 20 Low / 2 Unknown) | 41 (24 High / 14 Medium / 2 Critical / 1 Low) | -541 |
-| Functional tests (route through nginx + MySQL round trip) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 582 | 41 | -541 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Which image this measures, and why that needed correcting
 

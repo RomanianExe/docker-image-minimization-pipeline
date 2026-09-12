@@ -2,8 +2,8 @@
   "document": "doc.report.container",
   "version": "ov/container/1.1",
   "target_type": "container",
-  "target_id": "7ed499adbe23c2fdf442b103181b92f38eed62fa657c8b73f2bbc39f30bbee28",
-  "image_id": "sha256:3abfd4b82212106e357989750b9c0c9859aa511f5305a9a55c18c8de7198b655",
+  "target_id": "0896bb93cf5c8dceeac9c3975c2584dee703eb065a6ae58ef31daf9275644820",
+  "image_id": "sha256:aaea1b8eb9e067851a1815e6e626cccdbe46845031a4619b33445056693ff264",
   "start_command": {
     "app_name": "/init"
   },
@@ -634,11 +634,2135 @@
       },
       {
         "file_type": "symlink",
+        "file_path": "/command/background",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/backtick",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/case",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/cd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/define",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/dollarat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/elgetopt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/elgetpositionals",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/elglob",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/eltest",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/emptyenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/envfile",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/exec",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/execline",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/execline-cd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/execline-umask",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/execlineb",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/exit",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/export",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/export-array",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/fdblock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/fdclose",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/fdmove",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/fdreserve",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/fdswap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/forbacktickx",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/foreground",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/forstdin",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/forx",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/getcwd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/getpid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/heredoc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/homeof",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/if",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/ifelse",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/ifte",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/ifthenelse",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/importas",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/logutil-newfifo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/logutil-service",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/loopwhilex",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/multidefine",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/multisubstitute",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/pipeline",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/piperw",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/posix-cd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/posix-umask",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/printcontenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/redirfd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/rngseed",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/runblock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-accessrules-cdb-from-fs",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-accessrules-fs-from-cdb",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-applyuidgid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-basename",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-cat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-chmod",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-chown",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-chroot",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-cleanfifodir",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-clock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-clockadd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-clockview",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-connlimit",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-cut",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dirname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dns-hosts-compile",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsip",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsip4",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsip4-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsip6",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsip6-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsmx",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsname-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsns",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsq",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsqr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnsqualify",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnssoa",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnssrv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dnstxt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-dumpenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-echo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-env",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-envdir",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-envuidgid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-expr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-false",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-daemon",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-delete",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-getdump",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-list",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-retrieve",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-setdump",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-store",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholder-transferdump",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fdholderd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-fghack",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-format-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-freeramdisk",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ftrig-listen",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ftrig-listen1",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ftrig-notify",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ftrig-wait",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ftrigrd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-getservbyname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-grep",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-head",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-hiercopy",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-hostname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ident-client",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-instance-control",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-instance-create",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-instance-delete",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-instance-list",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-instance-maker",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-instance-status",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ioconnect",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ipcclient",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ipcserver",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ipcserver-access",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ipcserver-socketbinder",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ipcserverd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linkname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-echo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-hpr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-logouthookd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-maker",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-nuke",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-shutdown",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-shutdownd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-telinit",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-init-umountall",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-linux-utils",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ln",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-log",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 34,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-logwatch",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ls",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-maximumtime",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 57,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-mkdir",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-mkfifo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-mkfifodir",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-mount",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-nice",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-notifyoncheck",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-nuke",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-overlay-stat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 59,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
         "file_path": "/command/s6-overlay-suexec",
         "modex": 134218239,
         "mode": "Lrwxrwxrwx",
         "link_ref": "../package/admin/s6-overlay-helpers/command/s6-overlay-suexec",
         "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-pause",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-permafailon",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-pivotchroot",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-portable-utils",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-printenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ps",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-quote",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-quote-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 58,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-randomip",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-bundle",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-compile",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-db",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-dryrun",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-format-upgrade",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-init",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rc-update",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 43,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rename",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 52,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-rmrf",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-seq",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-setlock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-setsid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-setuidgid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sleep",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sntpclock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-socklog",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-softlimit",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sort",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sudo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sudoc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sudod",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 36,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-supervise",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 34,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svdt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svdt-clear",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svlink",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svlisten",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svlisten1",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svok",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 35,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svperms",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svscan",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svscanctl",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 40,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svstat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svunlink",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-svwait",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-swapoff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-swapon",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-sync",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tai64n",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tai64ndiff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tai64nlocal",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-taiclock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-taiclockd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tail",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tcpclient",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tcpserver",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tcpserver-access",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tcpserver-socketbinder",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tcpserverd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tlsc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tlsc-io",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tlsclient",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tlsd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tlsd-io",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 47,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-tlsserver",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-touch",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 51,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-true",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ucspitlsc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-ucspitlsd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-umount",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-uniquename",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 56,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-unquote",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 53,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-unquote-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 60,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-update-symlinks",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 61,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/s6-usertree-maker",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/seekablepipe",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 55,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/shift",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/skadnsd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/trap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/tryexec",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/ucspilogd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 37,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/umask",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 39,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/unexport",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/wait",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 38,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/with-contenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/with-retries",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/command/withstdinas",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 45,
         "uid": 0,
         "gid": 0
       },
@@ -665,7 +2789,853 @@
         "file_path": "/etc/resolv.conf",
         "modex": 420,
         "mode": "-rw-r--r--",
-        "file_size": 224,
+        "file_size": 222,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/ci-service-check/dependencies.d/legacy-services",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/ci-service-check/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/ci-service-check/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-adduser/branding",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 567,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-adduser/dependencies.d/init-migrations",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-adduser/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1737,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-adduser/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-adduser/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config-end/dependencies.d/init-config",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config-end/dependencies.d/init-crontab-config",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config-end/dependencies.d/init-wireguard-confs",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config-end/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config-end/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 88,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config/dependencies.d/init-os-end",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-config/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 90,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-crontab-config/dependencies.d/init-config",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-crontab-config/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1278,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-crontab-config/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-crontab-config/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 48,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-custom-files/dependencies.d/init-mods-end",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-custom-files/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 759,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-custom-files/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-custom-files/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 46,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-device-perms/dependencies.d/init-adduser",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-device-perms/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1778,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-device-perms/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 7,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-device-perms/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-envfile/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 829,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-envfile/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-envfile/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 41,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-migrations/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 965,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-migrations/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-migrations/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 44,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-end/dependencies.d/init-mods-package-install",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-end/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-end/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 75,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-package-install/dependencies.d/init-mods",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-package-install/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 4178,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-package-install/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods-package-install/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 54,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods/dependencies.d/init-config-end",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-mods/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 77,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-os-end/dependencies.d/init-adduser",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-os-end/dependencies.d/init-device-perms",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-os-end/dependencies.d/init-envfile",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-os-end/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-os-end/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 75,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-services/dependencies.d/init-custom-files",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-services/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-services/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 73,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-confs/dependencies.d/init-wireguard-module",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-confs/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 8834,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-confs/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-confs/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 49,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-module/dependencies.d/init-config",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-module/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 794,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-module/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/init-wireguard-module/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 50,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-coredns/dependencies.d/init-services",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-coredns/notification-fd",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 2,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-coredns/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 740,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-coredns/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-cron/dependencies.d/init-services",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-cron/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 568,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-cron/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-wireguard/dependencies.d/svc-coredns",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-wireguard/down",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 45,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-wireguard/finish",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 369,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-wireguard/run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1362,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-wireguard/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/svc-wireguard/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 42,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-adduser",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-config",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-config-end",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-crontab-config",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-custom-files",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-device-perms",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-envfile",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-migrations",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-mods",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-mods-end",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-mods-package-install",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-os-end",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-services",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-wireguard-confs",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/init-wireguard-module",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/svc-coredns",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/svc-cron",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/contents.d/svc-wireguard",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 7,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user2/contents.d/ci-service-check",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/etc/s6-overlay/s6-rc.d/user2/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 7,
         "uid": 0,
         "gid": 0
       },
@@ -2867,6 +5837,1680 @@
       },
       {
         "file_type": "symlink",
+        "file_path": "/package/admin/execline",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 16,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/background",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/backtick",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/case",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/cd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/define",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/dollarat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/elgetopt",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/elgetpositionals",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/elglob",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/eltest",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/emptyenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/envfile",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/exec",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/execline-2.9.7.0/command/execline",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 202192,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/execline-cd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/execline-umask",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/execlineb",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/exit",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/export",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/export-array",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/fdblock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/fdclose",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/fdmove",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/fdreserve",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/fdswap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/forbacktickx",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/foreground",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/forstdin",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/forx",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/getcwd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/getpid",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/heredoc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/homeof",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/if",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/ifelse",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/ifte",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/ifthenelse",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/importas",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/loopwhilex",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/multidefine",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/multisubstitute",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/pipeline",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/piperw",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/posix-cd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/posix-umask",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/redirfd",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/runblock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/shift",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/trap",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/tryexec",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/umask",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/unexport",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/wait",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/execline-2.9.7.0/command/withstdinas",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 11,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-accessrules-cdb-from-fs",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 37968,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-accessrules-fs-from-cdb",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 25672,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-applyuidgid",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17408,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-cleanfifodir",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17480,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-connlimit",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-envdir",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 25592,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-envuidgid",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33784,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-daemon",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13384,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-delete",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29800,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-getdump",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 37992,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-list",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29864,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-retrieve",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33896,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-setdump",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33896,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-store",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29800,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholder-transferdump",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 37992,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fdholderd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 120112,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-fghack",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29928,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ftrig-listen",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 50504,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ftrig-listen1",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 50504,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ftrig-notify",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17480,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ftrig-wait",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 50504,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ftrigrd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 79176,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-instance-control",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-instance-create",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 66960,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-instance-delete",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 62728,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-instance-list",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17464,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-instance-maker",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33784,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-instance-status",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13432,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ioconnect",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 22056,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ipcclient",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ipcserver",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13384,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ipcserver-access",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33784,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ipcserver-socketbinder",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-ipcserverd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 38200,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-log",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 107976,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-mkfifodir",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-notifyoncheck",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-permafailon",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21584,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-setlock",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21568,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-setsid",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-setuidgid",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13384,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-socklog",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 30360,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-softlimit",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17408,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-sudo",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-sudoc",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29800,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-sudod",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 38344,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-supervise",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54600,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svc",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17480,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svdt",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13448,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svdt-clear",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13384,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svlink",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 66824,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svlisten",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svlisten1",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svok",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 9288,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svperms",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33848,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svscan",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 50496,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svscanctl",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13304,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svstat",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21664,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svunlink",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 58632,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-svwait",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-tai64n",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21712,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-tai64nlocal",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29912,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/s6-usertree-maker",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29688,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-2.13.2.0/command/ucspilogd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 22008,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-init",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 21,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 42128,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-echo",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 9272,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-hpr",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17512,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-logouthookd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 9208,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-maker",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 46120,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-nuke",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 5056,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-shutdown",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29816,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-shutdownd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 46352,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-telinit",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29928,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/command/s6-linux-init-umountall",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 37960,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/etc/skel/rc.init",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1546,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/etc/skel/rc.shutdown",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1278,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/etc/skel/rc.shutdown.final",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 762,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-init-1.1.3.0/etc/skel/runlevel",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 554,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 22,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/rngseed",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-chroot",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-freeramdisk",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-hostname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-linux-utils",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 120008,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-logwatch",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-mount",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-pivotchroot",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-ps",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-swapoff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-swapon",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-linux-utils-2.6.3.0/command/s6-umount",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-overlay",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 18,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/command/logutil-newfifo",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 439,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/command/logutil-service",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 349,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/command/printcontenv",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 323,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/command/with-contenv",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 192,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/command/with-retries",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 449,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-linux-init/skel/CMDSIG",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 128,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-linux-init/skel/rc.init",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 2531,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-linux-init/skel/rc.shutdown",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 172,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-linux-init/skel/rc.shutdown.final",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 24,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/scripts/cont-finish",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 574,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/scripts/cont-init",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 812,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/scripts/fix-attrs",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 922,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/scripts/services-down",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 457,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/scripts/services-up",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1935,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/base/contents.d/fix-attrs",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/base/contents.d/legacy-cont-init",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/base/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 7,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/fix-attrs/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/fix-attrs/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-cont-init/dependencies.d/fix-attrs",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-cont-init/down",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-cont-init/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-cont-init/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 62,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-services/dependencies.d/base",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-services/dependencies.d/user",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-services/down",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 66,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-services/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 8,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/legacy-services/up",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 64,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/top/contents.d/base",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/top/contents.d/legacy-services",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/top/contents.d/user",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/top/contents.d/user2",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 0,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/etc/s6-rc/sources/top/type",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 7,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/libexec/fix-attrs",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 1040,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/libexec/logutil-service-main",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 271,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/libexec/preinit",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 4576,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-3.2.1.0/libexec/stage0",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 2076,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
         "file_path": "/package/admin/s6-overlay-helpers",
         "modex": 134218239,
         "mode": "Lrwxrwxrwx",
@@ -2881,6 +7525,15 @@
         "modex": 2147484141,
         "mode": "drwxr-xr-x",
         "file_size": 4096,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-overlay-helpers-0.1.2.0/command/s6-overlay-stat",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29832,
         "uid": 0,
         "gid": 0
       },
@@ -2904,6 +7557,951 @@
         "mode": "urwxr-xr-x",
         "file_size": 42216,
         "sha1_hash": "8ce34be08bef0f4d72f6cbf44987cd11703334e3",
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 25,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-basename",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-cat",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-chmod",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-chown",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-clock",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-cut",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-dirname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-dumpenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-echo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-env",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-expr",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-false",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-format-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-grep",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-head",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-hiercopy",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-linkname",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-ln",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-ls",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-maximumtime",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-mkdir",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-mkfifo",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-nice",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-nuke",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-pause",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-portable-utils",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 157192,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-printenv",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-quote",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-quote-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-rename",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-rmrf",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-seq",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-sleep",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-sort",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-sync",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-tai64ndiff",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-tail",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-touch",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-true",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-uniquename",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-unquote",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-unquote-filter",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/s6-update-symlinks",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-portable-utils-2.3.1.0/command/seekablepipe",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 17,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/admin/s6-rc",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 13,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54608,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-bundle",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 42120,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-compile",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 79016,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-db",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29832,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-dryrun",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 9384,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-fdholder-filler",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 29864,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-format-upgrade",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17520,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-init",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 75016,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-oneshot-run",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17400,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/admin/s6-rc-0.5.6.0/command/s6-rc-update",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 111904,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/net/s6-networking",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 21,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-clockadd",
+        "modex": 448,
+        "mode": "-rwx------",
+        "file_size": 13312,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-clockview",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21664,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-getservbyname",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17544,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-ident-client",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21672,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-sntpclock",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 33920,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-taiclock",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21608,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-taiclockd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17488,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tcpclient",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 83856,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tcpserver",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13384,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tcpserver-access",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 83920,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tcpserver-socketbinder",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17400,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tcpserverd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 46392,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tlsc",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 34024,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tlsc-io",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 165896,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tlsclient",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17400,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tlsd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 34024,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tlsd-io",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 174224,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-tlsserver",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 17400,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-ucspitlsc",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21584,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/net/s6-networking-2.7.1.0/command/s6-ucspitlsd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 21584,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/prog/skalibs",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 16,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/pthread.lib",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/socket.lib",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/spawn.lib",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/sysclock.lib",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/sysdeps",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1190,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/target",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 18,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/timer.lib",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/prog/skalibs-2.14.4.0/sysdeps/util.lib",
+        "modex": 420,
+        "mode": "-rw-r--r--",
+        "file_size": 1,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "symlink",
+        "file_path": "/package/web/s6-dns",
+        "modex": 134218239,
+        "mode": "Lrwxrwxrwx",
+        "file_size": 14,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dns-hosts-compile",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 41984,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsip",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 67048,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsip4",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 67536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsip4-filter",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 54800,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsip6",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 67536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsip6-filter",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 58896,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsmx",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 42960,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsname",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 63440,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsname-filter",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 58896,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsns",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 42960,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsq",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 55024,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsqr",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 59440,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnsqualify",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 26056,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnssoa",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 63504,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnssrv",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 42960,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-dnstxt",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 67536,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/s6-randomip",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 13368,
+        "uid": 0,
+        "gid": 0
+      },
+      {
+        "file_type": "file",
+        "file_path": "/package/web/s6-dns-2.4.1.0/command/skadnsd",
+        "modex": 493,
+        "mode": "-rwxr-xr-x",
+        "file_size": 42768,
         "uid": 0,
         "gid": 0
       },

@@ -2,15 +2,16 @@
   "example": "react-express-mysql",
   "stage": "slim",
   "image_tag": "dip-react-express-mysql:slim",
-  "generated_at": "2026-08-27T11:08:38Z",
-  "size_bytes": 55605029,
-  "size_human": "55.61MB",
-  "sbom_component_count": 76,
-  "vulnerability_total": 24,
+  "generated_at": "2026-09-09T20:23:15Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 135365632,
+  "size_human": "135.37MB",
+  "sbom_component_count": 78,
+  "vulnerability_total": 28,
   "vulnerability_by_severity": {
-    "High": 8,
+    "High": 9,
     "Critical": 2,
-    "Medium": 7,
+    "Medium": 10,
     "Low": 7
   },
   "functional_tests": "PASS (tests/specific/react-express-mysql/test.sh)"

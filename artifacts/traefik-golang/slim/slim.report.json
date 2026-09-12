@@ -5,8 +5,8 @@
   "containerized": false,
   "host_distro": {
     "name": "Ubuntu",
-    "version": "26.04",
-    "display_name": "Ubuntu 26.04 LTS"
+    "version": "24.04",
+    "display_name": "Ubuntu 24.04.4 LTS"
   },
   "type": "slim",
   "state": "done",
@@ -22,26 +22,25 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf",
+      "id": "sha256:010474c26fb498f8ec952eb31d5a46542c80cbcbbce48a39e159bfa240276e03",
       "tags": [
         "original"
       ],
       "names": [
         "dip-traefik-golang:original"
-      ],
-      "digests": [
-        "sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf"
-      ],
-      "full_digests": [
-        "dip-traefik-golang@sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf"
       ]
     },
-    "size": 3557103,
-    "size_human": "3.6 MB",
-    "create_time": "2026-08-27T10:14:23Z",
+    "size": 6238732,
+    "size_human": "6.2 MB",
+    "create_time": "2026-09-09T20:37:42Z",
     "runtime_name": "docker",
     "architecture": "amd64",
     "os": "linux",
+    "labels": {
+      "com.docker.compose.project": "dip-traefik-golang",
+      "com.docker.compose.service": "backend",
+      "com.docker.compose.version": "5.4.0"
+    },
     "env_vars": [
       "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
     ],
@@ -49,51 +48,51 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 3774391,
-  "minified_image_size_human": "3.8 MB",
+  "minified_image_size": 6238954,
+  "minified_image_size_human": "6.2 MB",
   "minified_image": "dip-traefik-golang:slim",
-  "minified_image_id": "sha256:20def6b687a9ffe6a76b5a1a4b8c958fb8795e1a2b8d7c7c4101ae0d3a2c6538",
-  "minified_image_digest": "sha256:b595b0ff9ce791fe7eb7b171834327570bb80f2218ce5221f37c701b02259eb9",
+  "minified_image_id": "sha256:312df20a8e5f78881f2845dc575eb82be890be317a6d3d4fe5a932a9f51ea716",
+  "minified_image_digest": "sha256:bfea80717833285ed794e7aa2f8a0568e6d77b2790140c9c9fdad3466d6a523c",
   "minified_image_has_data": true,
-  "minified_by": 0.9424309776067186,
-  "artifact_location": "/tmp/mint-state/.mint-state/images/306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf/artifacts",
+  "minified_by": 0.9999644171122275,
+  "artifact_location": "/tmp/mint-state/.mint-state/images/010474c26fb498f8ec952eb31d5a46542c80cbcbbce48a39e159bfa240276e03/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "dip-traefik-golang-seccomp.json",
   "apparmor_profile_name": "dip-traefik-golang-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:306cb57d4fb60f6006ac92492a792f027e26eea6ef0d50c5489592ca1dc78fcf",
+      "id": "sha256:010474c26fb498f8ec952eb31d5a46542c80cbcbbce48a39e159bfa240276e03",
       "full_name": "dip-traefik-golang:original",
       "repo_name": "dip-traefik-golang",
       "version_tag": "original",
       "raw_tags": [
         "dip-traefik-golang:original"
       ],
-      "create_time": "2026-08-27T10:14:23Z",
-      "new_size": 6258688,
-      "new_size_human": "6.3 MB",
+      "create_time": "2026-09-09T20:37:42Z",
+      "new_size": 6238732,
+      "new_size_human": "6.2 MB",
       "instructions": [
         {
           "type": "COPY",
-          "time": "2026-08-27T10:14:23Z",
+          "time": "2026-09-09T20:37:42Z",
           "is_nop": false,
           "local_image_exists": false,
           "layer_index": 0,
-          "size": 6258688,
-          "size_human": "6.3 MB",
+          "size": 6238732,
+          "size_human": "6.2 MB",
           "params": "/compose/hello-docker/backend /usr/local/bin/backend",
           "command_snippet": "COPY /compose/hello-docker/backend /usr/loca...",
           "command_all": "COPY /compose/hello-docker/backend /usr/local/bin/backend",
           "comment": "buildkit.dockerfile.v0",
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T13:00:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:30:00+03:00",
           "inst_set_time_index": 0,
           "inst_set_time_reverse_index": 0
         },
         {
           "type": "CMD",
-          "time": "2026-08-27T10:14:23Z",
+          "time": "2026-09-09T20:37:42Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
@@ -108,7 +107,7 @@
             "dip-traefik-golang:original"
           ],
           "is_buildkit_instruction": true,
-          "inst_set_time_bucket": "2026-08-27T13:00:00+03:00",
+          "inst_set_time_bucket": "2026-09-09T23:30:00+03:00",
           "inst_set_time_index": 0,
           "inst_set_time_reverse_index": 0
         }

@@ -2,15 +2,16 @@
   "example": "nginx-flask-mongo",
   "stage": "slim",
   "image_tag": "dip-nginx-flask-mongo:slim",
-  "generated_at": "2026-08-27T10:58:18Z",
-  "size_bytes": 11756466,
-  "size_human": "11.76MB",
+  "generated_at": "2026-09-09T19:55:35Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 29252096,
+  "size_human": "29.25MB",
   "sbom_component_count": 2,
-  "vulnerability_total": 20,
+  "vulnerability_total": 21,
   "vulnerability_by_severity": {
     "High": 5,
     "Medium": 11,
-    "Low": 3,
+    "Low": 4,
     "Negligible": 1
   },
   "functional_tests": "PASS (tests/specific/nginx-flask-mongo/test.sh)"

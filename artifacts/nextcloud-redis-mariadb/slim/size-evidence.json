@@ -1,0 +1,56 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-nextcloud-redis-mariadb:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-nextcloud-redis-mariadb:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:be230ae7ac68d41024a21d5a785a033b1f1eceb2b3bf61f6ba966830c9b414e5",
+    "size": 555,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:26ffa1bb024eca7bb2d7afd4355d3ead8dfdd44962b1131e749136ad1cec4c83",
+    "size": 6466
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:6f4f2666dee050467c4bea2e4c51954633a4e9f2b06b90ec0afa4a6cf0a19c15",
+      "size": 1604972544
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:446a519dda849042c5d368982b98d3be431ba4e3ddc0b8e2fd38680b35d66515",
+      "size": 18944
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:6f4f2666dee050467c4bea2e4c51954633a4e9f2b06b90ec0afa4a6cf0a19c15",
+      "size": 1604972544,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:446a519dda849042c5d368982b98d3be431ba4e3ddc0b8e2fd38680b35d66515",
+      "size": 18944,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 1604991488
+}

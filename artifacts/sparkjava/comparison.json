@@ -1,33 +1,34 @@
 {
   "example": "sparkjava",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-sparkjava:original",
-    "size_bytes": 97444975,
-    "size_human": "97.44MB",
+    "size_bytes": 274244608,
+    "size_human": "274.24MB",
     "sbom_component_count": 170,
-    "vulnerability_total": 462,
+    "vulnerability_total": 519,
     "vulnerability_by_severity": {
       "High": 28,
-      "Medium": 281,
-      "Low": 141,
+      "Medium": 346,
+      "Low": 133,
       "Negligible": 12
     }
   },
   "slim": {
     "image_tag": "dip-sparkjava:slim",
-    "size_bytes": 53958724,
-    "size_human": "53.96MB",
+    "size_bytes": 134736896,
+    "size_human": "134.74MB",
     "sbom_component_count": 20,
-    "vulnerability_total": 44,
+    "vulnerability_total": 47,
     "vulnerability_by_severity": {
       "High": 15,
-      "Medium": 19,
-      "Low": 10
+      "Medium": 21,
+      "Low": 11
     }
   },
-  "size_reduction_pct": 44.6,
+  "size_reduction_pct": 50.9,
   "component_reduction": 150,
-  "vulnerability_reduction": 418,
+  "vulnerability_reduction": 472,
   "functional_tests_original": "PASS (tests/specific/sparkjava/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/sparkjava/test.sh)"
 }

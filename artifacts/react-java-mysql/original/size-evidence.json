@@ -1,0 +1,116 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-react-java-mysql:original",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-react-java-mysql:original",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:a73eb421bcbc3c5af473f36e7184fc7260c90af8c26743e0d1f009e27e5b3139",
+    "size": 1467,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:11dda3b6e87c20617827efea6b2e668969a5aa94814601b61a1aecd866ecc4b8",
+    "size": 7328
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:470b66ea5123c93b0d5606e4213bf9e47d3d426b640d32472e4ac213186c4bb6",
+      "size": 75191296
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:3c8aecb2a42d8fbfa0a3a1134b429bb3bf4f97d70c0585eed7eafb57e29f3f87",
+      "size": 55586304
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:d1f0fbadb7a943a57240cf20b4ff8a1967f5a36809528022e5c225cce32fbcc6",
+      "size": 140525056
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:7ab529ad13958724d157c466173ca6289dbdc4a8464415888fee25536e10e5a4",
+      "size": 2560
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:19086a9e37c47c3377c3395c8bcd7f0e2c048788b2d7fbb0d8ae2b7c3d8aabeb",
+      "size": 7168
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:4c3db095fd08ab2effb377fd77308e114d13ededb3b2326a55dcecf784ec3386",
+      "size": 43181056
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:f92c677b89871378e6454873abc0207ce48f910a53b24c4e367b201e702a209a",
+      "size": 10240
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:203b29786e36473d0e178ee7abfaf195b20c456618e577dec99d67de379fe4e0",
+      "size": 17920
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:470b66ea5123c93b0d5606e4213bf9e47d3d426b640d32472e4ac213186c4bb6",
+      "size": 75191296,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:3c8aecb2a42d8fbfa0a3a1134b429bb3bf4f97d70c0585eed7eafb57e29f3f87",
+      "size": 55586304,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:d1f0fbadb7a943a57240cf20b4ff8a1967f5a36809528022e5c225cce32fbcc6",
+      "size": 140525056,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:7ab529ad13958724d157c466173ca6289dbdc4a8464415888fee25536e10e5a4",
+      "size": 2560,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:19086a9e37c47c3377c3395c8bcd7f0e2c048788b2d7fbb0d8ae2b7c3d8aabeb",
+      "size": 7168,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:4c3db095fd08ab2effb377fd77308e114d13ededb3b2326a55dcecf784ec3386",
+      "size": 43181056,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:f92c677b89871378e6454873abc0207ce48f910a53b24c4e367b201e702a209a",
+      "size": 10240,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    },
+    {
+      "digest": "sha256:203b29786e36473d0e178ee7abfaf195b20c456618e577dec99d67de379fe4e0",
+      "size": 17920,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 314521600
+}

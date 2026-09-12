@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-flask:original`) | Slim (`dip-flask:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 23.8 MB | 9.79 MB | **-58.9%** |
+| Image size (normalized OCI uncompressed layers) | 72.73MB | 23.32MB | **-67.9%** |
 | SBOM components (Syft) | 80 | 2 | -78 |
-| Vulnerabilities (Grype) | 32 (9 High / 19 Medium / 3 Low / 1 Negligible) | 19 (5 High / 10 Medium / 3 Low / 1 Negligible) | -13 |
+| Vulnerabilities (Grype) | 41 | 21 | -20 |
 | Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 Raw data: `original/sbom.json`, `original/vulns.json`, `original/metrics.json`,
 `slim/sbom.json`, `slim/vulns.json`, `slim/metrics.json`, `comparison.json`.

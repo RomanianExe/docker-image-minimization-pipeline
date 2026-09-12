@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-react-nginx:original`) | Slim (`dip-react-nginx:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 26.45 MB | 4.48 MB | **-83.1%** |
+| Image size (normalized OCI uncompressed layers) | 70.88MB | 9.39MB | **-86.7%** |
 | SBOM components (Syft) | 71 | 1 | -70 |
-| Vulnerabilities (Grype) | 10 (4 High / 6 Medium) | 0 | -10 |
+| Vulnerabilities (Grype) | 16 | 0 | -16 |
 | Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## First Node/frontend example: real (not stubbed) multi-stage build
 `react-nginx`'s Dockerfile has 4 named stages (`development`, `build`, `dev-envs`)

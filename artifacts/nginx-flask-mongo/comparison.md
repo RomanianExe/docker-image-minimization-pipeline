@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nginx-flask-mongo:original`) | Slim (`dip-nginx-flask-mongo:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 25.80 MB | 11.76 MB | **-54.4%** |
+| Image size (normalized OCI uncompressed layers) | 80.38MB | 29.25MB | **-63.6%** |
 | SBOM components (Syft) | 82 | 2 | -80 |
-| Vulnerabilities (Grype) | 51 (21 High / 22 Medium / 3 Low / 1 Negligible / 4 Unknown) | 20 (5 High / 11 Medium / 3 Low / 1 Negligible) | -31 |
-| Functional tests (direct + through proxy) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 41 | 21 | -20 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Alpine confirms the same metadata-loss pattern as Debian
 SBOM components dropping to just 2 (essentially the Python interpreter and

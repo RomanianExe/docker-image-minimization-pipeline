@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-react-rust-postgres:original`) | Slim (`dip-react-rust-postgres:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 30.72 MB | 4.01 MB | **-86.9%** |
+| Image size (normalized OCI uncompressed layers) | 85.39MB | 9.88MB | **-88.4%** |
 | SBOM components (Syft) | 88 | 0 | -88 |
-| Vulnerabilities (Grype) | 177 (7 Critical / 17 High / 63 Medium / 8 Low / 58 Negligible / 24 Unknown) | 0 | -177 |
-| Functional tests (DB round trip + row decode) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 211 | 0 | -211 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## The only example where the SBOM legitimately goes to zero
 

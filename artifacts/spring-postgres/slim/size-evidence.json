@@ -1,0 +1,46 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-spring-postgres:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-spring-postgres:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:0e5ad780273035502b68037c31c58fdf149bf543c2551bb28e253ac598928b1f",
+    "size": 403,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:72e02bb74fcf0984ac1c41ef119facf458fb88f290c4e4d244c8199a193b212b",
+    "size": 3984
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:af93e70ea0be6f84726b891c486e2f73f718899cc565b04d4fa1a48b2c31b26d",
+      "size": 173874688
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:af93e70ea0be6f84726b891c486e2f73f718899cc565b04d4fa1a48b2c31b26d",
+      "size": 173874688,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 173874688
+}

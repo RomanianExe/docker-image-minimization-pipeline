@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-react-express-mongodb:original`) | Slim (`dip-react-express-mongodb:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 89.93 MB | 45.67 MB | **-49.2%** |
+| Image size (normalized OCI uncompressed layers) | 261.62MB | 109.59MB | **-58.1%** |
 | SBOM components (Syft) | 512 | 146 | -366 |
-| Vulnerabilities (Grype) | 244 (5 Critical / 86 High / 58 Medium / 29 Low / 62 Negligible / 4 Unknown) | 74 (4 Critical / 33 High / 20 Medium / 17 Low) | -170 |
-| Functional tests (write + read round trip) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 247 | 76 | -171 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## First genuine functional regression caught by this pipeline
 Every previous example's minimization either preserved all tested
@@ -31,7 +33,7 @@ have Slim actually exercise it during analysis, not just read endpoints.
 General-purpose fix, not specific to this example.
 
 ## In line with other Node examples
-49.2% is comparable to `react-nginx`'s reduction ratio and in the expected
+58.1% is a moderate result within the Node/JS cluster and in the expected
 range for a `node:*-slim`-based image with a moderate `node_modules` tree —
 confirms the Node/npm pattern generalizes from a static frontend build
 (`react-nginx`) to a real Express backend with a DB dependency.

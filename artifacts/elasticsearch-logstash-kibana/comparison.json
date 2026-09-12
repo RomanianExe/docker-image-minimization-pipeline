@@ -1,0 +1,36 @@
+{
+  "example": "elasticsearch-logstash-kibana",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "original": {
+    "image_tag": "dip-elasticsearch-logstash-kibana:original",
+    "size_bytes": 916799488,
+    "size_human": "916.80MB",
+    "sbom_component_count": 977,
+    "vulnerability_total": 548,
+    "vulnerability_by_severity": {
+      "Medium": 354,
+      "High": 74,
+      "Critical": 5,
+      "Low": 113,
+      "Negligible": 2
+    }
+  },
+  "slim": {
+    "image_tag": "dip-elasticsearch-logstash-kibana:slim",
+    "size_bytes": 374818304,
+    "size_human": "374.82MB",
+    "sbom_component_count": 537,
+    "vulnerability_total": 143,
+    "vulnerability_by_severity": {
+      "High": 66,
+      "Critical": 4,
+      "Medium": 61,
+      "Low": 12
+    }
+  },
+  "size_reduction_pct": 59.1,
+  "component_reduction": 440,
+  "vulnerability_reduction": 405,
+  "functional_tests_original": "PASS (tests/specific/elasticsearch-logstash-kibana/test.sh)",
+  "functional_tests_slim": "PASS (tests/specific/elasticsearch-logstash-kibana/test.sh)"
+}

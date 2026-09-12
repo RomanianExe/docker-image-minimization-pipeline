@@ -2,16 +2,17 @@
   "example": "django",
   "stage": "original",
   "image_tag": "dip-django:original",
-  "generated_at": "2026-08-24T14:38:39Z",
-  "size_bytes": 27718999,
-  "size_human": "27.72MB",
+  "generated_at": "2026-09-09T19:11:48Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 89571840,
+  "size_human": "89.57MB",
   "sbom_component_count": 63,
-  "vulnerability_total": 178,
+  "vulnerability_total": 182,
   "vulnerability_by_severity": {
     "Critical": 9,
     "High": 63,
-    "Medium": 88,
-    "Low": 17,
+    "Medium": 91,
+    "Low": 18,
     "Negligible": 1
   },
   "functional_tests": "PASS (tests/specific/django/test.sh)"

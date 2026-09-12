@@ -2,9 +2,10 @@
   "example": "wordpress-mysql",
   "stage": "slim",
   "image_tag": "dip-wordpress-mysql:slim",
-  "generated_at": "2026-08-31T21:48:28Z",
-  "size_bytes": 140202190,
-  "size_human": "140.20MB",
+  "generated_at": "2026-09-09T20:45:38Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 360488448,
+  "size_human": "360.49MB",
   "sbom_component_count": 18,
   "vulnerability_total": 4,
   "vulnerability_by_severity": {

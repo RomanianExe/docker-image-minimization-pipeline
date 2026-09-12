@@ -1,22 +1,23 @@
 {
   "example": "nginx-golang",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-nginx-golang-backend:original",
-    "size_bytes": 123401523,
-    "size_human": "123.40MB",
+    "size_bytes": 347691520,
+    "size_human": "347.69MB",
     "sbom_component_count": 59,
-    "vulnerability_total": 574,
+    "vulnerability_total": 584,
     "vulnerability_by_severity": {
-      "High": 271,
-      "Critical": 38,
-      "Medium": 245,
+      "High": 277,
+      "Critical": 40,
+      "Medium": 247,
       "Low": 20
     }
   },
   "slim": {
     "image_tag": "dip-nginx-golang-backend:slim",
-    "size_bytes": 4804703,
-    "size_human": "4.80MB",
+    "size_bytes": 8186368,
+    "size_human": "8.19MB",
     "sbom_component_count": 3,
     "vulnerability_total": 43,
     "vulnerability_by_severity": {
@@ -26,9 +27,9 @@
       "Low": 1
     }
   },
-  "size_reduction_pct": 96.1,
+  "size_reduction_pct": 97.6,
   "component_reduction": 56,
-  "vulnerability_reduction": 531,
+  "vulnerability_reduction": 541,
   "functional_tests_original": "PASS (tests/specific/nginx-golang/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/nginx-golang/test.sh)"
 }

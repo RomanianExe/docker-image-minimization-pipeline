@@ -1,0 +1,17 @@
+{
+  "example": "nextcloud-postgres",
+  "stage": "slim",
+  "image_tag": "dip-nextcloud-postgres:slim",
+  "generated_at": "2026-09-09T22:42:52Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 1604986368,
+  "size_human": "1604.99MB",
+  "sbom_component_count": 170,
+  "vulnerability_total": 7,
+  "vulnerability_by_severity": {
+    "High": 4,
+    "Critical": 2,
+    "Low": 1
+  },
+  "functional_tests": "PASS (tests/specific/nextcloud-postgres/test.sh)"
+}

@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-nextcloud-redis-mariadb:original`) | Slim (`dip-nextcloud-redis-mariadb:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 555.55 MB | 407.68 MB | **-26.6%** |
+| Image size (normalized OCI uncompressed layers) | 1558.18MB | 1604.99MB | **+3.0%** |
 | SBOM components (Syft) | 459 | 170 | -289 |
-| Vulnerabilities (Grype) | 1261 (63 Critical / 216 High / 198 Medium / 58 Low / 709 Negligible / 17 Unknown) | 7 (2 Critical / 4 High / 1 Low) | -1254 |
-| Functional tests (setup page + status.php + asset + DB reachability) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 1365 | 7 | -1358 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 Prebuilt example: the baseline is `nextcloud:apache` pulled and re-tagged, not built.
 The largest original image processed in this project. See `docs/methodology.md` §12.
@@ -27,18 +29,19 @@ later run reproduced the same class of failure one level down, with `/upgrade.ex
 a plain data file rsync is handed via `--exclude-from`, read but never executed.
 
 Both are now pinned explicitly with `SLIM_INCLUDE_BINS` / `SLIM_INCLUDE_PATHS` rather
-than left to the analysis. **The general lesson: a passing pipeline run is not by itself
+than left to the analysis. A separate post-Mint wrapper restores the original empty-volume
+seed semantics described below. **The general lesson: a passing pipeline run is not by itself
 evidence that a configuration is correct.** Anything a program touches exactly once at
-startup may or may not survive. See `docs/methodology.md` §12.7.
+startup may or may not survive. See `docs/methodology.md` §12.8.
 
 ## Keeping runtime state out of the image
 
-The entrypoint unpacks `/usr/src/nextcloud` into `/var/www/html`, which is a volume under
-compose but plain container filesystem under docker-slim — so without intervention the
-unpacked copy is baked into the "minimized" image. The working arrangement is
-`SLIM_MOUNTS` (a throwaway named volume at that path, so the analysed run writes where the
-real deployment writes) *plus* `SLIM_EXCLUDE_PATTERNS` for the same path, because mint's
-`--exclude-mounts` does not actually exclude. See `docs/methodology.md` §12.5.
+The entrypoint unpacks `/usr/src/nextcloud` into `/var/www/html`, a declared volume. Mint
+captured a partial analysis-time tree there, causing Docker to seed fresh volumes with a
+matching `version.php` and skip the required first-start rsync. The project-owned post-Mint
+wrapper clears every child of `/var/www/html`, including dotfiles, so a `docker create` from
+the repaired image seeds an empty volume exactly as the original does. See
+`docs/methodology.md` §12.8.
 
 This is also the only entry in the set that puts one service on two disjoint networks
 (`dbnet`, `redisnet`), and docker-slim attaches its analysis container to exactly one —

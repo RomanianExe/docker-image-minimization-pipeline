@@ -1,4 +1,6 @@
 # Functional Baseline — `nginx-flask-mongo` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## New pattern: Alpine-based Python image
 Unlike `flask`/`flask-redis`/`django` (Debian-based `python:*-slim`), this

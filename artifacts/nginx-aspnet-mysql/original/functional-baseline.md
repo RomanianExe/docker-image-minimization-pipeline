@@ -1,4 +1,6 @@
 # Functional Baseline — `nginx-aspnet-mysql` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## Same fail-fast pattern as react-java-mysql, needed higher retry count
 `Program.cs`'s `Prepare()` opens its own MySQL connection synchronously in

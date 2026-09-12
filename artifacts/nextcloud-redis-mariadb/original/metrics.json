@@ -2,18 +2,19 @@
   "example": "nextcloud-redis-mariadb",
   "stage": "original",
   "image_tag": "dip-nextcloud-redis-mariadb:original",
-  "generated_at": "2026-09-01T09:38:41Z",
-  "size_bytes": 555553556,
-  "size_human": "555.55MB",
+  "generated_at": "2026-09-09T22:46:52Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 1558183936,
+  "size_human": "1558.18MB",
   "sbom_component_count": 459,
-  "vulnerability_total": 1261,
+  "vulnerability_total": 1365,
   "vulnerability_by_severity": {
-    "Medium": 198,
-    "Negligible": 709,
-    "Low": 58,
-    "Critical": 63,
-    "High": 216,
-    "Unknown": 17
+    "Medium": 215,
+    "Negligible": 704,
+    "Low": 72,
+    "Critical": 67,
+    "High": 284,
+    "Unknown": 23
   },
   "functional_tests": "PASS (tests/specific/nextcloud-redis-mariadb/test.sh)"
 }

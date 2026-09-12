@@ -4,10 +4,12 @@
 
 | Metric | Original (`dip-flask-redis:original`) | Slim (`dip-flask-redis:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 25.0 MB | 11.58 MB | **-53.8%** |
+| Image size (normalized OCI uncompressed layers) | 77.64MB | 28.74MB | **-63.0%** |
 | SBOM components (Syft) | 82 | 3 | -79 |
-| Vulnerabilities (Grype) | 32 (9 High / 19 Medium / 3 Low / 1 Negligible) | 19 (5 High / 10 Medium / 3 Low / 1 Negligible) | -13 |
+| Vulnerabilities (Grype) | 41 | 21 | -20 |
 | Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Multi-service validation
 This example adds an interconnected dependency (`redis`) on top of the single-service

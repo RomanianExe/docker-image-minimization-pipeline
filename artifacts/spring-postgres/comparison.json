@@ -1,35 +1,36 @@
 {
   "example": "spring-postgres",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-spring-postgres:original",
-    "size_bytes": 133711886,
-    "size_human": "133.71MB",
+    "size_bytes": 314953216,
+    "size_human": "314.95MB",
     "sbom_component_count": 257,
-    "vulnerability_total": 575,
+    "vulnerability_total": 635,
     "vulnerability_by_severity": {
-      "Critical": 9,
+      "Critical": 12,
       "High": 82,
-      "Medium": 321,
-      "Low": 151,
+      "Medium": 389,
+      "Low": 140,
       "Negligible": 12
     }
   },
   "slim": {
     "image_tag": "dip-spring-postgres:slim",
-    "size_bytes": 91430096,
-    "size_human": "91.43MB",
+    "size_bytes": 173874688,
+    "size_human": "173.87MB",
     "sbom_component_count": 106,
-    "vulnerability_total": 160,
+    "vulnerability_total": 163,
     "vulnerability_by_severity": {
-      "Critical": 9,
+      "Critical": 12,
       "High": 69,
       "Medium": 64,
       "Low": 18
     }
   },
-  "size_reduction_pct": 31.6,
+  "size_reduction_pct": 44.8,
   "component_reduction": 151,
-  "vulnerability_reduction": 415,
+  "vulnerability_reduction": 472,
   "functional_tests_original": "PASS (tests/specific/spring-postgres/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/spring-postgres/test.sh)"
 }

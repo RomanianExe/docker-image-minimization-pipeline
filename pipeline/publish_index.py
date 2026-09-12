@@ -40,9 +40,10 @@ shown here is reduced scanner visibility rather than reduced exposure. Base secu
 decisions on a scan of the original image. The pipeline repository's `docs/methodology.md`
 §5 works through this.
 
-Three examples show a *positive* change — the minimized image is slightly larger than the
-original. Their final build stage is already `FROM scratch` with a static binary, so there is
-nothing left to remove and Slim's own metadata adds a little. They are published anyway, because the boundary
+One published image, `traefik-golang`, shows a *positive* change — the minimized image is
+slightly larger than the original. Its final build stage is already `FROM scratch` with a
+static binary, so there is nothing left to remove and Slim's own metadata adds a little. It
+is published anyway, because the boundary
 where a technique stops paying is a result too.
 
 ## Pulling

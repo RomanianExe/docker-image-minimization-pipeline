@@ -1,27 +1,29 @@
 {
   "example": "react-nginx",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-react-nginx:original",
-    "size_bytes": 26447276,
-    "size_human": "26.45MB",
+    "size_bytes": 70879744,
+    "size_human": "70.88MB",
     "sbom_component_count": 71,
-    "vulnerability_total": 10,
+    "vulnerability_total": 16,
     "vulnerability_by_severity": {
-      "High": 4,
-      "Medium": 6
+      "High": 6,
+      "Medium": 7,
+      "Unknown": 3
     }
   },
   "slim": {
     "image_tag": "dip-react-nginx:slim",
-    "size_bytes": 4481029,
-    "size_human": "4.48MB",
+    "size_bytes": 9392640,
+    "size_human": "9.39MB",
     "sbom_component_count": 1,
     "vulnerability_total": 0,
     "vulnerability_by_severity": {}
   },
-  "size_reduction_pct": 83.1,
+  "size_reduction_pct": 86.7,
   "component_reduction": 70,
-  "vulnerability_reduction": 10,
+  "vulnerability_reduction": 16,
   "functional_tests_original": "PASS (tests/specific/react-nginx/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/react-nginx/test.sh)"
 }

@@ -1,13 +1,13 @@
 # Functional Baseline — `flask` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## Build verification
 - Built via `docker compose build` (in `vendor/awesome-compose/flask`) and via
   `pipeline/build.sh flask original` (`docker build --target builder`).
-- Both produce an image of identical size (23.8MB, per `docker inspect .Size`), confirming
-  the pipeline script reproduces compose's build behavior exactly. Note: `docker images`
-  reports a larger "98.2MB" for this image because BuildKit generates a multi-platform
-  manifest list with attestations; `docker inspect .Size` is the actual runnable image size
-  and is what this project uses consistently for size metrics.
+- Both builds reproduce the same application behavior. The recorded pipeline baseline is
+  72.73MB under the backend-independent normalized OCI uncompressed-layer metric; image-list
+  display values and Docker's backend-specific `.Size` field are not project metrics.
 - Image tag used for the pipeline: `dip-flask:original`.
 
 ## Services & communication

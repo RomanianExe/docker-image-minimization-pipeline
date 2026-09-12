@@ -4,13 +4,15 @@
 
 | Metric | Original (`dip-spring-postgres:original`) | Slim (`dip-spring-postgres:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 133.71 MB | 91.43 MB | **-31.6%** |
+| Image size (normalized OCI uncompressed layers) | 314.95MB | 173.87MB | **-44.8%** |
 | SBOM components (Syft) | 257 | 106 | -151 |
-| Vulnerabilities (Grype) | 575 (9 Critical / 82 High / 321 Medium / 151 Low / 12 Negligible) | 160 (9 Critical / 69 High / 64 Medium / 18 Low) | -415 |
-| Functional tests (DB-backed greeting + 404 check) | PASS | PASS | no regression |
+| Vulnerabilities (Grype) | 635 | 163 | -472 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Lower ratio than sparkjava-mysql, but still meaningfully JVM-limited
-31.6% here vs. 42.9% for `sparkjava-mysql` and ~45% for plain `sparkjava` —
+44.8% here vs. 50.1% for `sparkjava-mysql` and 50.9% for plain `sparkjava` —
 Spring Boot's dependency surface (Spring Data JPA, Hibernate, Tomcat,
 HikariCP, Freemarker) is considerably larger than Spark Java's minimalist
 stack, so even after Slim removes everything unused, more of the JRE +

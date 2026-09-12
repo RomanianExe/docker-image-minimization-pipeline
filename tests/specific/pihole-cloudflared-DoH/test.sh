@@ -7,6 +7,7 @@ CONTAINER="${1:?Usage: test.sh <container-name> <base-url>}"
 BASE_URL="${2:?Usage: test.sh <container-name> <base-url>}"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+HELPER_IMAGE="busybox:1.36.1@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662"
 
 "$ROOT_DIR/tests/generic/container_up.sh" "$CONTAINER"
 
@@ -20,14 +21,36 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 "$ROOT_DIR/tests/generic/http_asset.sh" "$BASE_URL/admin/img/logo.svg" "svg"
 
 # The half the HTTP probe can never reach, and the reason this example exists:
-# FTL, the DNS resolver. Queried inside the container so it does not depend on
-# publishing :53 to a host that already runs systemd-resolved.
-docker exec "$CONTAINER" dig +short +time=5 +tries=2 @127.0.0.1 example.com | grep -qE '^[0-9]+\.'
+# FTL, the DNS resolver. The helper shares Pi-hole's network namespace, so its
+# loopback reaches FTL without publishing port 53 on the host.
+if ! docker run --rm \
+    --network "container:$CONTAINER" \
+    "$HELPER_IMAGE" \
+    nslookup example.com 127.0.0.1 |
+    awk '
+      /^Name:[[:space:]]+example\.com\.?$/ { answer = 1; next }
+      answer && /^Address:[[:space:]]+[0-9]+\./ { found = 1 }
+      END { exit !(answer && found) }
+    '; then
+  echo "FAIL: Pi-hole did not resolve example.com through FTL" >&2
+  exit 1
+fi
 
 # The resolver's own hostname is answered locally from Pi-hole's records rather
 # than forwarded, which exercises a different path through FTL than the query
 # above.
-docker exec "$CONTAINER" dig +short +time=5 @127.0.0.1 pi.hole > /dev/null
+if ! docker run --rm \
+    --network "container:$CONTAINER" \
+    "$HELPER_IMAGE" \
+    nslookup pi.hole 127.0.0.1 |
+    awk '
+      /^Name:[[:space:]]+pi\.hole\.?$/ { answer = 1; next }
+      answer && /^Address:[[:space:]]+127\.0\.0\.1$/ { found = 1 }
+      END { exit !(answer && found) }
+    '; then
+  echo "FAIL: Pi-hole did not resolve its local pi.hole record to 127.0.0.1" >&2
+  exit 1
+fi
 
 # The upstream half: queries are forwarded to the cloudflared DoH proxy at the
 # fixed address the vendor compose file assigns it.

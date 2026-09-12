@@ -1,35 +1,36 @@
 {
   "example": "react-java-mysql",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-react-java-mysql:original",
-    "size_bytes": 133418185,
-    "size_human": "133.42MB",
+    "size_bytes": 314521600,
+    "size_human": "314.52MB",
     "sbom_component_count": 249,
-    "vulnerability_total": 567,
+    "vulnerability_total": 627,
     "vulnerability_by_severity": {
-      "Critical": 8,
+      "Critical": 11,
       "High": 78,
-      "Medium": 319,
-      "Low": 150,
+      "Medium": 387,
+      "Low": 139,
       "Negligible": 12
     }
   },
   "slim": {
     "image_tag": "dip-react-java-mysql:slim",
-    "size_bytes": 91150344,
-    "size_human": "91.15MB",
+    "size_bytes": 173442048,
+    "size_human": "173.44MB",
     "sbom_component_count": 98,
-    "vulnerability_total": 152,
+    "vulnerability_total": 155,
     "vulnerability_by_severity": {
-      "Critical": 8,
+      "Critical": 11,
       "High": 65,
       "Medium": 62,
       "Low": 17
     }
   },
-  "size_reduction_pct": 31.7,
+  "size_reduction_pct": 44.9,
   "component_reduction": 151,
-  "vulnerability_reduction": 415,
+  "vulnerability_reduction": 472,
   "functional_tests_original": "PASS (tests/specific/react-java-mysql/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/react-java-mysql/test.sh)"
 }

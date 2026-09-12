@@ -8,6 +8,8 @@ BASE_URL="${2:?Usage: test.sh <container-name> <base-url>}"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 DB_CONTAINER="postgres"   # container_name from the vendor compose file
+TEMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TEMP_DIR"' EXIT
 
 "$ROOT_DIR/tests/generic/container_up.sh" "$CONTAINER"
 
@@ -28,12 +30,19 @@ DB_CONTAINER="postgres"   # container_name from the vendor compose file
 # pgAdmin keeps its own configuration in a SQLite database it creates on first
 # start. Its presence proves the config layer initialised, not just that the
 # web tier answered.
-docker exec "$CONTAINER" test -s /var/lib/pgadmin/pgadmin4.db
+PGADMIN_DB="$TEMP_DIR/pgadmin4.db"
+if ! docker cp "$CONTAINER:/var/lib/pgadmin/pgadmin4.db" "$PGADMIN_DB"; then
+  echo "FAIL: pgAdmin configuration database could not be copied from '$CONTAINER'" >&2
+  exit 1
+fi
+if [[ ! -s "$PGADMIN_DB" ]]; then
+  echo "FAIL: pgAdmin configuration database is missing or empty" >&2
+  exit 1
+fi
 
 # The vendor compose file wires nothing between pgadmin and postgres, so there
 # is no application-level round trip to assert. What can be asserted is that
-# the example's other half is actually up and serving — checked from inside the
-# pgadmin container, which also proves the two share a working network.
+# the example's other half is actually up and serving.
 "$ROOT_DIR/tests/generic/container_up.sh" "$DB_CONTAINER"
 docker exec "$DB_CONTAINER" pg_isready -U yourUser -d postgres
 

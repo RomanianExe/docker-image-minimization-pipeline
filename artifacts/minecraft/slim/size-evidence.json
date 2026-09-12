@@ -1,0 +1,46 @@
+{
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "image_tag": "dip-minecraft:slim",
+  "platform": {
+    "os": "linux",
+    "architecture": "amd64",
+    "variant": null
+  },
+  "skopeo_version": "skopeo version 1.13.3",
+  "skopeo_command": [
+    "skopeo",
+    "copy",
+    "--format",
+    "oci",
+    "--multi-arch",
+    "system",
+    "--dest-oci-accept-uncompressed-layers",
+    "docker-daemon:dip-minecraft:slim",
+    "oci:<temporary-layout>/exported:exported"
+  ],
+  "manifest": {
+    "digest": "sha256:79dd71cded89e47744c1049cc2b5d7798f862ee05bcd11703c955d5d3c46aa86",
+    "size": 403,
+    "mediaType": "application/vnd.oci.image.manifest.v1+json"
+  },
+  "config": {
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "digest": "sha256:8e89a4fd9f1b3c7acfdfc4943d92f47208e3d3b196526a278bb08efa10ea51f9",
+    "size": 6185
+  },
+  "source_layers": [
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "digest": "sha256:ccd082cb884065a48673c774b7c45178eb911f93916c17f7e653c661341c85be",
+      "size": 257743360
+    }
+  ],
+  "layers": [
+    {
+      "digest": "sha256:ccd082cb884065a48673c774b7c45178eb911f93916c17f7e653c661341c85be",
+      "size": 257743360,
+      "mediaType": "application/vnd.oci.image.layer.v1.tar"
+    }
+  ],
+  "layer_size_total": 257743360
+}

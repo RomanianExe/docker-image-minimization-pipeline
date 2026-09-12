@@ -2,16 +2,17 @@
   "example": "pihole-cloudflared-DoH",
   "stage": "original",
   "image_tag": "dip-pihole-cloudflared-doh:original",
-  "generated_at": "2026-09-01T09:48:31Z",
-  "size_bytes": 42673765,
-  "size_human": "42.67MB",
+  "generated_at": "2026-09-09T21:42:39Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 101292544,
+  "size_human": "101.29MB",
   "sbom_component_count": 94,
-  "vulnerability_total": 76,
+  "vulnerability_total": 112,
   "vulnerability_by_severity": {
-    "High": 38,
-    "Critical": 2,
-    "Medium": 33,
-    "Unknown": 3
+    "High": 58,
+    "Critical": 8,
+    "Medium": 44,
+    "Unknown": 2
   },
   "functional_tests": "PASS (tests/specific/pihole-cloudflared-DoH/test.sh)"
 }

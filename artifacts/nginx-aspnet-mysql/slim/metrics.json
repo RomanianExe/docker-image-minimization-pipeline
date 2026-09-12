@@ -2,9 +2,10 @@
   "example": "nginx-aspnet-mysql",
   "stage": "slim",
   "image_tag": "dip-nginx-aspnet-mysql:slim",
-  "generated_at": "2026-08-27T11:26:44Z",
-  "size_bytes": 48999990,
-  "size_human": "49.00MB",
+  "generated_at": "2026-09-09T19:54:37Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 100414464,
+  "size_human": "100.41MB",
   "sbom_component_count": 4,
   "vulnerability_total": 1,
   "vulnerability_by_severity": {

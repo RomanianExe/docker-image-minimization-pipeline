@@ -5,18 +5,15 @@
 # against it) — only this Dockerfile is substituted, via
 # compose.override.yaml's build.dockerfile.
 #
-# Fix: requirements.txt pins Flask==2.0.1 but not its Werkzeug dependency.
-# Unpinned, pip resolves the current Werkzeug (3.1.8), which removed
-# werkzeug.urls.url_quote — a name Flask 2.0.1 imports directly, crashing on
-# startup with an ImportError (see docs/methodology.md). Pinning Werkzeug to
-# the last release compatible with Flask 2.0.1 (2.0.x) restores the intended
-# behavior without touching the app's own code or the vendor requirements.txt.
+# The exact tested Python dependency graph is supplied from the project-owned
+# named build context, leaving the vendor requirements.txt untouched.
 FROM --platform=$BUILDPLATFORM python:3.10-alpine AS builder
 
 WORKDIR /code
 COPY requirements.txt /code
+COPY --from=dip_locks requirements.lock /locks/requirements.lock
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install -r requirements.txt "Werkzeug<2.1"
+    pip3 install --require-hashes -r /locks/requirements.lock
 
 COPY . .
 

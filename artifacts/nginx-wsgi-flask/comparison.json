@@ -1,36 +1,37 @@
 {
   "example": "nginx-wsgi-flask",
+  "size_metric": "oci_uncompressed_layer_bytes",
   "original": {
     "image_tag": "dip-nginx-wsgi-flask:original",
-    "size_bytes": 31835507,
-    "size_human": "31.84MB",
+    "size_bytes": 84147200,
+    "size_human": "84.15MB",
     "sbom_component_count": 75,
-    "vulnerability_total": 326,
+    "vulnerability_total": 333,
     "vulnerability_by_severity": {
       "Critical": 24,
-      "High": 150,
-      "Medium": 133,
-      "Low": 18,
+      "High": 154,
+      "Medium": 135,
+      "Low": 19,
       "Negligible": 1
     }
   },
   "slim": {
     "image_tag": "dip-nginx-wsgi-flask:slim",
-    "size_bytes": 8196145,
-    "size_human": "8.20MB",
-    "sbom_component_count": 1,
-    "vulnerability_total": 89,
+    "size_bytes": 19171328,
+    "size_human": "19.17MB",
+    "sbom_component_count": 2,
+    "vulnerability_total": 90,
     "vulnerability_by_severity": {
       "High": 35,
       "Medium": 42,
       "Critical": 4,
-      "Low": 7,
+      "Low": 8,
       "Negligible": 1
     }
   },
-  "size_reduction_pct": 74.3,
-  "component_reduction": 74,
-  "vulnerability_reduction": 237,
+  "size_reduction_pct": 77.2,
+  "component_reduction": 73,
+  "vulnerability_reduction": 243,
   "functional_tests_original": "PASS (tests/specific/nginx-wsgi-flask/test.sh)",
   "functional_tests_slim": "PASS (tests/specific/nginx-wsgi-flask/test.sh)"
 }

@@ -35,7 +35,8 @@ services:
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"
   proxy:
+    image: nginx:1.31.5@sha256:05b8cb60c354a44ab824ea6e7dc69b46d50762cdbe728a347a5b656e6fb3d7c4
     ports: !override
       - "${PROXY_HOST_PORT}:80"
   db:
-    image: postgres:17
+    image: postgres:17@sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675

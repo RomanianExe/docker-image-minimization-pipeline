@@ -7,9 +7,10 @@ against the minimized image, and reports the before/after difference in size, so
 components ([Syft](https://github.com/anchore/syft)) and vulnerabilities
 ([Grype](https://github.com/anchore/grype)).
 
-**Headline result: all 25 buildable awesome-compose examples processed end to end, plus 4
-prebuilt ones. Median size reduction is 54.1% across the 26 that had anything to remove, and
-the functional tests pass on every minimized image.** Full numbers in
+**Headline result: all 25 buildable awesome-compose examples processed end to end, plus 9
+prebuilt ones — 34 validated results in total. The median size reduction is 63.6% across the
+33 examples other than the already-`scratch` baseline, and the functional tests pass on every
+minimized image.** Full numbers in
 [`artifacts/summary.md`](artifacts/summary.md); the reasoning, the negative results and the
 failures are in [`docs/methodology.md`](docs/methodology.md).
 
@@ -21,22 +22,29 @@ things, so a number without a passing test beside it is not reported here.
 
 ## 1. Requirements
 
+See [REQUIREMENTS.md](REQUIREMENTS.md) for the complete host-tool checklist, installation
+notes, verification commands, and publishing-only requirements.
+
 | Tool | Version used | Purpose |
 |---|---|---|
 | Docker Engine | 29.7.2 | build and run |
 | Docker Compose | v5.5.0 (plugin, `docker compose`) | drives each example's own compose file |
+| Docker Buildx | (plugin, `docker buildx`) | BuildKit-backed compose builds and the `SLIM_POST_MINT_DOCKERFILE` wrapper images (§12.7-§12.8) |
 | Slim Toolkit (`mint` / `docker-slim`) | 1.41.8 | dynamic analysis + minimization |
 | Syft | 1.51.0 | SBOM generation |
 | Grype | 0.117.0 | vulnerability scanning |
+| `jq` | — | validates Grype's JSON output (`pipeline/vuln-scan.sh`) |
+| Skopeo | 1.13.3 | normalize local images to OCI for portable size measurement |
 | Python | 3.14 (3.8+ is enough; stdlib only) | metrics, comparison, summary |
 | `bash`, `curl` | — | test scripts |
 
-Install the three analysis tools:
+Install the analysis tools (on Debian/Ubuntu, install Skopeo and jq from the system package repository):
 
 ```bash
 curl -sL https://raw.githubusercontent.com/mintoolkit/mint/master/scripts/install-mint.sh | sudo -E bash -
 curl -sSfL https://get.anchore.io/syft  | sudo sh -s -- -b /usr/local/bin
 curl -sSfL https://get.anchore.io/grype | sudo sh -s -- -b /usr/local/bin
+sudo apt-get install skopeo jq
 ```
 
 Verify — every one of these must succeed before the pipeline will run:
@@ -44,7 +52,8 @@ Verify — every one of these must succeed before the pipeline will run:
 ```bash
 docker run --rm hello-world
 docker compose version
-docker-slim --version && syft version && grype version
+docker buildx version
+docker-slim --version && syft version && grype version && skopeo --version && jq --version
 ```
 
 The examples themselves come from a vendored copy of awesome-compose in
@@ -127,7 +136,7 @@ Common optional fields: `COMPOSE_DEPS` (dependency services to start), `COMPOSE_
 (the subset Slim needs), `STARTUP_WAIT`, `PROXY_HOST_PORT`, `APP_ENV`, `EXTRA_PROBE_PATHS`,
 `POST_PROBE_PATH`/`POST_PROBE_BODY` (Slim's probe is GET-only by default — see §9 of the
 methodology for the regression that made this necessary), and the `SLIM_*` family for
-prebuilt images (§12.7). Each existing `pipeline.env` documents its own non-obvious fields
+prebuilt images (§12.9). Each existing `pipeline.env` documents its own non-obvious fields
 in comments; `examples/flask-redis/pipeline.env` is the simplest complete one.
 
 **2 — `examples/<name>/compose.override.yaml`.** Layered over the vendor file, it pins the
@@ -166,7 +175,9 @@ Per example, under `artifacts/<name>/`:
 |---|---|
 | `original/sbom.json`, `slim/sbom.json` | Syft SBOMs, before and after |
 | `original/vulns.json`, `slim/vulns.json` | Grype findings, before and after |
-| `original/metrics.json`, `slim/metrics.json` | size, component count, vulnerability counts, test result |
+| `original/metrics.json`, `slim/metrics.json` | cumulative uncompressed OCI layer size, component count, vulnerability counts, test result |
+| `original/size-evidence.json`, `slim/size-evidence.json` | Skopeo command/version, verified OCI descriptors, platform, and layer-size total |
+| `original/size-oci-index.json`, `size-oci-manifest.json` (and slim equivalents) | OCI metadata used as compact measurement evidence; blobs are temporary and not retained |
 | `slim/slim.report.json`, `creport.json` | what Slim removed, and its analysis record |
 | `slim/*-seccomp.json`, `*-apparmor-profile` | hardening profiles Slim derives from the observed behaviour |
 | `comparison.json` | the before/after delta |
@@ -217,8 +228,8 @@ README index is regenerated from those manifests and is never edited by hand.
   results.
 - **12 prebuilt** — ship no Dockerfile, only an `image:`. `docker compose build` has nothing
   to build, so they fall outside the core methodology and are **excluded by default**
-  (§1.1). They were carried through anyway as an explicit extension (§12): 4 produced
-  validated slim images and are reported; 8 are recorded as diagnosed failures, each with a
+  (§1.1). They were carried through anyway as an explicit extension (§12): 9 produced
+  validated slim images and are reported; 3 are recorded as diagnosed failures, each with a
   passing baseline and a stated cause.
 - **2 WasmEdge** — excluded permanently: no `io.containerd.wasmedge.v1` runtime on the host.
 

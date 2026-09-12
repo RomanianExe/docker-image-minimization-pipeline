@@ -22,6 +22,9 @@ if [[ ! -f "$ENV_FILE" ]]; then
   echo "No pipeline.env found for example '$EXAMPLE' at $ENV_FILE" >&2
   exit 1
 fi
+# Post-Mint image repair is opt-in per example. Do not inherit this hook from
+# the invoking shell when the selected example does not declare it.
+unset SLIM_POST_MINT_DOCKERFILE
 # shellcheck disable=SC1090
 source "$ENV_FILE"
 
@@ -210,6 +213,14 @@ for p in ${SLIM_INCLUDE_PATHS:-}; do
   MOUNT_ARGS+=(--include-path "$p")
 done
 
+# SLIM_INCLUDE_NEW (optional boolean): control whether Mint retains files and
+# directories created during dynamic analysis. Leave unset to use Mint's
+# default, preserving existing behavior for every example that does not opt in.
+INCLUDE_NEW_ARGS=()
+if [[ -n "${SLIM_INCLUDE_NEW:-}" ]]; then
+  INCLUDE_NEW_ARGS=(--include-new "$SLIM_INCLUDE_NEW")
+fi
+
 # RUN_COMMAND (optional, see run-pipeline.sh) overrides both the command
 # Slim runs during its own analysis (--cmd) and the CMD baked into the
 # optimized output image (--new-cmd + --image-overrides cmd) — otherwise the
@@ -236,12 +247,12 @@ else
 fi
 
 echo "--- [$EXAMPLE] docker-slim invocation ---" >&2
-printf '%q ' docker-slim build --target "$ORIGINAL_TAG" --tag "$SLIM_TAG" \
+printf '%q ' mint build --target "$ORIGINAL_TAG" --tag "$SLIM_TAG" \
   "${PROBE_ARGS[@]}" --publish-port "${HOST_PORT}:${CONTAINER_PORT}" \
-  "${NETWORK_ARGS[@]}" "${ENV_ARGS[@]}" "${MOUNT_ARGS[@]}" "${CMD_ARGS[@]}" >&2
+  "${NETWORK_ARGS[@]}" "${ENV_ARGS[@]}" "${MOUNT_ARGS[@]}" "${INCLUDE_NEW_ARGS[@]}" "${CMD_ARGS[@]}" >&2
 echo >&2
 
-docker-slim build \
+mint build \
   --target "$ORIGINAL_TAG" \
   --tag "$SLIM_TAG" \
   "${PROBE_ARGS[@]}" \
@@ -249,10 +260,32 @@ docker-slim build \
   "${NETWORK_ARGS[@]}" \
   "${ENV_ARGS[@]}" \
   "${MOUNT_ARGS[@]}" \
+  "${INCLUDE_NEW_ARGS[@]}" \
   "${CMD_ARGS[@]}" \
   --show-clogs \
   --show-blogs \
   --copy-meta-artifacts "$ARTIFACT_DIR"
+
+# SLIM_POST_MINT_DOCKERFILE (optional, repository-relative): rebuild the
+# Mint-produced tag through an example-owned wrapper. This is deliberately an
+# opt-in post-processing hook: it is for restoring image metadata Mint cannot
+# represent through dynamic file observation, without changing any other
+# example's output. The wrapper must use $SLIM_TAG as its final-stage base and
+# re-tag its result as $SLIM_TAG, so all later validation and metric stages
+# consume the repaired image rather than Mint's intermediate output.
+if [[ -n "${SLIM_POST_MINT_DOCKERFILE:-}" ]]; then
+  POST_MINT_DOCKERFILE="$ROOT_DIR/$SLIM_POST_MINT_DOCKERFILE"
+  if [[ ! -f "$POST_MINT_DOCKERFILE" ]]; then
+    echo "Post-Mint Dockerfile not found: $POST_MINT_DOCKERFILE" >&2
+    exit 1
+  fi
+  echo "--- [$EXAMPLE] applying post-Mint image repair ---" >&2
+  docker build \
+    --pull=false \
+    --file "$POST_MINT_DOCKERFILE" \
+    --tag "$SLIM_TAG" \
+    "$(dirname "$POST_MINT_DOCKERFILE")"
+fi
 
 if [[ -n "$SLIM_DEPS" ]]; then
   "$ROOT_DIR/pipeline/compose.sh" "$EXAMPLE" down -v --remove-orphans

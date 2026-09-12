@@ -2,9 +2,10 @@
   "example": "apache-php",
   "stage": "slim",
   "image_tag": "dip-apache-php:slim",
-  "generated_at": "2026-08-23T10:05:00Z",
-  "size_bytes": 33723017,
-  "size_human": "33.72MB",
+  "generated_at": "2026-09-09T19:10:35Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 77460480,
+  "size_human": "77.46MB",
   "sbom_component_count": 4,
   "vulnerability_total": 59,
   "vulnerability_by_severity": {

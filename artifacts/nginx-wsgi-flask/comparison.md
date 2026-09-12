@@ -4,14 +4,16 @@
 
 | Metric | Original (`dip-nginx-wsgi-flask:original`) | Slim (`dip-nginx-wsgi-flask:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 31.84 MB | 8.20 MB | **-74.3%** |
-| SBOM components (Syft) | 75 | 1 | -74 |
-| Vulnerabilities (Grype) | 326 (24 Critical / 150 High / 133 Medium / 18 Low / 1 Negligible) | 89 (4 Critical / 35 High / 42 Medium / 7 Low / 1 Negligible) | -237 |
-| Functional tests (incl. non-root check, proxy-header echo) | PASS | PASS | no regression |
+| Image size (normalized OCI uncompressed layers) | 84.15MB | 19.17MB | **-77.2%** |
+| SBOM components (Syft) | 75 | 2 | -73 |
+| Vulnerabilities (Grype) | 333 | 90 | -243 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Best reduction ratio among the recovered/patched examples
-74.3% — well ahead of `nginx-flask-mysql` (54.6%) and `nginx-nodejs-redis`
-(17.7%), the other two examples excluded then recovered via a pipeline-side
+77.2% — well ahead of `nginx-flask-mysql` (64.9%) and `nginx-nodejs-redis`
+(35.6%), the other two examples excluded then recovered via a pipeline-side
 patch. Alpine base + a small, focused Flask app leaves very little for Slim
 to keep once the exact dependency chain resolves correctly.
 

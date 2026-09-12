@@ -2,9 +2,10 @@
   "example": "traefik-golang",
   "stage": "original",
   "image_tag": "dip-traefik-golang:original",
-  "generated_at": "2026-08-27T10:15:09Z",
-  "size_bytes": 3557103,
-  "size_human": "3.56MB",
+  "generated_at": "2026-09-09T20:37:48Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 6242304,
+  "size_human": "6.24MB",
   "sbom_component_count": 2,
   "vulnerability_total": 40,
   "vulnerability_by_severity": {

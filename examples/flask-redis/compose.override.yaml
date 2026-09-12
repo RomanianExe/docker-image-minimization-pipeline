@@ -17,10 +17,15 @@
 # outside the compose network needs to reach it.
 services:
   web:
+    build:
+      dockerfile: ${DIP_ROOT}/examples/flask-redis/Dockerfile.patched
+      additional_contexts:
+        dip_locks: ${DIP_ROOT}/examples/flask-redis
     image: ${TARGET_IMAGE}
     container_name: ${IMAGE_NAME}-test
     volumes: !reset null
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"
   redis:
+    image: redislabs/redismod@sha256:f8e639450a5c4c62834e4c5e7643119c9e132ea5e5b65c63ac61e72ceef26ba2
     ports: !reset null

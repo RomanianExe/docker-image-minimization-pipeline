@@ -4,16 +4,18 @@
 
 | Metric | Original (`dip-react-express-mysql:original`) | Slim (`dip-react-express-mysql:slim`) | Change |
 |---|---|---|---|
-| Image size (real, `docker inspect .Size`) | 417.88 MB | 55.61 MB | **-86.7%** |
-| SBOM components (Syft) | 661 | 76 | -585 |
-| Vulnerabilities (Grype) | 1791 (78 Critical / 263 High / 408 Medium / 80 Low / 916 Negligible / 46 Unknown) | 24 (2 Critical / 8 High / 7 Medium / 7 Low) | -1767 |
-| Functional tests (DB route + healthz route) | PASS | PASS | no regression |
+| Image size (normalized OCI uncompressed layers) | 1205.04MB | 135.37MB | **-88.8%** |
+| SBOM components (Syft) | 893 | 78 | -815 |
+| Vulnerabilities (Grype) | 2017 | 28 | -1989 |
+| Functional tests | PASS | PASS | no regression |
+> **Current metrics note.** The table above is synchronized with `comparison.json` and uses normalized OCI uncompressed-layer bytes. The diagnostic narrative below may describe the historical investigation that led to the current configuration; it does not supersede the table.
+
 
 ## Largest reduction ratio and largest vulnerability count in this project
-`node:lts` (full Debian) is the heaviest base image processed — 417.88MB,
-1791 raw vulnerabilities. Slim's 86.7% reduction is the best ratio seen so
-far, ahead of `angular` (72.6%, Debian-slim) and `react-express-mongodb`
-(49.2%, Debian-slim). This strengthens the pattern from `angular`'s
+`node:lts` (full Debian) is the heaviest Node/JS base image processed — 1205.04MB,
+with 2017 recorded findings. Slim's 88.8% reduction is the strongest Node/JS result,
+ahead of `angular` (75.6%, Debian-slim) and `react-express-mongodb`
+(58.1%, Debian-slim). This strengthens the pattern from `angular`'s
 comparison: the base image's own unused OS surface — not the app's runtime
 footprint — is the dominant factor in how much Slim can remove.
 

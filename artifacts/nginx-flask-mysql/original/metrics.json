@@ -2,17 +2,18 @@
   "example": "nginx-flask-mysql",
   "stage": "original",
   "image_tag": "dip-nginx-flask-mysql:original",
-  "generated_at": "2026-08-27T12:20:51Z",
-  "size_bytes": 24355600,
-  "size_human": "24.36MB",
+  "generated_at": "2026-09-09T19:56:07Z",
+  "size_metric": "oci_uncompressed_layer_bytes",
+  "size_bytes": 76188160,
+  "size_human": "76.19MB",
   "sbom_component_count": 80,
-  "vulnerability_total": 62,
+  "vulnerability_total": 52,
   "vulnerability_by_severity": {
-    "High": 24,
+    "High": 14,
     "Medium": 28,
-    "Unknown": 4,
-    "Low": 5,
-    "Negligible": 1
+    "Low": 6,
+    "Negligible": 1,
+    "Unknown": 3
   },
   "functional_tests": "PASS (tests/specific/nginx-flask-mysql/test.sh)"
 }

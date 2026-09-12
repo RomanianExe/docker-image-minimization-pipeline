@@ -1,4 +1,6 @@
 # Functional Baseline — `traefik-golang` example (Stage 2)
+> **Historical baseline note.** This investigation log records the original run. For current cross-example metrics, use this example's `metrics.json`/`comparison.json` and `artifacts/summary.md`: they use the normalized OCI uncompressed-layer metric and the current recorded Grype scan.
+
 
 ## Scope decision: backend only, no docker.sock mount
 `compose.yaml`'s `frontend` service (`traefik:2.6`) discovers `backend` via

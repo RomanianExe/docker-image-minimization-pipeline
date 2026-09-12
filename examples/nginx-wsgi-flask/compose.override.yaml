@@ -22,6 +22,8 @@ services:
     container_name: ${IMAGE_NAME}-test
     build:
       dockerfile: ${DIP_ROOT}/examples/nginx-wsgi-flask/Dockerfile.patched
+      additional_contexts:
+        dip_locks: ${DIP_ROOT}/examples/nginx-wsgi-flask
     volumes: !reset null
     ports: !override
       - "${HOST_PORT}:${CONTAINER_PORT}"
