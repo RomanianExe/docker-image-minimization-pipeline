@@ -29,20 +29,22 @@ notes, verification commands, and publishing-only requirements.
 |---|---|---|
 | Docker Engine | 29.7.2 | build and run |
 | Docker Compose | v5.5.0 (plugin, `docker compose`) | drives each example's own compose file |
+| Docker Buildx | (plugin, `docker buildx`) | BuildKit-backed compose builds and the `SLIM_POST_MINT_DOCKERFILE` wrapper images (§12.7-§12.8) |
 | Slim Toolkit (`mint` / `docker-slim`) | 1.41.8 | dynamic analysis + minimization |
 | Syft | 1.51.0 | SBOM generation |
 | Grype | 0.117.0 | vulnerability scanning |
+| `jq` | — | validates Grype's JSON output (`pipeline/vuln-scan.sh`) |
 | Skopeo | 1.13.3 | normalize local images to OCI for portable size measurement |
 | Python | 3.14 (3.8+ is enough; stdlib only) | metrics, comparison, summary |
 | `bash`, `curl` | — | test scripts |
 
-Install the analysis tools (on Debian/Ubuntu, install Skopeo from the system package repository):
+Install the analysis tools (on Debian/Ubuntu, install Skopeo and jq from the system package repository):
 
 ```bash
 curl -sL https://raw.githubusercontent.com/mintoolkit/mint/master/scripts/install-mint.sh | sudo -E bash -
 curl -sSfL https://get.anchore.io/syft  | sudo sh -s -- -b /usr/local/bin
 curl -sSfL https://get.anchore.io/grype | sudo sh -s -- -b /usr/local/bin
-sudo apt-get install skopeo
+sudo apt-get install skopeo jq
 ```
 
 Verify — every one of these must succeed before the pipeline will run:
@@ -50,7 +52,8 @@ Verify — every one of these must succeed before the pipeline will run:
 ```bash
 docker run --rm hello-world
 docker compose version
-docker-slim --version && syft version && grype version && skopeo --version
+docker buildx version
+docker-slim --version && syft version && grype version && skopeo --version && jq --version
 ```
 
 The examples themselves come from a vendored copy of awesome-compose in

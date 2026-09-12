@@ -1,9 +1,10 @@
-# Methodology — Awesome Compose Analysis & Technology Classification (Stage 1)
+# Methodology — Analysis, Decisions and Results Across the Whole Pipeline
 
-This document is the output of **Phase 1 / Stage 1** of the work plan: an inventory of
-the `vendor/awesome-compose` examples, their technologies, Dockerfile characteristics,
-and a grouping strategy used to plan reusable vs. image-specific functional tests for
-the minimization pipeline (Slim Toolkit + Syft + Grype).
+An inventory of the `vendor/awesome-compose` examples, their technologies and Dockerfile
+characteristics (§1-§4); the SBOM/vulnerability-scanning and reproducibility approach (§5);
+scope exclusions (§6); negative and corrected results (§7-§9); the compose-driven pipeline
+runtime (§11); and the twelve prebuilt-image examples with their failures, fixes and results
+(§12). See `README.md` and `REPORT.md` for the project's headline results.
 
 ## 1. Example Inventory
 
@@ -119,9 +120,6 @@ methodology, or extending it to further awesome-compose entries, should skip the
 3. `port_listen.sh <port>` — TCP port is open/listening inside the container.
 4. `proxy_passthrough.sh <proxy_url> <expected_marker>` — for the reverse-proxy cluster, verifies
    a request through the proxy is actually served by the backend (not just the proxy's own default page).
-5. `db_connectivity.sh` — for stacks with a DB service, verifies the app-to-DB connection succeeds
-   (e.g. via an app endpoint that touches the DB, since Slim's dynamic analysis needs the app to
-   exercise its real code paths, not just a raw DB ping).
 
 **Image-specific test layer** (`tests/specific/<example-name>/`):
 - Concrete routes/APIs exercised per example (e.g. Flask `/` vs Django admin routes vs Spring
