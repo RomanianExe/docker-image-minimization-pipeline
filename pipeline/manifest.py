@@ -49,11 +49,11 @@ def upstream_digest(image, prebuilt_ref):
 
 
 def tool_versions():
+    mint_version = run("mint", "--version")
     return {
         "docker": run("docker", "version", "-f", "{{.Server.Version}}"),
         "docker_compose": run("docker", "compose", "version", "--short"),
-        "mint": run("docker-slim", "--version").split("|")[2]
-        if "|" in run("docker-slim", "--version") else run("docker-slim", "--version"),
+        "mint": mint_version.split("|")[2] if "|" in mint_version else mint_version,
         "syft": run("syft", "version", "-o", "json", default="{}"),
         "grype": run("grype", "version", "-o", "json", default="{}"),
     }
