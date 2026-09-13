@@ -48,6 +48,28 @@ def upstream_digest(image, prebuilt_ref):
     return None
 
 
+def size_metric(example):
+    """Return the shared, validated size metric for the two image stages."""
+    artifact_dir = ROOT / "artifacts" / example
+    original = json.loads((artifact_dir / "original" / "metrics.json").read_text())
+    slim = json.loads((artifact_dir / "slim" / "metrics.json").read_text())
+    original_metric = original.get("size_metric")
+    slim_metric = slim.get("size_metric")
+    if not original_metric or original_metric != slim_metric:
+        raise ValueError(
+            f"{example}: original/slim size metrics must be present and identical "
+            f"(got {original_metric!r} and {slim_metric!r})"
+        )
+    return original_metric
+
+
+def size_reduction_pct(comparison):
+    """Calculate the unrounded percentage from the recorded OCI layer bytes."""
+    original_bytes = comparison["original"]["size_bytes"]
+    slim_bytes = comparison["slim"]["size_bytes"]
+    return (original_bytes - slim_bytes) * 100 / original_bytes
+
+
 def tool_versions():
     mint_version = run("mint", "--version")
     return {
@@ -69,6 +91,7 @@ def main():
     prebuilt = env.get("PREBUILT_IMAGE", "")
 
     versions = tool_versions()
+    metric = size_metric(example)
     for key in ("syft", "grype"):
         try:
             versions[key] = json.loads(versions[key]).get("version", "")
@@ -99,7 +122,8 @@ def main():
             "size_human": comparison["original"]["size_human"],
         },
         "measurements": {
-            "size_reduction_pct": comparison["size_reduction_pct"],
+            "size_metric": metric,
+            "size_reduction_pct": size_reduction_pct(comparison),
             "sbom_components": {
                 "original": comparison["original"]["sbom_component_count"],
                 "slim": comparison["slim"]["sbom_component_count"],
