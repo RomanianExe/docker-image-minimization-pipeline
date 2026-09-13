@@ -33,8 +33,11 @@ it, and the tool versions used.
 FOOTER = """
 ## Reading the numbers
 
-Size is the honest measurement: it is the image on disk, before and after. **The component
-and vulnerability columns are not.** Slim removes package metadata along with unused files,
+Size is a normalized, backend-independent metric: cumulative uncompressed OCI layer bytes.
+Skopeo exports the local image into an OCI layout and the pipeline validates then sums the
+uncompressed layer descriptors. This avoids Docker image-store-specific `inspect .Size`
+semantics and `docker save` archive overhead. **The component and vulnerability columns are
+not.** Slim removes package metadata along with unused files,
 so Syft and Grype see less of a minimized image than of the original — part of every drop
 shown here is reduced scanner visibility rather than reduced exposure. Base security
 decisions on a scan of the original image. The pipeline repository's `docs/methodology.md`
@@ -65,6 +68,19 @@ every artifact under `artifacts/<example>/`.
 """
 
 
+def size_change_pct(entry):
+    original_bytes = entry["original"]["size_bytes"]
+    slim_bytes = entry["image"]["size_bytes"]
+    return (slim_bytes - original_bytes) * 100 / original_bytes
+
+
+def format_size_change(entry):
+    change = size_change_pct(entry)
+    # Do not round a non-zero increase such as Traefik's +0.02% to +0.0%.
+    precision = 2 if 0 < abs(change) < 0.1 else 1
+    return f"{change:+.{precision}f}%"
+
+
 def main():
     root = Path(sys.argv[1])
     manifests = sorted((root / "manifests").glob("*.json"))
@@ -73,7 +89,7 @@ def main():
         return
 
     entries = [json.loads(p.read_text()) for p in manifests]
-    entries.sort(key=lambda m: -m["measurements"]["size_reduction_pct"])
+    entries.sort(key=size_change_pct)
 
     rows = [
         "| Example | Stack | Source | Size before | Size after | Change | Components | Vulns | Reference |",
@@ -87,7 +103,7 @@ def main():
         rows.append(
             f"| `{m['example']}` | {m['cluster']} | {source} "
             f"| {m['original']['size_human']} | {m['image']['size_human']} "
-            f"| **{-measured['size_reduction_pct']:+.1f}%** "
+            f"| **{format_size_change(m)}** "
             f"| {components['original']} → {components['slim']} "
             f"| {vulns['original']} → {vulns['slim']} "
             f"| `{m['image']['reference']}` |"
